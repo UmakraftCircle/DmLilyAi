@@ -1,8 +1,0 @@
-.git
-.venv
-data
-.env
-tests
-# cookbook examples are reference material, not runtime code
-LilyAiGroqSupport/[0-9][0-9]-*
-**/__pycache__

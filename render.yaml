@@ -1,0 +1,23 @@
+# One Render service = the bot, the API and the website. Its URL is the site.
+services:
+  - type: web
+    name: lilyai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: ADMIN_TOKEN
+        generateValue: true     # the password you type into Settings on the site
+      - key: LILYAI_DATA_DIR
+        value: /app/data
+    # The free plan has an ephemeral filesystem: memory and the RAG index reset on each deploy/restart.
+    # For persistence, use a paid plan and uncomment:
+    # disk:
+    #   name: lilyai-data
+    #   mountPath: /app/data
+    #   sizeGB: 1
