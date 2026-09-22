@@ -137,7 +137,12 @@ def build_app(
     )
     scheduler = Scheduler()
     if settings.model_scan_enabled and not isinstance(provider, OfflineProvider):
-        interval = max(1.0, settings.model_scan_interval_hours) * 3600
+        if settings.model_scan_interval_s is not None:
+            # Explicit seconds override (e.g. MODEL_SCAN_INTERVAL_SECONDS=600). 60s floor guards
+            # against a mistyped tiny value hammering the Groq API.
+            interval = max(60.0, settings.model_scan_interval_s)
+        else:
+            interval = max(1.0, settings.model_scan_interval_hours) * 3600
         # first run waits out whatever is left of the interval since the last scan (min 60s after start)
         scheduler.every("model-scan", interval, make_model_scan_job(scanner, bus),
                         initial_delay_s=max(60.0, scanner.seconds_until_due(interval)))
