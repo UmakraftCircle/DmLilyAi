@@ -1,6 +1,0 @@
-{
-  "name": "LilyAi",
-  "description": "An autonomous, self-learning AI assistant with Discord integration, RAG, Web search, and multi-agent capabilities powered by Groq.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
