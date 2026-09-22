@@ -1,12 +1,20 @@
 import { api } from "/Shared/api.js";
 import { h, clear, errorBox } from "/Shared/ui.js";
 import { card } from "/Shared/components/Card.js";
-import { toast } from "/Shared/components/Toast.js";
 
 /** Web search status + a manual query tester, mirroring the Knowledge card's tester. */
-export function webCard(c) {
+export function webCard() {
+  const status = h("p", { class: "muted" }, "Loading…");
   const out = h("div", {});
   const q = h("input", { type: "text", placeholder: "Test a web search…", "aria-label": "Web search query" });
+
+  async function loadStatus() {
+    try {
+      const c = await api("/api/config");
+      clear(status).append(`Status: ${c.web_enabled ? "enabled" : "disabled"}.`);
+    } catch (e) { clear(status).append(errorBox(e)); }
+  }
+
   const run = async () => {
     if (!q.value.trim()) return;
     try {
@@ -17,8 +25,7 @@ export function webCard(c) {
     } catch (e) { clear(out).append(errorBox(e)); }
   };
   q.addEventListener("keydown", (e) => { if (e.key === "Enter") run(); });
-  return card("Web search",
-    h("p", { class: "muted" }, `Status: ${c.web_enabled ? "enabled" : "disabled"}.`),
-    h("div", { class: "row", style: "margin-top:10px" }, h("div", { class: "grow" }, q), h("button", { class: "btn ghost small", onclick: run }, "Search")),
-    out);
+
+  loadStatus();
+  return { el: card("Web search", status, h("div", { class: "row", style: "margin-top:10px" }, h("div", { class: "grow" }, q), h("button", { class: "btn ghost small", onclick: run }, "Search")), out) };
 }
