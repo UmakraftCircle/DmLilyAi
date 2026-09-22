@@ -142,6 +142,13 @@ def create_api(app: App) -> FastAPI:
     async def rag_delete(source: str):
         return {"removed": app.rag.delete_source(source), **app.rag.stats()}
 
+    @api.post("/api/web/search", dependencies=guard)
+    async def web_search(body: QueryBody):
+        if not s.web_enabled:
+            raise HTTPException(400, "Web search is disabled (WEB_ENABLED)")
+        results = await app.web.search(body.query, 5)
+        return {"hits": [{"title": r.title, "url": r.url, "snippet": r.snippet, "domain": r.domain, "score": round(r.score, 3)} for r in results]}
+
     @api.post("/api/eval/run", dependencies=guard)
     async def run_eval():
         async def respond(prompt: str) -> str:
