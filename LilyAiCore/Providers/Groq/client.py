@@ -9,6 +9,7 @@ from LilyAiCore.Config.models import ModelPool
 from LilyAiCore.Exceptions.errors import ConfigError, ProviderError, RateLimitError
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider, LLMResponse, ToolCallRequest
+from LilyAiCore.Providers.Groq.key_rotator import KeyRotator
 
 log = get_logger("provider.groq")
 
@@ -16,29 +17,29 @@ log = get_logger("provider.groq")
 class GroqProvider(LLMProvider):
     def __init__(
         self,
-        api_key: str,
+        api_keys: list[str] | str,
         base_url: str = "https://api.groq.com/openai/v1",
         default_model: str = "openai/gpt-oss-20b",
         pool: ModelPool | None = None,
         timeout: float = 60.0,
         max_retries: int = 2,
     ):
-        if not api_key:
+        keys = [api_keys] if isinstance(api_keys, str) else list(api_keys)
+        if not keys:
             raise ConfigError("GROQ_API_KEY is not set")
+        self.rotator = KeyRotator(keys)
         self.default_model = default_model
         self.pool = pool or ModelPool()
         self.max_retries = max_retries
-        self._http = httpx.AsyncClient(
-            base_url=base_url.rstrip("/"),
-            headers={"Authorization": f"Bearer {api_key}"},
-            timeout=timeout,
-        )
+        # No fixed Authorization header: each request picks its own key from the rotator.
+        self._http = httpx.AsyncClient(base_url=base_url.rstrip("/"), timeout=timeout)
 
     async def aclose(self) -> None:
         await self._http.aclose()
 
     async def describe_models(self) -> list[dict[str, Any]]:
-        r = await self._http.get("/models")
+        key = await self.rotator.next()
+        r = await self._http.get("/models", headers={"Authorization": f"Bearer {key}"})
         if r.status_code != 200:
             raise ProviderError(f"Groq /models failed: {r.status_code} {r.text[:200]}")
         return sorted(r.json().get("data", []), key=lambda m: m.get("id", ""))
@@ -70,9 +71,12 @@ class GroqProvider(LLMProvider):
         if json_mode:
             body["response_format"] = {"type": "json_object"}
 
+        tried_keys: set[str] = set()  # keys already rate-limited within this call, so we don't retry them immediately
         for attempt in range(self.max_retries + 1):
+            key = await self.rotator.next(exclude=tried_keys)
+            headers = {"Authorization": f"Bearer {key}"}
             try:
-                r = await self._http.post("/chat/completions", json=body)
+                r = await self._http.post("/chat/completions", json=body, headers=headers)
             except httpx.HTTPError as e:
                 if attempt == self.max_retries:
                     raise ProviderError(f"network error: {e}") from e
@@ -80,10 +84,12 @@ class GroqProvider(LLMProvider):
                 continue
             if r.status_code == 429:
                 retry = float(r.headers.get("retry-after", "0") or 0)
-                if attempt == self.max_retries or retry > 8:
+                await self.rotator.mark_rate_limited(key, retry)
+                tried_keys.add(key)
+                log.info("key rate-limited, switching to next key (%d/%d tried)", len(tried_keys), self.rotator.key_count)
+                if attempt == self.max_retries:
                     raise RateLimitError(retry_after=retry)
-                await asyncio.sleep(max(retry, 1.0))
-                continue
+                continue  # retry immediately with a different key - no need to sleep out a key we're not using
             if r.status_code >= 500 and attempt < self.max_retries:
                 await asyncio.sleep(1.5 * (attempt + 1))
                 continue
