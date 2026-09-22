@@ -36,6 +36,7 @@ class Settings:
     learn_from_chats: bool
     model_scan_enabled: bool
     model_scan_interval_hours: float
+    model_scan_interval_s: float | None
     model_scan_max_auto: int
     model_scan_docs_dir: Path
     frontend_dir: str
@@ -57,6 +58,7 @@ def load_settings() -> Settings:
     data_dir = Path(os.getenv("LILYAI_DATA_DIR", "./data")).resolve()
     data_dir.mkdir(parents=True, exist_ok=True)
     allowed = frozenset(int(x) for x in os.getenv("ALLOWED_USER_IDS", "").split(",") if x.strip().isdigit())
+    scan_seconds_raw = os.getenv("MODEL_SCAN_INTERVAL_SECONDS", "").strip()
     return Settings(
         discord_token=os.getenv("DISCORD_TOKEN", ""),
         # GROQ_API_KEY accepts one key or several comma-separated keys (e.g. "gsk_a,gsk_b,gsk_c").
@@ -81,6 +83,9 @@ def load_settings() -> Settings:
         frontend_dir=os.getenv("FRONTEND_DIR", ""),
         model_scan_enabled=_bool("MODEL_SCAN_ENABLED", True),
         model_scan_interval_hours=float(os.getenv("MODEL_SCAN_INTERVAL_HOURS", "24")),
+        # Optional finer-grained override for sub-hour intervals (e.g. 600 = scan every 10 minutes).
+        # Takes precedence over MODEL_SCAN_INTERVAL_HOURS when set. A 60s floor is enforced in bootstrap.py.
+        model_scan_interval_s=float(scan_seconds_raw) if scan_seconds_raw else None,
         model_scan_max_auto=int(os.getenv("MODEL_SCAN_MAX_AUTO", "6")),
         model_scan_docs_dir=Path(os.getenv("MODEL_SCAN_DOCS_DIR", str(Path(__file__).resolve().parents[2] / "LilyAiGroqSupport"))),
     )
