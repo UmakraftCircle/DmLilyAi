@@ -17,7 +17,7 @@ def _bool(name: str, default: bool) -> bool:
 @dataclass(frozen=True)
 class Settings:
     discord_token: str
-    groq_api_key: str
+    groq_api_keys: tuple[str, ...]
     groq_base_url: str
     chat_model: str
     reasoning_model: str
@@ -59,7 +59,9 @@ def load_settings() -> Settings:
     allowed = frozenset(int(x) for x in os.getenv("ALLOWED_USER_IDS", "").split(",") if x.strip().isdigit())
     return Settings(
         discord_token=os.getenv("DISCORD_TOKEN", ""),
-        groq_api_key=os.getenv("GROQ_API_KEY", ""),
+        # GROQ_API_KEY accepts one key or several comma-separated keys (e.g. "gsk_a,gsk_b,gsk_c").
+        # Multiple keys are rotated evenly (shuffled-bag) and auto-switched on rate limits - see LilyAiCore/Providers/Groq/key_rotator.py.
+        groq_api_keys=tuple(k.strip() for k in os.getenv("GROQ_API_KEY", "").split(",") if k.strip()),
         groq_base_url=os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1"),
         chat_model=os.getenv("LILYAI_CHAT_MODEL", "openai/gpt-oss-20b"),
         reasoning_model=os.getenv("LILYAI_REASONING_MODEL", "openai/gpt-oss-120b"),
