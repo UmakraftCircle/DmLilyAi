@@ -88,3 +88,16 @@ class LilyDiscordClient(discord.Client):
                 elif out.menu:
                     view = MenuView(self, out.menu)
             await channel.send(part, view=view) if view else await channel.send(part)
+
+    async def send_dm(self, user_id: str, text: str) -> bool:
+        """Actuator entry point: send a DM the user didn't just prompt (reminders, notifications).
+        Satisfies the Notifier protocol - see LilyAiCore/ExternalServices/Discord/notifier.py."""
+        try:
+            user = await self.fetch_user(int(user_id))
+            dm = await user.create_dm()
+            for part in split_reply(text):
+                await dm.send(part)
+            return True
+        except Exception as e:
+            log.error("failed to send unsolicited DM to %s: %s", user_id, e)
+            return False
