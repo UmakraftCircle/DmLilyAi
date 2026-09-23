@@ -1,1 +1,1 @@
-from .records import ConversationTurn, KnowledgeNote, SessionState, UserFact  # noqa: F401
+from .records import ConversationTurn, SessionState, UserFact  # noqa: F401
