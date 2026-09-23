@@ -20,15 +20,6 @@ class ConversationTurn:
 
 
 @dataclass
-class KnowledgeNote:
-    id: int
-    topic: str
-    content: str
-    source: str = ""
-    created_at: float = 0.0
-
-
-@dataclass
 class SessionState:
     user_id: str
     started_at: float
