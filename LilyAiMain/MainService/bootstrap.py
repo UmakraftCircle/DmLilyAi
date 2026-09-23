@@ -6,6 +6,7 @@ from LilyAiContext.service import ContextBuilder
 from LilyAiCore.Config.models import ModelPool
 from LilyAiCore.Config.settings import Settings
 from LilyAiCore.ExternalServices.Database.sqlite import Database
+from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider
@@ -50,6 +51,7 @@ class App:
     discord_state: DiscordEventHandlers
     scanner: ModelScanner
     scheduler: Scheduler
+    notifier_box: NotifierBox
     started_at: float
 
     async def aclose(self) -> None:
@@ -124,7 +126,8 @@ def build_app(
     learning = LearningService(db)
     rag = RagService(settings.rag_path)
     web = WebService(search_provider, learning.web.preferred_domains())
-    tools = ToolService()
+    notifier_box = NotifierBox()
+    tools = ToolService(notifier_box)
     for spec in _web_tools(web):
         tools.register(spec)
 
@@ -148,5 +151,6 @@ def build_app(
                         initial_delay_s=max(60.0, scanner.seconds_until_due(interval)))
     return App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
-        FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler, time.time(),
+        FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,
+        notifier_box, time.time(),
     )
