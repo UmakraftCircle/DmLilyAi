@@ -19,6 +19,10 @@ CREATE TABLE IF NOT EXISTS learning_events (
 CREATE INDEX IF NOT EXISTS idx_events_kind ON learning_events(kind, key);
 """
 
+# Per-kind cap, not a global one: "context_tokens"/"tool" get written on every message/tool call and would
+# otherwise crowd out low-volume kinds like "domain" (only written on feedback) if trimmed together.
+MAX_EVENTS_PER_KIND = 2000
+
 
 class LearningStore:
     def __init__(self, db: Database):
@@ -36,4 +40,12 @@ class LearningStore:
         self.db.execute(
             "INSERT INTO learning_events(kind,key,value,ok,created_at) VALUES (?,?,?,?,?)",
             (kind, key, value, int(ok), now_ts()),
+        )
+        self._trim(kind)
+
+    def _trim(self, kind: str) -> None:
+        self.db.execute(
+            "DELETE FROM learning_events WHERE kind=? AND id NOT IN "
+            "(SELECT id FROM learning_events WHERE kind=? ORDER BY id DESC LIMIT ?)",
+            (kind, kind, MAX_EVENTS_PER_KIND),
         )
