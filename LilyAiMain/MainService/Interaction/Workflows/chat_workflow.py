@@ -79,7 +79,7 @@ class ChatWorkflow:
                 display_name=req.display_name,
                 history=history,
                 user_facts=self.memory.relevant_user_facts(uid, text),
-                knowledge_snippets=[h.as_snippet() for h in rag_hits] + self.memory.relevant_notes(text),
+                knowledge_snippets=[h.as_snippet() for h in rag_hits],
                 tool_schemas=schemas,
             )
         )
