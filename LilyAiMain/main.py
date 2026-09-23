@@ -35,6 +35,7 @@ async def run() -> None:
             from LilyAiMain.MainService.Discord.Client.client import LilyDiscordClient
 
             client = LilyDiscordClient(app)
+            app.notifier_box.notifier = client  # actuator online: tools registered earlier (e.g. remind_me) can now reach Discord
             tasks["discord"] = asyncio.create_task(client.start(settings.discord_token), name="discord")
         else:
             log.warning("DISCORD_TOKEN is not set: Discord is disabled (API and DM Simulator still work)")
