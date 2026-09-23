@@ -16,12 +16,4 @@ CREATE TABLE IF NOT EXISTS conversation_turns (
     created_at REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_turns_user ON conversation_turns(user_id, id);
-
-CREATE TABLE IF NOT EXISTS knowledge_notes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    topic TEXT NOT NULL,
-    content TEXT NOT NULL,
-    source TEXT NOT NULL DEFAULT '',
-    created_at REAL NOT NULL
-);
 """
