@@ -35,9 +35,12 @@ class ReplyLog:
 
 
 class FeedbackHandler:
-    def __init__(self, replies: ReplyLog, learning: LearningService, rag: RagService):
+    def __init__(self, replies: ReplyLog, learning: LearningService, rag: RagService, max_rated: int = 500):
         self.replies, self.learning, self.rag = replies, learning, rag
-        self._rated: set[tuple[str, str]] = set()
+        # Capped to match ReplyLog's own cap: once a reply_id ages out of `replies`, handle() returns
+        # early before ever touching _rated, so entries beyond ReplyLog's cap are unreachable anyway.
+        self.max_rated = max_rated
+        self._rated: OrderedDict[tuple[str, str], None] = OrderedDict()
 
     def handle(self, user_id: str, reply_id: str, rating: int, comment: str = "") -> str:
         rec = self.replies.get(reply_id)
@@ -45,9 +48,12 @@ class FeedbackHandler:
             return "That message is too old for me to learn from, but thanks!"
         if rec.user_id != user_id:
             return "That reply isn't yours to rate."
-        if (user_id, reply_id) in self._rated:
+        key = (user_id, reply_id)
+        if key in self._rated:
             return "Thanks, I already have your feedback on that one."
-        self._rated.add((user_id, reply_id))
+        self._rated[key] = None
+        while len(self._rated) > self.max_rated:
+            self._rated.popitem(last=False)
         promoted = self.learning.on_feedback(
             FeedbackRecord(user_id, rating, rec.prompt, rec.response, comment, rec.used_evidence, rec.domains)
         )
