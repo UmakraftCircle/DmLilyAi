@@ -2,7 +2,7 @@
 from pathlib import Path
 
 # The only client folders that may be served. Nothing else in the repo is reachable over HTTP.
-SERVED_DIRS = frozenset({"Public", "Assets", "Shared", "Home", "Chat", "Dashboard", "Settings", "Admin"})
+SERVED_DIRS = frozenset({"Public", "Assets", "Shared", "Home", "Chat", "Dashboard", "Leaderboard", "Settings", "Admin"})
 
 
 def default_frontend_dir() -> Path:
