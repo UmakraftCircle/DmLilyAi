@@ -7,6 +7,7 @@ from LilyAiCore.Config.models import ModelPool
 from LilyAiCore.Config.settings import Settings
 from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
+from LilyAiCore.ExternalServices.Discord.reconnect_state import ReconnectState
 from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
@@ -58,6 +59,7 @@ class App:
     notifier_box: NotifierBox
     umamoe: UmamoeClient | None
     umamoe_store: UmamoeStore | None
+    discord_reconnect: ReconnectState
     started_at: float
 
     async def aclose(self) -> None:
@@ -160,6 +162,7 @@ def build_app(
     rag = RagService(settings.rag_path)
     web = WebService(search_provider, learning.web.preferred_domains())
     notifier_box = NotifierBox(ReminderStore(db))
+    discord_reconnect = ReconnectState(db)
     tools = ToolService(notifier_box)
     for spec in _web_tools(web):
         tools.register(spec)
@@ -203,5 +206,5 @@ def build_app(
     return App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
         FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,
-        notifier_box, umamoe, umamoe_store, time.time(),
+        notifier_box, umamoe, umamoe_store, discord_reconnect, time.time(),
     )
