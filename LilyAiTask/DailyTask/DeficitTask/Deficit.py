@@ -1,7 +1,8 @@
 """Deficit Task
 
 Daily fan-gain quota tracker feeding into the 150-million monthly quota
-(see MonthlyTask/quota.py).
+(see MonthlyTask/quota.py). Sends one Discord DM per day reporting whether
+the member met quota, or how much surplus/deficit they have.
 
 Rules:
 - Base daily quota is 5,000,000 fans (5m * 30 days = 150,000,000 monthly).
@@ -14,6 +15,8 @@ Rules:
   day is short or over, later days automatically adjust so the month
   still totals exactly 150,000,000 by the end of the tally period.
 """
+
+import discord
 
 # Base daily quota - 150,000,000 monthly quota spread over 30 days.
 DAILY_QUOTA = 5_000_000
@@ -79,6 +82,59 @@ class DeficitTracker:
     def remaining_month_quota(self) -> int:
         """How many fans are still needed to hit the monthly quota."""
         return max(0, MONTHLY_QUOTA - self.total_gained)
+
+
+def _fmt(n: int) -> str:
+    """Format a fan count with thousands separators."""
+    return f"{n:,}"
+
+
+def format_daily_message(result: dict) -> str:
+    """Build the daily DM text from a record_day() result.
+
+    - Exactly met -> confirms quota met, no carry.
+    - Gained more than required -> reports surplus banked for tomorrow.
+    - Gained less than required -> reports deficit owed, added to tomorrow.
+    """
+    gained = result["gained"]
+    required = result["required"]
+    carry = result["carry"]
+    total = result["total_gained"]
+    remaining = max(0, MONTHLY_QUOTA - total)
+
+    lines = [
+        "**Daily Fan Quota Report**",
+        f"Gained today: {_fmt(gained)}",
+        f"Required today: {_fmt(required)}",
+    ]
+
+    if carry == 0:
+        lines.append(f"Status: \u2705 Quota met exactly \u2014 no carry into tomorrow.")
+    elif carry > 0:
+        lines.append(
+            f"Status: \u26a0\ufe0f Deficit of {_fmt(carry)} \u2014 added to tomorrow's required quota."
+        )
+    else:
+        lines.append(
+            f"Status: \U0001f389 Surplus of {_fmt(-carry)} \u2014 credited, lowering tomorrow's required quota."
+        )
+
+    lines.append(f"Monthly progress: {_fmt(total)} / {_fmt(MONTHLY_QUOTA)} (remaining: {_fmt(remaining)})")
+
+    return "\n".join(lines)
+
+
+async def send_daily_dm(client: discord.Client, user_id: int, result: dict) -> None:
+    """Send the daily quota report as a Discord direct message.
+
+    Args:
+        client: The logged-in discord.Client/Bot instance.
+        user_id: Discord user ID to DM.
+        result: The dict returned by DeficitTracker.record_day().
+    """
+    user = client.get_user(user_id) or await client.fetch_user(user_id)
+    message = format_daily_message(result)
+    await user.send(message)
 
 
 def run():
