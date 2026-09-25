@@ -41,6 +41,10 @@ class Settings:
     model_scan_docs_dir: Path
     frontend_dir: str
     webhook_url: str
+    umamoe_api_key: str
+    umamoe_circle_ids: tuple[int, ...]
+    umamoe_notify_user_id: str
+    umamoe_poll_interval_hours: float
 
     @property
     def db_path(self) -> Path:
@@ -86,4 +90,10 @@ def load_settings() -> Settings:
         model_scan_max_auto=int(os.getenv("MODEL_SCAN_MAX_AUTO", "6")),
         model_scan_docs_dir=Path(os.getenv("MODEL_SCAN_DOCS_DIR", str(Path(__file__).resolve().parents[2] / "LilyAiGroqSupport"))),
         webhook_url=os.getenv("WEBHOOK_URL", ""),
+        # uma.moe (Umamusume circle/fan tracking) - see LilyAiCore/ExternalServices/Umamoe/
+        umamoe_api_key=os.getenv("UMAMOE_API_KEY", ""),
+        umamoe_circle_ids=tuple(int(x) for x in os.getenv("UMAMOE_CIRCLE_IDS", "").split(",") if x.strip().isdigit()),
+        # Discord user id to DM when a tracked circle's rank/points/fans change. Empty = log only.
+        umamoe_notify_user_id=os.getenv("UMAMOE_NOTIFY_USER_ID", ""),
+        umamoe_poll_interval_hours=float(os.getenv("UMAMOE_POLL_INTERVAL_HOURS", "6")),
     )
