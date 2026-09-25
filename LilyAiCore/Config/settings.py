@@ -45,6 +45,7 @@ class Settings:
     umamoe_circle_ids: tuple[int, ...]
     umamoe_notify_user_id: str
     umamoe_poll_interval_hours: float
+    umamoe_poll_interval_s: float | None
 
     @property
     def db_path(self) -> Path:
@@ -64,6 +65,7 @@ def load_settings() -> Settings:
     data_dir.mkdir(parents=True, exist_ok=True)
     allowed = frozenset(int(x) for x in os.getenv("ALLOWED_USER_IDS", "").split(",") if x.strip().isdigit())
     scan_seconds_raw = os.getenv("MODEL_SCAN_INTERVAL_SECONDS", "").strip()
+    umamoe_seconds_raw = os.getenv("UMAMOE_POLL_INTERVAL_SECONDS", "").strip()
     return Settings(
         discord_token=os.getenv("DISCORD_TOKEN", ""),
         groq_api_keys=tuple(k.strip() for k in os.getenv("GROQ_API_KEY", "").split(",") if k.strip()),
@@ -96,4 +98,7 @@ def load_settings() -> Settings:
         # Discord user id to DM when a tracked circle's rank/points/fans change. Empty = log only.
         umamoe_notify_user_id=os.getenv("UMAMOE_NOTIFY_USER_ID", ""),
         umamoe_poll_interval_hours=float(os.getenv("UMAMOE_POLL_INTERVAL_HOURS", "6")),
+        # Sub-hour override (e.g. 300 = every 5 minutes). Takes precedence over
+        # UMAMOE_POLL_INTERVAL_HOURS when set. A 60s floor is enforced in bootstrap.py.
+        umamoe_poll_interval_s=float(umamoe_seconds_raw) if umamoe_seconds_raw else None,
     )
