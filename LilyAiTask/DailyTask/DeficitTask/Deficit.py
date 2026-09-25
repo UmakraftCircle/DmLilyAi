@@ -4,6 +4,11 @@ Daily fan-gain quota tracker feeding into the 150-million monthly quota
 (see MonthlyTask/quota.py). Sends one Discord DM per day reporting whether
 the member met quota, or how much surplus/deficit they have.
 
+The DM is only sent for a member who is already linked: someone with both
+a Discord user ID and a uma.moe trainer ID on file (see LinkedMember /
+LilyAiMemory for where that link actually lives). Unlinked trainers are
+skipped rather than guessed at.
+
 Rules:
 - Base daily quota is 5,000,000 fans (5m * 30 days = 150,000,000 monthly).
 - If a day falls short of its required amount, the shortfall (deficit)
@@ -16,6 +21,9 @@ Rules:
   still totals exactly 150,000,000 by the end of the tally period.
 """
 
+from dataclasses import dataclass
+from typing import Iterable, Optional
+
 import discord
 
 # Base daily quota - 150,000,000 monthly quota spread over 30 days.
@@ -23,6 +31,21 @@ DAILY_QUOTA = 5_000_000
 
 # Kept in sync with LilyAiTask/MonthlyTask/quota.py MONTHLY_QUOTA.
 MONTHLY_QUOTA = 150_000_000
+
+
+@dataclass
+class LinkedMember:
+    """A member with a confirmed Discord <-> uma.moe trainer link.
+
+    Both ids must be present for a daily report to be sendable; this is
+    the join point between the Discord side (where the DM goes) and the
+    uma.moe side (where fan-gain numbers come from). Actual link storage
+    /lookup belongs to LilyAiMemory - this is just the shape used here.
+    """
+
+    discord_id: int
+    trainer_id: str
+    trainer_name: Optional[str] = None
 
 
 class DeficitTracker:
@@ -89,7 +112,7 @@ def _fmt(n: int) -> str:
     return f"{n:,}"
 
 
-def format_daily_message(result: dict) -> str:
+def format_daily_message(result: dict, member: Optional[LinkedMember] = None) -> str:
     """Build the daily DM text from a record_day() result.
 
     - Exactly met -> confirms quota met, no carry.
@@ -102,14 +125,18 @@ def format_daily_message(result: dict) -> str:
     total = result["total_gained"]
     remaining = max(0, MONTHLY_QUOTA - total)
 
+    header = "**Daily Fan Quota Report**"
+    if member and member.trainer_name:
+        header += f" \u2014 {member.trainer_name}"
+
     lines = [
-        "**Daily Fan Quota Report**",
+        header,
         f"Gained today: {_fmt(gained)}",
         f"Required today: {_fmt(required)}",
     ]
 
     if carry == 0:
-        lines.append(f"Status: \u2705 Quota met exactly \u2014 no carry into tomorrow.")
+        lines.append("Status: \u2705 Quota met exactly \u2014 no carry into tomorrow.")
     elif carry > 0:
         lines.append(
             f"Status: \u26a0\ufe0f Deficit of {_fmt(carry)} \u2014 added to tomorrow's required quota."
@@ -124,17 +151,43 @@ def format_daily_message(result: dict) -> str:
     return "\n".join(lines)
 
 
-async def send_daily_dm(client: discord.Client, user_id: int, result: dict) -> None:
-    """Send the daily quota report as a Discord direct message.
+async def send_daily_dm(client: discord.Client, member: LinkedMember, result: dict) -> None:
+    """Send the daily quota report as a Discord DM to a linked member.
+
+    Requires the member to already be linked (has both a Discord ID and
+    a uma.moe trainer ID) - if either is missing, the report is skipped
+    rather than sent to a guessed/unverified user.
 
     Args:
         client: The logged-in discord.Client/Bot instance.
-        user_id: Discord user ID to DM.
+        member: The LinkedMember to DM (must have discord_id + trainer_id).
         result: The dict returned by DeficitTracker.record_day().
     """
-    user = client.get_user(user_id) or await client.fetch_user(user_id)
-    message = format_daily_message(result)
+    if not member.discord_id or not member.trainer_id:
+        return
+
+    user = client.get_user(member.discord_id) or await client.fetch_user(member.discord_id)
+    message = format_daily_message(result, member)
     await user.send(message)
+
+
+async def send_daily_reports(
+    client: discord.Client,
+    members: Iterable[LinkedMember],
+    results_by_trainer_id: dict,
+) -> None:
+    """Send daily DMs for every linked member that has a result today.
+
+    Args:
+        client: The logged-in discord.Client/Bot instance.
+        members: Linked members eligible for a DM (discord_id + trainer_id).
+        results_by_trainer_id: Maps trainer_id -> record_day() result dict.
+    """
+    for member in members:
+        result = results_by_trainer_id.get(member.trainer_id)
+        if result is None:
+            continue
+        await send_daily_dm(client, member, result)
 
 
 def run():
