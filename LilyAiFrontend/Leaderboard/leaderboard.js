@@ -1,5 +1,5 @@
 import { api } from "/Shared/api.js";
-import { h, clear, page, errorBox, fmtNum, fmtDelta, fmtDate } from "/Shared/ui.js";
+import { h, clear, page, errorBox, fmtNum, fmtDeltaCompact, fmtDate } from "/Shared/ui.js";
 import { card } from "/Shared/components/Card.js";
 import { table } from "/Shared/components/Table.js";
 import { stat } from "/Shared/components/Stat.js";
@@ -8,7 +8,7 @@ const PAGE_SIZE = 10;
 
 function gain(n) {
   const cls = n > 0 ? "pos" : n < 0 ? "neg" : "zero";
-  return h("span", { class: `gain ${cls}` }, fmtDelta(n));
+  return h("span", { class: `gain ${cls}` }, fmtDeltaCompact(n));
 }
 
 /** Prev/number/Next pager. Page-count is whatever the caller hands it — club tabs naturally

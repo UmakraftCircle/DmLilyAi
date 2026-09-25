@@ -23,6 +23,20 @@ export const fmtDelta = (n) => `${(n ?? 0) > 0 ? "+" : ""}${(n ?? 0).toLocaleStr
 /** Calendar date (no time) for "last seen"-style columns. */
 export const fmtDate = (ts) => (ts ? new Date(ts * 1000).toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" }) : "\u2014");
 
+/** Abbreviated magnitude for narrow columns, e.g. 11,000,000 -> "11m", 8,941,025 -> "8.9m", 711,252 -> "711.3k".
+ * Keeps one decimal place, dropped when it's a whole number ("11m" not "11.0m"). Values under 1,000 print as-is. */
+export function fmtCompact(n) {
+  const v = n ?? 0;
+  const abs = Math.abs(v);
+  const unit = abs >= 1e9 ? 1e9 : abs >= 1e6 ? 1e6 : abs >= 1e3 ? 1e3 : 0;
+  if (!unit) return String(v);
+  const suffix = unit === 1e9 ? "b" : unit === 1e6 ? "m" : "k";
+  const scaled = Math.round((v / unit) * 10) / 10;
+  return `${Number.isInteger(scaled) ? scaled : scaled.toFixed(1)}${suffix}`;
+}
+/** Signed + abbreviated, for gain/loss columns that need to stay narrow, e.g. "+11m" / "-8.9m". */
+export const fmtDeltaCompact = (n) => `${(n ?? 0) > 0 ? "+" : ""}${fmtCompact(n)}`;
+
 export function page(title, lede, ...body) {
   return [h("header", { class: "page-head" }, h("h1", {}, title), lede ? h("p", {}, lede) : null), ...body];
 }
