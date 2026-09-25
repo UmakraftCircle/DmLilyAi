@@ -36,7 +36,10 @@ async def run() -> None:
 
             client = LilyDiscordClient(app)
             app.notifier_box.notifier = client  # actuator online: tools registered earlier (e.g. remind_me) can now reach Discord
-            tasks["discord"] = asyncio.create_task(client.start(settings.discord_token), name="discord")
+            # run_forever() retries with backoff on connect failures (e.g. Cloudflare
+            # rate-limit blocks) instead of raising, so a Discord outage can't take
+            # the API server down with it via the FIRST_COMPLETED wait below.
+            tasks["discord"] = asyncio.create_task(client.run_forever(settings.discord_token), name="discord")
         else:
             log.warning("DISCORD_TOKEN is not set: Discord is disabled (API and DM Simulator still work)")
 

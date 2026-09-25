@@ -1,4 +1,6 @@
 """Discord DM client. Thin adapter: all behaviour lives in the router."""
+import asyncio
+
 import discord
 
 from LilyAiCore.ExternalServices.Discord.helpers import split_reply
@@ -55,6 +57,27 @@ class LilyDiscordClient(discord.Client):
         intents.dm_messages = True
         super().__init__(intents=intents)
         self.app = app
+
+    async def run_forever(self, token: str) -> None:
+        """Connect with exponential backoff. Catches connect-time failures (e.g. a
+        Cloudflare/rate-limit block returned as HTTPException) instead of letting them
+        propagate and take the whole process down with them. Returns normally once
+        self.close() causes start() to exit cleanly (e.g. during app shutdown)."""
+        backoff = 30
+        max_backoff = 900
+        while True:
+            try:
+                await self.start(token)
+                return
+            except discord.HTTPException as e:
+                log.error("discord connection failed: %r", e)
+            except Exception:
+                log.exception("discord stopped unexpectedly")
+            if self.is_closed():
+                return
+            log.warning("retrying discord connection in %ss", backoff)
+            await asyncio.sleep(backoff)
+            backoff = min(backoff * 2, max_backoff)
 
     async def on_ready(self):
         self.app.discord_state.on_ready(str(self.user))
