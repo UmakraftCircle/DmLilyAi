@@ -1,4 +1,4 @@
-"""HTTP API for the web frontend (Chat, Dashboard, Settings, Relay, DM Simulator)."""
+"""HTTP API for the web frontend (Chat, Dashboard, Settings, Relay, DM Simulator, Leaderboard)."""
 import hmac
 import time
 from pathlib import Path
@@ -148,6 +148,34 @@ def create_api(app: App) -> FastAPI:
             raise HTTPException(400, "Web search is disabled (WEB_ENABLED)")
         results = await app.web.search(body.query, 5)
         return {"hits": [{"title": r.title, "url": r.url, "snippet": r.snippet, "domain": r.domain, "score": round(r.score, 3)} for r in results]}
+
+    @api.get("/api/leaderboard", dependencies=guard)
+    async def leaderboard():
+        if not app.umamoe:
+            raise HTTPException(400, "uma.moe is not configured (set UMAMOE_API_KEY)")
+        if not s.umamoe_circle_ids:
+            raise HTTPException(400, "No circles tracked (set UMAMOE_CIRCLE_IDS)")
+        circles = []
+        for circle_id in s.umamoe_circle_ids:
+            data = await app.umamoe.get_circle(circle_id=circle_id)
+            c = data.get("circle") or {}
+            members = sorted(
+                (
+                    {
+                        "viewer_id": m.get("viewer_id"),
+                        "trainer_name": m.get("trainer_name"),
+                        "total_fans": max(m.get("daily_fans") or [0], default=0),
+                    }
+                    for m in data.get("members", [])
+                ),
+                key=lambda m: m["total_fans"], reverse=True,
+            )
+            circles.append({
+                "circle_id": circle_id, "name": c.get("name", str(circle_id)),
+                "monthly_rank": c.get("monthly_rank"), "monthly_point": c.get("monthly_point"),
+                "member_count": c.get("member_count"), "members": members,
+            })
+        return {"circles": circles}
 
     @api.post("/api/eval/run", dependencies=guard)
     async def run_eval():
