@@ -16,6 +16,7 @@ const PATHS = {
   moon: ["M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"],
   lock: ["M6 11h12v10H6z", "M8 11V7a4 4 0 0 1 8 0v4"],
   arrow: ["M5 12h14M13 6l6 6-6 6"],
+  leaderboard: ["M4 20V11", "M10 20V4", "M16 20v-7"],
 };
 
 const NS = "http://www.w3.org/2000/svg";
