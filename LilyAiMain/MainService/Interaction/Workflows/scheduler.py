@@ -3,6 +3,7 @@ import asyncio
 from dataclasses import dataclass
 from typing import Awaitable, Callable
 
+from LilyAiCore.ExternalServices.Webhooks.webhook import post_webhook
 from LilyAiCore.Logging.logger import get_logger
 
 log = get_logger("scheduler")
@@ -17,9 +18,10 @@ class Job:
 
 
 class Scheduler:
-    def __init__(self):
+    def __init__(self, webhook_url: str = ""):
         self._jobs: list[Job] = []
         self._tasks: list[asyncio.Task] = []
+        self._webhook_url = webhook_url
 
     def every(self, name: str, interval_s: float, fn: Callable[[], Awaitable[None]], initial_delay_s: float = 0.0) -> None:
         self._jobs.append(Job(name, interval_s, fn, initial_delay_s))
@@ -40,6 +42,8 @@ class Scheduler:
                 await job.fn()
             except asyncio.CancelledError:
                 raise
-            except Exception:
+            except Exception as e:
                 log.exception("job %s failed", job.name)
+                if self._webhook_url:
+                    await post_webhook(self._webhook_url, f"⚠️ scheduled job `{job.name}` failed: {e!r}")
             await asyncio.sleep(job.interval_s)
