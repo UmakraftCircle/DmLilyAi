@@ -9,6 +9,8 @@ from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
+from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
+from LilyAiCore.ExternalServices.Umamoe.store import UmamoeStore
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider
 from LilyAiCore.Providers.offline import OfflineProvider
@@ -26,6 +28,7 @@ from LilyAiMain.MainService.Interaction.Polls.polls import PollManager
 from LilyAiMain.MainService.Interaction.Workflows.chat_workflow import ChatWorkflow
 from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_model_scan_job
 from LilyAiMain.MainService.Interaction.Workflows.scheduler import Scheduler
+from LilyAiMain.MainService.Interaction.Workflows.umamoe_job import make_umamoe_job
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
 from LilyAiTool.service import ToolContextData, ToolService, ToolSpec
@@ -53,6 +56,8 @@ class App:
     scanner: ModelScanner
     scheduler: Scheduler
     notifier_box: NotifierBox
+    umamoe: UmamoeClient | None
+    umamoe_store: UmamoeStore | None
     started_at: float
 
     async def aclose(self) -> None:
@@ -87,6 +92,33 @@ def _web_tools(web: WebService) -> list[ToolSpec]:
             "Fetch and read the text of a specific web page URL.",
             {"type": "object", "properties": {"url": {"type": "string"}}, "required": ["url"]},
             read_webpage, category="web", timeout=30,
+        ),
+    ]
+
+
+def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> list[ToolSpec]:
+    async def check_umamoe(ctx: ToolContextData, args: dict) -> str:
+        circle_id = args.get("circle_id")
+        ids = (circle_id,) if circle_id else default_circle_ids
+        if not ids:
+            return "No uma.moe circle configured. Set UMAMOE_CIRCLE_IDS or pass a circle_id."
+        lines = []
+        for cid in ids:
+            data = await client.get_circle(circle_id=cid)
+            c = data.get("circle") or {}
+            lines.append(
+                f"{c.get('name', cid)}: rank {c.get('monthly_rank', '?')}, "
+                f"{c.get('monthly_point', '?')} pts, {c.get('member_count', '?')} members"
+            )
+        return "\n".join(lines)
+
+    return [
+        ToolSpec(
+            "check_umamoe",
+            "Check current uma.moe circle standing (rank, points, member count) for the tracked club(s), "
+            "or a specific circle_id if given.",
+            {"type": "object", "properties": {"circle_id": {"type": "integer"}}, "required": []},
+            check_umamoe, category="umamoe", timeout=15,
         ),
     ]
 
@@ -132,6 +164,14 @@ def build_app(
     for spec in _web_tools(web):
         tools.register(spec)
 
+    umamoe = UmamoeClient(settings.umamoe_api_key) if settings.umamoe_api_key else None
+    umamoe_store = UmamoeStore(db) if umamoe else None
+    if umamoe:
+        for spec in _umamoe_tools(umamoe, settings.umamoe_circle_ids):
+            tools.register(spec)
+    else:
+        log.info("UMAMOE_API_KEY not set: uma.moe circle tracking (Leaderboard, check_umamoe) is disabled")
+
     chat = ChatWorkflow(settings, provider, memory, rag, tools, ContextBuilder(settings.token_budget), learning)
     replies, bus = ReplyLog(), EventBus()
     forms, polls = FormManager(), PollManager()
@@ -152,8 +192,16 @@ def build_app(
         # first run waits out whatever is left of the interval since the last scan (min 60s after start)
         scheduler.every("model-scan", interval, make_model_scan_job(scanner, bus),
                         initial_delay_s=max(60.0, scanner.seconds_until_due(interval)))
+    if umamoe and settings.umamoe_circle_ids:
+        umamoe_interval = max(1.0, settings.umamoe_poll_interval_hours) * 3600
+        scheduler.every("umamoe-poll", umamoe_interval,
+                        make_umamoe_job(umamoe, umamoe_store, notifier_box, settings.umamoe_circle_ids,
+                                        settings.umamoe_notify_user_id, bus),
+                        initial_delay_s=60.0)
+    elif umamoe:
+        log.info("UMAMOE_CIRCLE_IDS not set: check_umamoe works on demand but background polling is off")
     return App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
         FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,
-        notifier_box, time.time(),
+        notifier_box, umamoe, umamoe_store, time.time(),
     )
