@@ -15,19 +15,22 @@ listed gap gets resolved.
 | **LilyAiTool** | ✅ Audited | 6 submodules, all wired: `Executor` runs `Validator.validate_args()` then the handler, catching timeout/`ToolError`/any crash. Added `remind_me` actuator (`NotifierBox` + Discord `send_dm`) - first real action, not just read/reply. |
 | **LilyAiWeb** | ✅ Audited | 5 submodules, all wired via `service.py`'s search -> process -> extract pipeline. `Cache/TTLCache` confirmed genuinely used. `Sources.is_safe_url` checked twice in the extractor (pre-fetch and post-redirect) - real SSRF guard. Added `/api/web/search` + Settings web card. |
 | **LilyAiCore** (Infrastructure) | ✅ Audited | 8 submodules. `Database`, `Discord` helpers/notifier, `Search`, `Config`, `Constants`, `Exceptions` (all 7 error classes used), `Helpers` (all 4 text functions used, `tokenize` shared by Rag + Memory), `Logging`, `Providers` (Groq/offline) all confirmed wired. **One orphan found**: `ExternalServices/Webhooks/webhook.py` (`post_webhook` - ops-alert webhook) has zero callers anywhere and isn't wired into `settings.py` (no `WEBHOOK_URL` var). Decision: leave it alone for now, not removed, not wired up. |
-| **LilyAiMain** (Entry) | ✅ Audited + fixed | `Api`, `Discord` (`Client`/`Router`/`Middleware`/`Session`/`Events`), `Interaction` (`Feedback`/`Forms`/`Menus`/`Onboarding`/`Polls`/`Workflows`) - all confirmed wired via `Router`, the central dispatcher. No orphans. Found and fixed the same unbounded-growth shape three times: `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` - all now capped with LRU/FIFO eviction (`SessionManager` specifically never evicts a *currently-held* lock, avoiding a real correctness bug). |
+| **LilyAiMain** (Entry) | ✅ Audited + fixed | `Api`, `Discord` (`Client`/`Router`/`Middleware`/`Session`/`Events`), `Interaction` (`Feedback`/`Forms`/`Menus`/`Onboarding`/`Polls`/`Workflows`) - all confirmed wired via `Router`, the central dispatcher. No orphans. Found and fixed the same unbounded-growth shape three times: `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` - all now capped with LRU/FIFO eviction (`SessionManager` specifically never evicts a *currently-held* lock, avoiding a real correctness bug). Also fixed a process-isolation bug: `run()`'s `asyncio.wait(FIRST_COMPLETED)` tore down the whole app (API included) on any Discord connect failure - Discord's `client.start()` now runs via `run_forever()`, which retries with backoff instead of raising. |
 | **LilyAiFrontend** | ✅ Audited | Every `Shared/` file (9 components, `app.js`, `api.js`, `routes.js`, `theme.js`, `icons.js`, `ui.js`), every CSS file `index.html` references, and every page (`Home`, `Chat`, `Dashboard` + 4 cards, `Settings` + 4 cards, `Admin/Relay`, `Admin/DMSimulator`) confirmed wired via `routes.js`, the frontend's own "facade". No orphans. `Relay`'s polling loop correctly returns a cleanup function (`clearTimeout`) so it stops on navigation - no leak on route change. |
 
 ## All layers audited - remaining items are small and known
 
-1. **`retriever.py` docstring** - still says "over user facts **and knowledge notes**", a stale reference
-   to the retired `KnowledgeMemory`. One-line fix, no behavior change, still needs a go-ahead.
+1. ~~**`retriever.py` docstring**~~ - fixed. `LilyAiMemory/Retrieval/retriever.py`'s docstring no longer
+   references the retired `KnowledgeMemory`; now correctly says it ranks over user facts only.
 2. **Fold `LilyAiCore`/`LilyAiMain`/`LilyAiFrontend` findings into `overview.md`** - it currently only
    reflects the 6 intelligence-domain findings from the first docs pass.
-3. **`GROQ_API_KEY` / `DISCORD_TOKEN`** still not set on the live Render service - highest real-world
-   impact of anything on this list. Everything audited across all 9 layers runs against `OfflineProvider`
-   with Discord disconnected until these are set.
-4. **`remind_me` persistence** - reminders are in-memory only, lost on restart/redeploy.
+3. ~~**`GROQ_API_KEY` / `DISCORD_TOKEN`**~~ - both now set on the live Render service. Groq provider
+   confirmed ready with 6 API key(s); Discord connects (subject to Cloudflare rate-limit blocks - see
+   the `run_forever()` backoff fix under LilyAiMain above).
+4. ~~**`remind_me` persistence**~~ - fixed. New `ReminderStore` (SQLite, same pattern as `LearningStore`)
+   persists each reminder on creation; `NotifierBox.resume_pending()` replays anything still outstanding
+   once the real Discord client is wired in on startup, firing overdue ones immediately instead of
+   dropping them.
 5. **`ExternalServices/Webhooks`** - orphan, intentionally left alone per your call.
 
 ## Docs alignment pass - partial (6 intelligence domains only)
