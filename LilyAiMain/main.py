@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from LilyAiCore.Config.settings import load_settings  # noqa: E402
+from LilyAiCore.ExternalServices.Webhooks.webhook import post_webhook  # noqa: E402
 from LilyAiCore.Logging.logger import get_logger, setup_logging  # noqa: E402
 from LilyAiMain.MainService.bootstrap import build_app  # noqa: E402
 
@@ -56,6 +57,8 @@ async def run() -> None:
         for t in done:
             if t.exception():
                 log.error("%s stopped: %r", t.get_name(), t.exception())
+                if settings.webhook_url:
+                    await post_webhook(settings.webhook_url, f"🚨 LilyAi `{t.get_name()}` task stopped: {t.exception()!r}")
     finally:
         if server:
             server.should_exit = True
