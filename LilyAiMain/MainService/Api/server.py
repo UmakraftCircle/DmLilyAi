@@ -19,17 +19,30 @@ LOOPBACK = {"127.0.0.1", "::1", "localhost", "testclient"}
 
 
 def _member_gains(daily_fans: list[int] | None) -> tuple[int, int, int]:
-    """(current_fans, daily_gain, monthly_gain) from uma.moe's chronological daily-fan list.
+    """(current_fans, daily_gain, monthly_gain) from uma.moe's daily-fan array.
 
-    daily_gain is the change since the previous day; monthly_gain is the change since the
-    first entry in the list (uma.moe returns the current month-to-date series).
+    get_circle() accepts month/year, which means uma.moe hands back one full calendar
+    month's worth of daily snapshots (day 1 .. last day of month) rather than "up to
+    today" - days later in the month that haven't happened yet come back as 0 padding.
+    So "today" is the LAST NON-ZERO entry, not simply the last slot in the array; blindly
+    using daily[-1] picks up an unfilled future day (0) and produces a wildly negative
+    monthly_gain (0 - day-1's real total).
     """
     daily = daily_fans or []
     if not daily:
         return 0, 0, 0
-    current = daily[-1]
-    daily_gain = daily[-1] - daily[-2] if len(daily) >= 2 else 0
-    monthly_gain = daily[-1] - daily[0]
+    latest_idx = 0
+    for i, v in enumerate(daily):
+        if v:
+            latest_idx = i
+    current = daily[latest_idx]
+    prev_idx = None
+    for i in range(latest_idx - 1, -1, -1):
+        if daily[i]:
+            prev_idx = i
+            break
+    daily_gain = current - daily[prev_idx] if prev_idx is not None else 0
+    monthly_gain = current - daily[0]
     return current, daily_gain, monthly_gain
 
 
