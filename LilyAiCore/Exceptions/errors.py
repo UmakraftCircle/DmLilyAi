@@ -26,3 +26,7 @@ class ToolValidationError(ToolError):
 
 class WebError(LilyAiError):
     pass
+
+
+class UmamoeError(LilyAiError):
+    pass
