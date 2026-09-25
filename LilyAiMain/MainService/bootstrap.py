@@ -139,7 +139,9 @@ def build_app(
         memory, chat, replies, bus, SessionManager(), RateLimiter(), AccessControl(settings.allowed_user_ids),
         forms, polls, OnboardingFlow(memory, forms, polls),
     )
-    scheduler = Scheduler()
+    if not settings.webhook_url:
+        log.info("WEBHOOK_URL not set: ops alerts (task crashes, job failures) are logged only")
+    scheduler = Scheduler(settings.webhook_url)
     if settings.model_scan_enabled and not isinstance(provider, OfflineProvider):
         if settings.model_scan_interval_s is not None:
             # Explicit seconds override (e.g. MODEL_SCAN_INTERVAL_SECONDS=600). 60s floor guards
