@@ -40,8 +40,12 @@ async def run() -> None:
             app.notifier_box.resume_pending()  # replay any reminders left over from before a restart/redeploy
             # run_forever() retries with backoff on connect failures (e.g. Cloudflare
             # rate-limit blocks) instead of raising, so a Discord outage can't take
-            # the API server down with it via the FIRST_COMPLETED wait below.
-            tasks["discord"] = asyncio.create_task(client.run_forever(settings.discord_token), name="discord")
+            # the API server down with it via the FIRST_COMPLETED wait below. The backoff
+            # itself is persisted via app.discord_reconnect, so a redeploy landing mid-cooldown
+            # resumes waiting instead of resetting to the floor and re-triggering the block.
+            tasks["discord"] = asyncio.create_task(
+                client.run_forever(settings.discord_token, app.discord_reconnect), name="discord"
+            )
         else:
             log.warning("DISCORD_TOKEN is not set: Discord is disabled (API and DM Simulator still work)")
 
