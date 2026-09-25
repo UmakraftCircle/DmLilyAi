@@ -15,6 +15,16 @@ services:
         generateValue: true     # the password you type into Settings on the site
       - key: LILYAI_DATA_DIR
         value: /app/data
+      # uma.moe (Umamusume circle/fan tracking) - powers /api/leaderboard, check_umamoe,
+      # and the background umamoe-poll job. See LilyAiCore/ExternalServices/Umamoe/.
+      - key: UMAMOE_API_KEY
+        sync: false            # from https://uma.moe - leaderboard/check_umamoe are disabled without it
+      - key: UMAMOE_CIRCLE_IDS
+        sync: false            # comma-separated circle ids to track (e.g. 12345,67890)
+      - key: UMAMOE_NOTIFY_USER_ID
+        sync: false            # Discord user id to DM on rank/points/fan changes; empty = log only
+      - key: UMAMOE_POLL_INTERVAL_HOURS
+        value: "6"
     # The free plan has an ephemeral filesystem: memory and the RAG index reset on each deploy/restart.
     # For persistence, use a paid plan and uncomment:
     # disk:
