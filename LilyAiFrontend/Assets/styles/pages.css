@@ -54,7 +54,9 @@ ul.plain { margin: 0; padding-left: 18px; }
 
 /* ---- leaderboard ---- */
 /* .page.fill (above) already pins the page to the viewport height with no page-level scroll;
-   .lb-body only scrolls internally as a fallback if a very tall roster ever overflows it. */
+   .lb-body only scrolls internally, vertically, as the tab/pager panel changes. Every element
+   in .lb-card below is allowed to shrink and wrap rather than push the card wider than its
+   column, so the page never needs to scroll sideways on a phone. */
 .lb-body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
 .lb-tabs { row-gap: 8px; }
 .lb-panel { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
@@ -64,3 +66,30 @@ ul.plain { margin: 0; padding-left: 18px; }
 .gain.pos { color: var(--ok); }
 .gain.neg { color: var(--warn); }
 .gain.zero { color: var(--text-mute); font-weight: 400; }
+
+/* Trainer entry cards - one per member, five to a page. Sized (not scrolled) to fit: on a
+   typical phone viewport five of these plus the tabs/stats above comfortably fit the height
+   .lb-body allots, with .lb-body's vertical scroll as the only fallback for very short screens. */
+.lb-cards { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.lb-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 14px; min-width: 0; display: flex; flex-direction: column; gap: 8px;
+}
+.lb-card-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.lb-rank { flex: none; font-weight: 800; font-size: 13px; color: var(--text-mute); width: 28px; }
+.lb-rank.gold { color: #ffcb47; }
+.lb-rank.silver { color: #cbd3e8; }
+.lb-rank.bronze { color: #d98a53; }
+.lb-who { flex: 1; min-width: 0; }
+.lb-name { font-weight: 700; font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lb-id { font-size: 11.5px; color: var(--text-mute); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lb-card .pill { flex: none; }
+.lb-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.lb-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; padding-top: 4px; border-top: 1px dashed var(--border); }
+.lb-cell { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.lb-label { font-size: 11.5px; color: var(--text-mute); font-weight: 650; text-transform: uppercase; letter-spacing: .04em; }
+.lb-label small { text-transform: none; letter-spacing: 0; font-weight: 500; }
+.lb-label.accent { color: var(--ring); }
+.lb-value { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 15px; overflow-wrap: anywhere; }
+.lb-value.muted { font-weight: 600; color: var(--text-dim); font-size: 13px; }
+.lb-split .lb-value { font-size: 14px; }

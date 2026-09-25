@@ -1,6 +1,7 @@
 """HTTP API for the web frontend (Chat, Dashboard, Settings, Relay, DM Simulator, Leaderboard)."""
 import hmac
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
@@ -8,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 
+from LilyAiCore.Helpers.clock import now_ts
 from LilyAiLearning.Evaluation.evaluator import DEFAULT_CASES, Evaluator
 from LilyAiMain.MainService.Api.static import default_frontend_dir, resolve_static
 from LilyAiMain.MainService.bootstrap import App
@@ -18,32 +20,65 @@ from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_mod
 LOOPBACK = {"127.0.0.1", "::1", "localhost", "testclient"}
 
 
-def _member_gains(daily_fans: list[int] | None) -> tuple[int, int, int]:
-    """(current_fans, daily_gain, monthly_gain) from uma.moe's daily-fan array.
+def _member_gains(daily_fans: list[int] | None) -> dict:
+    """Fan-gain breakdown from uma.moe's daily-fan array (one cumulative-total entry per
+    day of the currently-tracked month; days that haven't happened yet come back as 0
+    padding, since get_circle() hands back a full calendar month of snapshots rather than
+    "up to today").
 
-    get_circle() accepts month/year, which means uma.moe hands back one full calendar
-    month's worth of daily snapshots (day 1 .. last day of month) rather than "up to
-    today" - days later in the month that haven't happened yet come back as 0 padding.
-    So "today" is the LAST NON-ZERO entry, not simply the last slot in the array; blindly
-    using daily[-1] picks up an unfilled future day (0) and produces a wildly negative
-    monthly_gain (0 - day-1's real total).
+    Returns:
+      total_fans   - current cumulative fan count (last day with real data)
+      today_gain   - fans gained so far on the current (possibly still in-progress) day
+      daily_gain   - fans gained on the last FULL completed day (i.e. "yesterday")
+      monthly_gain - fans gained since day 1 of the tracked month
+      week_avg     - average daily gain since this week's Monday, resetting every Monday;
+                     None when Monday falls before day 1 of the fetched month (edge of month)
+
+    "Today" is the LAST NON-ZERO entry, not simply the last slot in the array - blindly
+    using daily[-1] would pick up an unfilled future day (0) and produce a wildly negative
+    gain. Same logic walks backward again to find the last full day, and again for Monday.
     """
     daily = daily_fans or []
+    empty = {"total_fans": 0, "today_gain": 0, "daily_gain": 0, "monthly_gain": 0, "week_avg": None}
     if not daily:
-        return 0, 0, 0
-    latest_idx = 0
-    for i, v in enumerate(daily):
-        if v:
-            latest_idx = i
+        return empty
+
+    def last_nonzero(upto: int) -> int | None:
+        for i in range(upto, -1, -1):
+            if daily[i]:
+                return i
+        return None
+
+    latest_idx = last_nonzero(len(daily) - 1)
+    if latest_idx is None:
+        return empty
     current = daily[latest_idx]
-    prev_idx = None
-    for i in range(latest_idx - 1, -1, -1):
-        if daily[i]:
-            prev_idx = i
-            break
-    daily_gain = current - daily[prev_idx] if prev_idx is not None else 0
+
+    prev_idx = last_nonzero(latest_idx - 1)
+    today_gain = current - daily[prev_idx] if prev_idx is not None else 0
+
+    day_before_idx = last_nonzero(prev_idx - 1) if prev_idx is not None else None
+    daily_gain = (daily[prev_idx] - daily[day_before_idx]
+                  if prev_idx is not None and day_before_idx is not None else 0)
+
     monthly_gain = current - daily[0]
-    return current, daily_gain, monthly_gain
+
+    # Resolve "this Monday" as a day-of-month against the same array. Assumes the array's
+    # month matches the server's current UTC month (true unless this poll happens right at
+    # a month boundary); a Monday that falls in the previous month reports week_avg=None.
+    today = datetime.now(timezone.utc)
+    monday_day = today.day - today.weekday()  # Monday == 0
+    week_avg = None
+    if monday_day >= 1:
+        monday_idx = monday_day - 1
+        if monday_idx <= latest_idx and daily[monday_idx]:
+            elapsed = max(1, latest_idx - monday_idx + 1)
+            week_avg = round((current - daily[monday_idx]) / elapsed)
+
+    return {
+        "total_fans": current, "today_gain": today_gain, "daily_gain": daily_gain,
+        "monthly_gain": monthly_gain, "week_avg": week_avg,
+    }
 
 
 class ChatBody(BaseModel):
@@ -183,6 +218,7 @@ def create_api(app: App) -> FastAPI:
             raise HTTPException(400, "uma.moe is not configured (set UMAMOE_API_KEY)")
         if not s.umamoe_circle_ids:
             raise HTTPException(400, "No circles tracked (set UMAMOE_CIRCLE_IDS)")
+        fetched_at = now_ts()
         circles = []
         former_members = []
         for circle_id in s.umamoe_circle_ids:
@@ -194,13 +230,14 @@ def create_api(app: App) -> FastAPI:
             for m in data.get("members", []):
                 viewer_id = m.get("viewer_id")
                 seen_ids.add(viewer_id)
-                total_fans, daily_gain, monthly_gain = _member_gains(m.get("daily_fans"))
+                gains = _member_gains(m.get("daily_fans"))
                 members.append({
                     "viewer_id": viewer_id,
                     "trainer_name": m.get("trainer_name") or str(viewer_id),
-                    "total_fans": total_fans,
-                    "daily_gain": daily_gain,
-                    "monthly_gain": monthly_gain,
+                    # uma.moe's own per-record refresh time when it provides one (field name
+                    # unconfirmed - passed through defensively); otherwise this poll's time.
+                    "last_updated": m.get("updated_at") or m.get("last_updated") or fetched_at,
+                    **gains,
                 })
             members.sort(key=lambda m: m["total_fans"], reverse=True)
             circles.append({
@@ -220,7 +257,7 @@ def create_api(app: App) -> FastAPI:
                             "total_fans": row["total_fans"], "last_seen": row["updated_at"],
                         })
         former_members.sort(key=lambda m: m["last_seen"] or 0, reverse=True)
-        return {"circles": circles, "former_members": former_members}
+        return {"circles": circles, "former_members": former_members, "fetched_at": fetched_at}
 
     @api.post("/api/eval/run", dependencies=guard)
     async def run_eval():

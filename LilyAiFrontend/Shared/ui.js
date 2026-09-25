@@ -37,6 +37,19 @@ export function fmtCompact(n) {
 /** Signed + abbreviated, for gain/loss columns that need to stay narrow, e.g. "+11m" / "-8.9m". */
 export const fmtDeltaCompact = (n) => `${(n ?? 0) > 0 ? "+" : ""}${fmtCompact(n)}`;
 
+/** Relative "time ago" for freshness stamps, e.g. "just now" / "3m ago" / "2h ago" / "5d ago". */
+export function fmtAgo(ts) {
+  if (!ts) return "\u2014";
+  const diffS = Math.max(0, Date.now() / 1000 - ts);
+  if (diffS < 60) return "just now";
+  const m = Math.floor(diffS / 60);
+  if (m < 60) return `${m}m ago`;
+  const hr = Math.floor(m / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const d = Math.floor(hr / 24);
+  return `${d}d ago`;
+}
+
 export function page(title, lede, ...body) {
   return [h("header", { class: "page-head" }, h("h1", {}, title), lede ? h("p", {}, lede) : null), ...body];
 }
