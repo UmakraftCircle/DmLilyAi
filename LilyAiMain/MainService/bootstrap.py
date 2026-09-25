@@ -196,11 +196,16 @@ def build_app(
         scheduler.every("model-scan", interval, make_model_scan_job(scanner, bus),
                         initial_delay_s=max(60.0, scanner.seconds_until_due(interval)))
     if umamoe and settings.umamoe_circle_ids:
-        umamoe_interval = max(1.0, settings.umamoe_poll_interval_hours) * 3600
+        if settings.umamoe_poll_interval_s is not None:
+            # Explicit seconds override (e.g. UMAMOE_POLL_INTERVAL_SECONDS=300 = every 5 minutes).
+            # 60s floor guards against a mistyped tiny value hammering the uma.moe API.
+            umamoe_interval = max(60.0, settings.umamoe_poll_interval_s)
+        else:
+            umamoe_interval = max(1.0, settings.umamoe_poll_interval_hours) * 3600
         scheduler.every("umamoe-poll", umamoe_interval,
                         make_umamoe_job(umamoe, umamoe_store, notifier_box, settings.umamoe_circle_ids,
                                         settings.umamoe_notify_user_id, bus),
-                        initial_delay_s=60.0)
+                        initial_delay_s=10.0)
     elif umamoe:
         log.info("UMAMOE_CIRCLE_IDS not set: check_umamoe works on demand but background polling is off")
     return App(
