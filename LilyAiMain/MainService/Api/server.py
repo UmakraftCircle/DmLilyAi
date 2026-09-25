@@ -18,6 +18,21 @@ from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_mod
 LOOPBACK = {"127.0.0.1", "::1", "localhost", "testclient"}
 
 
+def _member_gains(daily_fans: list[int] | None) -> tuple[int, int, int]:
+    """(current_fans, daily_gain, monthly_gain) from uma.moe's chronological daily-fan list.
+
+    daily_gain is the change since the previous day; monthly_gain is the change since the
+    first entry in the list (uma.moe returns the current month-to-date series).
+    """
+    daily = daily_fans or []
+    if not daily:
+        return 0, 0, 0
+    current = daily[-1]
+    daily_gain = daily[-1] - daily[-2] if len(daily) >= 2 else 0
+    monthly_gain = daily[-1] - daily[0]
+    return current, daily_gain, monthly_gain
+
+
 class ChatBody(BaseModel):
     text: str = Field(min_length=1, max_length=4000)
     user_id: str = Field(default="web:admin", max_length=64)
@@ -156,26 +171,43 @@ def create_api(app: App) -> FastAPI:
         if not s.umamoe_circle_ids:
             raise HTTPException(400, "No circles tracked (set UMAMOE_CIRCLE_IDS)")
         circles = []
+        former_members = []
         for circle_id in s.umamoe_circle_ids:
             data = await app.umamoe.get_circle(circle_id=circle_id)
             c = data.get("circle") or {}
-            members = sorted(
-                (
-                    {
-                        "viewer_id": m.get("viewer_id"),
-                        "trainer_name": m.get("trainer_name"),
-                        "total_fans": max(m.get("daily_fans") or [0], default=0),
-                    }
-                    for m in data.get("members", [])
-                ),
-                key=lambda m: m["total_fans"], reverse=True,
-            )
+            name = c.get("name", str(circle_id))
+            seen_ids: set = set()
+            members = []
+            for m in data.get("members", []):
+                viewer_id = m.get("viewer_id")
+                seen_ids.add(viewer_id)
+                total_fans, daily_gain, monthly_gain = _member_gains(m.get("daily_fans"))
+                members.append({
+                    "viewer_id": viewer_id,
+                    "trainer_name": m.get("trainer_name") or str(viewer_id),
+                    "total_fans": total_fans,
+                    "daily_gain": daily_gain,
+                    "monthly_gain": monthly_gain,
+                })
+            members.sort(key=lambda m: m["total_fans"], reverse=True)
             circles.append({
-                "circle_id": circle_id, "name": c.get("name", str(circle_id)),
+                "circle_id": circle_id, "name": name,
                 "monthly_rank": c.get("monthly_rank"), "monthly_point": c.get("monthly_point"),
                 "member_count": c.get("member_count"), "members": members,
             })
-        return {"circles": circles}
+            # Anyone we've ever recorded for this circle (via the background poll job) who is
+            # missing from the live roster has left — their store row keeps their last-known
+            # fan total and the poll timestamp they were last seen at.
+            if app.umamoe_store:
+                for row in app.umamoe_store.members_for_circle(circle_id):
+                    if row["viewer_id"] not in seen_ids:
+                        former_members.append({
+                            "circle_id": circle_id, "circle_name": name,
+                            "viewer_id": row["viewer_id"], "trainer_name": row["trainer_name"],
+                            "total_fans": row["total_fans"], "last_seen": row["updated_at"],
+                        })
+        former_members.sort(key=lambda m: m["last_seen"] or 0, reverse=True)
+        return {"circles": circles, "former_members": former_members}
 
     @api.post("/api/eval/run", dependencies=guard)
     async def run_eval():
