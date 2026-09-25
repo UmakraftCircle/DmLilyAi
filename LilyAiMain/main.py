@@ -36,6 +36,7 @@ async def run() -> None:
 
             client = LilyDiscordClient(app)
             app.notifier_box.notifier = client  # actuator online: tools registered earlier (e.g. remind_me) can now reach Discord
+            app.notifier_box.resume_pending()  # replay any reminders left over from before a restart/redeploy
             # run_forever() retries with backoff on connect failures (e.g. Cloudflare
             # rate-limit blocks) instead of raising, so a Discord outage can't take
             # the API server down with it via the FIRST_COMPLETED wait below.

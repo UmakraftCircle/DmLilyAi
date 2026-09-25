@@ -7,6 +7,7 @@ from LilyAiCore.Config.models import ModelPool
 from LilyAiCore.Config.settings import Settings
 from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
+from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider
@@ -126,7 +127,7 @@ def build_app(
     learning = LearningService(db)
     rag = RagService(settings.rag_path)
     web = WebService(search_provider, learning.web.preferred_domains())
-    notifier_box = NotifierBox()
+    notifier_box = NotifierBox(ReminderStore(db))
     tools = ToolService(notifier_box)
     for spec in _web_tools(web):
         tools.register(spec)
