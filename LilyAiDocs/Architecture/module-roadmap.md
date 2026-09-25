@@ -14,8 +14,8 @@ listed gap gets resolved.
 | **LilyAiLearning** | ✅ Audited + fixed | 7 submodules, all real and wired. `LearningStore`'s `learning_events` table now has a per-kind trim (2000 rows/kind) - it was unbounded despite being written on every chat message and every tool call. |
 | **LilyAiTool** | ✅ Audited | 6 submodules, all wired: `Executor` runs `Validator.validate_args()` then the handler, catching timeout/`ToolError`/any crash. Added `remind_me` actuator (`NotifierBox` + Discord `send_dm`) - first real action, not just read/reply. `check_umamoe` added since (see Umamoe section below). |
 | **LilyAiWeb** | ✅ Audited | 5 submodules, all wired via `service.py`'s search -> process -> extract pipeline. `Cache/TTLCache` confirmed genuinely used. `Sources.is_safe_url` checked twice in the extractor (pre-fetch and post-redirect) - real SSRF guard. Added `/api/web/search` + Settings web card. |
-| **LilyAiCore** (Infrastructure) | ✅ Audited + fixed | 8 submodules. `Database`, `Discord` helpers/notifier, `Search`, `Config`, `Constants`, `Exceptions` (all 7 error classes used, plus `UmamoeError` added since), `Helpers` (all 4 text functions used, `tokenize` shared by Rag + Memory), `Logging`, `Providers` (Groq/offline) all confirmed wired. `ExternalServices/Webhooks/webhook.py` (`post_webhook`) is no longer an orphan - see item 5 below. `ExternalServices/Umamoe/` (client + store) added since - see Umamoe section below. |
-| **LilyAiMain** (Entry) | ✅ Audited + fixed | `Api`, `Discord` (`Client`/`Router`/`Middleware`/`Session`/`Events`), `Interaction` (`Feedback`/`Forms`/`Menus`/`Onboarding`/`Polls`/`Workflows`) - all confirmed wired via `Router`, the central dispatcher. No orphans. Found and fixed the same unbounded-growth shape three times: `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` - all now capped with LRU/FIFO eviction (`SessionManager` specifically never evicts a *currently-held* lock, avoiding a real correctness bug). Also fixed a process-isolation bug: `run()`'s `asyncio.wait(FIRST_COMPLETED)` tore down the whole app (API included) on any Discord connect failure - Discord's `client.start()` now runs via `run_forever()`, which retries with backoff instead of raising. `Interaction/Workflows/umamoe_job.py` + `/api/leaderboard` added since - see Umamoe section below. |
+| **LilyAiCore** (Infrastructure) | ✅ Audited + fixed | 8 submodules. `Database`, `Discord` helpers/notifier, `Search`, `Config`, `Constants`, `Exceptions` (all 7 error classes used, plus `UmamoeError` added since), `Helpers` (all 4 text functions used, `tokenize` shared by Rag + Memory), `Logging`, `Providers` (Groq/offline) all confirmed wired. `ExternalServices/Webhooks/webhook.py` (`post_webhook`) is no longer an orphan - see item 5 below. `ExternalServices/Umamoe/` (client + store) and `ExternalServices/Discord/reconnect_state.py` added since - see Umamoe section and item 7 below. |
+| **LilyAiMain** (Entry) | ✅ Audited + fixed | `Api`, `Discord` (`Client`/`Router`/`Middleware`/`Session`/`Events`), `Interaction` (`Feedback`/`Forms`/`Menus`/`Onboarding`/`Polls`/`Workflows`) - all confirmed wired via `Router`, the central dispatcher. No orphans. Found and fixed the same unbounded-growth shape three times: `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` - all now capped with LRU/FIFO eviction (`SessionManager` specifically never evicts a *currently-held* lock, avoiding a real correctness bug). Also fixed a process-isolation bug: `run()`'s `asyncio.wait(FIRST_COMPLETED)` tore down the whole app (API included) on any Discord connect failure - Discord's `client.start()` now runs via `run_forever()`, which retries with backoff instead of raising. That backoff is now persisted across restarts too (item 7 below). `Interaction/Workflows/umamoe_job.py` + `/api/leaderboard` added since - see Umamoe section below. |
 | **LilyAiFrontend** | ✅ Audited | Every `Shared/` file (9 components, `app.js`, `api.js`, `routes.js`, `theme.js`, `icons.js`, `ui.js`), every CSS file `index.html` references, and every page (`Home`, `Chat`, `Dashboard` + 4 cards, `Settings` + 4 cards, `Admin/Relay`, `Admin/DMSimulator`) confirmed wired via `routes.js`, the frontend's own "facade". No orphans. `Relay`'s polling loop correctly returns a cleanup function (`clearTimeout`) so it stops on navigation - no leak on route change. `Leaderboard` page added since - see Umamoe section below. |
 
 ## In progress: Umamoe fan tracking (uma.moe)
@@ -50,8 +50,8 @@ patterns, not yet re-checked against a live API response shape.
    unbounded-growth guards, the `LilyAiCore` Webhooks orphan, updated the reminder-persistence note under
    "Actions, not just replies", and expanded the Frontend section with its audit confirmation.
 3. ~~**`GROQ_API_KEY` / `DISCORD_TOKEN`**~~ - both now set on the live Render service. Groq provider
-   confirmed ready with 6 API key(s); Discord connects (subject to Cloudflare rate-limit blocks - see
-   the `run_forever()` backoff fix under LilyAiMain above).
+   confirmed ready with 6 API key(s); Discord connects, subject to Cloudflare error-1015 IP rate-limit
+   blocks from Discord's own CDN - see item 7 below for the persisted-backoff fix for that.
 4. ~~**`remind_me` persistence**~~ - fixed. New `ReminderStore` (SQLite, same pattern as `LearningStore`)
    persists each reminder on creation; `NotifierBox.resume_pending()` replays anything still outstanding
    once the real Discord client is wired in on startup, firing overdue ones immediately instead of
@@ -63,6 +63,15 @@ patterns, not yet re-checked against a live API response shape.
    startup log line says so once, at boot.
 6. **Umamoe fan tracking** - see the "In progress" section above. Needs `UMAMOE_API_KEY` +
    `UMAMOE_CIRCLE_IDS` set on Render, then a real-response audit pass before it's marked done here.
+7. ~~**Cloudflare error 1015 on Discord reconnect**~~ - fixed. `run_forever()`'s exponential backoff (30s
+   -> 900s) was in-memory only, so a Render redeploy landing mid-cooldown reset it straight back to the
+   30s floor and immediately retried into the same IP-level Cloudflare ban, instead of waiting it out.
+   New `ExternalServices/Discord/reconnect_state.py` (`ReconnectState`, SQLite) persists `next_attempt_at`
+   + the current `backoff_s` across restarts - `run_forever()` now resumes any pending cooldown before
+   trying to connect at all. Also: a response containing "cloudflare" or "error code: 1015" is now
+   recognized as an IP-level ban specifically (not just a generic gateway 429) and gets a much higher
+   floor/ceiling (5min-1hr) than an ordinary connect failure (30s-15min), since short retries just
+   re-trigger/extend that kind of ban rather than riding it out.
 
 ## Docs alignment pass - now covers all 9 layers
 
@@ -94,3 +103,7 @@ remove from the live docs. `overview.md` now reflects all 9 layers' findings (it
 7. Not every gap needs code built to close it - some are better resolved by fixing the doc's claim instead
    of building unrequested scope, and some orphans are fine to just leave alone if that's the call made.
 8. Report findings, get a decision, then act - never restructure a layer without that go-ahead.
+9. In-memory state that's meant to survive a failure (a backoff timer, a cooldown, anything computed from
+   "time since the last attempt") needs to be persisted if the process can restart independently of the
+   thing it's tracking - a Render redeploy doesn't care that Discord is still mid-ban. Item 7 above is the
+   concrete case: check for this pattern in any other retry/backoff loop the codebase grows.
