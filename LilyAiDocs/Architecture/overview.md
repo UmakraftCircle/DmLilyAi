@@ -13,7 +13,8 @@ Dependencies point downward only. Intelligence domains depend on `LilyAiCore` ab
 (`LLMProvider`, `SearchProvider`, `Database`, `Embedder`), never on Groq, Discord or DuckDuckGo directly.
 
 For per-domain audit status (what's built, what's wired, what's still a doc-only gap), see
-`LilyAiDocs/Architecture/module-roadmap.md` - all 6 intelligence domains have been swept as of this writing.
+`LilyAiDocs/Architecture/module-roadmap.md` - all 9 layers (the 6 intelligence domains plus
+`LilyAiCore`, `LilyAiMain` and `LilyAiFrontend`) have been swept as of this writing.
 
 ## Ownership
 
@@ -52,7 +53,19 @@ of just sleeping it out.
 schedules a Discord DM to arrive later, unprompted. The plumbing behind it - `LilyAiCore/ExternalServices/Discord/notifier.py`
 (`NotifierBox`) - exists because the Discord client is only constructed after the rest of the app (tools included); the box is a
 mutable seam tools can hold at registration time, and `main.py` swaps in the real client once Discord connects. Until then (or if
-Discord is disabled), a `NullNotifier` no-ops safely. Reminders are in-memory only - lost on restart/redeploy, no persistence yet.
+Discord is disabled), a `NullNotifier` no-ops safely. Reminders are persisted via `ReminderStore` (SQLite,
+`LilyAiCore/ExternalServices/Discord/reminder_store.py`): each is written when scheduled and removed once the send is attempted, so
+a restart/redeploy in between no longer loses it. `NotifierBox.resume_pending()` replays anything still outstanding right after the
+real Discord client is wired in on startup - anything overdue fires immediately instead of being dropped.
+
+## Resilience
+
+Discord connect failures (including Cloudflare-level rate-limit blocks, not just Discord's own 429s) no longer take the whole
+process down. `main.py`'s `run()` waits on the API server and Discord tasks together via `asyncio.wait(FIRST_COMPLETED)`, and used
+to run the Discord client via a bare `client.start(token)` - so any connect exception was treated the same as the API server dying,
+tearing down both. The Discord task now runs via `LilyDiscordClient.run_forever()`, which retries with exponential backoff
+(30s, capped at 15min) on `HTTPException` and other connect failures instead of raising - a Discord outage can no longer take
+the API server down with it.
 
 ## Scheduled jobs
 
@@ -64,16 +77,26 @@ sub-hour intervals (60s floor) when faster detection of new Groq models is neede
 
 ## Unbounded-growth guards
 
-Every table that's written on a high-frequency path is capped, trimmed on insert:
+Every table or in-memory collection written on a high-frequency path is capped, trimmed or evicted on insert:
 - `ConversationMemory` - 500 turns/user (`LilyAiMemory/ConversationMemory/conversation_memory.py`)
 - `UserMemory` - 200 facts/user (pre-existing)
 - `LearningStore.learning_events` - 2000 rows/kind (`LilyAiLearning/store.py`) - this one matters most since
   `context_tokens` writes on every chat message and `tool` writes on every tool call.
+- `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` (`LilyAiMain`) - all in-memory per-user
+  dicts/sets, found unbounded during the Main audit, now capped with LRU/FIFO eviction. `SessionManager`
+  specifically never evicts a *currently-held* lock, avoiding a real correctness bug that a naive LRU cap would
+  have introduced.
 
 `LilyAiMemory/KnowledgeMemory` (shared, user-independent notes) has been removed: it was a dead write path -
 read every chat turn via `relevant_notes()`, but nothing ever called `.add()` - fully duplicated by
 `LilyAiLearning/RagLearning`'s `learned:qa` promotion into the Rag index, which is the real, working version
 of the same idea.
+
+## Known orphan
+
+`LilyAiCore/ExternalServices/Webhooks/webhook.py` (`post_webhook` - an ops-alert webhook) has zero callers anywhere
+and isn't wired into `settings.py` (no `WEBHOOK_URL` var). Found during the Core audit; left in place and
+intentionally not wired up.
 
 ## Frontend
 
@@ -82,10 +105,15 @@ See `LilyAiFrontend/README.md`: modular ES modules, one folder per page, shared 
 `Settings` now has a Web card (`Settings/cards/webCard.js`) showing `web_enabled` status plus a manual query
 tester against `/api/web/search` - giving `LilyAiWeb` the same frontend visibility as the other 5 domains.
 
+Every `Shared/` file, every CSS file `index.html` references, and every page (`Home`, `Chat`, `Dashboard` + 4
+cards, `Settings` + 4 cards, `Admin/Relay`, `Admin/DMSimulator`) were confirmed wired via `routes.js` during the
+Frontend audit - no orphans. `Relay`'s polling loop correctly returns a cleanup function (`clearTimeout`) so it
+stops on navigation, avoiding a leak on route change.
+
 ## Additions to the README scaffold
 
 - `LilyAiMain/MainService/Api/` - FastAPI server; also serves the web client (`static.py`) so one URL is the site
 - `LilyAiMain/MainService/bootstrap.py`, `Interaction/messages.py` - wiring and shared message types
 - `Interaction/Workflows/scheduler.py`, `model_scan_job.py` - scheduled model scan
 - `service.py` facade in each domain root; `tests/`; root `Dockerfile` and `render.yaml` (one service for bot, API and website)
-- `LilyAiCore/ExternalServices/Discord/notifier.py` - actuator seam for tools that need to reach Discord directly (see "Actions, not just replies" above)
+- `LilyAiCore/ExternalServices/Discord/notifier.py`, `reminder_store.py` - actuator seam for tools that need to reach Discord directly, and the persistence behind scheduled reminders (see "Actions, not just replies" above)
