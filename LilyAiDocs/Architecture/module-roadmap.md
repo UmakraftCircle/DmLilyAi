@@ -22,8 +22,10 @@ listed gap gets resolved.
 
 1. ~~**`retriever.py` docstring**~~ - fixed. `LilyAiMemory/Retrieval/retriever.py`'s docstring no longer
    references the retired `KnowledgeMemory`; now correctly says it ranks over user facts only.
-2. **Fold `LilyAiCore`/`LilyAiMain`/`LilyAiFrontend` findings into `overview.md`** - it currently only
-   reflects the 6 intelligence-domain findings from the first docs pass.
+2. ~~**Fold `LilyAiCore`/`LilyAiMain`/`LilyAiFrontend` findings into `overview.md`**~~ - fixed. Added a
+   `## Resilience` section (the `FIRST_COMPLETED`/`run_forever` fix), the three `LilyAiMain`
+   unbounded-growth guards, the `LilyAiCore` Webhooks orphan, updated the reminder-persistence note under
+   "Actions, not just replies", and expanded the Frontend section with its audit confirmation.
 3. ~~**`GROQ_API_KEY` / `DISCORD_TOKEN`**~~ - both now set on the live Render service. Groq provider
    confirmed ready with 6 API key(s); Discord connects (subject to Cloudflare rate-limit blocks - see
    the `run_forever()` backoff fix under LilyAiMain above).
@@ -33,14 +35,14 @@ listed gap gets resolved.
    dropping them.
 5. **`ExternalServices/Webhooks`** - orphan, intentionally left alone per your call.
 
-## Docs alignment pass - partial (6 intelligence domains only)
+## Docs alignment pass - now covers all 9 layers
 
 Checked the **live** `README.md` and `Architecture/overview.md` on GitHub (not the local mounted copy some
 of this audit was originally compared against): neither actually contains the `PostgreSQL`/`VectorStorage`/
 `Chroma`/`FAISS`/`Qdrant`/`DataTools` claims that were flagged during the domain audits - `README.md` only
 lists top-level domain folders and defers detail to `overview.md`, and `overview.md` is a high-level
 architecture doc that never went into that level of subfolder detail either. So there was nothing false to
-remove from the live docs. `overview.md` was updated with the 6-domain findings; item 2 above still open.
+remove from the live docs. `overview.md` now reflects all 9 layers' findings (item 2 above, closed).
 
 ## Repeatable audit process (used for all 9 layers - reuse for any future addition, e.g. LilyAiVoice/Vision)
 
