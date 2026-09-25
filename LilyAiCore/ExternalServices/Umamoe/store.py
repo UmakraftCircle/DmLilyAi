@@ -1,5 +1,10 @@
 """SQLite-backed last-seen state for tracked uma.moe circles, so the polling job can diff
 rank/points/member fan totals and only alert on real changes instead of every poll.
+
+Also doubles as the "former member" record: a row stays here (with its last-known fan total
+and `updated_at`) even after the member drops out of a circle's live roster, because the poll
+job only touches rows for members it currently sees. /api/leaderboard diffs this table against
+the live member list to find who left.
 """
 from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiCore.Helpers.clock import now_ts
@@ -58,7 +63,11 @@ class UmamoeStore:
         )
 
     def members_for_circle(self, circle_id: int) -> list[dict]:
+        """Every member ever recorded for this circle (including ones no longer on the live
+        roster), newest fan total first. `updated_at` freezes at a member's last-seen poll once
+        they drop off the roster, so it doubles as their "last detected on uma.moe" timestamp.
+        """
         return self.db.query(
-            "SELECT viewer_id, trainer_name, total_fans FROM umamoe_member_state "
+            "SELECT viewer_id, trainer_name, total_fans, updated_at FROM umamoe_member_state "
             "WHERE circle_id=? ORDER BY total_fans DESC", (circle_id,)
         )

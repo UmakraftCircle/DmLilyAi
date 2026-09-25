@@ -18,6 +18,10 @@ export function h(tag, props = {}, ...children) {
 export const clear = (node) => { while (node.firstChild) node.firstChild.remove(); return node; };
 export const fmtTime = (ts) => new Date(ts * 1000).toLocaleTimeString([], { hour12: false });
 export const fmtNum = (n) => (n ?? 0).toLocaleString();
+/** Signed number for gain/loss columns, e.g. "+1,204" / "-38" / "0". */
+export const fmtDelta = (n) => `${(n ?? 0) > 0 ? "+" : ""}${(n ?? 0).toLocaleString()}`;
+/** Calendar date (no time) for "last seen"-style columns. */
+export const fmtDate = (ts) => (ts ? new Date(ts * 1000).toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" }) : "\u2014");
 
 export function page(title, lede, ...body) {
   return [h("header", { class: "page-head" }, h("h1", {}, title), lede ? h("p", {}, lede) : null), ...body];
