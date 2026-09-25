@@ -14,7 +14,7 @@ listed gap gets resolved.
 | **LilyAiLearning** | ✅ Audited + fixed | 7 submodules, all real and wired. `LearningStore`'s `learning_events` table now has a per-kind trim (2000 rows/kind) - it was unbounded despite being written on every chat message and every tool call. |
 | **LilyAiTool** | ✅ Audited | 6 submodules, all wired: `Executor` runs `Validator.validate_args()` then the handler, catching timeout/`ToolError`/any crash. Added `remind_me` actuator (`NotifierBox` + Discord `send_dm`) - first real action, not just read/reply. |
 | **LilyAiWeb** | ✅ Audited | 5 submodules, all wired via `service.py`'s search -> process -> extract pipeline. `Cache/TTLCache` confirmed genuinely used. `Sources.is_safe_url` checked twice in the extractor (pre-fetch and post-redirect) - real SSRF guard. Added `/api/web/search` + Settings web card. |
-| **LilyAiCore** (Infrastructure) | ✅ Audited | 8 submodules. `Database`, `Discord` helpers/notifier, `Search`, `Config`, `Constants`, `Exceptions` (all 7 error classes used), `Helpers` (all 4 text functions used, `tokenize` shared by Rag + Memory), `Logging`, `Providers` (Groq/offline) all confirmed wired. **One orphan found**: `ExternalServices/Webhooks/webhook.py` (`post_webhook` - ops-alert webhook) has zero callers anywhere and isn't wired into `settings.py` (no `WEBHOOK_URL` var). Decision: leave it alone for now, not removed, not wired up. |
+| **LilyAiCore** (Infrastructure) | ✅ Audited + fixed | 8 submodules. `Database`, `Discord` helpers/notifier, `Search`, `Config`, `Constants`, `Exceptions` (all 7 error classes used), `Helpers` (all 4 text functions used, `tokenize` shared by Rag + Memory), `Logging`, `Providers` (Groq/offline) all confirmed wired. `ExternalServices/Webhooks/webhook.py` (`post_webhook`) is no longer an orphan - see item 5 below. |
 | **LilyAiMain** (Entry) | ✅ Audited + fixed | `Api`, `Discord` (`Client`/`Router`/`Middleware`/`Session`/`Events`), `Interaction` (`Feedback`/`Forms`/`Menus`/`Onboarding`/`Polls`/`Workflows`) - all confirmed wired via `Router`, the central dispatcher. No orphans. Found and fixed the same unbounded-growth shape three times: `RateLimiter._hits`, `SessionManager._locks`, `FeedbackHandler._rated` - all now capped with LRU/FIFO eviction (`SessionManager` specifically never evicts a *currently-held* lock, avoiding a real correctness bug). Also fixed a process-isolation bug: `run()`'s `asyncio.wait(FIRST_COMPLETED)` tore down the whole app (API included) on any Discord connect failure - Discord's `client.start()` now runs via `run_forever()`, which retries with backoff instead of raising. |
 | **LilyAiFrontend** | ✅ Audited | Every `Shared/` file (9 components, `app.js`, `api.js`, `routes.js`, `theme.js`, `icons.js`, `ui.js`), every CSS file `index.html` references, and every page (`Home`, `Chat`, `Dashboard` + 4 cards, `Settings` + 4 cards, `Admin/Relay`, `Admin/DMSimulator`) confirmed wired via `routes.js`, the frontend's own "facade". No orphans. `Relay`'s polling loop correctly returns a cleanup function (`clearTimeout`) so it stops on navigation - no leak on route change. |
 
@@ -33,7 +33,11 @@ listed gap gets resolved.
    persists each reminder on creation; `NotifierBox.resume_pending()` replays anything still outstanding
    once the real Discord client is wired in on startup, firing overdue ones immediately instead of
    dropping them.
-5. **`ExternalServices/Webhooks`** - orphan, intentionally left alone per your call.
+5. ~~**`ExternalServices/Webhooks`**~~ - implemented. Added `WEBHOOK_URL` to `Settings`/`.env.example`.
+   `post_webhook` now has two real callers: `LilyAiMain/main.py` fires it when the API or Discord task
+   crashes (the `FIRST_COMPLETED` handler), and `Scheduler._loop` fires it when a scheduled job raises
+   (previously logged only). Both are fire-and-forget and stay silent when `WEBHOOK_URL` is unset - a
+   startup log line says so once, at boot.
 
 ## Docs alignment pass - now covers all 9 layers
 
@@ -51,7 +55,7 @@ remove from the live docs. `overview.md` now reflects all 9 layers' findings (it
    it shows what's actually wired together.
 3. For anything that looks like a write path (a `.add()`, an `.ingest()`, a table insert), code-search
    the whole repo for real callers before trusting it's live - `KnowledgeMemory` and `post_webhook()` both
-   looked complete but had zero callers.
+   looked complete but had zero callers (the latter now fixed - see item 5 above).
 4. For anything that looks like a shared/duplicate concept across domains, check both before building
    either further - `KnowledgeMemory` vs Rag's `learned:qa` promotion was exactly this. (A near-miss:
    `chunk_for_discord` vs `split_reply` looked like a possible duplicate but was clean layering instead -
