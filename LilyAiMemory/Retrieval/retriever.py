@@ -1,4 +1,4 @@
-"""Keyword-overlap retrieval over user facts and knowledge notes (fast, no embeddings)."""
+"""Keyword-overlap retrieval over user facts (fast, no embeddings)."""
 from LilyAiCore.Helpers.text import tokenize
 
 _STOP = frozenset(
