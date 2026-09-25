@@ -1,9 +1,11 @@
 """Discord DM client. Thin adapter: all behaviour lives in the router."""
 import asyncio
+import time
 
 import discord
 
 from LilyAiCore.ExternalServices.Discord.helpers import split_reply
+from LilyAiCore.ExternalServices.Discord.reconnect_state import ReconnectState
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiMain.MainService.bootstrap import App
 from LilyAiMain.MainService.Interaction.messages import IncomingMessage, MenuItem, OutgoingMessage
@@ -58,26 +60,51 @@ class LilyDiscordClient(discord.Client):
         super().__init__(intents=intents)
         self.app = app
 
-    async def run_forever(self, token: str) -> None:
+    async def run_forever(self, token: str, reconnect_state: ReconnectState | None = None) -> None:
         """Connect with exponential backoff. Catches connect-time failures (e.g. a
         Cloudflare/rate-limit block returned as HTTPException) instead of letting them
         propagate and take the whole process down with them. Returns normally once
-        self.close() causes start() to exit cleanly (e.g. during app shutdown)."""
-        backoff = 30
-        max_backoff = 900
+        self.close() causes start() to exit cleanly (e.g. during app shutdown).
+
+        A Cloudflare error 1015 ("You are being rate limited") is an IP-level ban, not a
+        normal gateway rate limit - it needs a much higher floor/ceiling than an ordinary
+        connect failure, or repeated short retries just extend it. backoff is persisted via
+        reconnect_state (if given) so a Render redeploy landing mid-cooldown resumes the wait
+        instead of resetting to the floor and immediately retrying into the same ban.
+        """
+        backoff, ceiling = 30, 900
+        CF_FLOOR, CF_CEILING = 300, 3600  # 5min - 1hr: Cloudflare 1015 bans typically run tens of minutes
+
+        if reconnect_state:
+            next_at, saved_backoff = reconnect_state.get()
+            wait = next_at - time.time()
+            if wait > 0:
+                log.warning("resuming a discord reconnect cooldown from before restart: waiting %ss", int(wait))
+                await asyncio.sleep(wait)
+            if saved_backoff:
+                backoff = saved_backoff
+
         while True:
             try:
                 await self.start(token)
+                if reconnect_state:
+                    reconnect_state.clear()
                 return
             except discord.HTTPException as e:
-                log.error("discord connection failed: %r", e)
+                if "cloudflare" in str(e).lower() or "error code: 1015" in str(e).lower():
+                    backoff, ceiling = max(backoff, CF_FLOOR), CF_CEILING
+                    log.error("discord connection blocked by Cloudflare (IP rate-limited, not just a gateway 429): %r", e)
+                else:
+                    log.error("discord connection failed: %r", e)
             except Exception:
                 log.exception("discord stopped unexpectedly")
             if self.is_closed():
                 return
             log.warning("retrying discord connection in %ss", backoff)
+            if reconnect_state:
+                reconnect_state.set(time.time() + backoff, backoff)
             await asyncio.sleep(backoff)
-            backoff = min(backoff * 2, max_backoff)
+            backoff = min(backoff * 2, ceiling)
 
     async def on_ready(self):
         self.app.discord_state.on_ready(str(self.user))
