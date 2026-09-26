@@ -112,3 +112,13 @@ ul.plain { margin: 0; padding-left: 18px; }
 .set-body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
 .set-body .card { margin: 0; }
 @media (min-width: 600px) { .set-tabs { overflow-x: visible; } }
+
+/* ---- dashboard stat strip ---- */
+/* A single horizontally-scrolling row instead of the generic .stats grid: 7 stat cards in
+   a grid runs to four rows on a phone and pushes .set-tabs/.set-body off-screen, which
+   defeats the point of .page.fill. This keeps the stats to one compact row (~70px) so the
+   tabs and active panel are always visible without scrolling the page itself. */
+.dash-stats { flex: none; display: flex; gap: 8px; overflow-x: auto; margin-bottom: 14px; -webkit-overflow-scrolling: touch; }
+.dash-stats .stat { flex: none; min-width: 96px; padding: 10px 12px; }
+.dash-stats .stat b { font-size: 19px; }
+.dash-stats .stat span { font-size: 11px; white-space: nowrap; }
