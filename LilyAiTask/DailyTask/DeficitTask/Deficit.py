@@ -131,17 +131,27 @@ def _fmt(n: int) -> str:
     return f"{n:,}"
 
 
-def format_daily_message(result: dict, member: Optional[LinkedMember] = None) -> str:
+def format_daily_message(
+    result: dict,
+    member: Optional[LinkedMember] = None,
+    monthly_gain: Optional[int] = None,
+) -> str:
     """Build the daily DM text from a record_day() result.
 
     - Exactly met -> confirms quota met, no carry.
     - Gained more than required -> reports surplus banked for tomorrow.
     - Gained less than required -> reports deficit owed, added to tomorrow.
+
+    monthly_gain, when given, overrides result["total_gained"] for the
+    "Monthly progress" line. Pass the figure computed by
+    LilyAiMemory.FanGain (the same snapshot-based calculation the fan
+    gain embed reads) so this DM and the embed never disagree about a
+    trainer's monthly total.
     """
     gained = result["gained"]
     required = result["required"]
     carry = result["carry"]
-    total = result["total_gained"]
+    total = monthly_gain if monthly_gain is not None else result["total_gained"]
     remaining = max(0, MONTHLY_QUOTA - total)
 
     header = "**Daily Fan Quota Report**"
@@ -170,7 +180,12 @@ def format_daily_message(result: dict, member: Optional[LinkedMember] = None) ->
     return "\n".join(lines)
 
 
-async def send_daily_dm(client: discord.Client, member: LinkedMember, result: dict) -> None:
+async def send_daily_dm(
+    client: discord.Client,
+    member: LinkedMember,
+    result: dict,
+    monthly_gain: Optional[int] = None,
+) -> None:
     """Send the daily quota report as a Discord DM to a linked member.
 
     Requires the member to already be linked (has both a Discord ID and
@@ -181,12 +196,15 @@ async def send_daily_dm(client: discord.Client, member: LinkedMember, result: di
         client: The logged-in discord.Client/Bot instance.
         member: The LinkedMember to DM (must have discord_id + trainer_id).
         result: The dict returned by DeficitTracker.record_day().
+        monthly_gain: Optional snapshot-based monthly total (see
+            format_daily_message) to keep this DM in sync with the fan
+            gain embed.
     """
     if not member.discord_id or not member.trainer_id:
         return
 
     user = client.get_user(member.discord_id) or await client.fetch_user(member.discord_id)
-    message = format_daily_message(result, member)
+    message = format_daily_message(result, member, monthly_gain)
     await user.send(message)
 
 
