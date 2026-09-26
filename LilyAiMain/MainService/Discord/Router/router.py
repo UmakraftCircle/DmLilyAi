@@ -8,6 +8,7 @@ from LilyAiMain.MainService.Discord.Middleware.middleware import AccessControl, 
 from LilyAiMain.MainService.Discord.Session.manager import SessionManager
 from LilyAiMain.MainService.Interaction.Feedback.feedback import ReplyLog, ReplyRecord
 from LilyAiMain.MainService.Interaction.Forms.forms import FormManager
+from LilyAiMain.MainService.Interaction.Forms.link_trainer import LinkTrainerFlow
 from LilyAiMain.MainService.Interaction.Menus.menus import HELP_TEXT, main_menu
 from LilyAiMain.MainService.Interaction.messages import IncomingMessage, OutgoingMessage
 from LilyAiMain.MainService.Interaction.Onboarding.onboarding import OnboardingFlow
@@ -21,6 +22,8 @@ _HELP = re.compile(r"^\s*(help|menu|\?|what can you do\??)\s*$", re.I)
 _SHOW_MEMORY = re.compile(r"\b(what do you (?:remember|know) about me|show (?:me )?my memor(?:y|ies)|what have you learned about me)\b", re.I)
 _FORGET = re.compile(r"\b(forget (?:everything|all)(?: about me)?|wipe my (?:memory|data)|delete my (?:memory|data))\b", re.I)
 _SETUP = re.compile(r"\b(set me up again|redo (?:my )?setup|start onboarding)\b", re.I)
+_LINK = re.compile(r"\blink (?:me|my (?:account|trainer(?: id)?))\b|\bconnect my trainer(?: id)?\b", re.I)
+_UNLINK = re.compile(r"\bunlink (?:me|my (?:account|trainer(?: id)?))\b", re.I)
 _YES = {"yes", "y", "yep", "confirm", "do it", "sure"}
 
 
@@ -37,10 +40,12 @@ class DMRouter:
         forms: FormManager,
         polls: PollManager,
         onboarding: OnboardingFlow,
+        link_trainer: LinkTrainerFlow,
     ):
         self.memory, self.chat, self.replies, self.bus = memory, chat, replies, bus
         self.sessions, self.limiter, self.access = sessions, limiter, access
         self.forms, self.polls, self.onboarding = forms, polls, onboarding
+        self.link_trainer = link_trainer
 
     async def route(self, msg: IncomingMessage) -> list[OutgoingMessage]:
         text = clean_input(msg.text)
@@ -94,6 +99,11 @@ class DMRouter:
             return sys(HELP_TEXT, main_menu())
         if _SETUP.search(text):
             return sys(self.onboarding.start(uid))
+        if _LINK.search(text):
+            return sys(self.link_trainer.start(uid))
+        if _UNLINK.search(text):
+            unlinked = self.memory.trainer_link.unlink(uid)
+            return sys("You're unlinked." if unlinked else "You weren't linked to a Trainer ID.")
         if _SHOW_MEMORY.search(text):
             facts = self.memory.user.list(uid)
             if not facts:
