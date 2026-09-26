@@ -43,4 +43,11 @@ CREATE TABLE IF NOT EXISTS deficit_tracker_state (
     updated_at REAL,
     PRIMARY KEY (club, trainer_id)
 );
+
+CREATE TABLE IF NOT EXISTS daily_job_runs (
+    job_name TEXT NOT NULL,
+    run_date TEXT NOT NULL,
+    ran_at REAL,
+    PRIMARY KEY (job_name, run_date)
+);
 """
