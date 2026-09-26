@@ -3,6 +3,7 @@ from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiMemory.ConversationMemory.conversation_memory import ConversationMemory
 from LilyAiMemory.DeficitState.deficit_state_store import DeficitStateStore
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
+from LilyAiMemory.JobRuns.job_run_store import JobRunStore
 from LilyAiMemory.Retrieval.retriever import rank_by_overlap
 from LilyAiMemory.SessionMemory.session_memory import SessionMemory
 from LilyAiMemory.Storage.store import MemoryStore
@@ -19,6 +20,7 @@ class MemoryService:
         self.trainer_link = TrainerLinkStore(self.store)
         self.fan_gain = FanSnapshotStore(self.store)
         self.deficit_state = DeficitStateStore(self.store)
+        self.job_runs = JobRunStore(self.store)
 
     def relevant_user_facts(self, user_id: str, query: str, limit: int = 6) -> list[str]:
         """Most relevant facts for this message; falls back to the newest facts so basics aren't lost."""
