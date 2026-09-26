@@ -104,6 +104,15 @@ class QueryBody(BaseModel):
     query: str = Field(min_length=1, max_length=500)
 
 
+class WatchChannelBody(BaseModel):
+    channel_id: int | None = None
+
+
+class SendChannelBody(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+    reply_to: int | None = None  # a message_id from a prior /api/relay/channel/messages entry
+
+
 def create_api(app: App) -> FastAPI:
     s = app.settings
     api = FastAPI(title="LilyAi API", version="1.0.0")
@@ -120,6 +129,11 @@ def create_api(app: App) -> FastAPI:
             raise HTTPException(401, "Set ADMIN_TOKEN to use the API from a non-local address")
 
     guard = [Depends(auth)]
+
+    def _discord_or_400():
+        if not app.discord_client:
+            raise HTTPException(400, "Discord is not connected")
+        return app.discord_client
 
     @api.api_route("/api/health", methods=["GET", "HEAD"])  # HEAD too, so uptime pingers work
     async def health():
@@ -156,6 +170,32 @@ def create_api(app: App) -> FastAPI:
     @api.get("/api/relay/events", dependencies=guard)
     async def relay(after: int = 0, source: str = "all"):
         return {"events": app.bus.since(after, source), "discord": app.discord_state.connected, "bot": app.discord_state.bot_name}
+
+    # ---- live channel relay (Relay page "Channel" tab + drawer channel picker) ----
+
+    @api.get("/api/relay/channels", dependencies=guard)
+    async def relay_channels():
+        return {"channels": _discord_or_400().list_channels()}
+
+    @api.get("/api/relay/channel", dependencies=guard)
+    async def relay_channel_status():
+        return app.channel_watch.status()
+
+    @api.post("/api/relay/channel", dependencies=guard)
+    async def relay_watch_channel(body: WatchChannelBody):
+        return await _discord_or_400().watch_channel(body.channel_id)
+
+    @api.get("/api/relay/channel/messages", dependencies=guard)
+    async def relay_channel_messages(after: int = 0):
+        return {"messages": app.channel_watch.since(after), **app.channel_watch.status()}
+
+    @api.post("/api/relay/channel/send", dependencies=guard)
+    async def relay_channel_send(body: SendChannelBody):
+        client = _discord_or_400()
+        if not app.channel_watch.channel_id:
+            raise HTTPException(400, "No channel is being watched - pick one from the drawer first")
+        await client.send_channel_message(app.channel_watch.channel_id, body.text, body.reply_to)
+        return {"ok": True}
 
     @api.get("/api/dashboard", dependencies=guard)
     async def dashboard():
