@@ -4,6 +4,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import discord
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
@@ -105,12 +106,23 @@ class QueryBody(BaseModel):
 
 
 class WatchChannelBody(BaseModel):
-    channel_id: int | None = None
+    # A Discord snowflake as a string, not a number: IDs are 64-bit and JS's Number can't
+    # represent them exactly, so a numeric JSON field gets silently corrupted in the browser.
+    channel_id: str | None = None
 
 
 class SendChannelBody(BaseModel):
     text: str = Field(min_length=1, max_length=2000)
-    reply_to: int | None = None  # a message_id from a prior /api/relay/channel/messages entry
+    reply_to: str | None = None  # a message_id (string) from a prior /api/relay/channel/messages entry
+
+
+def _snowflake(raw: str | None) -> int | None:
+    if not raw:
+        return None
+    try:
+        return int(raw)
+    except ValueError:
+        raise HTTPException(400, "Invalid Discord ID")
 
 
 def create_api(app: App) -> FastAPI:
@@ -183,7 +195,12 @@ def create_api(app: App) -> FastAPI:
 
     @api.post("/api/relay/channel", dependencies=guard)
     async def relay_watch_channel(body: WatchChannelBody):
-        return await _discord_or_400().watch_channel(body.channel_id)
+        try:
+            return await _discord_or_400().watch_channel(_snowflake(body.channel_id))
+        except discord.NotFound:
+            raise HTTPException(404, "That channel doesn't exist, or the bot can no longer see it")
+        except discord.Forbidden:
+            raise HTTPException(403, "The bot doesn't have permission to view that channel")
 
     @api.get("/api/relay/channel/messages", dependencies=guard)
     async def relay_channel_messages(after: int = 0):
@@ -194,7 +211,12 @@ def create_api(app: App) -> FastAPI:
         client = _discord_or_400()
         if not app.channel_watch.channel_id:
             raise HTTPException(400, "No channel is being watched - pick one from the drawer first")
-        await client.send_channel_message(app.channel_watch.channel_id, body.text, body.reply_to)
+        try:
+            await client.send_channel_message(app.channel_watch.channel_id, body.text, _snowflake(body.reply_to))
+        except discord.NotFound:
+            raise HTTPException(404, "That channel (or the message being replied to) no longer exists")
+        except discord.Forbidden:
+            raise HTTPException(403, "The bot doesn't have permission to send in that channel")
         return {"ok": True}
 
     @api.get("/api/dashboard", dependencies=guard)
