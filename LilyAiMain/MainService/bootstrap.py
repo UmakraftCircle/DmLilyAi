@@ -36,8 +36,11 @@ from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_mod
 from LilyAiMain.MainService.Interaction.Workflows.scheduler import Scheduler
 from LilyAiMain.MainService.Interaction.Workflows.self_ping_job import make_self_ping_job
 from LilyAiMain.MainService.Interaction.Workflows.umamoe_job import make_umamoe_job
+from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
+from LilyAiTask.DailyTask.DeficitTask.Deficit import DeficitTracker
+from LilyAiTask.DailyTask.DeficitTask.snapshot_job import run_daily_fan_gain
 from LilyAiTool.service import ToolContextData, ToolService, ToolSpec
 from LilyAiWeb.service import WebService
 
@@ -147,6 +150,32 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
     ]
 
 
+def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore,
+                   umamoe: UmamoeClient, circle_id: int, club: str):
+    """Build one scheduler job: snapshot every linked trainer's current fan total for
+    `club`/`circle_id` (via the real UmamoeClient - see snapshot_job.py) and send the
+    daily quota DM.
+
+    `trackers` is created once here and closed over, so DeficitTracker state (carry,
+    total_gained) persists across runs for the life of the process, per club, exactly
+    as run_daily_fan_gain's docstring expects.
+
+    app.discord_client isn't set yet when jobs are registered below (Discord connects
+    after build_app() returns - see main.py), so it's read lazily on every run instead,
+    the same way LilyAiMain/MainService/Api/server.py's _discord_or_400() does.
+    """
+    trackers: dict[str, DeficitTracker] = {}
+
+    async def run() -> None:
+        client = app.discord_client
+        if not client or not client.is_ready():
+            log.info("daily-fan-gain (%s): Discord not connected yet, skipping this run", club)
+            return
+        await run_daily_fan_gain(client, trainer_link_store, fan_store, umamoe, circle_id, club, trackers)
+
+    return run
+
+
 def build_app(
     settings: Settings,
     provider: LLMProvider | None = None,
@@ -238,8 +267,30 @@ def build_app(
             scheduler.every("self-ping", ping_interval, make_self_ping_job(ping_url), initial_delay_s=ping_interval)
         else:
             log.info("SELF_PING_ENABLED but no SELF_PING_URL/RENDER_EXTERNAL_URL set: self-ping is off")
-    return App(
+
+    app = App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
         FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,
         notifier_box, umamoe, umamoe_store, discord_reconnect, ChannelWatch(), RelayChannelStore(db), time.time(),
     )
+
+    if umamoe and settings.umamoe_circle_ids:
+        # One daily fan-snapshot + quota job per tracked circle (see snapshot_job.py).
+        # Club names follow the convention already used there and in .env.example's
+        # "your 2 clubs" comment: the first tracked circle is "Umakraft", any further
+        # ones are numbered. Re-map UMAMOE_CIRCLE_IDS's order if that's ever not right.
+        #
+        # The in-process Scheduler only supports fixed intervals, not a fixed time of
+        # day, so this runs once every 24h from process start rather than at a specific
+        # UTC hour - close enough for a daily quota reminder, but worth revisiting if
+        # the DM needs to land at a particular time.
+        for i, circle_id in enumerate(settings.umamoe_circle_ids, start=1):
+            club = "Umakraft" if i == 1 else f"Umakraft {i}"
+            scheduler.every(
+                f"daily-fan-gain-{i}",
+                24 * 3600,
+                _fan_gain_job(app, memory.trainer_link, memory.fan_gain, umamoe, circle_id, club),
+                initial_delay_s=120.0,
+            )
+
+    return app
