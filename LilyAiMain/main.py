@@ -36,6 +36,7 @@ async def run() -> None:
             from LilyAiMain.MainService.Discord.Client.client import LilyDiscordClient
 
             client = LilyDiscordClient(app)
+            app.discord_client = client  # lets the API (/api/relay/channel*) reach the live bot for channel listing/watch/send
             app.notifier_box.notifier = client  # actuator online: tools registered earlier (e.g. remind_me) can now reach Discord
             app.notifier_box.resume_pending()  # replay any reminders left over from before a restart/redeploy
             # run_forever() retries with backoff on connect failures (e.g. Cloudflare
