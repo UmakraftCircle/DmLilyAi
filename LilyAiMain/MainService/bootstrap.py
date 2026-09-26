@@ -1,6 +1,7 @@
 """Composition root: the only place that wires domains to infrastructure."""
 import time
 from dataclasses import dataclass
+from typing import Any
 
 from LilyAiContext.service import ContextBuilder
 from LilyAiCore.Config.models import ModelPool
@@ -9,6 +10,7 @@ from LilyAiCore.ExternalServices.Database.sqlite import Database
 from LilyAiCore.ExternalServices.Database.turso import TursoDatabase
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiCore.ExternalServices.Discord.reconnect_state import ReconnectState
+from LilyAiCore.ExternalServices.Discord.relay_channel_store import RelayChannelStore
 from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
@@ -19,6 +21,7 @@ from LilyAiCore.Providers.offline import OfflineProvider
 from LilyAiLearning.Evaluation.model_scan import ModelScanner
 from LilyAiLearning.service import LearningService
 from LilyAiMain.MainService.Discord.Events.bus import EventBus
+from LilyAiMain.MainService.Discord.Events.channel_watch import ChannelWatch
 from LilyAiMain.MainService.Discord.Events.handlers import DiscordEventHandlers
 from LilyAiMain.MainService.Discord.Middleware.middleware import AccessControl, RateLimiter
 from LilyAiMain.MainService.Discord.Router.router import DMRouter
@@ -62,7 +65,13 @@ class App:
     umamoe: UmamoeClient | None
     umamoe_store: UmamoeStore | None
     discord_reconnect: ReconnectState
+    channel_watch: ChannelWatch
+    relay_channel_store: RelayChannelStore
     started_at: float
+    # Set from main.py once LilyDiscordClient exists (built after the API/App, so it can't be
+    # wired in here). None whenever Discord is disabled or hasn't connected yet - callers using
+    # it (the /api/relay/channel* endpoints) check for that.
+    discord_client: Any = None
 
     async def aclose(self) -> None:
         await self.scheduler.stop()
@@ -231,5 +240,5 @@ def build_app(
     return App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
         FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,
-        notifier_box, umamoe, umamoe_store, discord_reconnect, time.time(),
+        notifier_box, umamoe, umamoe_store, discord_reconnect, ChannelWatch(), RelayChannelStore(db), time.time(),
     )
