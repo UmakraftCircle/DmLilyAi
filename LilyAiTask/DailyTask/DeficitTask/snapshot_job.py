@@ -18,16 +18,21 @@ passed into send_daily_dm as an override so the DM never disagrees with
 the embed, even if DeficitTracker.total_gained drifts (e.g. after a
 restart resets an in-memory tracker mid-month).
 
-fetch_fan_total is left as an injected callable because no uma.moe
-scraper exists in the repo yet - plug the real one in once it's built.
+Fan totals come from the existing LilyAiCore.ExternalServices.Umamoe.
+UmamoeClient (the same uma.moe API client that already powers
+check_umamoe and /api/leaderboard, configured via UMAMOE_API_KEY /
+UMAMOE_CIRCLE_IDS - see render.yaml and .env.example). There is no
+scraper here and none is needed: one get_circle(circle_id) call per run
+returns every tracked member's fan total in one shot, the same call
+umamoe_job.py already makes for the rank/points poll.
 """
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Callable
 
 import discord
 
+from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
 from LilyAiMemory.TrainerLink.trainer_link import TrainerLinkStore
 from LilyAiTask.DailyTask.DeficitTask.Deficit import (
@@ -51,11 +56,33 @@ def _month_start_total(
     return base.fan_total if base else fallback
 
 
+async def _fetch_fan_totals(umamoe: UmamoeClient, circle_id: int) -> dict[str, int]:
+    """trainer_id (uma.moe viewer_id, as str) -> current fan_total for every
+    member currently on this circle's roster.
+
+    Same call and same "current total = max(daily_fans)" reading that
+    umamoe_job.py's poll job uses, so this and the rank/points poll never
+    disagree about a member's fan count.
+    """
+    data = await umamoe.get_circle(circle_id=circle_id)
+    totals: dict[str, int] = {}
+    for member in data.get("members", []):
+        viewer_id = member.get("viewer_id")
+        if viewer_id is None:
+            continue
+        daily = member.get("daily_fans") or []
+        if not daily:
+            continue
+        totals[str(viewer_id)] = max(daily)
+    return totals
+
+
 async def run_daily_fan_gain(
     client: discord.Client,
     trainer_link_store: TrainerLinkStore,
     fan_store: FanSnapshotStore,
-    fetch_fan_total: Callable[[str], int],
+    umamoe: UmamoeClient,
+    circle_id: int,
     club: str,
     trackers: dict[str, DeficitTracker],
     now: datetime | None = None,
@@ -66,8 +93,11 @@ async def run_daily_fan_gain(
         client: logged-in discord.Client/Bot, passed through to send_daily_dm.
         trainer_link_store: source of linked Discord<->trainer pairs.
         fan_store: FanSnapshotStore for this club's snapshot history.
-        fetch_fan_total: trainer_id -> current fan_total. Placeholder for
-            the real uma.moe scraper, which doesn't exist in the repo yet.
+        umamoe: the shared UmamoeClient (app.umamoe - None means
+            UMAMOE_API_KEY isn't set, in which case this job shouldn't be
+            scheduled; see bootstrap.py).
+        circle_id: the uma.moe circle id this club maps to (one of
+            settings.umamoe_circle_ids).
         club: which club this run is for ("Umakraft" / "Umakraft 2").
         trackers: trainer_id -> DeficitTracker, kept alive by the caller
             across days (e.g. held on the bot/app instance) so carry and
@@ -83,9 +113,14 @@ async def run_daily_fan_gain(
         return
 
     previous_totals = fan_store.latest(club)
+    current_totals = await _fetch_fan_totals(umamoe, circle_id)
 
     for member in members:
-        fan_total = fetch_fan_total(member.trainer_id)
+        fan_total = current_totals.get(member.trainer_id)
+        if fan_total is None:
+            # Linked trainer isn't on this circle's live roster right now
+            # (e.g. dropped from the club) - nothing to snapshot today.
+            continue
         fan_store.record(club, member.trainer_id, fan_total)
 
         prev = previous_totals.get(member.trainer_id)
