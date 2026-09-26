@@ -2,10 +2,12 @@ import { h } from "/Shared/ui.js";
 import { icon } from "/Shared/icons.js";
 import { Tile } from "/Shared/components/Tile.js";
 import { createStatusBar } from "/Shared/components/StatusBar.js";
+import { createChannelPicker } from "/Shared/components/ChannelPicker.js";
 
 /** Slide-in drawer on phones, permanent sidebar on wide screens (same DOM, CSS decides). */
 export function createDrawer({ routes, onNavigate, onClose }) {
   const status = createStatusBar();
+  const picker = createChannelPicker();
   const tiles = new Map();
   const groups = [];
   for (const r of routes) {
@@ -31,9 +33,10 @@ export function createDrawer({ routes, onNavigate, onClose }) {
       h("div", {}, h("b", {}, "LILYAI"), h("small", {}, "Intelligence portal")),
       h("button", { class: "icon-btn", "aria-label": "Close menu", onclick: onClose }, icon("close"))),
     nav,
-    h("div", { class: "drawer-foot" }, status.el));
+    h("div", { class: "drawer-foot" }, picker.el, status.el));
 
   status.start();
+  picker.load();
   return {
     el,
     setCurrent(id) { for (const [k, t] of tiles) k === id ? t.setAttribute("aria-current", "page") : t.removeAttribute("aria-current"); },
