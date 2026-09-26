@@ -1,6 +1,7 @@
 """Composition root: the only place that wires domains to infrastructure."""
 import time
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from LilyAiContext.service import ContextBuilder
@@ -39,6 +40,7 @@ from LilyAiMain.MainService.Interaction.Workflows.self_ping_job import make_self
 from LilyAiMain.MainService.Interaction.Workflows.umamoe_job import make_umamoe_job
 from LilyAiMemory.DeficitState.deficit_state_store import DeficitStateStore
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
+from LilyAiMemory.JobRuns.job_run_store import JobRunStore
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
 from LilyAiTask.DailyTask.DeficitTask.snapshot_job import run_daily_fan_gain
@@ -92,6 +94,28 @@ def _build_db(settings: Settings) -> Database | TursoDatabase:
             sync_interval_s=settings.turso_sync_interval_s,
         )
     return Database(settings.db_path)
+
+
+def _seconds_until_utc(hour: int, minute: int = 0) -> float:
+    """Seconds from now until the next hour:minute UTC (today if that time hasn't
+    happened yet today, otherwise tomorrow).
+
+    Used to align a daily scheduler job to a fixed time of day. Recomputed fresh
+    on every process start (build_app() calls this, it's not itself persisted),
+    so a restart just re-targets the next occurrence rather than drifting - and
+    since the moment a day's target time has passed, "next occurrence" is always
+    tomorrow, a same-day restart can never compute a delay that lands on today
+    again. That still leaves a narrow race if two processes are briefly alive at
+    once (e.g. a rolling Render redeploy) with both about to fire close together;
+    JobRunStore (see _fan_gain_job) is the actual guarantee against a double send,
+    this is just what makes it happen at 11:00 UTC instead of at process-start-
+    plus-N in the first place.
+    """
+    now = datetime.now(timezone.utc)
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if target <= now:
+        target += timedelta(days=1)
+    return (target - now).total_seconds()
 
 
 def _web_tools(web: WebService) -> list[ToolSpec]:
@@ -196,7 +220,7 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
 
 
 def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore, tracker_store: DeficitStateStore,
-                   umamoe: UmamoeClient, circle_id: int, club: str):
+                   job_run_store: JobRunStore, job_name: str, umamoe: UmamoeClient, circle_id: int, club: str):
     """Build one scheduler job: snapshot every linked trainer's current fan total for
     `club`/`circle_id` (via the real UmamoeClient - see snapshot_job.py) and send the
     daily quota DM.
@@ -204,6 +228,12 @@ def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore, tra
     No in-memory tracker state is kept here: run_daily_fan_gain loads and saves each
     trainer's DeficitTracker carry/total_gained through tracker_store on every call, so
     it's correct on the very first run and survives process restarts/redeploys.
+
+    job_run_store/job_name guard against sending the same UTC day's DM twice if the
+    process restarts right around the scheduled time - see JobRunStore's docstring.
+    Checked (and claimed via mark_run) BEFORE calling run_daily_fan_gain, so even a
+    process that started moments after another one already ran today skips instead
+    of re-sending every linked trainer's DM.
 
     app.discord_client isn't set yet when jobs are registered below (Discord connects
     after build_app() returns - see main.py), so it's read lazily on every run instead,
@@ -215,6 +245,11 @@ def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore, tra
         if not client or not client.is_ready():
             log.info("daily-fan-gain (%s): Discord not connected yet, skipping this run", club)
             return
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        if job_run_store.has_run(job_name, today):
+            log.info("daily-fan-gain (%s): already ran today (%s), skipping", club, today)
+            return
+        job_run_store.mark_run(job_name, today)
         await run_daily_fan_gain(client, trainer_link_store, fan_store, tracker_store, umamoe, circle_id, club)
 
     return run
@@ -319,22 +354,27 @@ def build_app(
     )
 
     if umamoe and settings.umamoe_circle_ids:
-        # One daily fan-snapshot + quota job per tracked circle (see snapshot_job.py).
-        # Club names follow the convention already used there and in .env.example's
-        # "your 2 clubs" comment: the first tracked circle is "Umakraft", any further
-        # ones are numbered. Re-map UMAMOE_CIRCLE_IDS's order if that's ever not right.
+        # One daily fan-snapshot + quota job per tracked circle (see snapshot_job.py),
+        # fired at 11:00 UTC. _seconds_until_utc(11, 0) recomputes the delay to the
+        # next 11:00 UTC fresh on every process start, so a restart just re-targets
+        # the next occurrence instead of drifting off schedule. job_run_store guards
+        # against sending the same UTC day's DM twice if a restart happens to land
+        # right around 11:00 (e.g. old/new processes briefly overlapping during a
+        # Render redeploy) - see JobRunStore's docstring.
         #
-        # The in-process Scheduler only supports fixed intervals, not a fixed time of
-        # day, so this runs once every 24h from process start rather than at a specific
-        # UTC hour - close enough for a daily quota reminder, but worth revisiting if
-        # the DM needs to land at a particular time.
+        # Club names follow the convention already used in snapshot_job.py and
+        # .env.example's "your 2 clubs" comment: the first tracked circle is
+        # "Umakraft", any further ones are numbered. Re-map UMAMOE_CIRCLE_IDS's
+        # order if that's ever not right.
         for i, circle_id in enumerate(settings.umamoe_circle_ids, start=1):
             club = "Umakraft" if i == 1 else f"Umakraft {i}"
+            job_name = f"daily-fan-gain-{i}"
             scheduler.every(
-                f"daily-fan-gain-{i}",
+                job_name,
                 24 * 3600,
-                _fan_gain_job(app, memory.trainer_link, memory.fan_gain, memory.deficit_state, umamoe, circle_id, club),
-                initial_delay_s=120.0,
+                _fan_gain_job(app, memory.trainer_link, memory.fan_gain, memory.deficit_state,
+                              memory.job_runs, job_name, umamoe, circle_id, club),
+                initial_delay_s=_seconds_until_utc(11, 0),
             )
 
     return app
