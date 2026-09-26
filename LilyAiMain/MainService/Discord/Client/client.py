@@ -1,4 +1,11 @@
-"""Discord DM client. Thin adapter: all behaviour lives in the router."""
+"""Discord DM client. Thin adapter: all behaviour lives in the router.
+
+Also carries the (separate, opt-in) live-channel relay: the DM path above is untouched -
+router.route() and everything downstream is still DM-only - but if the admin has picked a
+channel to watch (see ChannelWatch / RelayChannelStore), messages posted there are mirrored
+into that buffer for the web Relay page's Channel tab, and the same page can send messages
+(optionally as a reply) back into that channel through send_channel_message().
+"""
 import asyncio
 import time
 
@@ -108,13 +115,22 @@ class LilyDiscordClient(discord.Client):
 
     async def on_ready(self):
         self.app.discord_state.on_ready(str(self.user))
+        stored = self.app.relay_channel_store.get()
+        if stored and self.app.channel_watch.channel_id is None:
+            try:
+                await self.watch_channel(stored["channel_id"])
+            except Exception as e:
+                log.warning("couldn't resume watching channel %s: %s", stored["channel_id"], e)
 
     async def on_disconnect(self):
         self.app.discord_state.on_disconnect()
 
     async def on_message(self, message: discord.Message):
-        if message.author.bot or message.guild is not None:
-            return  # DM-first: ignore servers and other bots
+        if message.guild is not None:
+            await self._relay_channel_message(message)
+            return  # server messages never reach the AI chat pipeline - DM-only, unchanged
+        if message.author.bot:
+            return
         async with message.channel.typing():
             await self.process(message.author.id, message.author.display_name, message.content, message.channel)
 
@@ -151,3 +167,65 @@ class LilyDiscordClient(discord.Client):
         except Exception as e:
             log.error("failed to send unsolicited DM to %s: %s", user_id, e)
             return False
+
+    # ---- live channel relay (Relay page "Channel" tab) ----
+
+    def list_channels(self) -> list[dict]:
+        """Every text channel, across every server the bot is in, that it can actually post
+        in - detected straight from the live gateway connection (no extra Discord API calls)."""
+        out = []
+        for guild in self.guilds:
+            me = guild.me
+            if me is None:
+                continue
+            for ch in guild.text_channels:
+                if ch.permissions_for(me).send_messages:
+                    out.append({"guild_id": guild.id, "guild_name": guild.name, "channel_id": ch.id, "channel_name": ch.name})
+        return out
+
+    async def watch_channel(self, channel_id: int | None) -> dict:
+        """Switch (or clear, if channel_id is None) which channel is mirrored into
+        self.app.channel_watch, persist the choice, and backfill recent history so the web
+        UI isn't empty on first open."""
+        watch, store = self.app.channel_watch, self.app.relay_channel_store
+        if channel_id is None:
+            watch.reset(None, "", None, "")
+            store.clear()
+            return watch.status()
+
+        channel = self.get_channel(channel_id) or await self.fetch_channel(channel_id)
+        guild = channel.guild
+        watch.reset(channel.id, channel.name, guild.id, guild.name)
+        store.set(channel.id, channel.name, guild.id, guild.name)
+        try:
+            async for msg in channel.history(limit=30, oldest_first=True):
+                watch.add(
+                    message_id=msg.id, author=msg.author.display_name, is_me=msg.author.id == self.user.id,
+                    text=msg.content, ts=msg.created_at.timestamp(), reply_to=self._reply_meta(msg),
+                )
+        except discord.HTTPException as e:
+            log.warning("couldn't backfill history for channel %s: %s", channel_id, e)
+        return watch.status()
+
+    async def send_channel_message(self, channel_id: int, text: str, reply_to: int | None = None) -> None:
+        channel = self.get_channel(channel_id) or await self.fetch_channel(channel_id)
+        reference = discord.MessageReference(message_id=reply_to, channel_id=channel.id, fail_if_not_exists=False) if reply_to else None
+        await channel.send(text, reference=reference)
+
+    def _reply_meta(self, msg: discord.Message) -> dict | None:
+        ref = msg.reference
+        if not ref or not ref.message_id:
+            return None
+        resolved = ref.resolved
+        if isinstance(resolved, discord.Message):
+            return {"message_id": resolved.id, "author": resolved.author.display_name, "text": resolved.content[:120]}
+        return {"message_id": ref.message_id, "author": "", "text": ""}
+
+    async def _relay_channel_message(self, message: discord.Message) -> None:
+        watch = self.app.channel_watch
+        if watch.channel_id is None or message.channel.id != watch.channel_id:
+            return
+        watch.add(
+            message_id=message.id, author=message.author.display_name, is_me=message.author.id == self.user.id,
+            text=message.content, ts=message.created_at.timestamp(), reply_to=self._reply_meta(message),
+        )
