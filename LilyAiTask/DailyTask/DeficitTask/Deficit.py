@@ -5,9 +5,10 @@ Daily fan-gain quota tracker feeding into the 150-million monthly quota
 the member met quota, or how much surplus/deficit they have.
 
 The DM is only sent for a member who is already linked: someone with both
-a Discord user ID and a uma.moe trainer ID on file (see LinkedMember /
-LilyAiMemory for where that link actually lives). Unlinked trainers are
-skipped rather than guessed at.
+a Discord user ID and a uma.moe trainer ID on file. That link is created
+via the "link me" DM flow (see LilyAiMain/MainService/Interaction/Forms/
+link_trainer.py) and stored by LilyAiMemory.TrainerLink.TrainerLinkStore.
+Unlinked trainers are skipped rather than guessed at.
 
 Rules:
 - Base daily quota is 5,000,000 fans (5m * 30 days = 150,000,000 monthly).
@@ -39,13 +40,31 @@ class LinkedMember:
 
     Both ids must be present for a daily report to be sendable; this is
     the join point between the Discord side (where the DM goes) and the
-    uma.moe side (where fan-gain numbers come from). Actual link storage
-    /lookup belongs to LilyAiMemory - this is just the shape used here.
+    uma.moe side (where fan-gain numbers come from).
     """
 
     discord_id: int
     trainer_id: str
     trainer_name: Optional[str] = None
+
+    @classmethod
+    def from_trainer_link(cls, link) -> "LinkedMember":
+        """Build a LinkedMember from a LilyAiMemory TrainerLink record."""
+        return cls(
+            discord_id=int(link.discord_id),
+            trainer_id=link.trainer_id,
+            trainer_name=link.trainer_name,
+        )
+
+
+def linked_members(trainer_link_store) -> list[LinkedMember]:
+    """Fetch every currently linked member from LilyAiMemory's TrainerLinkStore.
+
+    Args:
+        trainer_link_store: A LilyAiMemory.TrainerLink.trainer_link.TrainerLinkStore
+            (e.g. app.memory.trainer_link).
+    """
+    return [LinkedMember.from_trainer_link(link) for link in trainer_link_store.all_linked()]
 
 
 class DeficitTracker:
@@ -181,6 +200,8 @@ async def send_daily_reports(
     Args:
         client: The logged-in discord.Client/Bot instance.
         members: Linked members eligible for a DM (discord_id + trainer_id).
+            Pass linked_members(app.memory.trainer_link) to pull the current
+            set straight from storage.
         results_by_trainer_id: Maps trainer_id -> record_day() result dict.
     """
     for member in members:
