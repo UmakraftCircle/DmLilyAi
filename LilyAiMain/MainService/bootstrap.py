@@ -6,6 +6,7 @@ from LilyAiContext.service import ContextBuilder
 from LilyAiCore.Config.models import ModelPool
 from LilyAiCore.Config.settings import Settings
 from LilyAiCore.ExternalServices.Database.sqlite import Database
+from LilyAiCore.ExternalServices.Database.turso import TursoDatabase
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiCore.ExternalServices.Discord.reconnect_state import ReconnectState
 from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
@@ -42,7 +43,7 @@ log = get_logger("bootstrap")
 class App:
     settings: Settings
     pool: ModelPool
-    db: Database
+    db: Database | TursoDatabase
     provider: LLMProvider
     memory: MemoryService
     rag: RagService
@@ -66,6 +67,16 @@ class App:
         await self.scheduler.stop()
         await self.provider.aclose()
         self.db.close()
+
+
+def _build_db(settings: Settings) -> Database | TursoDatabase:
+    if settings.turso_database_url:
+        log.info("Turso database configured: using embedded replica synced against %s", settings.turso_database_url)
+        return TursoDatabase(
+            settings.db_path, settings.turso_database_url, settings.turso_auth_token,
+            sync_interval_s=settings.turso_sync_interval_s,
+        )
+    return Database(settings.db_path)
 
 
 def _web_tools(web: WebService) -> list[ToolSpec]:
@@ -129,10 +140,10 @@ def build_app(
     settings: Settings,
     provider: LLMProvider | None = None,
     search_provider: SearchProvider | None = None,
-    db: Database | None = None,
+    db: Database | TursoDatabase | None = None,
 ) -> App:
     pool = ModelPool()
-    db = db or Database(settings.db_path)
+    db = db or _build_db(settings)
 
     if provider is None:
         if settings.groq_api_keys:
