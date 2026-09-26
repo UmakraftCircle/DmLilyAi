@@ -94,11 +94,11 @@ ul.plain { margin: 0; padding-left: 18px; }
 .lb-value.muted { font-weight: 600; color: var(--text-dim); font-size: 13px; }
 .lb-split .lb-value { font-size: 14px; }
 
-/* ---- settings ---- */
+/* ---- settings / dashboard tabs ---- */
 /* Icon tab strip + a single scrolling panel below it, same "pin to viewport, scroll only
-   the active panel" shape as .lb-tabs/.lb-body above - only one of the four settings cards
-   is ever in the DOM at a time, so the page fits one screen instead of stacking all four. */
-.set-tabs { flex: none; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+   the active panel" shape as .lb-tabs/.lb-body above - only one card is ever in the DOM at
+   a time, so pages using this (Settings, Dashboard) fit one screen instead of stacking cards. */
+.set-tabs { flex: none; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; margin-bottom: 14px; -webkit-overflow-scrolling: touch; }
 .set-tab {
   flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 74px;
   padding: 10px 10px 9px; border-radius: 16px; border: 1px solid var(--border); background: var(--surface);
