@@ -172,7 +172,9 @@ class LilyDiscordClient(discord.Client):
 
     def list_channels(self) -> list[dict]:
         """Every text channel, across every server the bot is in, that it can actually post
-        in - detected straight from the live gateway connection (no extra Discord API calls)."""
+        in - detected straight from the live gateway connection (no extra Discord API calls).
+        IDs go out as strings: they're 64-bit and JS's Number can't hold them exactly, so a
+        raw JSON number gets silently corrupted round-tripping through the browser."""
         out = []
         for guild in self.guilds:
             me = guild.me
@@ -180,7 +182,7 @@ class LilyDiscordClient(discord.Client):
                 continue
             for ch in guild.text_channels:
                 if ch.permissions_for(me).send_messages:
-                    out.append({"guild_id": guild.id, "guild_name": guild.name, "channel_id": ch.id, "channel_name": ch.name})
+                    out.append({"guild_id": str(guild.id), "guild_name": guild.name, "channel_id": str(ch.id), "channel_name": ch.name})
         return out
 
     async def watch_channel(self, channel_id: int | None) -> dict:
