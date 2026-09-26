@@ -4,9 +4,14 @@ Reads FanSnapshot rows written once per day by LilyAiTask/DailyTask (the
 same job that runs Deficit.py) to compute gain since three boundaries:
 today's 00:00, this week's Monday 00:00, and this month's 1st 00:00.
 
-Monthly gain here is computed independently of LilyAiTask/MonthlyTask/
-quota.py's carry-forward tracking - reconcile the two before shipping so
-the fan gain embed and the quota DM never disagree for the same trainer.
+Currently unused: no fan gain embed calls get_fan_gain_rows() yet, and the
+daily quota DM (LilyAiTask/DailyTask/DeficitTask/snapshot_job.py) computes
+today/monthly gain from LilyAiCore.ExternalServices.Umamoe.gains.member_gains()
+instead - reading it straight from uma.moe's own daily_fans array rather than
+diffing snapshots here, so it works correctly from a trainer's very first day
+and isn't affected by process restarts. If an embed is ever built on top of
+this module, prefer wiring it to member_gains() too rather than reviving the
+snapshot-diffing approach below, so the two can't disagree.
 """
 from __future__ import annotations
 
@@ -24,7 +29,8 @@ class FanSnapshotStore:
 
     def record(self, club: str, trainer_id: str, fan_total: int) -> FanSnapshot:
         """Write today's snapshot for a trainer. Called once per day per
-        trainer by the daily task, right after the uma.moe scrape."""
+        trainer by the daily task, right after polling uma.moe (see
+        snapshot_job.py) - purely a historical log, not read back for gain math."""
         ts = now_ts()
         sid = self.db.execute(
             "INSERT INTO fan_snapshots(club, trainer_id, fan_total, snapshot_at) VALUES (?,?,?,?)",
@@ -92,7 +98,11 @@ def get_fan_gain_rows(
     store: FanSnapshotStore,
     now: datetime | None = None,
 ) -> list[FanGainRow]:
-    """roster: trainer_id -> display name, e.g. from TrainerLinkStore.all_linked()."""
+    """roster: trainer_id -> display name, e.g. from TrainerLinkStore.all_linked().
+
+    Not currently called anywhere (see module docstring) - kept in case a fan
+    gain embed is built later, but prefer member_gains() for new code.
+    """
     now = now or datetime.utcnow()
     today_start, week_start, month_start = _boundaries(now)
 
