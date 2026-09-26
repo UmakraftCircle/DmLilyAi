@@ -4,6 +4,7 @@ from LilyAiMemory.ConversationMemory.conversation_memory import ConversationMemo
 from LilyAiMemory.Retrieval.retriever import rank_by_overlap
 from LilyAiMemory.SessionMemory.session_memory import SessionMemory
 from LilyAiMemory.Storage.store import MemoryStore
+from LilyAiMemory.TrainerLink.trainer_link import TrainerLinkStore
 from LilyAiMemory.UserMemory.user_memory import UserMemory
 
 
@@ -13,6 +14,7 @@ class MemoryService:
         self.user = UserMemory(self.store)
         self.conversation = ConversationMemory(self.store)
         self.session = SessionMemory()
+        self.trainer_link = TrainerLinkStore(self.store)
 
     def relevant_user_facts(self, user_id: str, query: str, limit: int = 6) -> list[str]:
         """Most relevant facts for this message; falls back to the newest facts so basics aren't lost."""
