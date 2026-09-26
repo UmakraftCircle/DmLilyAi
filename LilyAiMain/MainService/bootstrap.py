@@ -36,10 +36,10 @@ from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_mod
 from LilyAiMain.MainService.Interaction.Workflows.scheduler import Scheduler
 from LilyAiMain.MainService.Interaction.Workflows.self_ping_job import make_self_ping_job
 from LilyAiMain.MainService.Interaction.Workflows.umamoe_job import make_umamoe_job
+from LilyAiMemory.DeficitState.deficit_state_store import DeficitStateStore
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
-from LilyAiTask.DailyTask.DeficitTask.Deficit import DeficitTracker
 from LilyAiTask.DailyTask.DeficitTask.snapshot_job import run_daily_fan_gain
 from LilyAiTool.service import ToolContextData, ToolService, ToolSpec
 from LilyAiWeb.service import WebService
@@ -150,28 +150,27 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
     ]
 
 
-def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore,
+def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore, tracker_store: DeficitStateStore,
                    umamoe: UmamoeClient, circle_id: int, club: str):
     """Build one scheduler job: snapshot every linked trainer's current fan total for
     `club`/`circle_id` (via the real UmamoeClient - see snapshot_job.py) and send the
     daily quota DM.
 
-    `trackers` is created once here and closed over, so DeficitTracker state (carry,
-    total_gained) persists across runs for the life of the process, per club, exactly
-    as run_daily_fan_gain's docstring expects.
+    No in-memory tracker state is kept here: run_daily_fan_gain loads and saves each
+    trainer's DeficitTracker carry/total_gained through tracker_store on every call, so
+    it's correct on the very first run and survives process restarts/redeploys.
 
     app.discord_client isn't set yet when jobs are registered below (Discord connects
     after build_app() returns - see main.py), so it's read lazily on every run instead,
     the same way LilyAiMain/MainService/Api/server.py's _discord_or_400() does.
     """
-    trackers: dict[str, DeficitTracker] = {}
 
     async def run() -> None:
         client = app.discord_client
         if not client or not client.is_ready():
             log.info("daily-fan-gain (%s): Discord not connected yet, skipping this run", club)
             return
-        await run_daily_fan_gain(client, trainer_link_store, fan_store, umamoe, circle_id, club, trackers)
+        await run_daily_fan_gain(client, trainer_link_store, fan_store, tracker_store, umamoe, circle_id, club)
 
     return run
 
@@ -289,7 +288,7 @@ def build_app(
             scheduler.every(
                 f"daily-fan-gain-{i}",
                 24 * 3600,
-                _fan_gain_job(app, memory.trainer_link, memory.fan_gain, umamoe, circle_id, club),
+                _fan_gain_job(app, memory.trainer_link, memory.fan_gain, memory.deficit_state, umamoe, circle_id, club),
                 initial_delay_s=120.0,
             )
 
