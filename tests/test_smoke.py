@@ -137,6 +137,23 @@ class SmokeTests(unittest.TestCase):
         outs = [self.say("u5", f"msg {i}") for i in range(10)]
         self.assertTrue(any("catch up" in o[0].text for o in outs))
 
+    def test_link_trainer_flow(self):
+        self.app.memory.user.add("u6", "Test user")
+        out = self.say("u6", "link me")
+        self.assertIn("Trainer ID", out[0].text)
+        out = self.say("u6", "123456789")
+        self.assertIn("linked", out[0].text)
+        link = self.app.memory.trainer_link.by_discord_id("u6")
+        self.assertIsNotNone(link)
+        self.assertEqual(link.trainer_id, "123456789")
+        # relink overwrites the previous trainer_id for the same discord user
+        self.say("u6", "link me")
+        self.say("u6", "987654321")
+        self.assertEqual(self.app.memory.trainer_link.by_discord_id("u6").trainer_id, "987654321")
+        out = self.say("u6", "unlink me")
+        self.assertIn("unlinked", out[0].text)
+        self.assertIsNone(self.app.memory.trainer_link.by_discord_id("u6"))
+
 
 if __name__ == "__main__":
     unittest.main()
