@@ -34,4 +34,13 @@ CREATE TABLE IF NOT EXISTS fan_snapshots (
     snapshot_at REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_fan_snapshots_lookup ON fan_snapshots(club, trainer_id, snapshot_at);
+
+CREATE TABLE IF NOT EXISTS deficit_tracker_state (
+    club TEXT NOT NULL,
+    trainer_id TEXT NOT NULL,
+    carry INTEGER NOT NULL DEFAULT 0,
+    total_gained INTEGER NOT NULL DEFAULT 0,
+    updated_at REAL,
+    PRIMARY KEY (club, trainer_id)
+);
 """
