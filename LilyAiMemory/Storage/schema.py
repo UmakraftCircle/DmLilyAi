@@ -16,4 +16,13 @@ CREATE TABLE IF NOT EXISTS conversation_turns (
     created_at REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_turns_user ON conversation_turns(user_id, id);
+
+CREATE TABLE IF NOT EXISTS trainer_links (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    discord_id TEXT NOT NULL UNIQUE,
+    trainer_id TEXT NOT NULL UNIQUE,
+    trainer_name TEXT,
+    created_at REAL NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_trainer_links_trainer ON trainer_links(trainer_id);
 """
