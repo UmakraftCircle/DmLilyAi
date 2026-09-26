@@ -93,3 +93,22 @@ ul.plain { margin: 0; padding-left: 18px; }
 .lb-value { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 15px; overflow-wrap: anywhere; }
 .lb-value.muted { font-weight: 600; color: var(--text-dim); font-size: 13px; }
 .lb-split .lb-value { font-size: 14px; }
+
+/* ---- settings ---- */
+/* Icon tab strip + a single scrolling panel below it, same "pin to viewport, scroll only
+   the active panel" shape as .lb-tabs/.lb-body above - only one of the four settings cards
+   is ever in the DOM at a time, so the page fits one screen instead of stacking all four. */
+.set-tabs { flex: none; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+.set-tab {
+  flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 74px;
+  padding: 10px 10px 9px; border-radius: 16px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text-dim); font-size: 11.5px; font-weight: 650; line-height: 1.15; cursor: pointer;
+  transition: transform .15s, background .15s, border-color .15s, color .15s;
+}
+.set-tab:hover { background: var(--surface-2); color: var(--text); }
+.set-tab .tile-icon { width: 36px; height: 36px; border-radius: 12px; }
+.set-tab[aria-current="page"] { color: var(--text); border-color: transparent; background: var(--grad-soft); box-shadow: inset 0 0 0 1.5px rgba(169, 155, 255, .55); }
+.set-tab[aria-current="page"] .tile-icon { background: var(--grad-brand); color: #fff; box-shadow: var(--glow); }
+.set-body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+.set-body .card { margin: 0; }
+@media (min-width: 600px) { .set-tabs { overflow-x: visible; } }
