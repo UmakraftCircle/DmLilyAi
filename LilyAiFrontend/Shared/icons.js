@@ -17,6 +17,9 @@ const PATHS = {
   lock: ["M6 11h12v10H6z", "M8 11V7a4 4 0 0 1 8 0v4"],
   arrow: ["M5 12h14M13 6l6 6-6 6"],
   leaderboard: ["M4 20V11", "M10 20V4", "M16 20v-7"],
+  plug: ["M9 2v6", "M15 2v6", "M6 8h12v3a6 6 0 0 1-12 0z", "M12 17v5"],
+  cpu: ["M7 7h10v10H7z", "M12 3v4", "M12 17v4", "M3 12h4", "M17 12h4"],
+  search: [circle(11, 11, 7), "M21 21l-4.3-4.3"],
 };
 
 const NS = "http://www.w3.org/2000/svg";
