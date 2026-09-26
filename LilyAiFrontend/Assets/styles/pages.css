@@ -16,6 +16,7 @@
 .chatwrap.with-side { grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 1100px) { .chatwrap.with-side { grid-template-columns: minmax(0, 1fr) 320px; } }
 .thread { display: flex; flex-direction: column; min-height: 0; padding: 0; overflow: hidden; }
+.set-body > .thread { flex: 1; } /* Relay's Channel tab reuses .thread outside the chat grid - give it the height .msgs needs to scroll instead of collapsing to content size */
 .msgs { flex: 1; overflow-y: auto; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth; }
 .empty { margin: auto; text-align: center; color: var(--text-mute); max-width: 32ch; }
 .empty .logo-mark { margin: 0 auto 12px; width: 52px; height: 52px; border-radius: 17px; }
@@ -51,6 +52,29 @@ ul.plain { margin: 0; padding-left: 18px; }
 :root[data-theme="light"] .k-dm_out { color: #7a3fd0; }
 .relay-box { max-height: calc(100vh - 290px); overflow: auto; }
 @media (max-width: 640px) { .ev { grid-template-columns: 1fr; gap: 0; } .relay-box { max-height: 65vh; } }
+
+/* ---- relay channel thread ---- */
+/* Discord-style reply UI layered onto the existing .bubble styling above: a quoted preview
+   sits above a bubble it replies to, a small "Reply" affordance sits under every bubble
+   (tapping it fills the banner above the compose box), same visual language as .rate. */
+.bubble-wrap { display: flex; flex-direction: column; gap: 3px; max-width: 85%; }
+.bubble-wrap .bubble { max-width: none; align-self: stretch; }
+.bubble-author { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 2px; }
+.reply-quote {
+  align-self: flex-start; max-width: 100%; font-size: 12.5px; color: var(--text-mute); padding: 4px 12px;
+  border-left: 2px solid var(--ring); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.bubble-reply {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; background: none; border: 0;
+  color: var(--text-mute); font-size: 11.5px; font-weight: 650; cursor: pointer; padding: 0;
+}
+.bubble-reply:hover { color: var(--text); }
+.reply-banner {
+  display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-top: 1px solid var(--border);
+  background: var(--surface-2); font-size: 13px;
+}
+.reply-banner small { display: block; color: var(--ring); font-weight: 650; font-size: 11.5px; }
+.reply-banner p { margin: 1px 0 0; color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---- leaderboard ---- */
 /* .page.fill (above) already pins the page to the viewport height with no page-level scroll;
@@ -94,10 +118,10 @@ ul.plain { margin: 0; padding-left: 18px; }
 .lb-value.muted { font-weight: 600; color: var(--text-dim); font-size: 13px; }
 .lb-split .lb-value { font-size: 14px; }
 
-/* ---- settings / dashboard tabs ---- */
+/* ---- settings / dashboard / relay tabs ---- */
 /* Icon tab strip + a single scrolling panel below it, same "pin to viewport, scroll only
    the active panel" shape as .lb-tabs/.lb-body above - only one card is ever in the DOM at
-   a time, so pages using this (Settings, Dashboard) fit one screen instead of stacking cards. */
+   a time, so pages using this (Settings, Dashboard, Relay) fit one screen instead of stacking. */
 .set-tabs { flex: none; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; margin-bottom: 14px; -webkit-overflow-scrolling: touch; }
 .set-tab {
   flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 74px;
@@ -122,3 +146,8 @@ ul.plain { margin: 0; padding-left: 18px; }
 .dash-stats .stat { flex: none; min-width: 96px; padding: 10px 12px; }
 .dash-stats .stat b { font-size: 19px; }
 .dash-stats .stat span { font-size: 11px; white-space: nowrap; }
+
+/* ---- drawer channel picker ---- */
+.channel-picker { margin-bottom: 12px; }
+.cp-label { display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 6px; }
+.channel-picker select { font-size: 13px; padding: 8px 10px; }
