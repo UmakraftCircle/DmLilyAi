@@ -202,7 +202,9 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             "Check current uma.moe CIRCLE-level standing (overall rank, points, member count) for the tracked "
             "club(s), or a specific circle_id if given. Does NOT include individual members' fan numbers - use "
             "check_fan_gain for that.",
-            {"type": "object", "properties": {"circle_id": {"type": "integer"}}, "required": []},
+            {"type": "object", "properties": {
+                "circle_id": {"type": ["integer", "null"], "description": "Omit or pass null for the default club(s)"},
+            }, "required": []},
             check_umamoe, category="umamoe", timeout=15,
         ),
         ToolSpec(
@@ -211,8 +213,11 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             "uma.moe club(s). Optionally filter to one trainer_name. Use this for any request about fan gain, "
             "fan numbers, or a fan leaderboard - never try to fetch or scrape this bot's own web pages for it.",
             {"type": "object", "properties": {
-                "circle_id": {"type": "integer"},
-                "trainer_name": {"type": "string", "description": "Filter to trainers whose name contains this"},
+                "circle_id": {"type": ["integer", "null"], "description": "Omit or pass null for the default club(s)"},
+                "trainer_name": {
+                    "type": ["string", "null"],
+                    "description": "Filter to trainers whose name contains this; omit or pass null for everyone",
+                },
             }, "required": []},
             check_fan_gain, category="umamoe", timeout=15,
         ),
