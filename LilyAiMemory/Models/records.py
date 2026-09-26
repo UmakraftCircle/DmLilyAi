@@ -52,3 +52,21 @@ class FanSnapshot:
     trainer_id: str
     fan_total: int
     snapshot_at: float = 0.0
+
+
+@dataclass
+class DeficitState:
+    """A trainer's persisted DeficitTracker state for the daily fan quota.
+
+    carry/total_gained mirror LilyAiTask.DailyTask.DeficitTask.Deficit.
+    DeficitTracker's own fields of the same name - written after every
+    run_daily_fan_gain() run so a process restart or Render redeploy can
+    restore a trainer's running carry (deficit owed / surplus banked)
+    instead of silently resetting it to zero.
+    """
+
+    club: str
+    trainer_id: str
+    carry: int = 0
+    total_gained: int = 0
+    updated_at: float = 0.0
