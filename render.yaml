@@ -25,8 +25,15 @@ services:
         sync: false            # Discord user id to DM on rank/points/fan changes; empty = log only
       - key: UMAMOE_POLL_INTERVAL_HOURS
         value: "6"
-    # The free plan has an ephemeral filesystem: memory and the RAG index reset on each deploy/restart.
-    # For persistence, use a paid plan and uncomment:
+      # Turso (libSQL) - optional. Set these to persist memory/state across deploys on the
+      # free plan instead of paying for a disk (see LilyAiCore/ExternalServices/Database/turso.py).
+      - key: TURSO_DATABASE_URL
+        sync: false            # e.g. libsql://your-db-name.turso.io
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+    # The free plan has an ephemeral filesystem: memory and the RAG index reset on each deploy/restart,
+    # UNLESS TURSO_DATABASE_URL/TURSO_AUTH_TOKEN are set above (memory only - the RAG index still resets).
+    # Alternatively, for persistence without Turso, use a paid plan and uncomment:
     # disk:
     #   name: lilyai-data
     #   mountPath: /app/data
