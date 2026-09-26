@@ -5,7 +5,11 @@ import { icon } from "/Shared/icons.js";
 /** Drawer footer control: pick which Discord channel the bot mirrors into the Relay page's
  * Channel tab. The choice is saved server-side (RelayChannelStore), not per-browser, so it's
  * the same for every admin and survives a refresh or a restart. Hides itself entirely when
- * Discord isn't connected (nothing to pick a channel on). */
+ * Discord isn't connected (nothing to pick a channel on).
+ *
+ * Channel IDs are kept as strings throughout - never run through Number(). Discord snowflakes
+ * are 64-bit and JS's Number can't represent them exactly, so converting one silently corrupts
+ * it into a different (usually nonexistent) ID - the API then 404s with "Unknown Channel". */
 export function createChannelPicker() {
   const select = h("select", { "aria-label": "Watched Discord channel" }, h("option", { value: "" }, "Loading…"));
   const el = h("div", { class: "channel-picker", hidden: true },
@@ -15,7 +19,7 @@ export function createChannelPicker() {
   function fill(current) {
     clear(select).append(
       h("option", { value: "" }, "Not watching"),
-      ...channels.map((c) => h("option", { value: String(c.channel_id), selected: c.channel_id === current }, `#${c.channel_name} · ${c.guild_name}`)));
+      ...channels.map((c) => h("option", { value: c.channel_id, selected: c.channel_id === current }, `#${c.channel_name} · ${c.guild_name}`)));
   }
 
   async function load() {
@@ -30,7 +34,7 @@ export function createChannelPicker() {
   }
 
   select.addEventListener("change", async () => {
-    const channel_id = select.value ? Number(select.value) : null;
+    const channel_id = select.value || null; // string, not Number() - see note above
     select.disabled = true;
     try { await api("/api/relay/channel", { method: "POST", body: { channel_id } }); }
     catch { await load(); } // roll the dropdown back to whatever's actually watched
