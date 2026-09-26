@@ -25,4 +25,13 @@ CREATE TABLE IF NOT EXISTS trainer_links (
     created_at REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_trainer_links_trainer ON trainer_links(trainer_id);
+
+CREATE TABLE IF NOT EXISTS fan_snapshots (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    club TEXT NOT NULL,
+    trainer_id TEXT NOT NULL,
+    fan_total INTEGER NOT NULL,
+    snapshot_at REAL NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_fan_snapshots_lookup ON fan_snapshots(club, trainer_id, snapshot_at);
 """

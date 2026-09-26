@@ -36,3 +36,19 @@ class TrainerLink:
     trainer_id: str
     trainer_name: str | None = None
     created_at: float = 0.0
+
+
+@dataclass
+class FanSnapshot:
+    """A trainer's fan_total at a point in time.
+
+    Written once per day (and, on Mondays, doubles as the week's
+    baseline) by LilyAiTask/DailyTask; used by LilyAiMemory.FanGain to
+    compute today/weekly/monthly gain for the fan gain leaderboard.
+    """
+
+    id: int
+    club: str
+    trainer_id: str
+    fan_total: int
+    snapshot_at: float = 0.0
