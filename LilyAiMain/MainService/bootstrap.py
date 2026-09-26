@@ -28,6 +28,7 @@ from LilyAiMain.MainService.Discord.Router.router import DMRouter
 from LilyAiMain.MainService.Discord.Session.manager import SessionManager
 from LilyAiMain.MainService.Interaction.Feedback.feedback import FeedbackHandler, ReplyLog
 from LilyAiMain.MainService.Interaction.Forms.forms import FormManager
+from LilyAiMain.MainService.Interaction.Forms.link_trainer import LinkTrainerFlow
 from LilyAiMain.MainService.Interaction.Onboarding.onboarding import OnboardingFlow
 from LilyAiMain.MainService.Interaction.Polls.polls import PollManager
 from LilyAiMain.MainService.Interaction.Workflows.chat_workflow import ChatWorkflow
@@ -201,7 +202,7 @@ def build_app(
     forms, polls = FormManager(), PollManager()
     router = DMRouter(
         memory, chat, replies, bus, SessionManager(), RateLimiter(), AccessControl(settings.allowed_user_ids),
-        forms, polls, OnboardingFlow(memory, forms, polls),
+        forms, polls, OnboardingFlow(memory, forms, polls), LinkTrainerFlow(memory, forms),
     )
     if not settings.webhook_url:
         log.info("WEBHOOK_URL not set: ops alerts (task crashes, job failures) are logged only")
