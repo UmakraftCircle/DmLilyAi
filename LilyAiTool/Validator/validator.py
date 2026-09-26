@@ -10,7 +10,20 @@ _TYPES = {
     "boolean": bool,
     "array": list,
     "object": dict,
+    "null": type(None),
 }
+
+
+def _type_names(spec: dict[str, Any]) -> list[str]:
+    """spec["type"] is normally a single JSON-schema type name, but an optional
+    field may declare a union like ["integer", "null"] - some models (seen with
+    Groq's openai/gpt-oss-* models calling check_fan_gain's circle_id) pass null
+    explicitly for an omitted optional argument instead of leaving it out, and
+    without "null" in the schema's type list, Groq's own API-side validation
+    rejects the tool call before it ever reaches this function. Always returns a
+    list so callers don't need to branch on str vs list."""
+    raw = spec.get("type", "")
+    return raw if isinstance(raw, list) else [raw]
 
 
 def validate_args(schema: dict[str, Any], args: dict[str, Any]) -> dict[str, Any]:
@@ -25,9 +38,15 @@ def validate_args(schema: dict[str, Any], args: dict[str, Any]) -> dict[str, Any
         spec = props.get(key)
         if spec is None:
             continue  # ignore unknown args silently; models sometimes add extras
-        expected = _TYPES.get(spec.get("type", ""), object)
-        if spec.get("type") in {"integer", "number"} and isinstance(value, bool):
-            raise ToolValidationError(f"'{key}' must be {spec['type']}")
+        names = _type_names(spec)
+        if value is None:
+            if "null" not in names:
+                raise ToolValidationError(f"'{key}' must be {spec.get('type')}")
+            clean[key] = value
+            continue
+        expected = tuple(_TYPES[n] for n in names if n in _TYPES) or (object,)
+        if ("integer" in names or "number" in names) and isinstance(value, bool):
+            raise ToolValidationError(f"'{key}' must be {spec.get('type')}")
         if not isinstance(value, expected):
             raise ToolValidationError(f"'{key}' must be {spec.get('type')}")
         if "enum" in spec and value not in spec["enum"]:
