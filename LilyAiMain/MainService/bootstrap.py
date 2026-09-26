@@ -30,6 +30,7 @@ from LilyAiMain.MainService.Interaction.Polls.polls import PollManager
 from LilyAiMain.MainService.Interaction.Workflows.chat_workflow import ChatWorkflow
 from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_model_scan_job
 from LilyAiMain.MainService.Interaction.Workflows.scheduler import Scheduler
+from LilyAiMain.MainService.Interaction.Workflows.self_ping_job import make_self_ping_job
 from LilyAiMain.MainService.Interaction.Workflows.umamoe_job import make_umamoe_job
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
@@ -219,6 +220,14 @@ def build_app(
                         initial_delay_s=10.0)
     elif umamoe:
         log.info("UMAMOE_CIRCLE_IDS not set: check_umamoe works on demand but background polling is off")
+    if settings.enable_api and settings.self_ping_enabled:
+        if settings.self_ping_url:
+            ping_url = settings.self_ping_url.rstrip("/") + "/api/health"
+            # 60s floor guards against a mistyped tiny value hammering the service's own API.
+            ping_interval = max(60.0, settings.self_ping_interval_s)
+            scheduler.every("self-ping", ping_interval, make_self_ping_job(ping_url), initial_delay_s=ping_interval)
+        else:
+            log.info("SELF_PING_ENABLED but no SELF_PING_URL/RENDER_EXTERNAL_URL set: self-ping is off")
     return App(
         settings, pool, db, provider, memory, rag, web, tools, learning, chat, router,
         FeedbackHandler(replies, learning, rag), bus, DiscordEventHandlers(bus), scanner, scheduler,

@@ -49,6 +49,9 @@ class Settings:
     turso_database_url: str
     turso_auth_token: str
     turso_sync_interval_s: float
+    self_ping_enabled: bool
+    self_ping_url: str
+    self_ping_interval_s: float
 
     @property
     def db_path(self) -> Path:
@@ -110,4 +113,13 @@ def load_settings() -> Settings:
         turso_database_url=os.getenv("TURSO_DATABASE_URL", ""),
         turso_auth_token=os.getenv("TURSO_AUTH_TOKEN", ""),
         turso_sync_interval_s=float(os.getenv("TURSO_SYNC_INTERVAL_SECONDS", "60")),
+        # Self-ping (optional, on by default) - keeps a free-tier host (e.g. Render's free
+        # plan) from sleeping the service after ~15 min of no inbound traffic, by hitting
+        # its own /api/health on a schedule. Render auto-sets RENDER_EXTERNAL_URL, so this
+        # needs no config there; SELF_PING_URL overrides it (e.g. for other hosts), and
+        # SELF_PING_ENABLED=false turns it off entirely. See
+        # LilyAiMain/MainService/Interaction/Workflows/self_ping_job.py.
+        self_ping_enabled=_bool("SELF_PING_ENABLED", True),
+        self_ping_url=os.getenv("SELF_PING_URL", os.getenv("RENDER_EXTERNAL_URL", "")),
+        self_ping_interval_s=float(os.getenv("SELF_PING_INTERVAL_SECONDS", "300")),
     )
