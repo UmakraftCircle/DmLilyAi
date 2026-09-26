@@ -46,6 +46,9 @@ class Settings:
     umamoe_notify_user_id: str
     umamoe_poll_interval_hours: float
     umamoe_poll_interval_s: float | None
+    turso_database_url: str
+    turso_auth_token: str
+    turso_sync_interval_s: float
 
     @property
     def db_path(self) -> Path:
@@ -101,4 +104,10 @@ def load_settings() -> Settings:
         # Sub-hour override (e.g. 300 = every 5 minutes). Takes precedence over
         # UMAMOE_POLL_INTERVAL_HOURS when set. A 60s floor is enforced in bootstrap.py.
         umamoe_poll_interval_s=float(umamoe_seconds_raw) if umamoe_seconds_raw else None,
+        # Turso (libSQL) - optional. When TURSO_DATABASE_URL is set, bootstrap.py uses
+        # TursoDatabase (embedded replica) instead of local sqlite. See
+        # LilyAiCore/ExternalServices/Database/turso.py.
+        turso_database_url=os.getenv("TURSO_DATABASE_URL", ""),
+        turso_auth_token=os.getenv("TURSO_AUTH_TOKEN", ""),
+        turso_sync_interval_s=float(os.getenv("TURSO_SYNC_INTERVAL_SECONDS", "60")),
     )
