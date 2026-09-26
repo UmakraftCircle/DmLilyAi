@@ -73,14 +73,19 @@ class DeficitTracker:
     A shortfall on one day increases the required amount for the next
     day (and keeps stacking onto following days until paid off). A
     surplus on one day decreases the required amount for the next day.
+
+    carry/total_gained can be seeded from a prior run's saved state (see
+    LilyAiMemory.DeficitState.DeficitStateStore) so a tracker rebuilt after
+    a process restart or Render redeploy picks up exactly where the last
+    run left off, instead of silently resetting to zero.
     """
 
-    def __init__(self, daily_quota: int = DAILY_QUOTA):
+    def __init__(self, daily_quota: int = DAILY_QUOTA, carry: int = 0, total_gained: int = 0):
         self.daily_quota = daily_quota
         # Positive carry = deficit owed (adds to next day's requirement).
         # Negative carry = surplus/credit (reduces next day's requirement).
-        self.carry = 0
-        self.total_gained = 0
+        self.carry = carry
+        self.total_gained = total_gained
         self.history = []
 
     def required_today(self) -> int:
@@ -143,10 +148,10 @@ def format_daily_message(
     - Gained less than required -> reports deficit owed, added to tomorrow.
 
     monthly_gain, when given, overrides result["total_gained"] for the
-    "Monthly progress" line. Pass the figure computed by
-    LilyAiMemory.FanGain (the same snapshot-based calculation the fan
-    gain embed reads) so this DM and the embed never disagree about a
-    trainer's monthly total.
+    "Monthly progress" line. Pass the figure from LilyAiCore.ExternalServices.
+    Umamoe.gains.member_gains() (the same uma.moe daily_fans-based calculation
+    /api/leaderboard uses) so this DM and the leaderboard never disagree about
+    a trainer's monthly total.
     """
     gained = result["gained"]
     required = result["required"]
@@ -196,9 +201,8 @@ async def send_daily_dm(
         client: The logged-in discord.Client/Bot instance.
         member: The LinkedMember to DM (must have discord_id + trainer_id).
         result: The dict returned by DeficitTracker.record_day().
-        monthly_gain: Optional snapshot-based monthly total (see
-            format_daily_message) to keep this DM in sync with the fan
-            gain embed.
+        monthly_gain: Optional uma.moe-based monthly total (see
+            format_daily_message) to keep this DM in sync with the leaderboard.
     """
     if not member.discord_id or not member.trainer_id:
         return
