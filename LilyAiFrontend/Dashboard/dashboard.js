@@ -14,13 +14,14 @@ const TABS = [
   { id: "eval", label: "Evaluation", icon: "check" },
 ];
 
-/** Dashboard as one fixed-height page: the stat grid stays pinned at the top, an icon tab
- * strip below it, then a single scrolling panel (Tools / Context / Knowledge / Evaluation)
- * rendered one at a time - same shape as Settings. Cards are rebuilt on every load() (as
- * before) since they render server data that can change (tool stats, knowledge sources). */
+/** Dashboard as one fixed-height page: a compact horizontally-scrolling stat strip stays
+ * pinned at the top (not a grid - a grid of 7 cards runs to four rows and pushes the tabs
+ * off-screen), then an icon tab strip, then a single scrolling panel (Tools / Context /
+ * Knowledge / Evaluation) rendered one at a time - same shape as Settings. Cards are rebuilt
+ * on every load() (as before) since they render server data that can change. */
 export function mount(root) {
   root.classList.add("fill");
-  const stats = h("div", { class: "stats" });
+  const stats = h("div", { class: "dash-stats" });
   const tabs = h("div", { class: "set-tabs" });
   const body = h("div", { class: "set-body" });
   const state = { tab: "tools" };
