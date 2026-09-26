@@ -25,14 +25,28 @@ class TursoDatabase:
         auth_token: str,
         sync_interval_s: float | None = 60.0,
     ):
-        # sync_period enables background auto-sync on this interval, in addition to
-        # the explicit sync() call below on startup so the replica is never stale
-        # right after a cold start (e.g. right after a redeploy).
-        self._conn = libsql.connect(
-            str(path), sync_url=sync_url, auth_token=auth_token, sync_period=sync_interval_s
-        )
+        # The installed libsql_experimental build has no built-in periodic sync
+        # (no sync_period kwarg on connect()), so background sync is driven here
+        # with a plain threading.Timer instead.
+        self._conn = libsql.connect(str(path), sync_url=sync_url, auth_token=auth_token)
         self._lock = threading.Lock()
+        self._sync_interval_s = sync_interval_s
+        self._timer: threading.Timer | None = None
         self.sync()
+        if sync_interval_s:
+            self._schedule_sync()
+
+    def _schedule_sync(self) -> None:
+        self._timer = threading.Timer(self._sync_interval_s, self._sync_and_reschedule)
+        self._timer.daemon = True
+        self._timer.start()
+
+    def _sync_and_reschedule(self) -> None:
+        try:
+            self.sync()
+        finally:
+            if self._sync_interval_s:
+                self._schedule_sync()
 
     def sync(self) -> None:
         with self._lock:
@@ -64,5 +78,7 @@ class TursoDatabase:
         return rows[0] if rows else None
 
     def close(self) -> None:
+        if self._timer:
+            self._timer.cancel()
         with self._lock:
             self._conn.close()
