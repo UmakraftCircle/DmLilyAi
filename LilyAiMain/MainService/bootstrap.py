@@ -14,6 +14,7 @@ from LilyAiCore.ExternalServices.Discord.relay_channel_store import RelayChannel
 from LilyAiCore.ExternalServices.Discord.reminder_store import ReminderStore
 from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
+from LilyAiCore.ExternalServices.Umamoe.gains import member_gains
 from LilyAiCore.ExternalServices.Umamoe.store import UmamoeStore
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider
@@ -110,7 +111,9 @@ def _web_tools(web: WebService) -> list[ToolSpec]:
         ToolSpec(
             "web_search",
             "Search the web for current or factual information and read the top pages. Use for news, prices, "
-            "recent events, or anything you're unsure about.",
+            "recent events, or anything you're unsure about. Never use this (or read_webpage) to look up uma.moe "
+            "fan gain, circle standing, or leaderboard data - use check_umamoe / check_fan_gain instead, even for "
+            "this bot's own site.",
             {"type": "object", "properties": {"query": {"type": "string"}}, "required": ["query"]},
             web_search, category="web", timeout=30,
         ),
@@ -139,13 +142,55 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             )
         return "\n".join(lines)
 
+    async def check_fan_gain(ctx: ToolContextData, args: dict) -> str:
+        circle_id = args.get("circle_id")
+        name_filter = (args.get("trainer_name") or "").strip().lower()
+        ids = (circle_id,) if circle_id else default_circle_ids
+        if not ids:
+            return "No uma.moe circle configured. Set UMAMOE_CIRCLE_IDS or pass a circle_id."
+        sections = []
+        for cid in ids:
+            data = await client.get_circle(circle_id=cid)
+            circle_name = (data.get("circle") or {}).get("name", str(cid))
+            rows = []
+            for m in data.get("members", []):
+                trainer_name = m.get("trainer_name") or str(m.get("viewer_id"))
+                if name_filter and name_filter not in trainer_name.lower():
+                    continue
+                rows.append((trainer_name, member_gains(m.get("daily_fans"))))
+            if not rows:
+                continue
+            rows.sort(key=lambda r: r[1]["today_gain"], reverse=True)
+            section = [f"**{circle_name}**"]
+            for trainer_name, g in rows[:25]:  # keep replies readable for a full-roster query
+                section.append(
+                    f"- {trainer_name}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
+                    f"(total {g['total_fans']:,})"
+                )
+            sections.append("\n".join(section))
+        if not sections:
+            return f"No trainer matching '{args.get('trainer_name')}' found." if name_filter else "No members found."
+        return "\n\n".join(sections)
+
     return [
         ToolSpec(
             "check_umamoe",
-            "Check current uma.moe circle standing (rank, points, member count) for the tracked club(s), "
-            "or a specific circle_id if given.",
+            "Check current uma.moe CIRCLE-level standing (overall rank, points, member count) for the tracked "
+            "club(s), or a specific circle_id if given. Does NOT include individual members' fan numbers - use "
+            "check_fan_gain for that.",
             {"type": "object", "properties": {"circle_id": {"type": "integer"}}, "required": []},
             check_umamoe, category="umamoe", timeout=15,
+        ),
+        ToolSpec(
+            "check_fan_gain",
+            "Look up today's and this month's fan gain, plus current total fans, per trainer in the tracked "
+            "uma.moe club(s). Optionally filter to one trainer_name. Use this for any request about fan gain, "
+            "fan numbers, or a fan leaderboard - never try to fetch or scrape this bot's own web pages for it.",
+            {"type": "object", "properties": {
+                "circle_id": {"type": "integer"},
+                "trainer_name": {"type": "string", "description": "Filter to trainers whose name contains this"},
+            }, "required": []},
+            check_fan_gain, category="umamoe", timeout=15,
         ),
     ]
 
