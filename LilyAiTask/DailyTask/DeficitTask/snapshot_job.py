@@ -21,6 +21,14 @@ FanSnapshotStore is still written here as a historical record of each day's
 total_fans (harmless, and useful if that log is ever wanted later), but it no
 longer participates in the gain math.
 
+DeficitTracker's own carry (deficit owed / surplus banked toward the monthly
+quota) is a different kind of state - it can't be recomputed from uma.moe on
+demand, it only exists because of what record_day() was called with on past
+days. That state is persisted via LilyAiMemory.DeficitState.DeficitStateStore
+(loaded at the top of each trainer's turn below, saved back right after
+record_day()), so a process restart or Render redeploy carries it over
+instead of silently zeroing a trainer's carry.
+
 There is no scraper here: fan data comes from the existing UmamoeClient (the
 same client that already powers check_umamoe and /api/leaderboard, configured
 via UMAMOE_API_KEY / UMAMOE_CIRCLE_IDS - see render.yaml and .env.example).
@@ -36,6 +44,7 @@ import discord
 
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
 from LilyAiCore.ExternalServices.Umamoe.gains import member_gains
+from LilyAiMemory.DeficitState.deficit_state_store import DeficitStateStore
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
 from LilyAiMemory.TrainerLink.trainer_link import TrainerLinkStore
 from LilyAiTask.DailyTask.DeficitTask.Deficit import (
@@ -64,14 +73,27 @@ async def _fetch_member_gains(umamoe: UmamoeClient, circle_id: int) -> dict[str,
     return out
 
 
+def _load_tracker(tracker_store: DeficitStateStore, club: str, trainer_id: str, now: datetime) -> DeficitTracker:
+    """Rebuild a trainer's DeficitTracker from its last saved carry/total_gained,
+    or start fresh on the 1st of the month (a new tally period) or if nothing's
+    been saved for them yet."""
+    if _is_first_of_month(now):
+        tracker_store.reset(club, trainer_id)
+        return DeficitTracker()
+    saved = tracker_store.get(club, trainer_id)
+    if saved is None:
+        return DeficitTracker()
+    return DeficitTracker(carry=saved.carry, total_gained=saved.total_gained)
+
+
 async def run_daily_fan_gain(
     client: discord.Client,
     trainer_link_store: TrainerLinkStore,
     fan_store: FanSnapshotStore,
+    tracker_store: DeficitStateStore,
     umamoe: UmamoeClient,
     circle_id: int,
     club: str,
-    trackers: dict[str, DeficitTracker],
     now: datetime | None = None,
 ) -> None:
     """Run one day's quota cycle for every linked trainer in `club`.
@@ -82,16 +104,15 @@ async def run_daily_fan_gain(
         fan_store: FanSnapshotStore - written here purely as a historical log
             of each day's total_fans; today_gain/monthly_gain both come from
             member_gains() below, not from diffing these snapshots.
+        tracker_store: DeficitStateStore - persists each trainer's DeficitTracker
+            carry/total_gained across runs and process restarts (e.g.
+            app.memory.deficit_state).
         umamoe: the shared UmamoeClient (app.umamoe - None means
             UMAMOE_API_KEY isn't set, in which case this job shouldn't be
             scheduled; see bootstrap.py).
         circle_id: the uma.moe circle id this club maps to (one of
             settings.umamoe_circle_ids).
         club: which club this run is for ("Umakraft" / "Umakraft 2").
-        trackers: trainer_id -> DeficitTracker, kept alive by the caller
-            across days (e.g. held on the bot/app instance) so carry persists
-            between runs. A trainer's tracker is replaced with a fresh one on
-            the 1st of the month.
         now: override for testing; defaults to current UTC time.
     """
     now = now or datetime.utcnow()
@@ -110,9 +131,8 @@ async def run_daily_fan_gain(
 
         fan_store.record(club, member.trainer_id, gains["total_fans"])
 
-        if member.trainer_id not in trackers or _is_first_of_month(now):
-            trackers[member.trainer_id] = DeficitTracker()
-
-        result = trackers[member.trainer_id].record_day(gains["today_gain"])
+        tracker = _load_tracker(tracker_store, club, member.trainer_id, now)
+        result = tracker.record_day(gains["today_gain"])
+        tracker_store.set(club, member.trainer_id, tracker.carry, tracker.total_gained)
 
         await send_daily_dm(client, member, result, monthly_gain=gains["monthly_gain"])
