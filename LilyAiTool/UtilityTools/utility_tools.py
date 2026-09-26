@@ -42,7 +42,13 @@ def _calculate(ctx, args):
 
 
 def _current_time(ctx, args):
-    offset = args.get("utc_offset_hours", 0)
+    # args.get(..., 0) only covers the key being absent - a model that passes
+    # utc_offset_hours: null explicitly (allowed since the schema below accepts
+    # null) leaves the key present with value None, so that default wouldn't
+    # apply; treat None the same as "not given" here.
+    offset = args.get("utc_offset_hours")
+    if offset is None:
+        offset = 0
     if not -12 <= offset <= 14:
         raise ToolError("utc_offset_hours must be between -12 and 14")
     now = datetime.now(timezone.utc) + timedelta(hours=offset)
@@ -61,7 +67,12 @@ def utility_tools() -> list[ToolSpec]:
         ToolSpec(
             "current_time",
             "Get the current date and time, optionally at a UTC offset in hours.",
-            {"type": "object", "properties": {"utc_offset_hours": {"type": "number"}}, "required": []},
+            {"type": "object", "properties": {
+                "utc_offset_hours": {
+                    "type": ["number", "null"],
+                    "description": "Omit or pass null for UTC (offset 0)",
+                },
+            }, "required": []},
             _current_time,
         ),
     ]
