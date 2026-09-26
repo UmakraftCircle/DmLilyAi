@@ -25,3 +25,14 @@ class SessionState:
     started_at: float
     last_seen: float
     data: dict = field(default_factory=dict)
+
+
+@dataclass
+class TrainerLink:
+    """A confirmed Discord <-> uma.moe trainer ID link."""
+
+    id: int
+    discord_id: str
+    trainer_id: str
+    trainer_name: str | None = None
+    created_at: float = 0.0
