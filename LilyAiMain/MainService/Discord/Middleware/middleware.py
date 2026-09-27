@@ -29,6 +29,11 @@ class RateLimiter:
 
 
 class AccessControl:
+    """Discord-only allowlist. Web/simulator traffic is intentionally not gated here - it
+    already sits behind LilyAiMain/MainService/Api/server.py's admin_token/loopback guard, so
+    this and that are two separate gates that both need to stay correct, not one bypassing
+    the other."""
+
     def __init__(self, allowed_ids: frozenset[int]):
         self.allowed = {str(i) for i in allowed_ids}
 
@@ -36,5 +41,10 @@ class AccessControl:
         return source != "discord" or not self.allowed or user_id in self.allowed
 
 
-def clean_input(text: str) -> str:
-    return text.strip()[:MAX_INPUT_CHARS]
+def clean_input(text: str) -> tuple[str, bool]:
+    """Strip and cap to MAX_INPUT_CHARS. Returns (text, truncated) so the router can tell the
+    user when part of their message was cut off, instead of just silently discarding it."""
+    stripped = text.strip()
+    if len(stripped) <= MAX_INPUT_CHARS:
+        return stripped, False
+    return stripped[:MAX_INPUT_CHARS], True
