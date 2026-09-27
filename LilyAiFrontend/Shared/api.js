@@ -11,12 +11,18 @@ export const settings = {
   },
 };
 
+/** `body` is either a plain object (sent as JSON) or a FormData instance (sent as
+ * multipart/form-data, e.g. for file uploads - see channelThread.js). The Content-Type header
+ * is only set for the JSON case; fetch sets multipart's own header (with its boundary) itself
+ * when given a FormData body, and setting it manually would drop that boundary and break the
+ * upload. */
 export async function api(path, { method = "GET", body } = {}) {
-  const headers = { "Content-Type": "application/json" };
+  const isForm = typeof FormData !== "undefined" && body instanceof FormData;
+  const headers = isForm ? {} : { "Content-Type": "application/json" };
   if (settings.token) headers.Authorization = `Bearer ${settings.token}`;
   let res;
   try {
-    res = await fetch(settings.base + path, { method, headers, body: body ? JSON.stringify(body) : undefined });
+    res = await fetch(settings.base + path, { method, headers, body: isForm ? body : (body ? JSON.stringify(body) : undefined) });
   } catch {
     throw new Error(`Can't reach the API at ${settings.base}. Check Settings.`);
   }
