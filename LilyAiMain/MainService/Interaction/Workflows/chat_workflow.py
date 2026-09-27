@@ -99,10 +99,9 @@ class ChatWorkflow:
                     break
                 messages.append(final.raw_message)
                 for call in final.tool_calls:
-                    result = await self.tools.run(call.name, call.arguments, tool_ctx)
-                    self.learning.tools.record(call.name, result.ok, result.duration_ms)
+                    result = await self._run_tool(call.name, call.arguments, tool_ctx)
                     used.append(call.name)
-                    messages.append({"role": "tool", "tool_call_id": call.id, "content": result.output})
+                    messages.append({"role": "tool", "tool_call_id": call.id, "content": result})
         except ProviderError as e:
             log.error("provider failed: %s", e)
             return ChatReply(FALLBACK_ERROR, ok=False, elapsed_ms=(time.perf_counter() - start) * 1000)
@@ -127,6 +126,24 @@ class ChatWorkflow:
             token_estimate=built.token_estimate,
             elapsed_ms=(time.perf_counter() - start) * 1000,
         )
+
+    async def _run_tool(self, name: str, arguments: dict, tool_ctx: ToolContextData) -> str:
+        """Run one tool call and always return a string for the model to see - even on
+        failure. A tool that raises instead of returning a ToolResult used to blow up the
+        whole turn (skipping conversation.append() below and losing the turn to the router's
+        generic catch with no clue which tool was at fault); now the model gets told the tool
+        errored and can still answer in text, and the failure is both logged and recorded in
+        the learning service like any other tool outcome."""
+        try:
+            result = self.tools.run(name, arguments, tool_ctx)
+            if asyncio.iscoroutine(result):
+                result = await result
+        except Exception as e:
+            log.exception("tool %r raised instead of returning a ToolResult", name)
+            self.learning.tools.record(name, False, 0.0)
+            return f"Tool error: {type(e).__name__}: {e}"
+        self.learning.tools.record(name, result.ok, result.duration_ms)
+        return result.output
 
     async def _learn_facts(self, user_id: str, text: str, reply: str) -> None:
         for fact in await extract_facts(self.provider, text, reply, model=self.settings.chat_model):
