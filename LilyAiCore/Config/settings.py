@@ -47,6 +47,7 @@ class Settings:
     umamoe_notify_user_id: str
     umamoe_poll_interval_hours: float
     umamoe_poll_interval_s: float | None
+    umapyoi_enabled: bool
     turso_database_url: str
     turso_auth_token: str
     turso_sync_interval_s: float
@@ -114,6 +115,11 @@ def load_settings() -> Settings:
         # Sub-hour override (e.g. 300 = every 5 minutes). Takes precedence over
         # UMAMOE_POLL_INTERVAL_HOURS when set. A 60s floor is enforced in bootstrap.py.
         umamoe_poll_interval_s=float(umamoe_seconds_raw) if umamoe_seconds_raw else None,
+        # umapyoi.net (Uma Musume game data: gacha banners, news, character info/birthdays) -
+        # keyless, no config needed beyond this toggle. Supplementary/flavor tools only - see
+        # LilyAiCore/ExternalServices/Umapyoi/ and bootstrap.py's build_app(); check_umamoe /
+        # check_fan_gain and web_search remain the bot's primary tools.
+        umapyoi_enabled=_bool("UMAPYOI_ENABLED", True),
         # Turso (libSQL) - optional. When TURSO_DATABASE_URL is set, bootstrap.py uses
         # TursoDatabase (embedded replica) instead of local sqlite. See
         # LilyAiCore/ExternalServices/Database/turso.py.
