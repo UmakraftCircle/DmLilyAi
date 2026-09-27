@@ -1,4 +1,5 @@
 """Composition root: the only place that wires domains to infrastructure."""
+import json
 import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -17,6 +18,7 @@ from LilyAiCore.ExternalServices.Search.base import SearchProvider
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
 from LilyAiCore.ExternalServices.Umamoe.gains import member_gains
 from LilyAiCore.ExternalServices.Umamoe.store import UmamoeStore
+from LilyAiCore.ExternalServices.Umapyoi.client import UmapyoiClient
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiCore.Providers.base import LLMProvider
 from LilyAiCore.Providers.offline import OfflineProvider
@@ -224,6 +226,72 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
     ]
 
 
+def _umapyoi_tools(client: UmapyoiClient) -> list[ToolSpec]:
+    """Supplementary Uma Musume game-trivia tools (umapyoi.net - keyless, no rotation needed).
+
+    These are secondary/flavor tools, not core features - check_umamoe/check_fan_gain (circle
+    and fan tracking) and web_search (everything else current/factual) remain the bot's primary
+    tools. Every tool description below says so explicitly so the model doesn't reach for these
+    over the primary two, and each just returns compact JSON straight from the API rather than
+    a hand-formatted string, since the response schema isn't pinned down anywhere - the model
+    can read and summarize the JSON fine, and this avoids silently-wrong formatting if a field
+    name turns out different than expected.
+    """
+
+    def _json(data, limit: int = 3000) -> str:
+        return json.dumps(data, ensure_ascii=False)[:limit]
+
+    async def check_gacha_banner(ctx: ToolContextData, args: dict) -> str:
+        return _json(await client.gacha_current())
+
+    async def check_umamusume_news(ctx: ToolContextData, args: dict) -> str:
+        count = args.get("count") or 5
+        return _json(await client.news_latest(count=count, english=True))
+
+    async def check_character_birthdays(ctx: ToolContextData, args: dict) -> str:
+        return _json(await client.character_birthdays())
+
+    async def check_character(ctx: ToolContextData, args: dict) -> str:
+        entry = await client.find_character(args["name"])
+        if not entry:
+            return f"No character found matching '{args['name']}'."
+        return _json(entry, limit=2000)
+
+    _note = (
+        "This is a secondary game-trivia tool, not a primary one - check_umamoe/check_fan_gain "
+        "(circle and fan tracking) and web_search (everything else current) come first; only "
+        "reach for this when the request is specifically "
+    )
+    return [
+        ToolSpec(
+            "check_gacha_banner",
+            _note + "about the current in-game gacha banner (what outfits/support cards are featured right now).",
+            {"type": "object", "properties": {}, "required": []},
+            check_gacha_banner, category="umapyoi", timeout=15,
+        ),
+        ToolSpec(
+            "check_umamusume_news",
+            _note + "for recent official Uma Musume game news/announcements.",
+            {"type": "object", "properties": {
+                "count": {"type": ["integer", "null"], "description": "How many posts, max 32; omit for 5"},
+            }, "required": []},
+            check_umamusume_news, category="umapyoi", timeout=15,
+        ),
+        ToolSpec(
+            "check_character_birthdays",
+            _note + "about which character(s) have a birthday today or next.",
+            {"type": "object", "properties": {}, "required": []},
+            check_character_birthdays, category="umapyoi", timeout=15,
+        ),
+        ToolSpec(
+            "check_character",
+            _note + "asking for a specific character's game info/profile by name.",
+            {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"]},
+            check_character, category="umapyoi", timeout=15,
+        ),
+    ]
+
+
 def _fan_gain_job(app: App, trainer_link_store, fan_store: FanSnapshotStore, tracker_store: DeficitStateStore,
                    job_run_store: JobRunStore, job_name: str, umamoe: UmamoeClient, circle_id: int, club: str):
     """Build one scheduler job: snapshot every linked trainer's current fan total for
@@ -316,6 +384,13 @@ def build_app(
             tools.register(spec)
     else:
         log.info("UMAMOE_API_KEY not set: uma.moe circle tracking (Leaderboard, check_umamoe) is disabled")
+
+    if settings.umapyoi_enabled:
+        for spec in _umapyoi_tools(UmapyoiClient()):
+            tools.register(spec)
+        log.info("umapyoi.net game-data tools ready (secondary to check_umamoe/check_fan_gain/web_search)")
+    else:
+        log.info("UMAPYOI_ENABLED=false: umapyoi.net game-data tools (banners/news/birthdays/character) are disabled")
 
     chat = ChatWorkflow(settings, provider, memory, rag, tools, ContextBuilder(settings.token_budget), learning)
     replies, bus = ReplyLog(), EventBus()
