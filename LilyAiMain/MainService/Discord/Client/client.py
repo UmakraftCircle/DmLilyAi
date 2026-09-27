@@ -230,12 +230,12 @@ class LilyDiscordClient(discord.Client):
         chat"), across every server the bot is in, that it can actually post in - detected
         straight from the live gateway connection (no extra Discord API calls). Voice channels
         are included so an admin can also relay into one (e.g. to drop a link/file for people
-        in a call) - this only adds them to the picker; the bot never joins voice audio/video
-        itself (see LilyAiCore/ExternalServices/Search/tavily.py's sibling docstring note: this
-        stays text-only, no PyNaCl/ffmpeg/voice-gateway dependency added). channel_type tells
-        the frontend which kind each entry is. IDs go out as strings: they're 64-bit and JS's
-        Number can't hold them exactly, so a raw JSON number gets silently corrupted
-        round-tripping through the browser."""
+        in a call); this only adds them to the picker - the bot never joins voice audio/video
+        itself, and no voice-gateway dependency (PyNaCl/ffmpeg/libdave) is added by this. Stays
+        strictly text-in-channel, same as the existing text-channel relay. channel_type tells
+        the frontend which kind each entry is ("text" or "voice"). IDs go out as strings:
+        they're 64-bit and JS's Number can't hold them exactly, so a raw JSON number gets
+        silently corrupted round-tripping through the browser."""
         out = []
         for guild in self.guilds:
             me = guild.me
