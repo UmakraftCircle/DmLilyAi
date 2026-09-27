@@ -4,9 +4,11 @@ Also carries the (separate, opt-in) live-channel relay: the DM path above is unt
 router.route() and everything downstream is still DM-only - but if the admin has picked a
 channel to watch (see ChannelWatch / RelayChannelStore), messages posted there are mirrored
 into that buffer for the web Relay page's Channel tab, and the same page can send messages
-(optionally as a reply) back into that channel through send_channel_message().
+(optionally as a reply, optionally with file/image attachments) back into that channel through
+send_channel_message().
 """
 import asyncio
+import io
 import re
 import time
 import urllib.parse
@@ -274,10 +276,18 @@ class LilyDiscordClient(discord.Client):
             log.warning("couldn't backfill history for channel %s: %s", channel_id, e)
         return watch.status()
 
-    async def send_channel_message(self, channel_id: int, text: str, reply_to: int | None = None) -> None:
+    async def send_channel_message(
+        self, channel_id: int, text: str, reply_to: int | None = None, files: list[tuple[str, bytes]] | None = None,
+    ) -> None:
+        """`files` is a list of (filename, raw_bytes) - kept as plain bytes rather than
+        discord.File all the way from the API layer, since discord.File wraps a single-use
+        file-like object and this keeps discord.py's type out of the API/server layer. text
+        may be empty when at least one file is given (Discord allows a message with an
+        attachment and no content, just not neither)."""
         channel = self.get_channel(channel_id) or await self.fetch_channel(channel_id)
         reference = discord.MessageReference(message_id=reply_to, channel_id=channel.id, fail_if_not_exists=False) if reply_to else None
-        await channel.send(text, reference=reference)
+        discord_files = [discord.File(io.BytesIO(data), filename=name) for name, data in (files or [])]
+        await channel.send(text, reference=reference, files=discord_files or None)
 
     def _reply_meta(self, msg: discord.Message) -> dict | None:
         ref = msg.reference
