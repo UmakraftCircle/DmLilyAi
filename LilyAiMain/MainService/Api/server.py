@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 
 import discord
-from fastapi import Depends, FastAPI, Header, HTTPException, Request
+from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
@@ -19,6 +19,13 @@ from LilyAiMain.MainService.Interaction.Workflows.chat_workflow import ChatReque
 from LilyAiMain.MainService.Interaction.Workflows.model_scan_job import make_model_scan_job
 
 LOOPBACK = {"127.0.0.1", "::1", "localhost", "testclient"}
+
+# Discord's own hard caps: 10 files per message, 25MB per file on a non-boosted server (a
+# boosted server allows more, but we can't know a given guild's boost tier from here - this is
+# a safe floor that fails fast with a clear message instead of a slow upload followed by an
+# opaque Discord 413/error, and Discord itself is still the final word if a guild allows more).
+_MAX_FILES = 10
+_MAX_FILE_BYTES = 25 * 1024 * 1024
 
 
 class ChatBody(BaseModel):
@@ -48,11 +55,6 @@ class WatchChannelBody(BaseModel):
     # A Discord snowflake as a string, not a number: IDs are 64-bit and JS's Number can't
     # represent them exactly, so a numeric JSON field gets silently corrupted in the browser.
     channel_id: str | None = None
-
-
-class SendChannelBody(BaseModel):
-    text: str = Field(min_length=1, max_length=2000)
-    reply_to: str | None = None  # a message_id (string) from a prior /api/relay/channel/messages entry
 
 
 def _snowflake(raw: str | None) -> int | None:
@@ -146,16 +148,38 @@ def create_api(app: App) -> FastAPI:
         return {"messages": app.channel_watch.since(after), **app.channel_watch.status()}
 
     @api.post("/api/relay/channel/send", dependencies=guard)
-    async def relay_channel_send(body: SendChannelBody):
+    async def relay_channel_send(
+        text: str = Form("", max_length=2000),
+        reply_to: str | None = Form(None),  # a message_id (string) from a prior /api/relay/channel/messages entry
+        files: list[UploadFile] = File(default=[]),
+    ):
+        """Multipart, not JSON, so this can carry file uploads (images, documents, whatever)
+        alongside the text - a plain JSON body can't hold binary file content. text and/or
+        files must be given (Discord rejects a message with neither); each upload is read
+        into memory and handed to discord.py as a discord.File, capped at _MAX_FILES/
+        _MAX_FILE_BYTES so an oversized/too-many-files request fails fast with a clear 400
+        instead of a slow upload followed by an opaque Discord-side rejection."""
         client = _discord_or_400()
         if not app.channel_watch.channel_id:
             raise HTTPException(400, "No channel is being watched - pick one from the drawer first")
+        if not text.strip() and not files:
+            raise HTTPException(400, "Message needs text, a file, or both")
+        if len(files) > _MAX_FILES:
+            raise HTTPException(400, f"Too many files - Discord allows at most {_MAX_FILES} per message")
+        attachments: list[tuple[str, bytes]] = []
+        for f in files:
+            data = await f.read()
+            if len(data) > _MAX_FILE_BYTES:
+                raise HTTPException(400, f"'{f.filename}' is over the {_MAX_FILE_BYTES // (1024 * 1024)}MB limit")
+            attachments.append((f.filename or "file", data))
         try:
-            await client.send_channel_message(app.channel_watch.channel_id, body.text, _snowflake(body.reply_to))
+            await client.send_channel_message(app.channel_watch.channel_id, text, _snowflake(reply_to), files=attachments)
         except discord.NotFound:
             raise HTTPException(404, "That channel (or the message being replied to) no longer exists")
         except discord.Forbidden:
             raise HTTPException(403, "The bot doesn't have permission to send in that channel")
+        except discord.HTTPException as e:
+            raise HTTPException(400, f"Discord rejected the message: {e}")
         return {"ok": True}
 
     @api.get("/api/dashboard", dependencies=guard)
