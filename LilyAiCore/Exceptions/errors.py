@@ -30,3 +30,7 @@ class WebError(LilyAiError):
 
 class UmamoeError(LilyAiError):
     pass
+
+
+class UmapyoiError(LilyAiError):
+    pass
