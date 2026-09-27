@@ -280,11 +280,11 @@ def build_app(
             provider = OfflineProvider()
 
     if search_provider is None:
-        if settings.tavily_api_key:
+        if settings.tavily_api_keys:
             from LilyAiCore.ExternalServices.Search.tavily import TavilySearch
 
-            search_provider = TavilySearch(settings.tavily_api_key)
-            log.info("Tavily search provider ready")
+            search_provider = TavilySearch(list(settings.tavily_api_keys))
+            log.info("Tavily search provider ready with %d API key(s)", len(settings.tavily_api_keys))
         else:
             from LilyAiCore.ExternalServices.Search.duckduckgo import DuckDuckGoSearch
 
