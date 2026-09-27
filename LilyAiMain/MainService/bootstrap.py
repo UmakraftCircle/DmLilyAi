@@ -280,9 +280,16 @@ def build_app(
             provider = OfflineProvider()
 
     if search_provider is None:
-        from LilyAiCore.ExternalServices.Search.duckduckgo import DuckDuckGoSearch
+        if settings.tavily_api_key:
+            from LilyAiCore.ExternalServices.Search.tavily import TavilySearch
 
-        search_provider = DuckDuckGoSearch()
+            search_provider = TavilySearch(settings.tavily_api_key)
+            log.info("Tavily search provider ready")
+        else:
+            from LilyAiCore.ExternalServices.Search.duckduckgo import DuckDuckGoSearch
+
+            search_provider = DuckDuckGoSearch()
+            log.info("TAVILY_API_KEY not set: web_search/read_webpage fall back to the DuckDuckGo HTML scraper")
 
     scanner = ModelScanner(
         provider, pool, settings.model_scan_state_path, settings.model_scan_docs_dir,
