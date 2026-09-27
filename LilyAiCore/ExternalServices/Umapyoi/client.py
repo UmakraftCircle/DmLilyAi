@@ -1,4 +1,4 @@
-"""Client for the umapyoi.net API (Uma Musume game data: characters, gacha banners, news).
+"""Client for the umapyoi.net API (Uma Musume game data: characters, gacha banners, news, music).
 
 Docs: https://umapyoi.net/docs/endpoints.html
 Fully public/keyless - no auth header needed, unlike UmamoeClient. Rate limits are generous
@@ -7,7 +7,7 @@ Fully public/keyless - no auth header needed, unlike UmamoeClient. Rate limits a
 This is a supplementary/flavor data source, not a primary one. See bootstrap.py's tool
 descriptions: check_umamoe / check_fan_gain (circle+fan tracking) and web_search (everything
 else current/factual) remain the bot's main tools - these are for game-trivia questions
-(banners, character info, official news, birthdays) that don't fit either of those.
+(banners, character info, official news, birthdays, music) that don't fit either of those.
 """
 import httpx
 
@@ -17,10 +17,11 @@ _BASE = "https://umapyoi.net/api/v1"
 
 
 class UmapyoiClient:
-    async def _get(self, path: str) -> dict | list:
+    async def _get(self, path: str, params: dict | None = None) -> dict | list:
+        clean = {k: v for k, v in (params or {}).items() if v}
         try:
             async with httpx.AsyncClient(timeout=15) as http:
-                r = await http.get(f"{_BASE}{path}")
+                r = await http.get(f"{_BASE}{path}", params=clean)
         except httpx.HTTPError as e:
             raise UmapyoiError(f"umapyoi.net request failed: {e}") from e
         if r.status_code != 200:
@@ -65,3 +66,10 @@ class UmapyoiClient:
                 if isinstance(value, str) and name_lower in value.lower():
                     return entry
         return None
+
+    async def music_filter(self, song: str | None = None, character: str | None = None) -> dict:
+        """Songs/albums matching a song name and/or character slug (free-text; the API does
+        substring-ish matching on these, no exact-slug requirement based on the docs example).
+        Result entries carry each song's playable mp3 URL - this is the source for `check_music`
+        (see bootstrap.py), which just hands that URL back so it can be linked/pasted in chat."""
+        return await self._get("/music/filter", {"song": song, "character": character})
