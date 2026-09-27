@@ -226,18 +226,28 @@ class LilyDiscordClient(discord.Client):
     # ---- live channel relay (Relay page "Channel" tab) ----
 
     def list_channels(self) -> list[dict]:
-        """Every text channel, across every server the bot is in, that it can actually post
-        in - detected straight from the live gateway connection (no extra Discord API calls).
-        IDs go out as strings: they're 64-bit and JS's Number can't hold them exactly, so a
-        raw JSON number gets silently corrupted round-tripping through the browser."""
+        """Every text AND voice channel (voice channels support Discord's "text in voice
+        chat"), across every server the bot is in, that it can actually post in - detected
+        straight from the live gateway connection (no extra Discord API calls). Voice channels
+        are included so an admin can also relay into one (e.g. to drop a link/file for people
+        in a call) - this only adds them to the picker; the bot never joins voice audio/video
+        itself (see LilyAiCore/ExternalServices/Search/tavily.py's sibling docstring note: this
+        stays text-only, no PyNaCl/ffmpeg/voice-gateway dependency added). channel_type tells
+        the frontend which kind each entry is. IDs go out as strings: they're 64-bit and JS's
+        Number can't hold them exactly, so a raw JSON number gets silently corrupted
+        round-tripping through the browser."""
         out = []
         for guild in self.guilds:
             me = guild.me
             if me is None:
                 continue
-            for ch in guild.text_channels:
+            channels = [(ch, "text") for ch in guild.text_channels] + [(ch, "voice") for ch in guild.voice_channels]
+            for ch, kind in channels:
                 if ch.permissions_for(me).send_messages:
-                    out.append({"guild_id": str(guild.id), "guild_name": guild.name, "channel_id": str(ch.id), "channel_name": ch.name})
+                    out.append({
+                        "guild_id": str(guild.id), "guild_name": guild.name,
+                        "channel_id": str(ch.id), "channel_name": ch.name, "channel_type": kind,
+                    })
         return out
 
     async def watch_channel(self, channel_id: int | None) -> dict:
