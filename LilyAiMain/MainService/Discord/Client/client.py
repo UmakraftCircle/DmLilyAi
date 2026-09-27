@@ -7,7 +7,10 @@ into that buffer for the web Relay page's Channel tab, and the same page can sen
 (optionally as a reply) back into that channel through send_channel_message().
 """
 import asyncio
+import re
 import time
+import urllib.parse
+from collections import deque
 
 import discord
 
@@ -19,44 +22,74 @@ from LilyAiMain.MainService.Interaction.messages import IncomingMessage, MenuIte
 
 log = get_logger("discord.client")
 
+_NO_CONTENT_REPLY = "I can't read images, files, or stickers yet - could you describe what you'd like in words?"
 
-class FeedbackView(discord.ui.View):
-    """Thumbs up/down buttons under a reply."""
 
-    def __init__(self, app: App, reply_id: str, user_id: str):
-        super().__init__(timeout=6 * 3600)
-        self.app, self.reply_id, self.user_id = app, reply_id, user_id
+class FeedbackButton(discord.ui.DynamicItem[discord.ui.Button], template=r"lily_fb:(?P<rating>up|down):(?P<reply_id>[0-9a-f]{6,32})"):
+    """Thumbs up/down. Stateless by design: everything it needs (which reply, which way) is
+    encoded in custom_id and re-parsed by from_custom_id() on every click, so a single
+    add_dynamic_items(FeedbackButton) call at startup covers every feedback button ever sent,
+    including ones sent before the process last restarted."""
 
-    async def _rate(self, interaction: discord.Interaction, rating: int):
-        note = self.app.feedback.handle(self.user_id, self.reply_id, rating)
-        self.app.bus.publish("feedback", "discord", self.user_id, text=f"{'+1' if rating > 0 else '-1'} on {self.reply_id}")
-        self.stop()
+    def __init__(self, app: App, rating: int, reply_id: str):
+        super().__init__(
+            discord.ui.Button(
+                label="\U0001F44D" if rating > 0 else "\U0001F44E",
+                style=discord.ButtonStyle.secondary,
+                custom_id=f"lily_fb:{'up' if rating > 0 else 'down'}:{reply_id}",
+            )
+        )
+        self.app, self.rating, self.reply_id = app, rating, reply_id
+
+    @classmethod
+    async def from_custom_id(cls, interaction: discord.Interaction, item: discord.ui.Item, match: re.Match[str]) -> "FeedbackButton":
+        rating = 1 if match["rating"] == "up" else -1
+        return cls(interaction.client.app, rating, match["reply_id"])
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        user_id = str(interaction.user.id)
+        note = self.app.feedback.handle(user_id, self.reply_id, self.rating)
+        self.app.bus.publish("feedback", "discord", user_id, text=f"{'+1' if self.rating > 0 else '-1'} on {self.reply_id}")
         await interaction.response.edit_message(view=None)
         await interaction.followup.send(note, ephemeral=True)
 
-    @discord.ui.button(label="\U0001F44D", style=discord.ButtonStyle.secondary)
-    async def up(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self._rate(interaction, 1)
 
-    @discord.ui.button(label="\U0001F44E", style=discord.ButtonStyle.secondary)
-    async def down(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self._rate(interaction, -1)
+class FeedbackView(discord.ui.View):
+    """Thumbs up/down buttons under a reply, built from the persistent FeedbackButton above."""
+
+    def __init__(self, app: App, reply_id: str):
+        super().__init__(timeout=None)
+        self.add_item(FeedbackButton(app, 1, reply_id))
+        self.add_item(FeedbackButton(app, -1, reply_id))
+
+
+class MenuButton(discord.ui.DynamicItem[discord.ui.Button], template=r"lily_menu:(?P<text>.+)"):
+    """Quick-action button; replays its text through the router as if the user typed it.
+    Persistent for the same reason as FeedbackButton - see its docstring."""
+
+    def __init__(self, app: App, label: str, text: str):
+        super().__init__(
+            discord.ui.Button(label=label, style=discord.ButtonStyle.primary, custom_id=f"lily_menu:{urllib.parse.quote(text)}")
+        )
+        self.app, self.text = app, text
+
+    @classmethod
+    async def from_custom_id(cls, interaction: discord.Interaction, item: discord.ui.Item, match: re.Match[str]) -> "MenuButton":
+        label = getattr(item, "label", None) or ""
+        return cls(interaction.client.app, label, urllib.parse.unquote(match["text"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        await interaction.response.defer()
+        await interaction.client.process(interaction.user.id, interaction.user.display_name, self.text, interaction.channel)
 
 
 class MenuView(discord.ui.View):
-    """Quick-action buttons; each one replays its text through the router as if the user typed it."""
+    """A row of quick-action buttons built from persistent MenuButton items."""
 
-    def __init__(self, client: "LilyDiscordClient", items: list[MenuItem]):
-        super().__init__(timeout=3600)
+    def __init__(self, app: App, items: list[MenuItem]):
+        super().__init__(timeout=None)
         for item in items:
-            btn = discord.ui.Button(label=item.label, style=discord.ButtonStyle.primary)
-
-            async def callback(interaction: discord.Interaction, text=item.text):
-                await interaction.response.defer()
-                await client.process(interaction.user.id, interaction.user.display_name, text, interaction.channel)
-
-            btn.callback = callback
-            self.add_item(btn)
+            self.add_item(MenuButton(app, item.label, item.text))
 
 
 class LilyDiscordClient(discord.Client):
@@ -66,6 +99,12 @@ class LilyDiscordClient(discord.Client):
         intents.dm_messages = True
         super().__init__(intents=intents)
         self.app = app
+        # Registered once; from_custom_id() reconstructs a fresh handler per click from the
+        # custom_id alone, so this single call covers every button ever sent, past or future.
+        self.add_dynamic_items(FeedbackButton, MenuButton)
+        # Bounded FIFO de-dupe guard against a duplicate gateway dispatch of the same DM.
+        self._seen_message_ids: deque[int] = deque(maxlen=2000)
+        self._seen_message_id_set: set[int] = set()
 
     async def run_forever(self, token: str, reconnect_state: ReconnectState | None = None) -> None:
         """Connect with exponential backoff. Catches connect-time failures (e.g. a
@@ -125,11 +164,27 @@ class LilyDiscordClient(discord.Client):
     async def on_disconnect(self):
         self.app.discord_state.on_disconnect()
 
+    def _already_seen(self, message_id: int) -> bool:
+        if message_id in self._seen_message_id_set:
+            return True
+        if len(self._seen_message_ids) >= self._seen_message_ids.maxlen:
+            oldest = self._seen_message_ids.popleft()
+            self._seen_message_id_set.discard(oldest)
+        self._seen_message_ids.append(message_id)
+        self._seen_message_id_set.add(message_id)
+        return False
+
     async def on_message(self, message: discord.Message):
         if message.guild is not None:
             await self._relay_channel_message(message)
             return  # server messages never reach the AI chat pipeline - DM-only, unchanged
         if message.author.bot:
+            return
+        if self._already_seen(message.id):
+            return
+        if not message.content.strip():
+            if message.attachments or message.stickers:
+                await message.channel.send(_NO_CONTENT_REPLY)
             return
         async with message.channel.typing():
             await self.process(message.author.id, message.author.display_name, message.content, message.channel)
@@ -150,9 +205,9 @@ class LilyDiscordClient(discord.Client):
             view = None
             if i == len(parts) - 1:
                 if out.reply_id:
-                    view = FeedbackView(self.app, out.reply_id, user_id)
+                    view = FeedbackView(self.app, out.reply_id)
                 elif out.menu:
-                    view = MenuView(self, out.menu)
+                    view = MenuView(self.app, out.menu)
             await channel.send(part, view=view) if view else await channel.send(part)
 
     async def send_dm(self, user_id: str, text: str) -> bool:

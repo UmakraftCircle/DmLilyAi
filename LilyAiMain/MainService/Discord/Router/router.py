@@ -4,7 +4,7 @@ import re
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiLearning.MemoryLearning.memory_learning import explicit_memory_request
 from LilyAiMain.MainService.Discord.Events.bus import EventBus
-from LilyAiMain.MainService.Discord.Middleware.middleware import AccessControl, RateLimiter, clean_input
+from LilyAiMain.MainService.Discord.Middleware.middleware import MAX_INPUT_CHARS, AccessControl, RateLimiter, clean_input
 from LilyAiMain.MainService.Discord.Session.manager import SessionManager
 from LilyAiMain.MainService.Interaction.Feedback.feedback import ReplyLog, ReplyRecord
 from LilyAiMain.MainService.Interaction.Forms.forms import FormManager
@@ -25,6 +25,7 @@ _SETUP = re.compile(r"\b(set me up again|redo (?:my )?setup|start onboarding)\b"
 _LINK = re.compile(r"\blink (?:me|my (?:account|trainer(?: id)?))\b|\bconnect my trainer(?: id)?\b", re.I)
 _UNLINK = re.compile(r"\bunlink (?:me|my (?:account|trainer(?: id)?))\b", re.I)
 _YES = {"yes", "y", "yep", "confirm", "do it", "sure"}
+_TRUNCATED_NOTICE = f"(Heads up: I only read the first {MAX_INPUT_CHARS} characters of that message - the rest got cut off.)"
 
 
 class DMRouter:
@@ -48,7 +49,7 @@ class DMRouter:
         self.link_trainer = link_trainer
 
     async def route(self, msg: IncomingMessage) -> list[OutgoingMessage]:
-        text = clean_input(msg.text)
+        text, truncated = clean_input(msg.text)
         if not text:
             return []
         uid = msg.user_id
@@ -62,6 +63,8 @@ class DMRouter:
 
         async with self.sessions.lock(uid):
             out = await self._dispatch(msg, text)
+        if truncated:
+            out = [OutgoingMessage(_TRUNCATED_NOTICE, kind="system"), *out]
         return self._out(msg, out)
 
     def _out(self, msg: IncomingMessage, out: list[OutgoingMessage]) -> list[OutgoingMessage]:
