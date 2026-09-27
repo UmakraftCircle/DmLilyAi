@@ -41,7 +41,7 @@ class Settings:
     model_scan_docs_dir: Path
     frontend_dir: str
     webhook_url: str
-    tavily_api_key: str
+    tavily_api_keys: tuple[str, ...]
     umamoe_api_key: str
     umamoe_circle_ids: tuple[int, ...]
     umamoe_notify_user_id: str
@@ -100,9 +100,11 @@ def load_settings() -> Settings:
         model_scan_docs_dir=Path(os.getenv("MODEL_SCAN_DOCS_DIR", str(Path(__file__).resolve().parents[2] / "LilyAiGroqSupport"))),
         webhook_url=os.getenv("WEBHOOK_URL", ""),
         # Tavily (LLM-oriented web search API) - preferred web_search/read_webpage provider when
-        # set; falls back to the keyless DuckDuckGo HTML scraper otherwise. See
-        # LilyAiCore/ExternalServices/Search/tavily.py and bootstrap.py's build_app().
-        tavily_api_key=os.getenv("TAVILY_API_KEY", ""),
+        # set; falls back to the keyless DuckDuckGo HTML scraper otherwise. One key, or several
+        # comma-separated (e.g. tvly_a,tvly_b) - rotated evenly and auto-switches on rate limits,
+        # same as GROQ_API_KEY. See LilyAiCore/ExternalServices/Search/tavily.py and
+        # bootstrap.py's build_app().
+        tavily_api_keys=tuple(k.strip() for k in os.getenv("TAVILY_API_KEY", "").split(",") if k.strip()),
         # uma.moe (Umamusume circle/fan tracking) - see LilyAiCore/ExternalServices/Umamoe/
         umamoe_api_key=os.getenv("UMAMOE_API_KEY", ""),
         umamoe_circle_ids=tuple(int(x) for x in os.getenv("UMAMOE_CIRCLE_IDS", "").split(",") if x.strip().isdigit()),
