@@ -4,6 +4,7 @@ import re
 import time
 from dataclasses import dataclass, field
 
+from LilyAiContext.CapabilityContext.capabilities import account_status_note
 from LilyAiContext.service import ContextBuilder, ContextInput, HistoryMessage
 from LilyAiCore.Config.settings import Settings
 from LilyAiCore.Constants.constants import MAX_TOOL_ROUNDS
@@ -72,6 +73,9 @@ class ChatWorkflow:
         schemas = self.tools.schemas() if self.settings.web_enabled else [
             s for s in self.tools.schemas() if s["function"]["name"] not in {"web_search", "read_webpage"}
         ]
+        # Live account state goes into the prompt so the model doesn't have to guess (or decide to
+        # call a tool) to know whether this user is linked to a Trainer ID.
+        link = self.memory.trainer_link.by_discord_id(uid)
         built = self.context.build(
             ContextInput(
                 user_message=text,
@@ -80,6 +84,7 @@ class ChatWorkflow:
                 history=history,
                 user_facts=self.memory.relevant_user_facts(uid, text),
                 knowledge_snippets=[h.as_snippet() for h in rag_hits],
+                notes=[account_status_note(link.trainer_id if link else None, link.trainer_name if link else None)],
                 tool_schemas=schemas,
             )
         )

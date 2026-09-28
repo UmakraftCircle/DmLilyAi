@@ -173,6 +173,9 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
     async def check_fan_gain(ctx: ToolContextData, args: dict) -> str:
         circle_id = args.get("circle_id")
         name_filter = (args.get("trainer_name") or "").strip().lower()
+        # Trainer IDs are numeric uma.moe viewer_ids. Accept an int or a string like "123,456,789" and
+        # compare digits only, so a linked user can be found by ID even if their name isn't on file.
+        id_filter = "".join(ch for ch in str(args.get("trainer_id") or "") if ch.isdigit())
         # "total" (current total fans) matches how a fan-gain LEADERBOARD is normally ranked -
         # same as /api/leaderboard and uma.moe's own site - so it's the default rather than
         # today_gain, which only makes sense when the user specifically asks about today.
@@ -187,20 +190,24 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             circle_name = (data.get("circle") or {}).get("name", str(cid))
             rows = []
             for m in data.get("members", []):
-                trainer_name = m.get("trainer_name") or str(m.get("viewer_id"))
+                viewer_id = str(m.get("viewer_id") or "")
+                trainer_name = m.get("trainer_name") or viewer_id
+                if id_filter and viewer_id != id_filter:
+                    continue
                 if name_filter and name_filter not in trainer_name.lower():
                     continue
-                rows.append((trainer_name, member_gains(m.get("daily_fans"))))
+                rows.append((trainer_name, viewer_id, member_gains(m.get("daily_fans"))))
             if not rows:
                 continue
-            rows.sort(key=lambda r: r[1][sort_key], reverse=True)
+            rows.sort(key=lambda r: r[2][sort_key], reverse=True)
             total_members = len(rows)
             shown = rows[:25]  # keep replies readable for a full-roster query
             section = [f"**{circle_name}** (ranked by {sort_by} fan gain)"]
             # Numbered so the model relays the rank instead of counting bullets itself.
-            for rank, (trainer_name, g) in enumerate(shown, start=1):
+            for rank, (trainer_name, viewer_id, g) in enumerate(shown, start=1):
+                id_part = f" (Trainer ID {viewer_id})" if viewer_id else ""
                 section.append(
-                    f"{rank}. {trainer_name}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
+                    f"{rank}. {trainer_name}{id_part}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
                     f"(total {g['total_fans']:,})"
                 )
             if total_members > len(shown):
@@ -208,10 +215,15 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
                 # presented as a complete leaderboard when it's actually been cut off.
                 section.append(
                     f"...(showing top {len(shown)} of {total_members} members - filter by trainer_name "
-                    "for anyone not shown)"
+                    "or trainer_id for anyone not shown)"
                 )
             sections.append("\n".join(section))
         if not sections:
+            if id_filter:
+                return (
+                    f"No member with Trainer ID {id_filter} found in the tracked club(s) - "
+                    "they may not be in the circle, or the ID may be wrong."
+                )
             return f"No trainer matching '{args.get('trainer_name')}' found." if name_filter else "No members found."
         return "\n\n".join(sections)
 
@@ -229,12 +241,18 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
         ToolSpec(
             "check_fan_gain",
             "Look up today's and this month's fan gain, plus current total fans, per trainer in the tracked "
-            "uma.moe club(s), returned as a numbered, ranked list. Optionally filter to one trainer_name. Use "
-            "this for any request about fan gain, fan numbers, or a fan leaderboard - never try to fetch or "
-            "scrape this bot's own web pages for it. IMPORTANT: pass sort_by matching what was actually asked "
-            "(e.g. 'today's leaderboard' -> sort_by='today') rather than re-sorting the returned list yourself.",
+            "uma.moe club(s), returned as a numbered, ranked list. Optionally filter to one trainer by trainer_id "
+            "(the numeric uma.moe Trainer ID - most exact, use it whenever you have one, e.g. from "
+            "get_linked_trainer) or by trainer_name. Use this for any request about fan gain, fan numbers, or a "
+            "fan leaderboard - never try to fetch or scrape this bot's own web pages for it. IMPORTANT: pass "
+            "sort_by matching what was actually asked (e.g. 'today's leaderboard' -> sort_by='today') rather "
+            "than re-sorting the returned list yourself.",
             {"type": "object", "properties": {
                 "circle_id": {"type": ["integer", "null"], "description": "Omit or pass null for the default club(s)"},
+                "trainer_id": {
+                    "type": ["string", "integer", "null"],
+                    "description": "Numeric uma.moe Trainer ID to look up exactly; omit or pass null to not filter by ID",
+                },
                 "trainer_name": {
                     "type": ["string", "null"],
                     "description": "Filter to trainers whose name contains this; omit or pass null for everyone",
@@ -272,16 +290,19 @@ def _trainer_link_tools(trainer_link_store) -> list[ToolSpec]:
                 "They can link one by saying \"link me\"."
             )
         name_part = f" ({link.trainer_name})" if link.trainer_name else ""
-        return f"This Discord account is linked to uma.moe Trainer ID `{link.trainer_id}`{name_part}."
+        return (
+            f"This Discord account is linked to uma.moe Trainer ID `{link.trainer_id}`{name_part}. "
+            f"For their fan numbers, call check_fan_gain with trainer_id=\"{link.trainer_id}\" (if that tool is available)."
+        )
 
     return [
         ToolSpec(
             "get_linked_trainer",
             "Look up the uma.moe Trainer ID linked to the CURRENT Discord user (the person you're chatting "
             "with right now). Call this whenever the user refers to \"my\" trainer/stats/fan gain without "
-            "giving an explicit Trainer ID or name - resolve it here first, then pass the result into "
-            "check_fan_gain. Takes no arguments; it always looks up the current user and never anyone else's "
-            "account.",
+            "giving an explicit Trainer ID or name - resolve it here first, then pass the returned Trainer ID "
+            "as trainer_id into check_fan_gain. Takes no arguments; it always looks up the current user and "
+            "never anyone else's account.",
             {"type": "object", "properties": {}, "required": []},
             get_linked_trainer, category="umamoe",
         ),

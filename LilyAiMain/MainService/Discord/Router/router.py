@@ -18,12 +18,23 @@ from LilyAiMemory.service import MemoryService
 
 log = get_logger("router")
 
+# NOTE: the example phrases in LilyAiContext/CapabilityContext/capabilities.py (DM_ACTIONS) are what Lily
+# tells users to say. Keep them matching these patterns - tests/test_dm_capabilities.py enforces it.
 _HELP = re.compile(r"^\s*(help|menu|\?|what can you do\??)\s*$", re.I)
 _SHOW_MEMORY = re.compile(r"\b(what do you (?:remember|know) about me|show (?:me )?my memor(?:y|ies)|what have you learned about me)\b", re.I)
 _FORGET = re.compile(r"\b(forget (?:everything|all)(?: about me)?|wipe my (?:memory|data)|delete my (?:memory|data))\b", re.I)
 _SETUP = re.compile(r"\b(set me up again|redo (?:my )?setup|start onboarding)\b", re.I)
 _LINK = re.compile(r"\blink (?:me|my (?:account|trainer(?: id)?))\b|\bconnect my trainer(?: id)?\b", re.I)
 _UNLINK = re.compile(r"\bunlink (?:me|my (?:account|trainer(?: id)?))\b", re.I)
+# "am I linked?" / "what's my trainer id" / "check my trainer id I linked". Skipped when the message is really a
+# stats question ("show my trainer id stats") so that still reaches the chat model and its tools.
+_LINK_STATUS = re.compile(
+    r"^(?!.*\b(?:stats?|gains?|fans?|rank|quota|leaderboard)\b).*"
+    r"\b(?:am i linked|is my (?:account|trainer(?: id)?) linked|"
+    r"(?:what(?:'s| is)|check|show|tell me)\s+my\s+(?:linked\s+)?trainer\s*id)\b",
+    re.I | re.S,
+)
+_LINK_STATUS_MAX_WORDS = 15
 _YES = {"yes", "y", "yep", "confirm", "do it", "sure"}
 _TRUNCATED_NOTICE = f"(Heads up: I only read the first {MAX_INPUT_CHARS} characters of that message - the rest got cut off.)"
 
@@ -102,11 +113,18 @@ class DMRouter:
             return sys(HELP_TEXT, main_menu())
         if _SETUP.search(text):
             return sys(self.onboarding.start(uid))
-        if _LINK.search(text):
-            return sys(self.link_trainer.start(uid))
         if _UNLINK.search(text):
             unlinked = self.memory.trainer_link.unlink(uid)
             return sys("You're unlinked." if unlinked else "You weren't linked to a Trainer ID.")
+        # The ID is right in the sentence ("my trainer id is 123456789", "link me to 123456789"): link it now
+        # instead of asking for it again, and before the bare "link me" pattern which would start the form.
+        direct = self.link_trainer.try_direct_link(uid, text)
+        if direct:
+            return sys(direct)
+        if _LINK.search(text):
+            return sys(self.link_trainer.start(uid))
+        if len(text.split()) <= _LINK_STATUS_MAX_WORDS and _LINK_STATUS.search(text):
+            return sys(self.link_trainer.status(uid))
         if _SHOW_MEMORY.search(text):
             facts = self.memory.user.list(uid)
             if not facts:

@@ -1,3 +1,4 @@
+from LilyAiContext.CapabilityContext.capabilities import format_capabilities
 from LilyAiContext.ContextFormatter.formatter import format_block
 from LilyAiContext.ContextWindow.window import trim_history
 from LilyAiContext.MessageContext.message_context import history_to_messages
@@ -19,6 +20,7 @@ class ContextBuilder:
             "web": format_block("Web results", ci.web_snippets),
             "notes": "\n".join(ci.notes),
             "tools": format_tool_hint(ci.tool_schemas),
+            "capabilities": format_capabilities(ci.tool_schemas),
         }
         system = "\n\n".join([build_system_prompt(ci.display_name)] + [s for s in sections.values() if s])
         fixed = estimate_tokens(system) + estimate_tokens(ci.user_message) + 16
