@@ -29,6 +29,30 @@ class MemberGainsTests(unittest.TestCase):
         self.assertEqual(g["monthly_gain"], 27 * 3_000_000)
         self.assertLessEqual(g["monthly_gain"], g["total_fans"])
 
+    def test_mid_month_joiner_detection_day_counts_as_zero(self):
+        # Detected on day 10 with 500m fans already: that influx must not count as a gain.
+        detected = [0] * 9 + [500_000_000] + [0] * 21
+        g = member_gains(detected)
+        self.assertEqual(g["total_fans"], 500_000_000)
+        self.assertEqual((g["monthly_gain"], g["today_gain"], g["daily_gain"]), (0, 0, 0))
+
+        # Two days later only the fans earned since detection count.
+        later = [0] * 9 + [500_000_000, 510_000_000, 530_000_000] + [0] * 19
+        g = member_gains(later)
+        self.assertEqual(g["monthly_gain"], 30_000_000)
+        self.assertEqual(g["today_gain"], 20_000_000)
+        self.assertEqual(g["daily_gain"], 10_000_000)
+
+    def test_club_total_excludes_a_new_members_influx(self):
+        veteran = [100_000_000 + i * 2_000_000 for i in range(10)] + [0] * 21          # +18m
+        joiner = [0] * 6 + [700_000_000 + i * 1_000_000 for i in range(4)] + [0] * 21  # +3m
+        club = sum(member_gains(d)["monthly_gain"] for d in (veteran, joiner))
+        self.assertEqual(club, 18_000_000 + 3_000_000)
+
+    def test_established_member_baseline_is_still_day_one(self):
+        daily = [50, 60, 0, 90, 0]
+        self.assertEqual(member_gains(daily)["monthly_gain"], 40)
+
     def test_label_only_affects_logging(self):
         daily = [10, 20, 35, 0]
         self.assertEqual(member_gains(daily), member_gains(daily, label="Sam (1)"))

@@ -69,7 +69,9 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
       total_fans   - current cumulative fan count (last day with real data)
       today_gain   - fans gained so far on the current (possibly still in-progress) day
       daily_gain   - fans gained on the last FULL completed day (i.e. "yesterday")
-      monthly_gain - fans gained since day 1 of the tracked month
+      monthly_gain - fans gained since the first day this trainer has data in the tracked month
+                     (day 1 for an established member; for someone who joined mid-month, the day
+                     uma.moe first detected them - see the join note below)
       week_avg     - average daily gain since this week's Monday, resetting every Monday;
                      None when Monday falls before day 1 of the fetched month (edge of month)
 
@@ -105,7 +107,15 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
     daily_gain = (daily[prev_idx] - daily[day_before_idx]
                   if prev_idx is not None and day_before_idx is not None else 0)
 
-    monthly_gain = current - daily[0]
+    # Join note: a trainer who joined the club mid-month has 0 padding before the day uma.moe
+    # first detected them, and on that day their whole pre-existing total appears at once.
+    # Measuring from daily[0] (a 0) would book all of it as a gain and inflate the club's fan
+    # gain. Baselining on the FIRST day with data makes the detection day's gain 0 (today_gain
+    # and daily_gain already come out 0 there because there is no earlier day to diff against),
+    # so only fans earned after being detected count. Established members (data on day 1) are
+    # unaffected: their baseline is still daily[0].
+    first_idx = next(i for i, v in enumerate(daily) if v)  # exists: latest_idx is not None
+    monthly_gain = current - daily[first_idx]
 
     # Resolve "this Monday" as a day-of-month against the same array. Assumes the array's
     # month matches the server's current UTC month (true unless this poll happens right at
