@@ -53,7 +53,9 @@ def account_status_note(trainer_id: str | None = None, trainer_name: str | None 
         return (
             f"Account status: this Discord user IS linked to uma.moe Trainer ID {trainer_id}{name}. "
             "If they ask which trainer is linked, or whether they're linked, answer with that ID directly - "
-            "don't say you can't see it and don't ask them to repeat it."
+            "don't say you can't see it and don't ask them to repeat it. For their own stats or fan gain, "
+            f"look them up by this Trainer ID (trainer_id=\"{trainer_id}\") with a lookup tool if you have one, "
+            "rather than asking for their name."
         )
     return (
         "Account status: this Discord user is NOT linked to a uma.moe Trainer ID yet. If they ask about their own "
