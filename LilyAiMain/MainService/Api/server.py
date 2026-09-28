@@ -10,6 +10,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 
 from LilyAiCore.ExternalServices.Umamoe.gains import member_gains
+from LilyAiCore.ExternalServices.Umamoe.timestamps import to_epoch_seconds
 from LilyAiCore.Helpers.clock import now_ts
 from LilyAiLearning.Evaluation.evaluator import DEFAULT_CASES, Evaluator
 from LilyAiMain.MainService.Api.static import default_frontend_dir, resolve_static
@@ -256,12 +257,16 @@ def create_api(app: App) -> FastAPI:
                 viewer_id = m.get("viewer_id")
                 seen_ids.add(viewer_id)
                 gains = member_gains(m.get("daily_fans"))
+                # uma.moe's own per-record refresh time (CircleMemberFansMonthly.last_updated
+                # in its OpenAPI spec is an ISO 8601 string; updated_at kept as a defensive
+                # fallback in case that ever changes). The frontend's fmtAgo() does
+                # Date.now()/1000 - ts and expects epoch seconds, so the ISO string has to be
+                # converted here - handing it the raw string produced "NaNd ago" on every card.
+                raw_updated = m.get("last_updated") or m.get("updated_at")
                 members.append({
                     "viewer_id": viewer_id,
                     "trainer_name": m.get("trainer_name") or str(viewer_id),
-                    # uma.moe's own per-record refresh time when it provides one (field name
-                    # unconfirmed - passed through defensively); otherwise this poll's time.
-                    "last_updated": m.get("updated_at") or m.get("last_updated") or fetched_at,
+                    "last_updated": to_epoch_seconds(raw_updated) or fetched_at,
                     **gains,
                 })
             members.sort(key=lambda m: m["total_fans"], reverse=True)
