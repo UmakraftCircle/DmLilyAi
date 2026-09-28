@@ -98,6 +98,41 @@ class SignFlipNormalizationTests(unittest.TestCase):
         self.assertNotIn("monthly_gain exceeds total_fans", problems)
 
 
+class FirstTrackedDayTests(unittest.TestCase):
+    """first_tracked_day is what snapshot_job.py uses to skip quota/deficit tracking on a
+    day where there's no earlier entry to measure "today" against."""
+
+    def test_mid_month_join_is_first_tracked_day(self):
+        daily = [0] * 9 + [500_000_000] + [0] * 21
+        self.assertTrue(member_gains(daily)["first_tracked_day"])
+
+    def test_day_after_join_is_not(self):
+        daily = [0] * 9 + [500_000_000, 510_000_000] + [0] * 20
+        self.assertFalse(member_gains(daily)["first_tracked_day"])
+
+    def test_month_rollover_day_one_is_also_first_tracked_day(self):
+        # Not a new join - just the first poll of a new tracking month, same for everyone.
+        daily = [50_000_000] + [0] * 30
+        self.assertTrue(member_gains(daily)["first_tracked_day"])
+
+    def test_established_member_mid_month_is_not(self):
+        daily = [10_000_000, 12_000_000, 15_000_000] + [0] * 28
+        self.assertFalse(member_gains(daily)["first_tracked_day"])
+
+    def test_empty_data_is_not_first_tracked_day(self):
+        self.assertFalse(member_gains(None)["first_tracked_day"])
+        self.assertFalse(member_gains([])["first_tracked_day"])
+
+    def test_the_xth_array_is_not_first_tracked_day(self):
+        # theXth has ~28 days of history - definitely not their first tracked day.
+        daily = [-827154742, -830021721, -832205736, -834098050, -835530231, -837425967,
+                 -838932122, -840383441, -844066426, -847557628, -851576808, -855214530,
+                 -856880251, -862279944, -865202752, -868542377, -870893111, -875357509,
+                 -879452431, -881502420, -885758619, -887429121, -889953219, -894521021,
+                 -897698168, 905921468, 918152062, 930137085, 0, 0, 0, 0]
+        self.assertFalse(member_gains(daily)["first_tracked_day"])
+
+
 class AnomalyTests(unittest.TestCase):
     def test_clean_data_has_no_anomalies(self):
         daily = [10, 12, 15, 0, 0]
