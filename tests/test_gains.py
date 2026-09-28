@@ -59,21 +59,49 @@ class MemberGainsTests(unittest.TestCase):
         self.assertEqual(member_gains(None, label="x"), member_gains([]))
 
 
+class SignFlipNormalizationTests(unittest.TestCase):
+    """A run of negative entries in daily_fans (real uma.moe data, not a data-entry error
+    on our side) used to be read literally, producing a monthly gain bigger than the
+    trainer's total fan count. See _normalize_daily()'s docstring."""
+
+    def test_the_xth_2026_09_28_report(self):
+        # Reported live: theXth (viewer_id 460640859804) showed +1,757,291,827 monthly
+        # against a 930,137,085 total. Exact array from the Render log.
+        daily = [-827154742, -830021721, -832205736, -834098050, -835530231, -837425967,
+                 -838932122, -840383441, -844066426, -847557628, -851576808, -855214530,
+                 -856880251, -862279944, -865202752, -868542377, -870893111, -875357509,
+                 -879452431, -881502420, -885758619, -887429121, -889953219, -894521021,
+                 -897698168, 905921468, 918152062, 930137085, 0, 0, 0, 0]
+        g = member_gains(daily)
+        self.assertEqual(g["total_fans"], 930137085)
+        self.assertEqual(g["today_gain"], 930137085 - 918152062)
+        self.assertEqual(g["daily_gain"], 918152062 - 905921468)
+        # Baseline is abs(first entry), so the flip itself isn't read as a 1.7b jump.
+        self.assertEqual(g["monthly_gain"], 930137085 - 827154742)
+        self.assertLessEqual(g["monthly_gain"], g["total_fans"])
+        self.assertGreater(g["monthly_gain"], 0)
+
+    def test_short_negative_run_still_normalizes(self):
+        daily = [-100, -150, -180, 200, 230] + [0] * 26
+        g = member_gains(daily)
+        self.assertEqual(g["monthly_gain"], 230 - 100)
+        self.assertGreater(g["monthly_gain"], 0)
+
+    def test_raw_array_still_flagged_for_logging_even_though_result_is_now_sane(self):
+        # find_anomalies() looks at what uma.moe actually sent, not the corrected output -
+        # keeps the sign-flip visible in logs after member_gains() fixes the math.
+        daily = [-827154742, -830021721, 905921468, 918152062, 930137085] + [0] * 27
+        g = member_gains(daily)
+        problems = find_anomalies(daily, g)
+        self.assertIn("negative entry in daily_fans", problems)
+        # and the corrected gains dict no longer trips the "exceeds total" check itself
+        self.assertNotIn("monthly_gain exceeds total_fans", problems)
+
+
 class AnomalyTests(unittest.TestCase):
     def test_clean_data_has_no_anomalies(self):
         daily = [10, 12, 15, 0, 0]
         self.assertEqual(find_anomalies(daily, member_gains(daily)), [])
-
-    def test_reproduces_the_reported_impossible_numbers(self):
-        # monthly 1,755,029,179 vs total 927,874,437 (the screenshot) needs a day-1 value of
-        # -827,154,742 - a corrupt/wrapped entry, not a real fan count.
-        daily = [-827_154_742, 100, 927_874_437, 0]
-        g = member_gains(daily)
-        self.assertEqual(g["total_fans"], 927_874_437)
-        self.assertEqual(g["monthly_gain"], 1_755_029_179)
-        problems = find_anomalies(daily, g)
-        self.assertIn("negative entry in daily_fans", problems)
-        self.assertIn("monthly_gain exceeds total_fans", problems)
 
     def test_flags_totals_that_go_down(self):
         daily = [10, 20, 15, 0]
