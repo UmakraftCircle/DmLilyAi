@@ -105,6 +105,14 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
                      uma.moe first detected them - see the join note below)
       week_avg     - average daily gain since this week's Monday, resetting every Monday;
                      None when Monday falls before day 1 of the fetched month (edge of month)
+      first_tracked_day - True when there is no earlier day of data to diff "today" against,
+                     i.e. today IS this trainer's first entry in the array. Two different real
+                     situations produce this: a member uma.moe only detected today (mid-month
+                     join), or this is simply day 1 of a new tracking month for everyone (nobody
+                     has a "yesterday" yet). Either way today_gain/daily_gain are correctly 0
+                     already; callers doing quota/deficit math (see LilyAiTask/DailyTask/
+                     DeficitTask/snapshot_job.py) should treat this as "nothing to measure yet"
+                     rather than charge a shortfall against a real 0.
 
     "Today" is the LAST NON-ZERO entry, not simply the last slot in the array - blindly
     using daily[-1] would pick up an unfilled future day (0) and produce a wildly negative
@@ -121,7 +129,8 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
     any local snapshot store (e.g. Render's free-plan ephemeral filesystem).
     """
     daily = _normalize_daily(daily_fans)
-    empty = {"total_fans": 0, "today_gain": 0, "daily_gain": 0, "monthly_gain": 0, "week_avg": None}
+    empty = {"total_fans": 0, "today_gain": 0, "daily_gain": 0, "monthly_gain": 0,
+             "week_avg": None, "first_tracked_day": False}
     if not daily:
         return empty
 
@@ -168,4 +177,5 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
     return {
         "total_fans": current, "today_gain": today_gain, "daily_gain": daily_gain,
         "monthly_gain": monthly_gain, "week_avg": week_avg,
+        "first_tracked_day": prev_idx is None,
     }
