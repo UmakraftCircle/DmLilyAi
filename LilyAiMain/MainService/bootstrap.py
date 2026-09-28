@@ -226,6 +226,41 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
     ]
 
 
+def _trainer_link_tools(trainer_link_store) -> list[ToolSpec]:
+    """Expose the Discord<->uma.moe Trainer ID link (see LilyAiMemory/TrainerLink) to the chat model.
+
+    The link itself is created out-of-band via the "link me" DM flow (LinkTrainerFlow) and stored
+    in TrainerLinkStore, but until now nothing in the tool registry could read it back, so the model
+    had no way to answer "what's my trainer ID" and could only look trainers up by an ID/name the
+    user typed in fresh - even for a user who had already linked one.
+    """
+
+    def get_linked_trainer(ctx: ToolContextData, args: dict) -> str:
+        if not ctx.user_id:
+            return "No Discord user in this context to look up."
+        link = trainer_link_store.by_discord_id(ctx.user_id)
+        if not link:
+            return (
+                "This Discord account isn't linked to a uma.moe Trainer ID yet. "
+                "They can link one by saying \"link me\"."
+            )
+        name_part = f" ({link.trainer_name})" if link.trainer_name else ""
+        return f"This Discord account is linked to uma.moe Trainer ID `{link.trainer_id}`{name_part}."
+
+    return [
+        ToolSpec(
+            "get_linked_trainer",
+            "Look up the uma.moe Trainer ID linked to the CURRENT Discord user (the person you're chatting "
+            "with right now). Call this whenever the user refers to \"my\" trainer/stats/fan gain without "
+            "giving an explicit Trainer ID or name - resolve it here first, then pass the result into "
+            "check_fan_gain. Takes no arguments; it always looks up the current user and never anyone else's "
+            "account.",
+            {"type": "object", "properties": {}, "required": []},
+            get_linked_trainer, category="umamoe",
+        ),
+    ]
+
+
 def _umapyoi_tools(client: UmapyoiClient) -> list[ToolSpec]:
     """Supplementary Uma Musume game-trivia tools (umapyoi.net - keyless, no rotation needed).
 
@@ -375,6 +410,8 @@ def build_app(
     discord_reconnect = ReconnectState(db)
     tools = ToolService(notifier_box)
     for spec in _web_tools(web):
+        tools.register(spec)
+    for spec in _trainer_link_tools(memory.trainer_link):
         tools.register(spec)
 
     umamoe = UmamoeClient(settings.umamoe_api_key) if settings.umamoe_api_key else None
