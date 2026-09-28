@@ -194,12 +194,21 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             if not rows:
                 continue
             rows.sort(key=lambda r: r[1][sort_key], reverse=True)
+            total_members = len(rows)
+            shown = rows[:25]  # keep replies readable for a full-roster query
             section = [f"**{circle_name}** (ranked by {sort_by} fan gain)"]
             # Numbered so the model relays the rank instead of counting bullets itself.
-            for rank, (trainer_name, g) in enumerate(rows[:25], start=1):  # keep replies readable
+            for rank, (trainer_name, g) in enumerate(shown, start=1):
                 section.append(
                     f"{rank}. {trainer_name}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
                     f"(total {g['total_fans']:,})"
+                )
+            if total_members > len(shown):
+                # Told explicitly, not left implicit - otherwise a >25-member circle silently gets
+                # presented as a complete leaderboard when it's actually been cut off.
+                section.append(
+                    f"...(showing top {len(shown)} of {total_members} members - filter by trainer_name "
+                    "for anyone not shown)"
                 )
             sections.append("\n".join(section))
         if not sections:
