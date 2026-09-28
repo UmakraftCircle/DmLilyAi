@@ -7,10 +7,59 @@ about a trainer's numbers.
 """
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
 
+from LilyAiCore.Logging.logger import get_logger
 
-def member_gains(daily_fans: list[int] | None) -> dict:
+log = get_logger("umamoe_gains")
+
+
+def find_anomalies(daily_fans: list[int] | None, gains: dict) -> list[str]:
+    """Reasons a member's numbers can't be right, given cumulative daily totals.
+
+    daily_fans is a running total, so real data is never negative, never goes down
+    from one day to the next, and a month's gain can never exceed the current total.
+    Any hit means uma.moe's array (or how we read it) is off - see the diagnostics
+    in LilyAiMain/MainService/Interaction/Workflows/umamoe_job.py.
+    """
+    daily = daily_fans or []
+    problems: list[str] = []
+    numbers = [v for v in daily if isinstance(v, (int, float))]
+    if any(v < 0 for v in numbers):
+        problems.append("negative entry in daily_fans")
+    seen = [v for v in numbers if v]
+    if any(b < a for a, b in zip(seen, seen[1:])):
+        problems.append("cumulative total decreases between days")
+    if gains["monthly_gain"] < 0:
+        problems.append("monthly_gain is negative")
+    if gains["monthly_gain"] > gains["total_fans"]:
+        problems.append("monthly_gain exceeds total_fans")
+    return problems
+
+
+def member_gains(daily_fans: list[int] | None, label: str | None = None) -> dict:
+    """Fan-gain breakdown - see _compute_gains().
+
+    label is optional and only affects logging: when given (e.g. "Nero (316112867285)"),
+    a warning with the raw array is logged if the numbers fail find_anomalies(). The
+    returned values are identical with or without it.
+    """
+    gains = _compute_gains(daily_fans)
+    if label is not None:
+        try:
+            problems = find_anomalies(daily_fans, gains)
+            if problems:
+                log.warning(
+                    "fan-gain anomaly for %s: %s | gains=%s | daily_fans=%s",
+                    label, "; ".join(problems), gains, json.dumps(daily_fans)[:1000],
+                )
+        except Exception as e:  # diagnostics must never break a poll
+            log.warning("fan-gain anomaly check failed for %s: %s", label, e)
+    return gains
+
+
+def _compute_gains(daily_fans: list[int] | None) -> dict:
     """Fan-gain breakdown from uma.moe's daily-fan array (one cumulative-total entry per
     day of the currently-tracked month; days that haven't happened yet come back as 0
     padding, since get_circle() hands back a full calendar month of snapshots rather than
