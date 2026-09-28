@@ -1,6 +1,7 @@
 """Scheduled job: poll tracked uma.moe circles for rank/points/fan changes and alert on anything new."""
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiCore.ExternalServices.Umamoe.client import UmamoeClient
+from LilyAiCore.ExternalServices.Umamoe.gains import member_gains
 from LilyAiCore.ExternalServices.Umamoe.store import UmamoeStore
 from LilyAiCore.Logging.logger import get_logger
 from LilyAiMain.MainService.Discord.Events.bus import EventBus
@@ -34,9 +35,14 @@ def make_umamoe_job(client: UmamoeClient, store: UmamoeStore, notifier_box: Noti
                     continue
                 trainer_name = member.get("trainer_name") or str(viewer_id)
                 daily = member.get("daily_fans") or []
-                total = max(daily) if daily else None
-                if total is None:
+                if not daily:
                     continue
+                # member_gains() is the one shared calc (see its docstring) - using it here
+                # too means this poller's "current total fans" can never disagree with what
+                # check_fan_gain, /api/leaderboard, or the daily quota job report for the
+                # same trainer. The previous max(daily) could diverge from that on a data
+                # blip (e.g. a stray inflated value from an uma.moe hiccup).
+                total = member_gains(daily)["total_fans"]
                 prev_fans = store.get_member_fans(circle_id, viewer_id)
                 store.set_member_fans(circle_id, viewer_id, trainer_name, total)
                 if prev_fans is not None and total > prev_fans:
