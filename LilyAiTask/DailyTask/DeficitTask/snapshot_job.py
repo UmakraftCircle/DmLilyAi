@@ -60,8 +60,8 @@ def _is_first_of_month(now: datetime) -> bool:
 
 async def _fetch_member_gains(umamoe: UmamoeClient, circle_id: int) -> dict[str, dict]:
     """trainer_id (uma.moe viewer_id, as str) -> member_gains() breakdown
-    (total_fans/today_gain/daily_gain/monthly_gain/week_avg) for every member
-    currently on this circle's live roster.
+    (total_fans/today_gain/daily_gain/monthly_gain/week_avg/first_tracked_day) for
+    every member currently on this circle's live roster.
     """
     data = await umamoe.get_circle(circle_id=circle_id)
     out: dict[str, dict] = {}
@@ -130,6 +130,17 @@ async def run_daily_fan_gain(
             continue
 
         fan_store.record(club, member.trainer_id, gains["total_fans"])
+
+        if gains["first_tracked_day"]:
+            # No earlier day of data to measure "today" against yet - either uma.moe just
+            # detected this trainer (mid-month join) or this is the first poll of a new
+            # tracking month for everyone. member_gains() already forces today_gain to 0 in
+            # this case (see gains.py), but feeding that 0 into record_day() would still
+            # charge the full 5,000,000 daily quota as a deficit against someone who hasn't
+            # had a chance to gain anything measurable yet. Skip quota tracking and the DM
+            # for this one day; nothing is written to tracker_store, so tomorrow's
+            # _load_tracker() starts from a clean carry=0 instead of an artificial deficit.
+            continue
 
         tracker = _load_tracker(tracker_store, club, member.trainer_id, now)
         result = tracker.record_day(gains["today_gain"])
