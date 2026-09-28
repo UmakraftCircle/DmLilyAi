@@ -168,9 +168,16 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
             )
         return "\n".join(lines)
 
+    _SORT_KEYS = {"today": "today_gain", "monthly": "monthly_gain", "total": "total_fans"}
+
     async def check_fan_gain(ctx: ToolContextData, args: dict) -> str:
         circle_id = args.get("circle_id")
         name_filter = (args.get("trainer_name") or "").strip().lower()
+        # "total" (current total fans) matches how a fan-gain LEADERBOARD is normally ranked -
+        # same as /api/leaderboard and uma.moe's own site - so it's the default rather than
+        # today_gain, which only makes sense when the user specifically asks about today.
+        sort_by = args.get("sort_by") or "total"
+        sort_key = _SORT_KEYS.get(sort_by, "total_fans")
         ids = (circle_id,) if circle_id else default_circle_ids
         if not ids:
             return "No uma.moe circle configured. Set UMAMOE_CIRCLE_IDS or pass a circle_id."
@@ -186,11 +193,12 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
                 rows.append((trainer_name, member_gains(m.get("daily_fans"))))
             if not rows:
                 continue
-            rows.sort(key=lambda r: r[1]["today_gain"], reverse=True)
-            section = [f"**{circle_name}**"]
-            for trainer_name, g in rows[:25]:  # keep replies readable for a full-roster query
+            rows.sort(key=lambda r: r[1][sort_key], reverse=True)
+            section = [f"**{circle_name}** (ranked by {sort_by} fan gain)"]
+            # Numbered so the model relays the rank instead of counting bullets itself.
+            for rank, (trainer_name, g) in enumerate(rows[:25], start=1):  # keep replies readable
                 section.append(
-                    f"- {trainer_name}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
+                    f"{rank}. {trainer_name}: {g['today_gain']:,} today, {g['monthly_gain']:,} this month "
                     f"(total {g['total_fans']:,})"
                 )
             sections.append("\n".join(section))
@@ -212,13 +220,23 @@ def _umamoe_tools(client: UmamoeClient, default_circle_ids: tuple[int, ...]) -> 
         ToolSpec(
             "check_fan_gain",
             "Look up today's and this month's fan gain, plus current total fans, per trainer in the tracked "
-            "uma.moe club(s). Optionally filter to one trainer_name. Use this for any request about fan gain, "
-            "fan numbers, or a fan leaderboard - never try to fetch or scrape this bot's own web pages for it.",
+            "uma.moe club(s), returned as a numbered, ranked list. Optionally filter to one trainer_name. Use "
+            "this for any request about fan gain, fan numbers, or a fan leaderboard - never try to fetch or "
+            "scrape this bot's own web pages for it. IMPORTANT: pass sort_by matching what was actually asked "
+            "(e.g. 'today's leaderboard' -> sort_by='today') rather than re-sorting the returned list yourself.",
             {"type": "object", "properties": {
                 "circle_id": {"type": ["integer", "null"], "description": "Omit or pass null for the default club(s)"},
                 "trainer_name": {
                     "type": ["string", "null"],
                     "description": "Filter to trainers whose name contains this; omit or pass null for everyone",
+                },
+                "sort_by": {
+                    "type": ["string", "null"],
+                    "enum": ["today", "monthly", "total", None],
+                    "description": (
+                        "Rank by 'today' (today's gain), 'monthly' (this month's gain), or 'total' (current "
+                        "total fans - the standard leaderboard ranking, and the default if omitted)."
+                    ),
                 },
             }, "required": []},
             check_fan_gain, category="umamoe", timeout=15,
