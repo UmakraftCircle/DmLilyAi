@@ -123,7 +123,8 @@ Rank A or higher: Turf, Medium, Long, Front Runner.
 ## Gaps
 
 - Ears, tail, family, trivia and weight rows were left out (game text is not copied).
-- Overview, background and personality: not filled in yet.
+- Overview: not filled in yet.
+- Background and personality: not filled in yet.
 - Appearances (anime, game, other media): not filled in yet.
 - Unique skills, build notes, obtain methods and support cards: not filled in yet.
 - Kitasan Black [Gilded Shrine to Glory]: could not parse stats.
