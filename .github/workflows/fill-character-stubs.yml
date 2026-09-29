@@ -1,0 +1,109 @@
+name: Fill empty character profiles
+
+# Copies character profiles from an uploaded zip (or folder) into
+# LilyAiGameSpace/Umamusume/Character, but ONLY for files that are missing
+# or are empty stubs. Files that already have data are never overwritten.
+#
+# How to use:
+#   1. Upload Character.zip to  incoming/Character.zip  (GitHub web: Add file > Upload files)
+#   2. Actions tab > "Fill empty character profiles" > Run workflow
+#   3. Run once with dry_run = true (default) and read the log, then run again with dry_run = false.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Path to the update zip or folder in this repo"
+        default: "incoming/Character.zip"
+        required: true
+      stub_max_bytes:
+        description: "A target file at or below this size counts as an empty stub"
+        default: "200"
+        required: true
+      dry_run:
+        description: "Only report what would change (no commit)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fill stubs only
+        env:
+          SOURCE: ${{ inputs.source }}
+          STUB_MAX: ${{ inputs.stub_max_bytes }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          python3 - <<'PY'
+          import os, shutil, sys, tempfile, zipfile
+          from pathlib import Path
+
+          TARGET = Path("LilyAiGameSpace/Umamusume/Character")
+          source = Path(os.environ["SOURCE"])
+          stub_max = int(os.environ["STUB_MAX"])
+          dry = os.environ["DRY_RUN"].lower() == "true"
+
+          if not source.exists():
+              sys.exit(f"Source not found: {source}")
+
+          if source.is_file() and source.suffix.lower() == ".zip":
+              src_dir = Path(tempfile.mkdtemp())
+              with zipfile.ZipFile(source) as z:
+                  for m in z.namelist():
+                      p = Path(m)
+                      if p.is_absolute() or ".." in p.parts:
+                          sys.exit(f"Unsafe path in zip: {m}")
+                  z.extractall(src_dir)
+          elif source.is_dir():
+              src_dir = source
+          else:
+              sys.exit("Source must be a .zip file or a folder")
+
+          TARGET.mkdir(parents=True, exist_ok=True)
+          filled, created, skipped = [], [], []
+
+          for f in sorted(src_dir.rglob("*.md")):
+              dest = TARGET / f.name
+              if not dest.exists():
+                  created.append(f.name)
+                  if not dry:
+                      shutil.copyfile(f, dest)
+              elif dest.stat().st_size <= stub_max:
+                  filled.append(f.name)
+                  if not dry:
+                      shutil.copyfile(f, dest)
+              else:
+                  skipped.append(f.name)
+
+          print(f"Mode: {'DRY RUN' if dry else 'WRITE'}")
+          print(f"Filled empty stubs : {len(filled)}")
+          print(f"Created new files  : {len(created)}")
+          print(f"Skipped (has data) : {len(skipped)}")
+          for label, items in (("FILLED", filled), ("CREATED", created), ("SKIPPED", skipped)):
+              for n in items:
+                  print(f"  {label}: {n}")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as s:
+              s.write(f"### Character profile fill ({'dry run' if dry else 'written'})\n\n")
+              s.write(f"- Filled stubs: **{len(filled)}**\n- New files: **{len(created)}**\n- Skipped (already had data): **{len(skipped)}**\n")
+          PY
+
+      - name: Commit and push
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LilyAiGameSpace/Umamusume/Character
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Fill empty character profiles from update (stubs only)"
+            git push
+          fi
