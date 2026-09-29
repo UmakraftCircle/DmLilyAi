@@ -22,6 +22,12 @@ def find_anomalies(daily_fans: list[int] | None, gains: dict) -> list[str]:
     from one day to the next, and a month's gain can never exceed the current total.
     Any hit means uma.moe's array (or how we read it) is off - see the diagnostics
     in LilyAiMain/MainService/Interaction/Workflows/umamoe_job.py.
+
+    This inspects the RAW array as uma.moe sent it, before _normalize_daily() touches
+    it. member_gains() itself corrects a sign-flipped run (see _normalize_daily), so a
+    "negative entry" / "cumulative total decreases" hit here can still come with sane
+    gains in the `gains` dict passed in - that's expected: this reports what uma.moe
+    sent, as a diagnostic, not whether the returned numbers are still trustworthy.
     """
     daily = daily_fans or []
     problems: list[str] = []
@@ -59,6 +65,31 @@ def member_gains(daily_fans: list[int] | None, label: str | None = None) -> dict
     return gains
 
 
+def _normalize_daily(daily_fans: list[int] | None) -> list:
+    """daily_fans with every negative entry replaced by its absolute value.
+
+    uma.moe's array is documented (CircleMemberFansMonthly.daily_fans) as cumulative
+    fan totals, which are never negative - yet it can arrive with a run of entries
+    carrying the wrong sign. Real example (theXth, viewer_id 460640859804, logged
+    2026-09-28): 25 entries from -827,154,742 down to -897,698,168, then +905,921,468,
+    +918,152,062, +930,137,085. Read as absolute values that is one smooth, rising
+    series (every day-to-day step is a sane positive gain, sign flip included); taken
+    literally, the month "gained" 1,757,291,827 against a 930,137,085 total - the
+    original bug report.
+
+    The sign is the only thing wrong here, so it's dropped before any of the gain math
+    runs, which means total/today/daily/monthly/week_avg and the join baseline all see
+    the same corrected series. Non-numeric entries (e.g. None) pass through unchanged.
+    The raw array - sign included - is still what find_anomalies() inspects and logs
+    via member_gains(label=...), so a run like this stays visible in the logs even
+    though the returned numbers are now correct.
+    """
+    return [
+        abs(v) if isinstance(v, (int, float)) and not isinstance(v, bool) and v < 0 else v
+        for v in (daily_fans or [])
+    ]
+
+
 def _compute_gains(daily_fans: list[int] | None) -> dict:
     """Fan-gain breakdown from uma.moe's daily-fan array (one cumulative-total entry per
     day of the currently-tracked month; days that haven't happened yet come back as 0
@@ -74,18 +105,32 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
                      uma.moe first detected them - see the join note below)
       week_avg     - average daily gain since this week's Monday, resetting every Monday;
                      None when Monday falls before day 1 of the fetched month (edge of month)
+      first_tracked_day - True when there is no earlier day of data to diff "today" against,
+                     i.e. today IS this trainer's first entry in the array. Two different real
+                     situations produce this: a member uma.moe only detected today (mid-month
+                     join), or this is simply day 1 of a new tracking month for everyone (nobody
+                     has a "yesterday" yet). Either way today_gain/daily_gain are correctly 0
+                     already; callers doing quota/deficit math (see LilyAiTask/DailyTask/
+                     DeficitTask/snapshot_job.py) should treat this as "nothing to measure yet"
+                     rather than charge a shortfall against a real 0.
 
     "Today" is the LAST NON-ZERO entry, not simply the last slot in the array - blindly
     using daily[-1] would pick up an unfilled future day (0) and produce a wildly negative
     gain. Same logic walks backward again to find the last full day, and again for Monday.
+
+    Every entry is normalized through _normalize_daily() first: a sign-flipped run in
+    uma.moe's array (seen in production - see that function's docstring) otherwise makes
+    monthly_gain the current total PLUS the flipped baseline, e.g. 1.757b against a
+    930m total.
 
     Deliberately stateless: everything comes from this one daily_fans array, so callers
     never need their own day-to-day snapshot history to get correct today/monthly figures
     - not on a trainer's very first tracked day, and not after a process restart wipes
     any local snapshot store (e.g. Render's free-plan ephemeral filesystem).
     """
-    daily = daily_fans or []
-    empty = {"total_fans": 0, "today_gain": 0, "daily_gain": 0, "monthly_gain": 0, "week_avg": None}
+    daily = _normalize_daily(daily_fans)
+    empty = {"total_fans": 0, "today_gain": 0, "daily_gain": 0, "monthly_gain": 0,
+             "week_avg": None, "first_tracked_day": False}
     if not daily:
         return empty
 
@@ -132,4 +177,5 @@ def _compute_gains(daily_fans: list[int] | None) -> dict:
     return {
         "total_fans": current, "today_gain": today_gain, "daily_gain": daily_gain,
         "monthly_gain": monthly_gain, "week_avg": week_avg,
+        "first_tracked_day": prev_idx is None,
     }
