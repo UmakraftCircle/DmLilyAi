@@ -1,7 +1,7 @@
 name: Fill character profiles (GameTora)
 
 # Fills the one-line stub files in LilyAiGameSpace/Umamusume/Character using
-# GameTora + this repo's support card tables (tools/generate_character_profiles.py).
+# GameTora + this repo's support card tables (tools/generate_character_profiles_v2.py).
 # Hand-written profiles are never touched.
 #
 # How to use:
@@ -86,7 +86,7 @@ jobs:
           if [ -n "$ONLY" ]; then
             args+=(--only "$ONLY")
           fi
-          python -u tools/generate_character_profiles.py "${args[@]}" | tee generate.log
+          python -u tools/generate_character_profiles_v2.py "${args[@]}" | tee generate.log
 
       - name: Summary
         if: always()
@@ -98,47 +98,42 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # Diagnostic: shows what the parser sees on a real GameTora version page.
-      - name: Debug - what the parser sees
+      # Diagnostic: shows GameTora's profile-page data (used to fill the infobox next).
+      - name: Debug - profile page data
         if: always()
         continue-on-error: true
         run: |
           python - <<'PY' | tee debug_out.md >> "$GITHUB_STEP_SUMMARY"
-          import json, re, sys
+          import json, sys
           sys.path.insert(0, "tools")
           import generate_character_profiles as g
-          url = "https://gametora.com/umamusume/characters/100101-special-week"
-          raw = g.fetch(url)
-          print(f"### Debug: {url}")
-          if not raw:
-              print("fetch returned nothing (404, blocked or error)")
-              sys.exit(0)
-          lines, h1, em = g.html_to_lines(raw)
-          print(f"- html bytes: {len(raw)}, text lines: {len(lines)}, h1: {h1!r}")
-          for key in ("Base stats", "Stat bonuses", "Aptitude", "Objectives", "Release date"):
-              print(f"- '{key}' at line(s):", [i for i, l in enumerate(lines) if l == key])
-          m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.S)
-          if not m:
-              print("- no __NEXT_DATA__ script block in the page")
-          else:
-              try:
-                  d = json.loads(m.group(1))
-                  pp = d.get("props", {}).get("pageProps", {})
-                  print("- __NEXT_DATA__ pageProps keys:", list(pp.keys()))
-                  item = pp.get("itemData") or pp.get("data") or {}
-                  if isinstance(item, dict):
-                      print("- item keys:", list(item.keys())[:80])
-                  print("- JSON sample (first 3500 chars):")
-                  print("```json")
-                  print(json.dumps(pp)[:3500])
+          import generate_character_profiles_v2 as v2
+
+          def show(url, n_lines):
+              raw = g.fetch(url)
+              print(f"### Debug: {url}")
+              if not raw:
+                  print("fetch returned nothing (404, blocked or error)")
+                  return
+              lines, h1, em = g.html_to_lines(raw)
+              print(f"- text lines: {len(lines)}, h1: {h1!r}, first <em>: {em!r}")
+              pp = v2.next_data(raw) or {}
+              print("- pageProps keys:", list(pp.keys()))
+              for key in ("charData", "profileData", "profileTranslation", "objectiveData"):
+                  if key in pp:
+                      print(f"- {key} (first 1500 chars):")
+                      print("```json")
+                      print(json.dumps(pp[key], ensure_ascii=False)[:1500])
+                      print("```")
+              if n_lines:
+                  print(f"- text lines (first {n_lines}):")
                   print("```")
-              except Exception as e:
-                  print("- __NEXT_DATA__ parse error:", e)
-          print("- text lines (first 100):")
-          print("```")
-          for i, l in enumerate(lines[:100]):
-              print(i, l[:90])
-          print("```")
+                  for i, l in enumerate(lines[:n_lines]):
+                      print(i, l[:90])
+                  print("```")
+
+          show("https://gametora.com/umamusume/characters/special-week", 90)
+          show("https://gametora.com/umamusume/characters/100101-special-week", 0)
           PY
 
       - name: Fail if nothing was written
@@ -162,6 +157,8 @@ jobs:
             echo '```'
             echo "Dry run: no files were committed. Run again with dry_run = false to write them."
           } >> "$GITHUB_STEP_SUMMARY"
+          mkdir -p debug
+          for f in $(git diff --name-only -- LilyAiGameSpace/Umamusume/Character); do cp "$f" "debug/preview_$(basename "$f")"; done
           git checkout -- LilyAiGameSpace/Umamusume/Character
 
       - name: Commit and push profiles
@@ -177,7 +174,7 @@ jobs:
             git push
           fi
 
-      # Saves the log + debug output into debug/ so it can be read without opening the run page.
+      # Saves the log + debug output (and dry-run previews) into debug/ so they can be read without opening the run page.
       - name: Save debug output to the repo
         if: always()
         continue-on-error: true
