@@ -1,0 +1,73 @@
+name: Build support cards
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Test run: only process the first N cards (leave empty for the full run)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Test run (only when a limit is given)
+        if: ${{ inputs.limit != '' }}
+        env:
+          LIMIT: ${{ inputs.limit }}
+        run: python tools/build_support_cards.py --limit "$LIMIT" --out tools/test_out
+
+      - name: Upload test output
+        if: ${{ always() && inputs.limit != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-output
+          path: |
+            tools/test_out
+            tools/failed.txt
+          if-no-files-found: ignore
+
+      - name: Full run
+        if: ${{ inputs.limit == '' }}
+        run: python tools/build_support_cards.py
+
+      - name: Sanity check
+        if: ${{ inputs.limit == '' }}
+        run: |
+          rows=$(grep -c '^| \[' "LilyAiGameSpace/Umamusume/Support Cards/SSR.md" || true)
+          echo "SSR rows: $rows"
+          if [ "$rows" -lt 50 ]; then echo "Too few SSR rows, not committing"; exit 1; fi
+
+      - name: Commit results
+        if: ${{ inputs.limit == '' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "LilyAiGameSpace/Umamusume/Support Cards"
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update support cards (generated)"
+            git push
+          fi
+
+      - name: Upload failed cards list
+        if: ${{ always() && inputs.limit == '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-cards
+          path: tools/failed.txt
+          if-no-files-found: ignore
