@@ -1,11 +1,11 @@
 # Umamusume Skills
 
-Source: Game8 (All Skills List / All Rare Skills). Covers **Unique**, **Rare** and **Normal** skills, including Negative (purple) skills.
+Source: Game8 (All Skills List / All Rare Skills / All Unique Skills). Covers **Unique**, **Rare** and **Normal** skills, including Negative (purple) skills.
 
 **Skill types used:** Unique Skill, Velocity, Acceleration, Speed - Other (positioning, navigation, passing, field of view), Green Skill (Passive), Recovery, Debuff, Negative (purple).
 
 **Acquisition notes:**
-- Unique skills are innate to the listed character and can be passed down as Green Sparks when the Umamusume has at least 3 stars.
+- Unique skills are innate to the listed character and can be passed down as Green Sparks when the Umamusume has at least 3 stars. Inherited Unique skills are treated as Normal skills.
 - Rare skills are bought with Skill Points. Rare skills that upgrade a Normal skill require the Normal skill to be learned first, and both are paid for.
 - Normal skills are bought with Skill Points.
 - Negative skills are acquired by the trainee after losing races. Skill Points can be spent to remove them in the Skills menu.
@@ -49,7 +49,7 @@ Source: Game8 (All Skills List / All Rare Skills). Covers **Unique**, **Rare** a
 | Bountiful Harvest | Unique Skill | Increase velocity with a surge of great fortune when pressured by another runner toward the back in the second half of the race. | Innate: Matikane Fukukitaru (Lucky Tidings) |
 | Schwarzes Schwert | Unique Skill | Increase velocity in a dash for the lead after running calmly and according to plan up until the final straight. | Innate: Eishin Flash (Meisterschaft) |
 | I Never Goof Up! | Unique Skill | Aim for the front with unwavering determination when passing another runner from midpack or further back on a corner late-race. | Innate: Meisho Doto (Turbulent Blue) |
-| Dazzl'n ♪ Diver | Unique Skill | Recover endurance by relaxing after activating 2 skills mid-race. | Innate: Special Week (Hopp'n♪Happy Heart) |
+| Dazzl'n ♪ Diver | Unique Skill | Recover endurance by relaxing after activating 2 skills when positioned midpack mid-race. | Innate: Special Week (Hopp'n♪Happy Heart) |
 | A Kiss for Courage | Unique Skill | Increase velocity enthusiastically when positioned toward the front in the second half of the race after recovering endurance with a skill. | Innate: Maruzensky (Hot☆Summer Night) |
 | KEEP IT REAL. | Unique Skill | Moderately increase acceleration steadily with a wink when starting to make a move from midpack in the second half of the race. | Innate: Gold City (Authentic / 1928) |
 | Triumphant Pulse | Unique Skill | Greatly increase ability to break out of the pack by opening up a path when positioned toward the front with 200m remaining. | Innate: Oguri Cap (Starlight Beat) |
@@ -89,6 +89,7 @@ Source: Game8 (All Skills List / All Rare Skills). Covers **Unique**, **Rare** a
 | Class Rep + Speed = Bakushin | Unique Skill | Moderately increase velocity with BAKUSHIN power when engaged in a challenge toward the front in the second half of the race. | Innate: Sakura Bakushin O (Blossom in Learning) |
 | V Is for Victory! | Unique Skill | Moderately increase velocity with winning ambition when positioned toward the front on the final straight after engaging in a challenge on the final corner or later. | Innate: Winning Ticket (Get to Winning!) |
 | Introduction to Physiology | Unique Skill | Moderately recover endurance and slightly increase velocity for a moderate duration when sitting off the pace on a corner in the second half of the race. | Innate: Agnes Tachyon (Tach-nology) |
+| Fairy Tale | Unique Skill | Increase velocity with the excitement of running when engaged in a challenge while well-positioned in the second half of the race. | Character not listed on source |
 
 ## Rare Skills
 
