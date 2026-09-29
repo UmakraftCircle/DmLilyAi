@@ -110,7 +110,7 @@ def _seconds_until_utc(hour: int, minute: int = 0) -> float:
     again. That still leaves a narrow race if two processes are briefly alive at
     once (e.g. a rolling Render redeploy) with both about to fire close together;
     JobRunStore (see _fan_gain_job) is the actual guarantee against a double send,
-    this is just what makes it happen at 11:00 UTC instead of at process-start-
+    this is just what makes it happen at 19:00 UTC instead of at process-start-
     plus-N in the first place.
     """
     now = datetime.now(timezone.utc)
@@ -527,11 +527,11 @@ def build_app(
 
     if umamoe and settings.umamoe_circle_ids:
         # One daily fan-snapshot + quota job per tracked circle (see snapshot_job.py),
-        # fired at 11:00 UTC. _seconds_until_utc(11, 0) recomputes the delay to the
-        # next 11:00 UTC fresh on every process start, so a restart just re-targets
+        # fired at 19:00 UTC. _seconds_until_utc(19, 0) recomputes the delay to the
+        # next 19:00 UTC fresh on every process start, so a restart just re-targets
         # the next occurrence instead of drifting off schedule. job_run_store guards
         # against sending the same UTC day's DM twice if a restart happens to land
-        # right around 11:00 (e.g. old/new processes briefly overlapping during a
+        # right around 19:00 (e.g. old/new processes briefly overlapping during a
         # Render redeploy) - see JobRunStore's docstring.
         #
         # Club names follow the convention already used in snapshot_job.py and
@@ -546,7 +546,7 @@ def build_app(
                 24 * 3600,
                 _fan_gain_job(app, memory.trainer_link, memory.fan_gain, memory.deficit_state,
                               memory.job_runs, job_name, umamoe, circle_id, club),
-                initial_delay_s=_seconds_until_utc(11, 0),
+                initial_delay_s=_seconds_until_utc(19, 0),
             )
 
     return app
