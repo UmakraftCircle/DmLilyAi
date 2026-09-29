@@ -4,9 +4,11 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 ## Speed
 
+<!-- cleaned: support-card-details v1 -->
+
 ### [Tracen Academy] Silence Suzuka
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Focus: Slightly decrease time lost to slow starts.
@@ -21,25 +23,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- On and On
-- Of course.
-- Speed +10, Stamina +5, Bond +5
-
-- Sure! Now run as fast as you can!
-- Speed +15, Bond +5
-- What Should I Do?
-- Why not do some partner running with her?
-- Speed +5, Stamina +5, Wit +5, Bond +5
-
-- Maybe the trick is hidden in that left-handed loop you're in.
-- Bond +5, Left-Handed ○ Left-Handed ○
-- ○
-- Moderately increase performance on left-handed tracks. Hint +1
+- **On and On**
+  - “Of course.” → Speed +10, Stamina +5, Bond +5
+  - “Sure! Now run as fast as you can!” → Speed +15, Bond +5
+- **What Should I Do?**
+  - “Why not do some partner running with her?” → Speed +5, Stamina +5, Wit +5, Bond +5
+  - “Maybe the trick is hidden in that left-handed loop you're in.” → Bond +5, Left-Handed ○
+    - Hint +1: Moderately increase performance on left-handed tracks.
 
 ### [Tracen Academy] Tokai Teio
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Prudent Positioning: Increase navigation early-race.
@@ -51,25 +45,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- My Way, Or...
-- You should run the way that best suits you! 1
-- Mood +1, Skill points +15, Bond +5
-
-- But think of how good it'll feel to sprint after holding back.
-- Guts +15, Bond +5
-- My Weapon
-- Yeah, people who can do it all are so cool!
-- Mood +1, Guts +10, Bond +5
-
-- I think you have plenty of weapons up your sleeve already.
-- Bond +5, Pace Chaser Straightaways ○ Pace Chaser Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Pace Chaser) Hint +1
+- **My Way, Or...**
+  - “You should run the way that best suits you! 1” → Mood +1, Skill points +15, Bond +5
+  - “But think of how good it'll feel to sprint after holding back.” → Guts +15, Bond +5
+- **My Weapon**
+  - “Yeah, people who can do it all are so cool!” → Mood +1, Guts +10, Bond +5
+  - “I think you have plenty of weapons up your sleeve already.” → Bond +5, Pace Chaser Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Pace Chaser)
 
 ### [Tracen Academy] Maruzensky
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Early Lead: Slightly increase ability to go to the front early-race. (Front Runner)
@@ -80,24 +66,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- For an Adorable Younger Student
-- Teach her how to use her knees properly.
-- Bond +5, Early Lead Early Lead
-- Slightly increase ability to go to the front early-race. (Front Runner) Hint +1
-
-- Work on improving her baseline endurance.
-- Energy +5, Speed +10, Bond +5
-- Drive Destination
-- The beach.
-- Speed +5, Mood +1, Bond +5
-
-- A new town.
-- Wit +5, Mood +1, Bond +5
+- **For an Adorable Younger Student**
+  - “Teach her how to use her knees properly.” → Bond +5, Early Lead
+    - Hint +1: Slightly increase ability to go to the front early-race. (Front Runner)
+  - “Work on improving her baseline endurance.” → Energy +5, Speed +10, Bond +5
+- **Drive Destination**
+  - “The beach.” → Speed +5, Mood +1, Bond +5
+  - “A new town.” → Wit +5, Mood +1, Bond +5
 
 ### [Tracen Academy] Taiki Shuttle
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Preferred Position: Slightly decrease fatigue mid-race. (Pace Chaser)
@@ -109,24 +88,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Yes! Let's Hug ☆ ☆
-- Speed.
-- Speed +10, Bond +5
-
-- Power.
-- Speed +5, Power +5, Bond +5
-- Yeehaw! Party Tonight ☆ ☆
-- Take the long way and run as fast as you can!
-- Energy -10, Speed +5, Power +10, Bond +5
-
-- Imagine yourself parting the crowd as you run!
-- Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
+- **Yes! Let's Hug ☆**
+  - “Speed.” → Speed +10, Bond +5
+  - “Power.” → Speed +5, Power +5, Bond +5
+- **Yeehaw! Party Tonight ☆**
+  - “Take the long way and run as fast as you can!” → Energy -10, Speed +5, Power +10, Bond +5
+  - “Imagine yourself parting the crowd as you run!” → Prepared to Pass
+    - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
 
 ### [Tracen Academy] Gold City
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Sapporo Racecourse ○: Moderately increase performance at Sapporo Racecourse.
@@ -135,24 +107,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- 08:36 / Crap, I Overslept 08:36
-- Isn't class starting soon? ……
-- Mood -1, Skill points +45, Bond +5
-
-- Yeah, there's no point in rushing.
-- Energy +10, Wit +5, Bond +5
-- 13:12 / Lunch Break, Gotta Get Myself Together 13:12
-- Focus on what's at hand for now!
-- Skill points +30, Bond +5
-
-- Would you like an energy drink?
-- Bond +5, A Small Breather A Small Breather
-- Slightly recover endurance when positioned midpack or further back mid-race. (Late Surger) Hint +1
+- **08:36 / Crap, I Overslept 08:36**
+  - “Isn't class starting soon? ……” → Mood -1, Skill points +45, Bond +5
+  - “Yeah, there's no point in rushing.” → Energy +10, Wit +5, Bond +5
+- **13:12 / Lunch Break, Gotta Get Myself Together 13:12**
+  - “Focus on what's at hand for now!” → Skill points +30, Bond +5
+  - “Would you like an energy drink?” → Bond +5, A Small Breather
+    - Hint +1: Slightly recover endurance when positioned midpack or further back mid-race. (Late Surger)
 
 ### [Tracen Academy] Sakura Bakushin O
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Sprinting Gear: Slightly increase acceleration late-race. (Sprint)
@@ -166,24 +131,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Genius Efficiency!
-- Boost your speed by wiping the floor!
-- Speed +15, Bond +5
-
-- Boost your power by tidying the reference room!
-- Speed +5, Power +10, Bond +5
-- Enough to Break into a Dash!
-- Can I borrow it when you're done?
-- Gap Closer Gap Closer
-- Slightly increase spurting ability when positioned toward the back late-race. (Sprint) hint +1, Bond +5
-
-- Could you run for me so I can study your technique?
-- Energy -10, Speed +10, Power +5, Bond +5
+- **Genius Efficiency!**
+  - “Boost your speed by wiping the floor!” → Speed +15, Bond +5
+  - “Boost your power by tidying the reference room!” → Speed +5, Power +10, Bond +5
+- **Enough to Break into a Dash!**
+  - “Can I borrow it when you're done?” → Gap Closer / Slightly increase spurting ability when positioned toward the back late-race. (Sprint) hint +1, Bond +5
+  - “Could you run for me so I can study your technique?” → Energy -10, Speed +10, Power +5, Bond +5
 
 ### [Tracen Academy] Eishin Flash
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -194,25 +151,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Unforeseen Lunch
-- Why not take this chance to try something new?
-- Energy +15, Bond +5
-
-- Guess you'll have to think of something quickly.
-- Speed +5, Guts +5, Bond +5
-- Responding to the Unforeseen
-- Why not make it yourself?
-- Guts +10, Bond +5
-
-- I'm sure there's another store that sells it.
-- Bond +5, Target in Sight ○ Target in Sight ○
-- ○
-- Moderately increase performance when the favorite is using the same strategy. Hint +1
+- **Unforeseen Lunch**
+  - “Why not take this chance to try something new?” → Energy +15, Bond +5
+  - “Guess you'll have to think of something quickly.” → Speed +5, Guts +5, Bond +5
+- **Responding to the Unforeseen**
+  - “Why not make it yourself?” → Guts +10, Bond +5
+  - “I'm sure there's another store that sells it.” → Bond +5, Target in Sight ○
+    - Hint +1: Moderately increase performance when the favorite is using the same strategy.
 
 ### [Tracen Academy] Narita Taishin
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -225,24 +174,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Just Leave Me Alone
-- At least let me cheer you on!
-- Bond +5, Stamina +5, Skill Points +15
-
-- I just want to help.
-- Bond +5, Power +5, Skill points +15
-- Just Don't Bother Me
-- Okay, just don't be late...
-- Bond +5, Pressure Pressure
-- Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long) Hint +1
-
-- Don't overdo it.
-- Skill Points +30, Bond +5
+- **Just Leave Me Alone**
+  - “At least let me cheer you on!” → Bond +5, Stamina +5, Skill Points +15
+  - “I just want to help.” → Bond +5, Power +5, Skill points +15
+- **Just Don't Bother Me**
+  - “Okay, just don't be late...” → Bond +5, Pressure
+    - Hint +1: Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long)
+  - “Don't overdo it.” → Skill Points +30, Bond +5
 
 ### [Tracen Academy] Nishino Flower
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Hanshin Racecourse ○: Moderately increase performance at Hanshin Racecourse.
@@ -253,23 +195,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Warmth, Love, and Lunch
-- The side dishes are so cute.
-- Charming ○ , Bond +5
-
-- It looks very nutritious.
-- Energy +20, Bond +5
-- Let's Bloom Beautifully ♪ ♪
-- Let's share the work and get it done faster!
-- Wit +15, Bond +5
-
-- I'll fill up the watering can for you!
-- Speed +10, Power +5, Bond +5
+- **Warmth, Love, and Lunch**
+  - “The side dishes are so cute.” → Charming ○ , Bond +5
+  - “It looks very nutritious.” → Energy +20, Bond +5
+- **Let's Bloom Beautifully ♪**
+  - “Let's share the work and get it done faster!” → Wit +15, Bond +5
+  - “I'll fill up the watering can for you!” → Speed +10, Power +5, Bond +5
 
 ### [Tracen Academy] Biko Pegasus
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Outer Post Proficiency ○: Moderately increase performance in brackets 6–8.
@@ -282,25 +217,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Hero's Woes
-- You'll need to preserve your strength, then.
-- Energy +15, Bond +5
-
-- Now's your chance to train!
-- Energy +5, Power +5, Bond +5
-- Preparing My Special Move!
-- That strike thing sounds pretty neat.
-- Bond +5, Sprint Straightaways ○ Sprint Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Sprint) Hint +1
-
-- You shouldn't push yourself too hard.
-- Energy +30, Bond +5
+- **A Hero's Woes**
+  - “You'll need to preserve your strength, then.” → Energy +15, Bond +5
+  - “Now's your chance to train!” → Energy +5, Power +5, Bond +5
+- **Preparing My Special Move!**
+  - “That strike thing sounds pretty neat.” → Bond +5, Sprint Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Sprint)
+  - “You shouldn't push yourself too hard.” → Energy +30, Bond +5
 
 ### [Tracen Academy] King Halo
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -312,24 +239,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- You May Socialize With Me!
-- I'll take partner running.
-- Energy -20, Speed +10, Power +10, Wit +5, Bond +5
-
-- I'll take King Commendation practice.
-- Mood -1, Guts +25, Bond +5
-- You May Advise Me!
-- What do you think of the saying "Where there's a will, there's a way"?
-- Guts +10, Wit +5, Bond +5
-
-- Any thoughts on timing your strategy in a race?
-- Bond +5, Homestretch Haste Homestretch Haste
-- Slightly increase velocity in the last spurt. Hint +1
+- **You May Socialize With Me!**
+  - “I'll take partner running.” → Energy -20, Speed +10, Power +10, Wit +5, Bond +5
+  - “I'll take King Commendation practice.” → Mood -1, Guts +25, Bond +5
+- **You May Advise Me!**
+  - “What do you think of the saying "Where there's a will, there's a way"?” → Guts +10, Wit +5, Bond +5
+  - “Any thoughts on timing your strategy in a race?” → Bond +5, Homestretch Haste
+    - Hint +1: Slightly increase velocity in the last spurt.
 
 ### [Tracen Academy] Sweep Tosho
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Prudent Positioning: Increase navigation early-race.
@@ -342,23 +262,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Miracle ☆ Escape! ☆
-- Just admit defeat already.
-- Energy +10, Speed +5, Bond +5
-
-- Run! Hurry!
-- Energy -10, Speed +20, Bond +5
-- Wonderful ☆ Mistake! ☆
-- How about I teach you a cool spell instead?
-- Energy -20, Skill points +40, Bond +5
-
-- Let's look for it together. 1
-- Charming ○ , Bond +5
+- **Miracle ☆ Escape! ☆**
+  - “Just admit defeat already.” → Energy +10, Speed +5, Bond +5
+  - “Run! Hurry!” → Energy -10, Speed +20, Bond +5
+- **Wonderful ☆ Mistake! ☆**
+  - “How about I teach you a cool spell instead?” → Energy -20, Skill points +40, Bond +5
+  - “Let's look for it together. 1” → Charming ○ , Bond +5
 
 ### [Tracen Academy] Twin Turbo
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Competitive Spirit ○: Moderately increase performance when many other runners are using the same strategy.
@@ -370,24 +283,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Just Start Running!
-- I think you should prioritize speed, actually.
-- Mood -1, Speed +20, Bond +5
-
-- Yeah, strength is the way go!
-- Energy -10, Power +20, Bond +5
-- I'm All Fired Up!
-- How about doing an easy song so you don't miss as much?
-- Bond +5, Energy +15
-
-- You can get a higher score with a super hard song!
-- Bond +5, Early Lead Early Lead
-- Slightly increase ability to go to the front early-race. (Front Runner) Hint +1
+- **Just Start Running!**
+  - “I think you should prioritize speed, actually.” → Mood -1, Speed +20, Bond +5
+  - “Yeah, strength is the way go!” → Energy -10, Power +20, Bond +5
+- **I'm All Fired Up!**
+  - “How about doing an easy song so you don't miss as much?” → Bond +5, Energy +15
+  - “You can get a higher score with a super hard song!” → Bond +5, Early Lead
+    - Hint +1: Slightly increase ability to go to the front early-race. (Front Runner)
 
 ### [Tracen Academy] Kitasan Black
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -401,23 +307,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Ah, Friendship
-- You have a good set of pipes!
-- Mood +1, Bond +5, Power +5
-
-- Now you've just gotta get ready for the test!
-- Energy +10, Bond +5
-- Ah, Home Sweet Home
-- Some good quality shoes would work.
-- Speed +5, Power +10, Bond +5
-
-- A training guide would be good.
-- Bond +5, Acquired " Practice Perfect ○ " Condition
+- **Ah, Friendship**
+  - “You have a good set of pipes!” → Mood +1, Bond +5, Power +5
+  - “Now you've just gotta get ready for the test!” → Energy +10, Bond +5
+- **Ah, Home Sweet Home**
+  - “Some good quality shoes would work.” → Speed +5, Power +10, Bond +5
+  - “A training guide would be good.” → Bond +5, Acquired " Practice Perfect ○ " Condition
 
 ### [Tracen Academy] Kawakami Princess
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -427,24 +326,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Princess Punch!
-- Wint it up and go for a knockout punch! 1
-- Guts +10, Bond +5
-
-- How about imagining it's someone you want to hit?
-- Mood +1, Bond +5
-- Princess Escape!
-- Change who's it!
-- Energy +10, Bond +5
-
-- Why not change the rules a little?
-- Bond +5, Steadfast Steadfast
-- Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium) hint +1
+- **Princess Punch!**
+  - “Wint it up and go for a knockout punch! 1” → Guts +10, Bond +5
+  - “How about imagining it's someone you want to hit?” → Mood +1, Bond +5
+- **Princess Escape!**
+  - “Change who's it!” → Energy +10, Bond +5
+  - “Why not change the rules a little?” → Bond +5, Steadfast
+    - Hint +1: Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium)
 
 ### [Tracen Academy] Shinko Windy
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -454,24 +346,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Chomp Extermination!
-- Just tell her the truth!
-- Mood +1, Speed +3, Bond +5
-
-- Come on, help lessen her burden.
-- Energy +10, Skill points +5, Bond +5
-- Chomp Attack!
-- What did I tell you?
-- Skill points +15, Bond +5
-
-- Guess this means you lost, huh?
-- Speed +3, Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Chomp Extermination!**
+  - “Just tell her the truth!” → Mood +1, Speed +3, Bond +5
+  - “Come on, help lessen her burden.” → Energy +10, Skill points +5, Bond +5
+- **Chomp Attack!**
+  - “What did I tell you?” → Skill points +15, Bond +5
+  - “Guess this means you lost, huh?” → Speed +3, Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [Tracen Academy] Narita Brian
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -485,24 +370,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Student Council Member!
-- Need help?
-- Mood +1, Speed +5, Bond +5
-
-- Seems like a lot of work.
-- Max Energy +4, Bond +5
-- Lone Wolf
-- Just don't overdo it.
-- Speed +3, Stamina +3, Power +3, Bond +5
-
-- You just wanted to run on your own, huh? 1
-- Bond +5, Lone Wolf Lone Wolf
-- Moderately increase performance when no other runners have the heart of a lone wolf. Hint +1
+- **Student Council Member!**
+  - “Need help?” → Mood +1, Speed +5, Bond +5
+  - “Seems like a lot of work.” → Max Energy +4, Bond +5
+- **Lone Wolf**
+  - “Just don't overdo it.” → Speed +3, Stamina +3, Power +3, Bond +5
+  - “You just wanted to run on your own, huh? 1” → Bond +5, Lone Wolf
+    - Hint +1: Moderately increase performance when no other runners have the heart of a lone wolf.
 
 ### [Tracen Academy] Narita Top Road
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -515,24 +393,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Thorough Inspection
-- You could use this opportunity to take a break.
-- Bond +5, Energy +20
-
-- Better hurry up and finish!
-- Bond +5, Energy -10, Speed +25
-- A Diligent Effort
-- Practice makes perfect!
-- Bond +5, Stamina +10
-
-- What if you tried speeding up the song?
-- Bond +5, Up-Tempo Up-Tempo
-- Slightly increase positioning ability when positioned toward the front mid-race. (Medium) Hint +1
+- **A Thorough Inspection**
+  - “You could use this opportunity to take a break.” → Bond +5, Energy +20
+  - “Better hurry up and finish!” → Bond +5, Energy -10, Speed +25
+- **A Diligent Effort**
+  - “Practice makes perfect!” → Bond +5, Stamina +10
+  - “What if you tried speeding up the song?” → Bond +5, Up-Tempo
+    - Hint +1: Slightly increase positioning ability when positioned toward the front mid-race. (Medium)
 
 ### [Tracen Academy] Aston Machan
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -545,13 +416,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Jungle Pocket
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Late Surger Corners ○: Slightly increase velocity on a corner. (Late Surger)
@@ -564,21 +434,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- “”
-- Bond +5, Power +15
-
-- LRoars……
-- Bond +5, Energy -10, Speed +15, Stamina +10
-- “”
-- Bond +5, Stamina +15
-
-- Bond +5, Scramble Scramble
-- Moderately expend endurance to slightly increase acceleration when positioned midpack or further back in the last spurt. (Late, Long) Hint +1
+- **“”**
+  - Bond +5, Power +15
+  - “LRoars……” → Bond +5, Energy -10, Speed +15, Stamina +10
+- **“”**
+  - Bond +5, Stamina +15 / Bond +5, Scramble
+    - Hint +1: Moderately expend endurance to slightly increase acceleration when positioned midpack or further back in the last spurt. (Late, Long)
 
 ### [Tracen Academy] Katsuragi Ace
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -593,15 +458,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- VS
-- No data yet! Add it here .
-- VS
-- No data yet! Add it here .
+- **VS**
+  - _no data yet_
+- **VS**
+  - _no data yet_
 
 ### [Tracen Academy] Still in Love
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -615,18 +479,13 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Bond +5, Energy +10, Skill Points +15
-
-- Bond +5, Guts +20
-- Bond +5, Speed +20
-
-- Bond +5, Graceful Gait Graceful Gait
-- Slightly increase velocity mid-race. (Mile/Medium) Hint +1
+- **(untitled event)**
+  - Bond +5, Energy +10, Skill Points +15 / Bond +5, Guts +20 / Bond +5, Speed +20 / Bond +5, Graceful Gait
+    - Hint +1: Slightly increase velocity mid-race. (Mile/Medium)
 
 ### [Tracen Academy] Duramente
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Recovery: Slightly recover endurance on a mid-race straight.
@@ -639,13 +498,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Bubble Gum Fellow
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -657,13 +515,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Gentildonna
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -676,15 +533,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- is Beautiful.
-- No data yet! Add it here .
-- is Justice.
-- No data yet! Add it here .
+- **is Beautiful.**
+  - _no data yet_
+- **is Justice.**
+  - _no data yet_
 
 ### [Tracen Academy] Dream Journey
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -700,13 +556,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Almond Eye
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -722,13 +577,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Fusaichi Pandora
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Go with the Flow: Moderately increase navigation late-race.
@@ -741,14 +595,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ♡
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **♡**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Admire Groove
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Fall Runner ○: Moderately increase performance in fall.
@@ -765,13 +617,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Calstone Light O
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Fall Runner ○: Moderately increase performance in fall.
@@ -790,13 +641,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Sakura Chitose O
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Cloudy Days ○: Moderately increase performance in cloudy weather.
@@ -811,13 +661,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Victoire Pisa
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -832,13 +681,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Marche Lorraine
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -857,15 +705,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Bond +5, Stamina +5, Power +5, Guts +5
-
-- Bond +5, Skill Points +15
-- No data yet! Add it here .
+- **(untitled event)**
+  - Bond +5, Stamina +5, Power +5, Guts +5 / Bond +5, Skill Points +15 / _no data yet_
 
 ### [Tracen Academy] Efforia
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -883,15 +728,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ## Power
 
 ### [Tracen Academy] Oguri Cap
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Cloudy Days ○: Moderately increase performance in cloudy weather.
@@ -907,25 +751,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- How Should I Respond? ……
-- Why don't you show them how you train?
-- Energy +5, Power +5, Bond +5
-
-- Think of it as a chance to work on your weaknesses.
-- Energy -10, Guts +15, Bond +5
-- Conquering the Crowds ……
-- Fight your way through the crowd.
-- Power +5, Skill points +15, Bond +5
-
-- Wait for the right moment to slip through.
-- Bond +5, Nakayama Racecourse ○ Nakayama Racecourse ○
-- ○
-- Moderately increase performance at Nakayama Racecourse. Hint +1
+- **How Should I Respond? ……**
+  - “Why don't you show them how you train?” → Energy +5, Power +5, Bond +5
+  - “Think of it as a chance to work on your weaknesses.” → Energy -10, Guts +15, Bond +5
+- **Conquering the Crowds ……**
+  - “Fight your way through the crowd.” → Power +5, Skill points +15, Bond +5
+  - “Wait for the right moment to slip through.” → Bond +5, Nakayama Racecourse ○
+    - Hint +1: Moderately increase performance at Nakayama Racecourse.
 
 ### [Tracen Academy] Vodka
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -940,24 +776,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Coolest Line
-- Try making yourself look more threatening.
-- Bond +5, Power +10
-
-- Ty striking an intimidation pose.
-- Bond +5, Power +5, Skill Points +15
-- Enemies on Main Street
-- Use the side roads.
-- Bond +5, Nimble Navigator Nimble Navigator
-- Slightly increase maneuverability when the way ahead is blocked in the last spurt. Hint +1
-
-- Run as fast as you can.
-- Power +5, Skill points +15, Bond +5
+- **The Coolest Line**
+  - “Try making yourself look more threatening.” → Bond +5, Power +10
+  - “Ty striking an intimidation pose.” → Bond +5, Power +5, Skill Points +15
+- **Enemies on Main Street**
+  - “Use the side roads.” → Bond +5, Nimble Navigator
+    - Hint +1: Slightly increase maneuverability when the way ahead is blocked in the last spurt.
+  - “Run as fast as you can.” → Power +5, Skill points +15, Bond +5
 
 ### [Tracen Academy] El Condor Pasa
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -970,25 +799,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Blazing Fire!
-- You could eat a stamina-boosting meal.
-- Stamina +10, Bond +5
-
-- You could try sprinting with a tire tied to you.
-- Energy -10, Power 20, Bond +5
-- Secret Notebook!
-- The El-Style Power Training Program.
-- Power +10, Bond +5
-
-- Tips for Race Running on a Clear Day.
-- Bond +5, Sunny Days ○ Sunny Days ○
-- ○
-- Moderately increase performance in sunny weather. Hint +1
+- **Blazing Fire!**
+  - “You could eat a stamina-boosting meal.” → Stamina +10, Bond +5
+  - “You could try sprinting with a tire tied to you.” → Energy -10, Power 20, Bond +5
+- **Secret Notebook!**
+  - “The El-Style Power Training Program.” → Power +10, Bond +5
+  - “Tips for Race Running on a Clear Day.” → Bond +5, Sunny Days ○
+    - Hint +1: Moderately increase performance in sunny weather.
 
 ### [Tracen Academy] Hishi Amazon
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Stamina to Spare: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
@@ -999,24 +820,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Hishiama's Struggles: Problem Children
-- Surround her from all sides and trap her.
-- Energy +10, Wit +5, Bond +5
-
-- Lure her out to the track.
-- Energy -10, Speed 10, Guts 5, Bond 5
-- Hishiama's Struggles: Final Stretch
-- Blow the other racers away with sheer force of will.
-- Bond +5, Hesitant End Closers Hesitant End Closers
-- Slightly decrease velocity of end closers late-race. Hint +1
-
-- Go wide on the outside, then make your move.
-- Power +5, Skill Points +15, Bond +5
+- **Hishiama's Struggles: Problem Children**
+  - “Surround her from all sides and trap her.” → Energy +10, Wit +5, Bond +5
+  - “Lure her out to the track.” → Energy -10, Speed 10, Guts 5, Bond 5
+- **Hishiama's Struggles: Final Stretch**
+  - “Blow the other racers away with sheer force of will.” → Bond +5, Hesitant End Closers
+    - Hint +1: Slightly decrease velocity of end closers late-race.
+  - “Go wide on the outside, then make your move.” → Power +5, Skill Points +15, Bond +5
 
 ### [Tracen Academy] Agnes Digital
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -1028,27 +842,18 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Umamusume Deficiency!
-- You should go home and rest.
-- Energy +5, Speed +5, Bond +5
-
-- You can still make it, though!
-- Speed +5, Power +5, Bond +5
-- Heavy Romance
-- You'll catch a cold if you push yourself too hard.
-- Bond +5, Rainy Days ○ Rainy Days ○
-- ○
-- Moderately increase performance in rainy weather. Hint +1
-
-- Talk about being hardcore!
-- Bond +5, Wet Conditions ○ Wet Conditions ○
-- ○
-- Moderately increase performance on good, soft, and heavy ground. Hint +1
+- **Umamusume Deficiency!**
+  - “You should go home and rest.” → Energy +5, Speed +5, Bond +5
+  - “You can still make it, though!” → Speed +5, Power +5, Bond +5
+- **Heavy Romance**
+  - “You'll catch a cold if you push yourself too hard.” → Bond +5, Rainy Days ○
+    - Hint +1: Moderately increase performance in rainy weather.
+  - “Talk about being hardcore!” → Bond +5, Wet Conditions ○
+    - Hint +1: Moderately increase performance on good, soft, and heavy ground.
 
 ### [Tracen Academy] Biwa Hayahide
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Hanshin Racecourse ○: Moderately increase performance at Hanshin Racecourse.
@@ -1059,24 +864,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Last-Minute Modal Theory
-- Train until the last moment.
-- Power +15, Bond +5
-
-- Watch previous races.
-- Speed +10, Skill points +15, Bond +5
-- Step-Out-of-Your-Comfort-Zone Theory
-- Don't think with your head- just act.
-- Energy -10, Bond +5, Inside Scoop Inside Scoop
-- Slightly increase velocity when near the inner rail on the final corner. (Long) Hint +1
-
-- It'll only do you harm if you injure yourself.
-- Energy +10, Stamina +10, Bond +5
+- **Last-Minute Modal Theory**
+  - “Train until the last moment.” → Power +15, Bond +5
+  - “Watch previous races.” → Speed +10, Skill points +15, Bond +5
+- **Step-Out-of-Your-Comfort-Zone Theory**
+  - “Don't think with your head- just act.” → Energy -10, Bond +5, Inside Scoop
+    - Hint +1: Slightly increase velocity when near the inner rail on the final corner. (Long)
+  - “It'll only do you harm if you injure yourself.” → Energy +10, Stamina +10, Bond +5
 
 ### [Tracen Academy] Mihono Bourbon
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Snowy Days ○: Moderately increase performance in snowy weather.
@@ -1086,24 +884,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Do No Harm
-- They look super heavy... ……
-- Energy -10, Stamina +5, Power +15, Bond +5
-
-- They're kind of noisy for this late night...
-- Energy +10, Wit +5, Bond +5
-- Orders Must Be Followed
-- Get in line right before the store opens.
-- Bond +5, Focus Focus
-- Slightly decrease time lost to slow starts. Hint +1
-
-- Make a break for it during lunch!
-- Speed +10, Skill points +15, Bond +5
+- **Do No Harm**
+  - “They look super heavy... ……” → Energy -10, Stamina +5, Power +15, Bond +5
+  - “They're kind of noisy for this late night...” → Energy +10, Wit +5, Bond +5
+- **Orders Must Be Followed**
+  - “Get in line right before the store opens.” → Bond +5, Focus
+    - Hint +1: Slightly decrease time lost to slow starts.
+  - “Make a break for it during lunch!” → Speed +10, Skill points +15, Bond +5
 
 ### [Tracen Academy] Mejiro Ryan
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1113,24 +904,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- My Muscles and Me, Onward to Tomorrow!
-- Why stop there? Push yourself to the limit!
-- Energy -10, Power +15, Bond +5
-
-- Congrats on hitting your goal!
-- Power +5, Max Energy +4, Bond +5
-- It's Not Like I Like Romance!
-- It'd be better to pace yourself.
-- Bond +5, Pace Strategy Pace Strategy
-- Slightly recover endurance when passed by another runner mid-race. Hint +1
-
-- You'll exhaust yourself trying to binge it.
-- Energy +30, Bond +5
+- **My Muscles and Me, Onward to Tomorrow!**
+  - “Why stop there? Push yourself to the limit!” → Energy -10, Power +15, Bond +5
+  - “Congrats on hitting your goal!” → Power +5, Max Energy +4, Bond +5
+- **It's Not Like I Like Romance!**
+  - “It'd be better to pace yourself.” → Bond +5, Pace Strategy
+    - Hint +1: Slightly recover endurance when passed by another runner mid-race.
+  - “You'll exhaust yourself trying to binge it.” → Energy +30, Bond +5
 
 ### [Tracen Academy] Smart Falcon
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1144,24 +928,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Chants Are the Life of a Concert ☆ ☆
-- Faaaal-cooooo!
-- Stamina +5, Guts +10, Bond +5
-
-- I-I can't do this... ……
-- Wit +15, Bond +5
-- If I'm Cute, Come to My Show! ☆ ☆
-- Run away.
-- Energy -10, Power +10, Bond +5, Final Push Final Push
-- Slightly increase ability to keep the lead on the final corner. (Front Runner) Hint +1
-
-- Download it.
-- Energy +10, Wit +5, Bond +5
+- **Chants Are the Life of a Concert ☆**
+  - “Faaaal-cooooo!” → Stamina +5, Guts +10, Bond +5
+  - “I-I can't do this... ……” → Wit +15, Bond +5
+- **If I'm Cute, Come to My Show! ☆**
+  - “Run away.” → Energy -10, Power +10, Bond +5, Final Push
+    - Hint +1: Slightly increase ability to keep the lead on the final corner. (Front Runner)
+  - “Download it.” → Energy +10, Wit +5, Bond +5
 
 ### [Tracen Academy] Daitaku Helios
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -1174,25 +951,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Encounter With the Sun ☆ ☆
-- Buckle up and sing with everything you've got.
-- Power +10, Bond +5
-
-- Clap and cheer to set the mood.
-- Bond +5, Chance for Hot Topic
-- Smiles Forever
-- Pull yourself together!
-- Speed +5, Power +10, Bond +5
-
-- Just take a moment to calm down.
-- Bond +5, Long Shot ○ Long Shot ○
-- ○
-- Moderately increase performance when 4th favorite or below. Hint +1
+- **Encounter With the Sun ☆**
+  - “Buckle up and sing with everything you've got.” → Power +10, Bond +5
+  - “Clap and cheer to set the mood.” → Bond +5, Chance for Hot Topic
+- **Smiles Forever**
+  - “Pull yourself together!” → Speed +5, Power +10, Bond +5
+  - “Just take a moment to calm down.” → Bond +5, Long Shot ○
+    - Hint +1: Moderately increase performance when 4th favorite or below.
 
 ### [Tracen Academy] Yaeno Muteki
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -1203,25 +972,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Firm and Plain, Yet Close to Virtue
-- You should focus on how quickly you can punch.
-- Speed +10, Bond +5
-
-- You should focus on how powerfully you can punch.
-- Mood +1, Power +5, Bond +5
-- The Will to Protect! ……
-- You looked like you were undergoing harsh training just now.
-- Stamina +10, Power +10, Bond +5
-
-- So you also have a silly side, eh?
-- Bond +5, Medium Corners ○ Medium Corners ○
-- ○
-- Slightly increase velocity on a corner. (Medium) Hint +1
+- **Firm and Plain, Yet Close to Virtue**
+  - “You should focus on how quickly you can punch.” → Speed +10, Bond +5
+  - “You should focus on how powerfully you can punch.” → Mood +1, Power +5, Bond +5
+- **The Will to Protect! ……**
+  - “You looked like you were undergoing harsh training just now.” → Stamina +10, Power +10, Bond +5
+  - “So you also have a silly side, eh?” → Bond +5, Medium Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Medium)
 
 ### [Tracen Academy] Bamboo Memory
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Target in Sight ○: Moderately increase performance when the favorite is using the same strategy.
@@ -1233,25 +994,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Overthrow the Rival!
-- That's way too many rivals!
-- Bond +5, Guts +10
-
-- Knock 'em down one by one!
-- Bond +5, Max Energy +4, Energy -4
-- Tons of Trouble!
-- You've got your work cut out for you, huh?
-- Bond +5, Stamina +5, Guts +5
-
-- You'd better hurry to the scene of the crime!
-- Bond +5, Energy -10, Standard Distance ○ Standard Distance ○
-- ○
-- Moderately increase performance over standard distances (multiples of 400m). Hint +5
+- **Overthrow the Rival!**
+  - “That's way too many rivals!” → Bond +5, Guts +10
+  - “Knock 'em down one by one!” → Bond +5, Max Energy +4, Energy -4
+- **Tons of Trouble!**
+  - “You've got your work cut out for you, huh?” → Bond +5, Stamina +5, Guts +5
+  - “You'd better hurry to the scene of the crime!” → Bond +5, Energy -10, Standard Distance ○
+    - Hint +5: Moderately increase performance over standard distances (multiples of 400m).
 
 ### [Tracen Academy] Inari One
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Spring Runner ○: Moderately increase performance in spring.
@@ -1265,23 +1018,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Let's Tussle! Booyah!
-- Bond +5, Energy -5, Power +15
-
-- Bond +5, Mood +1, Guts +5
-- Mikoshi, Heave Ho!
-- Maybe a bit more vigor in your movements?
-- Bond +5, Skill Points +15
-
-- Maybe you just need an audience?
-- Bond +5, Kyoto Racecourse ○ Kyoto Racecourse ○
-- ○
-- Moderately increase performance at Kyoto Racecourse. Hint +1
+- **Let's Tussle! Booyah!**
+  - Bond +5, Energy -5, Power +15 / Bond +5, Mood +1, Guts +5
+- **Mikoshi, Heave Ho!**
+  - “Maybe a bit more vigor in your movements?” → Bond +5, Skill Points +15
+  - “Maybe you just need an audience?” → Bond +5, Kyoto Racecourse ○
+    - Hint +1: Moderately increase performance at Kyoto Racecourse.
 
 ### [Tracen Academy] Admire Vega
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Masterful Gambit: Slightly increase velocity during the last spurt when positioned toward the back late-race. (End Closer)
@@ -1292,24 +1038,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Awkward Triangulum
-- Let's work together!
-- Power +15, Bond +5
-
-- Let's try getting him to calm down.
-- Energy +10, Bond +5
-- Lonesome Cepheus
-- I'll tidy up a bit of her equipment as well!
-- Bond +5, Subdued Pace Chasers Subdued Pace Chasers
-- Slightly increase fatigue for pace chasers early-race. Hint +1
-
-- ...I should respect her wishes. ……
-- Wit +10, Bond +5
+- **Awkward Triangulum**
+  - “Let's work together!” → Power +15, Bond +5
+  - “Let's try getting him to calm down.” → Energy +10, Bond +5
+- **Lonesome Cepheus**
+  - “I'll tidy up a bit of her equipment as well!” → Bond +5, Subdued Pace Chasers
+    - Hint +1: Slightly increase fatigue for pace chasers early-race.
+  - “...I should respect her wishes. ……” → Wit +10, Bond +5
 
 ### [Tracen Academy] Daiichi Ruby
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -1326,24 +1065,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Magnificent Dismay?
-- It's late. You should head back and rest.
-- Energy +15, Bond +5
-
-- Are you okay? Is there anything I can help you with?
-- Power +15, Bond +5
-- Magnificent Melodia
-- Praise her skill with effusive compliments!
-- Bond +5, Skill Points +25
-
-- Bare your feelings with unreserved gusto!
-- Bond +5, Gap Closer Gap Closer
-- Slightly increase spurting ability when positioned toward the back late-race. (Sprint) Hint +1
+- **Magnificent Dismay?**
+  - “It's late. You should head back and rest.” → Energy +15, Bond +5
+  - “Are you okay? Is there anything I can help you with?” → Power +15, Bond +5
+- **Magnificent Melodia**
+  - “Praise her skill with effusive compliments!” → Bond +5, Skill Points +25
+  - “Bare your feelings with unreserved gusto!” → Bond +5, Gap Closer
+    - Hint +1: Slightly increase spurting ability when positioned toward the back late-race. (Sprint)
 
 ### [Tracen Academy] Tanino Gimlet
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -1355,19 +1087,15 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Euphoria of Destruction! ……
-- No data yet! Add it here .
-- An Electrifying Present! ……
-- Bond +5, Power +10, Skill points +5
-
-- Bond +5, End Closer Savvy ○ End Closer Savvy ○
-- ○
-- Moderately increase ability to get into a good position. (End Closer) Hint +1
+- **The Euphoria of Destruction! ……**
+  - _no data yet_
+- **An Electrifying Present! ……**
+  - Bond +5, Power +10, Skill points +5 / Bond +5, End Closer Savvy ○
+    - Hint +1: Moderately increase ability to get into a good position. (End Closer)
 
 ### [Tracen Academy] Wonder Acute
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Unyielding Spirit: Slightly increase passing ability. (Mile)
@@ -1382,13 +1110,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Royce and Royce
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Focus: Slightly decrease time lost to slow starts.
@@ -1401,13 +1128,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Espoir City
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Unyielding Spirit: Slightly increase passing ability. (Mile)
@@ -1422,21 +1148,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- …………
-- Bond +5, Power +15
-
-- ……
-- Bond +5, Energy +10, Speed +5
-- ……“”
-- Bond +5, Skill Points +25
-
-- Bond +5,
-- Hint +1
+- **…………**
+  - Bond +5, Power +15
+  - “……” → Bond +5, Energy +10, Speed +5
+- **……“”**
+  - Bond +5, Skill Points +25 / Bond +5,
+    - Hint +1
 
 ### [Tracen Academy] Daring Heart
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -1450,15 +1171,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Queen's Heart
-- No data yet! Add it here .
-- Away in the Mountains
-- No data yet! Add it here .
+- **Queen's Heart**
+  - _no data yet_
+- **Away in the Mountains**
+  - _no data yet_
 
 ### [Tracen Academy] Gran Alegria
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -1471,15 +1191,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ## Stamina
 
 ### [Tracen Academy] Gold Ship
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standing By: Slightly decrease fatigue mid-race. (End Closer)
@@ -1499,25 +1218,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Adventurer Gold Ship
-- E-endurance, I guess? ……
-- Stamina +15, Bond +5
-
-- Persistence or something? ……
-- Guts +10, Skill points +15, Bond +5
-- Revive the Brand! Golshi's Yakisoba
-- Why don't you try improving the flavor of your yakisoba? ……
-- Mood +1, Stamina +5, Bond +5
-
-- Why don't you try selling grilled akashiyaki dumplings? ……?
-- Bond +5, Hanshin Racecourse ○ Hanshin Racecourse ○
-- ○
-- Moderately increase performance at Hanshin Racecourse. Hint +1
+- **Adventurer Gold Ship**
+  - “E-endurance, I guess? ……” → Stamina +15, Bond +5
+  - “Persistence or something? ……” → Guts +10, Skill points +15, Bond +5
+- **Revive the Brand! Golshi's Yakisoba**
+  - “Why don't you try improving the flavor of your yakisoba? ……” → Mood +1, Stamina +5, Bond +5
+  - “Why don't you try selling grilled akashiyaki dumplings? ……?” → Bond +5, Hanshin Racecourse ○
+    - Hint +1: Moderately increase performance at Hanshin Racecourse.
 
 ### [Tracen Academy] Mejiro McQueen
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Kyoto Racecourse ○: Moderately increase performance at Kyoto Racecourse.
@@ -1531,24 +1242,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- To Maintain My Weight
-- She should do her best to stick to her diet until the race is over.
-- Energy -10, Stamina +15, Bond +5
-
-- She should be fine if she runs more to burn off what she eats.
-- Max Energy +4, Stamina +5, Bond +5
-- To Reach the Greatest Heights
-- Train your stamina and guts.
-- Stamina +5, Guts +5, Bond +5
-
-- Focus on your start.
-- Bond +5, Early Lead Early Lead
-- Slightly increase ability to go to the front early-race. (Front Runner) Hint +1
+- **To Maintain My Weight**
+  - “She should do her best to stick to her diet until the race is over.” → Energy -10, Stamina +15, Bond +5
+  - “She should be fine if she runs more to burn off what she eats.” → Max Energy +4, Stamina +5, Bond +5
+- **To Reach the Greatest Heights**
+  - “Train your stamina and guts.” → Stamina +5, Guts +5, Bond +5
+  - “Focus on your start.” → Bond +5, Early Lead
+    - Hint +1: Slightly increase ability to go to the front early-race. (Front Runner)
 
 ### [Tracen Academy] T.M. Opera O
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Stamina to Spare: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
@@ -1561,25 +1265,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Etude to Victory
-- I think just running a victory lap would be better… ……
-- Mood -1, Speed +5, Skill points +30, Bond +5
-
-- It was pretty good, yeah.
-- Power +5, Skill points +15, Bond +5
-- Beyond Our Limited Time
-- It's better to perform with everything you've got within the time you're allotted. …
-- Energy +10, Skill points +15, Bond +5
-
-- It's important to think outside the box.
-- Bond +5, Non-Standard Distance ○ Non-Standard Distance ○
-- ○
-- Moderately increase performance over non-standard distances (non-multiples of 400m). Hint +1
+- **Etude to Victory**
+  - “I think just running a victory lap would be better… ……” → Mood -1, Speed +5, Skill points +30, Bond +5
+  - “It was pretty good, yeah.” → Power +5, Skill points +15, Bond +5
+- **Beyond Our Limited Time**
+  - “It's better to perform with everything you've got within the time you're allotted. …” → Energy +10, Skill points +15, Bond +5
+  - “It's important to think outside the box.” → Bond +5, Non-Standard Distance ○
+    - Hint +1: Moderately increase performance over non-standard distances (non-multiples of 400m).
 
 ### [Tracen Academy] Seiun Sky
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Inner Post Proficiency ○: Moderately increase performance in brackets 1–3.
@@ -1591,24 +1287,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Recruiting Cat Catchers
-- Just wait in a sunny spot.
-- Energy +10, Wit +5, Bond +5
-
-- Chasing it at full speed is sure to work.
-- Energy -10, Speed +15, Stamina +5, Bond +5
-- Recruiting Advisors
-- You should try changing fishing spots.
-- Wit +15, Bond +5
-
-- You should try changing the way you move the rod.
-- Bond +5, Keeping the Lead Keeping the Lead
-- Slightly increase ability to maintain the lead when leading by a fair margin mid-race. (Long) Hint +1
+- **Recruiting Cat Catchers**
+  - “Just wait in a sunny spot.” → Energy +10, Wit +5, Bond +5
+  - “Chasing it at full speed is sure to work.” → Energy -10, Speed +15, Stamina +5, Bond +5
+- **Recruiting Advisors**
+  - “You should try changing fishing spots.” → Wit +15, Bond +5
+  - “You should try changing the way you move the rod.” → Bond +5, Keeping the Lead
+    - Hint +1: Slightly increase ability to maintain the lead when leading by a fair margin mid-race. (Long)
 
 ### [Tracen Academy] Rice Shower
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Kyoto Racecourse ○: Moderately increase performance at Kyoto Racecourse.
@@ -1623,25 +1312,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Page of Flower Shop Assistance 1
-- Want me to help water the flowers?
-- Mood +2, Bond +5
-
-- Want me to bring out more flowers from the back?
-- Stamina +10, Bond +5
-- A Page About Cloudy Weather 1
-- Rent out the gymnasium and run there!
-- Speed +5, Guts +5, Bond +5
-
-- Make some sunshine dolls to ward off the rain!
-- Bond +5, Firm Conditions ○ Firm Conditions ○
-- ○
-- Moderately increase performance on firm ground. Hint +1
+- **A Page of Flower Shop Assistance 1**
+  - “Want me to help water the flowers?” → Mood +2, Bond +5
+  - “Want me to bring out more flowers from the back?” → Stamina +10, Bond +5
+- **A Page About Cloudy Weather 1**
+  - “Rent out the gymnasium and run there!” → Speed +5, Guts +5, Bond +5
+  - “Make some sunshine dolls to ward off the rain!” → Bond +5, Firm Conditions ○
+    - Hint +1: Moderately increase performance on firm ground.
 
 ### [Tracen Academy] Super Creek
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -1652,24 +1333,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Leave it to Me to Help Out! ♪ ♪
-- Could you give me some pointers on training?
-- Energy +15, Bond +5
-
-- Would you like to train with us?
-- Stamina +10, Bond +5
-- Leave it to Me to Be Considerate! ♪ ♪
-- Cheer her on.
-- Bond +5, Deep Breaths Deep Breaths
-- Take a breather and slightly decrease fatigue mid-race. (Long) Hint +1
-
-- Get her a drink.
-- Energy +10, Stamina +5, Bond +5
+- **Leave it to Me to Help Out! ♪**
+  - “Could you give me some pointers on training?” → Energy +15, Bond +5
+  - “Would you like to train with us?” → Stamina +10, Bond +5
+- **Leave it to Me to Be Considerate! ♪**
+  - “Cheer her on.” → Bond +5, Deep Breaths
+    - Hint +1: Take a breather and slightly decrease fatigue mid-race. (Long)
+  - “Get her a drink.” → Energy +10, Stamina +5, Bond +5
 
 ### [Tracen Academy] Tamamo Cross
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Rosy Outlook: Slightly decrease fatigue when positioned toward the front mid-race. (Medium)
@@ -1682,24 +1356,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Tamamo's School Tour
-- Oh? Are you talking about the library?
-- Wit +10, Bond +5
-
-- Oh? Are you talking about the gym?
-- Stamina +5, Guts +5, Bond +5
-- A Battle I Can't Lose!
-- Get a grasp on the crowd's movements!
-- Bond +5, Calm in a Crowd Calm in a Crowd
-- Slightly recover endurance when surrounded mid-race. Hint +1
-
-- Observe your rivals closely!
-- Stamina +5, Wit +5, Bond +5
+- **Tamamo's School Tour**
+  - “Oh? Are you talking about the library?” → Wit +10, Bond +5
+  - “Oh? Are you talking about the gym?” → Stamina +5, Guts +5, Bond +5
+- **A Battle I Can't Lose!**
+  - “Get a grasp on the crowd's movements!” → Bond +5, Calm in a Crowd
+    - Hint +1: Slightly recover endurance when surrounded mid-race.
+  - “Observe your rivals closely!” → Stamina +5, Wit +5, Bond +5
 
 ### [Tracen Academy] Mayano Top Gun
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -1711,24 +1378,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Snack Advice for Mayano!
-- You gotta go with the new flavor.
-- Stamina +5, Guts +5, Bond +5
-
-- Go for the tried-and-true chocolate! 1
-- Stamina +10, Bond +5
-- Fashion Advice for Mayano!
-- The trendy fit!
-- Bond +5, Straightaway Adept Straightaway Adept
-- Slightly increase velocity on a straight. Hint +1
-
-- The comfy Fit!
-- Stamina +10, Bond +5
+- **Snack Advice for Mayano!**
+  - “You gotta go with the new flavor.” → Stamina +5, Guts +5, Bond +5
+  - “Go for the tried-and-true chocolate! 1” → Stamina +10, Bond +5
+- **Fashion Advice for Mayano!**
+  - “The trendy fit!” → Bond +5, Straightaway Adept
+    - Hint +1: Slightly increase velocity on a straight.
+  - “The comfy Fit!” → Stamina +10, Bond +5
 
 ### [Tracen Academy] Manhattan Cafe
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1740,25 +1400,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Solo Nighttime Run
-- Do you always run so much? ……
-- Stamina +10, Bond +5
-
-- You sure are focused. ……
-- Energy +10, Stamina +5, Bond +5
-- A Taste of Silence
-- Were you trying to relax?
-- Stamina +15, Skill Points +15, Bond +6
-
-- You're not scared being in the dark all alone?
-- Bond +5, Non-Standard Distance ○ Non-Standard Distance ○
-- ○
-- Moderately increase performance over non-standard distances (non-multiples of 400m). Hint +1
+- **Solo Nighttime Run**
+  - “Do you always run so much? ……” → Stamina +10, Bond +5
+  - “You sure are focused. ……” → Energy +10, Stamina +5, Bond +5
+- **A Taste of Silence**
+  - “Were you trying to relax?” → Stamina +15, Skill Points +15, Bond +6
+  - “You're not scared being in the dark all alone?” → Bond +5, Non-Standard Distance ○
+    - Hint +1: Moderately increase performance over non-standard distances (non-multiples of 400m).
 
 ### [Tracen Academy] Satono Diamond
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -1771,24 +1423,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I Love New Things!
-- Are you really gonna drink it out of a teacup?
-- Guts +10, Bond +5
-
-- Is this your first time trying melon soda?
-- Energy -10, Stamina +20, Bond +5
-- I Love Complicated Things!
-- Well, give it a shot!
-- Stamina +5, Guts +10, Bond +5
-
-- Let's see how fast it really is first. 1
-- Bond +5, Hesitant Front Runners Hesitant Front Runners
-- Slightly decrease velocity of front runners late-race. Hint +1
+- **I Love New Things!**
+  - “Are you really gonna drink it out of a teacup?” → Guts +10, Bond +5
+  - “Is this your first time trying melon soda?” → Energy -10, Stamina +20, Bond +5
+- **I Love Complicated Things!**
+  - “Well, give it a shot!” → Stamina +5, Guts +10, Bond +5
+  - “Let's see how fast it really is first. 1” → Bond +5, Hesitant Front Runners
+    - Hint +1: Slightly decrease velocity of front runners late-race.
 
 ### [Tracen Academy] Zenno Rob Roy
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -1802,25 +1447,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Book-lover Quirks
-- That final car chase was amazing.
-- Speed +5, Wit +5, Bond +5
-
-- The visuals were gorgeous.
-- Energy +10, Power +5, Bond +5
-- A Tale Entrusted
-- Why not ask the student library assistant for help?
-- Stamina +10, Wit +10, Bond +5
-
-- What kind of story is it?
-- Bond +5, Medium Straightaways ○ Medium Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Medium) Hint +1
+- **Book-lover Quirks**
+  - “That final car chase was amazing.” → Speed +5, Wit +5, Bond +5
+  - “The visuals were gorgeous.” → Energy +10, Power +5, Bond +5
+- **A Tale Entrusted**
+  - “Why not ask the student library assistant for help?” → Stamina +10, Wit +10, Bond +5
+  - “What kind of story is it?” → Bond +5, Medium Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Medium)
 
 ### [Tracen Academy] Sakura Chiyono O
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Steadfast: Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium)
@@ -1830,25 +1467,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Today's Words of Wisdom!
-- How about choosing one and sticking to it? 1
-- Energy -10, Power +20, Bond +5
-
-- Why not experiment with a bunch of methods?
-- Energy +5, Skill points +10, Bond +5
-- Until I Bloom... ……
-- Being yourself is important too.
-- Energy +5, Stamina +5, Bond +5
-
-- I'm positive you will!
-- Bond +5, Spring Runner ○ Spring Runner ○
-- ○
-- Moderately increase performance in spring. Hint +1
+- **Today's Words of Wisdom!**
+  - “How about choosing one and sticking to it? 1” → Energy -10, Power +20, Bond +5
+  - “Why not experiment with a bunch of methods?” → Energy +5, Skill points +10, Bond +5
+- **Until I Bloom... ……**
+  - “Being yourself is important too.” → Energy +5, Stamina +5, Bond +5
+  - “I'm positive you will!” → Bond +5, Spring Runner ○
+    - Hint +1: Moderately increase performance in spring.
 
 ### [Tracen Academy] Nakayama Festa
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1863,27 +1492,18 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Sundown Showdown
-- I don't like my odds... I better fold. ……
-- Energy +15, Bond +5
-
-- She has to be bluffing... I'm all in! ……
-- Guts +15, Bond +5
-- Sundown Solo Supper
-- Tripe stew sounds good.
-- Bond +5, Nakayama Racecourse ○ Nakayama Racecourse ○
-- ○
-- Moderately increase performance at Nakayama Racecourse. Hint +1
-
-- I vote katsu curry.
-- Bond +5, Nakayama Racecourse ○ Nakayama Racecourse ○
-- ○
-- Moderately increase performance at Nakayama Racecourse. Hint +1
+- **Sundown Showdown**
+  - “I don't like my odds... I better fold. ……” → Energy +15, Bond +5
+  - “She has to be bluffing... I'm all in! ……” → Guts +15, Bond +5
+- **Sundown Solo Supper**
+  - “Tripe stew sounds good.” → Bond +5, Nakayama Racecourse ○
+    - Hint +1: Moderately increase performance at Nakayama Racecourse.
+  - “I vote katsu curry.” → Bond +5, Nakayama Racecourse ○
+    - Hint +1: Moderately increase performance at Nakayama Racecourse.
 
 ### [Tracen Academy] Tosen Jordan
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -1895,24 +1515,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Doomscrolling the Time Away
-- Why don't you run a lap, and I'll time it for you? 1
-- Bond +5, Mood +1, Speed +5
-
-- How about you jog somewhere different than usual?
-- Bond +5, Stamina +10
-- Sponsored Posts Can Be Low-Key Sus
-- You can just use it on your days off.
-- Bond +5, Energy +10, Mood +1
-
-- You can use it for something else.
-- Bond +5, Lucky Seven Lucky Seven
-- Moderately good things may happen when in bracket 7. Hint +1
+- **Doomscrolling the Time Away**
+  - “Why don't you run a lap, and I'll time it for you? 1” → Bond +5, Mood +1, Speed +5
+  - “How about you jog somewhere different than usual?” → Bond +5, Stamina +10
+- **Sponsored Posts Can Be Low-Key Sus**
+  - “You can just use it on your days off.” → Bond +5, Energy +10, Mood +1
+  - “You can use it for something else.” → Bond +5, Lucky Seven
+    - Hint +1: Moderately good things may happen when in bracket 7.
 
 ### [Tracen Academy] Mejiro Bright
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -1923,24 +1536,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Slow and Leisurely
-- You could focus on the parts that most concern you.
-- Bond +5, Stamina +15, Guts +5
-
-- Give the entire dance a quick run-through.
-- Bond +5, Speed +15, Power +5
-- Sure and Steady
-- Practice makes perfect!
-- Bond +5, Energy +10, Deep Breaths Deep Breaths
-- Take a breather and slightly decrease fatigue mid-race. (Long) Hint +1
-
-- Just be careful not to hurt yourself.
-- Bond +5, Wit +20
+- **Slow and Leisurely**
+  - “You could focus on the parts that most concern you.” → Bond +5, Stamina +15, Guts +5
+  - “Give the entire dance a quick run-through.” → Bond +5, Speed +15, Power +5
+- **Sure and Steady**
+  - “Practice makes perfect!” → Bond +5, Energy +10, Deep Breaths
+    - Hint +1: Take a breather and slightly decrease fatigue mid-race. (Long)
+  - “Just be careful not to hurt yourself.” → Bond +5, Wit +20
 
 ### [Tracen Academy] Symboli Kris S
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Recovery ○: Slightly recover endurance on a corner with efficient turning.
@@ -1954,18 +1560,15 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Professional's Feelings
-- Guts +25, Bond +5
-
-- ......
-- Energy +15, Bond +5
-- A Professional's Creed
-- No data yet! Add it here .
+- **A Professional's Feelings**
+  - Guts +25, Bond +5
+  - “......” → Energy +15, Bond +5
+- **A Professional's Creed**
+  - _no data yet_
 
 ### [Tracen Academy] Sakura Laurel
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Spring Runner ○: Moderately increase performance in spring.
@@ -1980,15 +1583,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Stay Positive at All Times!
-- No data yet! Add it here .
-- Stay Positive in All Situations!
-- No data yet! Add it here .
+- **Stay Positive at All Times!**
+  - _no data yet_
+- **Stay Positive in All Situations!**
+  - _no data yet_
 
 ### [Tracen Academy] Hokko Tarumae
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Forward, March!: Moderately prepare to aim for the front late-race. (Dirt)
@@ -2000,13 +1602,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Sounds of Earth
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Recovery: Slightly recover endurance on a mid-race straight.
@@ -2019,13 +1620,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Cheval Grand
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Stamina to Spare: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
@@ -2039,15 +1639,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ……
-- No data yet! Add it here .
-- ……
-- No data yet! Add it here .
+- **……**
+  - _no data yet_
+- **……**
+  - _no data yet_
 
 ### [Tracen Academy] Hishi Miracle
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -2060,13 +1659,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Curren Bouquetd'or
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Recovery ○: Slightly recover endurance on a corner with efficient turning.
@@ -2081,13 +1679,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Fenomeno
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Long Corners ○: Slightly increase velocity on a corner. (Long)
@@ -2104,13 +1701,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Kiseki
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Recovery ○: Slightly recover endurance on a corner with efficient turning.
@@ -2128,15 +1724,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ◆……
-- No data yet! Add it here .
-- ◆
-- No data yet! Add it here .
+- **◆……**
+  - _no data yet_
+- **◆**
+  - _no data yet_
 
 ### [Tracen Academy] Rulership
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2150,15 +1745,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ## Guts
 
 ### [Tracen Academy] Special Week
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2171,24 +1765,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Watch Where You're Going!
-- Then you should probably save that energy for the race.
-- Bond +5, Extra Tank Extra Tank
-- Slightly regain the energy to run when close to exhausting strength. (Long) Hint +1
-
-- You'd better hurry, then.
-- Guts +15, Bond +5
-- So Many Options!
-- You should treat your self to something tasty.
-- Energy +10, Mood +1, Bond +5
-
-- Go everywhere that pops unto your head! !
-- Energy -10, Stamina +15, Skill points +15, Bond +5
+- **Watch Where You're Going!**
+  - “Then you should probably save that energy for the race.” → Bond +5, Extra Tank
+    - Hint +1: Slightly regain the energy to run when close to exhausting strength. (Long)
+  - “You'd better hurry, then.” → Guts +15, Bond +5
+- **So Many Options!**
+  - “You should treat your self to something tasty.” → Energy +10, Mood +1, Bond +5
+  - “Go everywhere that pops unto your head! !” → Energy -10, Stamina +15, Skill points +15, Bond +5
 
 ### [Tracen Academy] Grass Wonder
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -2202,26 +1789,18 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Library Vexation
-- For now, why not focus on the book you did manage to find? 1
-- Wit +10, Bond +5
-
-- Why don't we look for them together?
-- Guts +5, Wit +5, Bond +5
-- A Friendly Daytime Discussion
-- You could throw them off by messing with their pace.
-- Bond +5, Frenzied Pace Chasers Frenzied Pace Chasers
-- Increase time needed for pace chasers to calm down when they become rushed. Hint +1
-
-- Try sticking close to them to make sure they can't run way they want.
-- Bond +5, Target in Sight ○ Target in Sight ○
-- ○
-- Moderately increase performance when the favorite is using the same strategy. Hint +1
+- **Library Vexation**
+  - “For now, why not focus on the book you did manage to find? 1” → Wit +10, Bond +5
+  - “Why don't we look for them together?” → Guts +5, Wit +5, Bond +5
+- **A Friendly Daytime Discussion**
+  - “You could throw them off by messing with their pace.” → Bond +5, Frenzied Pace Chasers
+    - Hint +1: Increase time needed for pace chasers to calm down when they become rushed.
+  - “Try sticking close to them to make sure they can't run way they want.” → Bond +5, Target in Sight ○
+    - Hint +1: Moderately increase performance when the favorite is using the same strategy.
 
 ### [Tracen Academy] Winning Ticket
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -2232,50 +1811,33 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Full-Power Muscles!
-- Heck yeah! No pain, no gain!
-- Stamina +5, Skill points +15, Bond +5
-
-- Here, stay hydrated with this.
-- Mood +1, Skill points +15, Bond +5
-- Full-Power Racing!
-- Use the railing as a shortcut!
-- Bond +5, Late Surger Corners ○ Late Surger Corners ○
-- ○
-- Slightly increase velocity on a corner. (Late Surger) Hint +1
-
-- Try to predict where she's going.
-- Skill points +30, Bond +5
+- **Full-Power Muscles!**
+  - “Heck yeah! No pain, no gain!” → Stamina +5, Skill points +15, Bond +5
+  - “Here, stay hydrated with this.” → Mood +1, Skill points +15, Bond +5
+- **Full-Power Racing!**
+  - “Use the railing as a shortcut!” → Bond +5, Late Surger Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Late Surger)
+  - “Try to predict where she's going.” → Skill points +30, Bond +5
 
 ### [Tracen Academy] Haru Urara
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - (none found)
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Urara's ☆ Study Review ☆
-- It's easier to remember things if you study to a rhythm.
-- Energy +10, Wit +5, Bond +5
-
-- Try staying motivated by promising yourself a treat at the end.
-- Mood +1, Wit +5, Bond +5
-- Urara's ☆ Long Shot Dash! ☆
-- Explain what "Long Shot" really means.
-- Long Shot ○ Long Shot ○
-- ○
-- Moderately increase performance when 4th favorite or below. hint +1, Bond +5
-
-- Tell her to take a break.
-- Mood +1, Energy +10, Bond +5
+- **Urara's ☆ Study Review ☆**
+  - “It's easier to remember things if you study to a rhythm.” → Energy +10, Wit +5, Bond +5
+  - “Try staying motivated by promising yourself a treat at the end.” → Mood +1, Wit +5, Bond +5
+- **Urara's ☆ Long Shot Dash! ☆**
+  - “Explain what "Long Shot" really means.” → Long Shot ○ / Moderately increase performance when 4th favorite or below. hint +1, Bond +5
+  - “Tell her to take a break.” → Mood +1, Energy +10, Bond +5
 
 ### [Tracen Academy] Air Groove
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Pace Strategy: Slightly recover endurance when passed by another runner mid-race.
@@ -2287,24 +1849,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Strict but Gracious
-- Are you always so tough on them?
-- Bond +5, Go with the Flow Go with the Flow
-- Moderately increase navigation late-race. Hint +1
-
-- You're always watching them very closely, aren't you?
-- Energy +10, Wit +10, Bond +5
-- Agile but Strong
-- Will you be all right carrying all that by yourself? 1
-- Power +15, Bond +5
-
-- You'd better hurry if you want to get through all of that. ……
-- Speed +10, Stamina +5, Bond +5
+- **Strict but Gracious**
+  - “Are you always so tough on them?” → Bond +5, Go with the Flow
+    - Hint +1: Moderately increase navigation late-race.
+  - “You're always watching them very closely, aren't you?” → Energy +10, Wit +10, Bond +5
+- **Agile but Strong**
+  - “Will you be all right carrying all that by yourself? 1” → Power +15, Bond +5
+  - “You'd better hurry if you want to get through all of that. ……” → Speed +10, Stamina +5, Bond +5
 
 ### [Tracen Academy] Yukino Bijin
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -2314,25 +1869,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- For a Spiffy Concert
-- Try adding some flashy moves.
-- Guts +10, Bond +5
-
-- Try including some acrobatic choreography.
-- Energy -10, Guts +15, Bond +5
-- Aiming for the City Spots “”
-- Let me take a look at that map… If you want to go here… ……
-- Energy -10, Mood +1, Guts +10, Bond +5
-
-- You should use a GPS app.
-- Bond +5, Corner Acceleration ○ Corner Acceleration ○
-- ○
-- Slightly increase acceleration on a corner with masterful turning. Hint +1
+- **For a Spiffy Concert**
+  - “Try adding some flashy moves.” → Guts +10, Bond +5
+  - “Try including some acrobatic choreography.” → Energy -10, Guts +15, Bond +5
+- **Aiming for the City Spots “”**
+  - “Let me take a look at that map… If you want to go here… ……” → Energy -10, Mood +1, Guts +10, Bond +5
+  - “You should use a GPS app.” → Bond +5, Corner Acceleration ○
+    - Hint +1: Slightly increase acceleration on a corner with masterful turning.
 
 ### [Tracen Academy] Ines Fujin
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Steadfast: Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium)
@@ -2343,24 +1890,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- It's a Game of Tag!
-- I'll take it easy, then.
-- Energy +10, Speed +5, Bond +5
-
-- I won't show any mercy!
-- Bond +5, Fast-Paced Fast-Paced
-- Slightly increase ability to go to the front mid-race. (Front Runner) Hint +1
-- Ten Minutes Left! 10
-- When in doubt, just run!
-- Guts +15, Bond +5
-
-- Use the time to check your running form.
-- Wit +15, Bond +5
+- **It's a Game of Tag!**
+  - “I'll take it easy, then.” → Energy +10, Speed +5, Bond +5
+  - “I won't show any mercy!” → Bond +5, Fast-Paced
+    - Hint +1: Slightly increase ability to go to the front mid-race. (Front Runner)
+- **Ten Minutes Left! 10**
+  - “When in doubt, just run!” → Guts +15, Bond +5
+  - “Use the time to check your running form.” → Wit +15, Bond +5
 
 ### [Tracen Academy] Meisho Doto
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -2373,25 +1913,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I... Will Change ……
-- You should try copying her unwavering confidence.
-- Energy +10, Mood +1, Bond +5
-
-- You should try copying her boundless energy.
-- Guts +15, Bond +5
-- Please... Buy Some Carrots ……
-- Let's see if Tracen is interested in taking them.
-- Energy +10, Wit +5, Bond +5
-
-- You'll have more luck hawking carrots where it's more crowded.
-- Bond +5, Pace Chaser Corners ○ Pace Chaser Corners ○
-- ○
-- Slightly increase velocity on a corner. (Pace Chaser) Hint +1
+- **I... Will Change ……**
+  - “You should try copying her unwavering confidence.” → Energy +10, Mood +1, Bond +5
+  - “You should try copying her boundless energy.” → Guts +15, Bond +5
+- **Please... Buy Some Carrots ……**
+  - “Let's see if Tracen is interested in taking them.” → Energy +10, Wit +5, Bond +5
+  - “You'll have more luck hawking carrots where it's more crowded.” → Bond +5, Pace Chaser Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Pace Chaser)
 
 ### [Tracen Academy] Nice Nature
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Kokura Racecourse ○: Moderately increase performance at Kokura Racecourse.
@@ -2405,24 +1937,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Not like Meow
-- Tell her it's important to unwind.
-- Energy +20, Bond +5
-
-- Teach her how to take advantage of a cafe visit.
-- Energy +10, Wit +5, Bond +5
-- (Delicious) Burden
-- Eat it with grated daikon radish to make things easier!
-- Bond +5, Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +1
-
-- You should hold a tempura party at the dorm!
-- Mood +1, Max Energy +4, Bond +5
+- **Not like Meow**
+  - “Tell her it's important to unwind.” → Energy +20, Bond +5
+  - “Teach her how to take advantage of a cafe visit.” → Energy +10, Wit +5, Bond +5
+- **(Delicious) Burden**
+  - “Eat it with grated daikon radish to make things easier!” → Bond +5, Ramp Up
+    - Hint +1: Slightly increase velocity when passing another runner mid-race.
+  - “You should hold a tempura party at the dorm!” → Mood +1, Max Energy +4, Bond +5
 
 ### [Tracen Academy] Mejiro Palmer
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -2435,25 +1960,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- An Inescapable Choice?
-- Go with the tenacious wedge!
-- Energy -15, Guts +20, Bond +5
-
-- Uber-powerful driver all the way!
-- Power +5, Skill points +15, Bond +5
-- Optimistic Escapism
-- Thanks for the tip, but I think I'll keep trying a bit longer.
-- Guts +15, Bond +5
-
-- All right! I'll give this mental escape thing a try!
-- Bond +5, Wet Conditions ○ Wet Conditions ○
-- ○
-- Moderately increase performance on good, soft, and heavy ground. Hint +1
+- **An Inescapable Choice?**
+  - “Go with the tenacious wedge!” → Energy -15, Guts +20, Bond +5
+  - “Uber-powerful driver all the way!” → Power +5, Skill points +15, Bond +5
+- **Optimistic Escapism**
+  - “Thanks for the tip, but I think I'll keep trying a bit longer.” → Guts +15, Bond +5
+  - “All right! I'll give this mental escape thing a try!” → Bond +5, Wet Conditions ○
+    - Hint +1: Moderately increase performance on good, soft, and heavy ground.
 
 ### [Tracen Academy] Matikanetannhauser
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -2464,24 +1981,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Just Your Typical Hard Work!
-- You catch on to their styles so fast.
-- Speed +10, Bond +5
-
-- You have a very special power.
-- Power +10, Bond +5
-- Just A Typical Accident?!
-- You really charged off there!
-- Stamina +5, Guts +10, Bond +5
-
-- You didn't even hesitate!
-- Bond +5, Subdued Front Runners Subdued Front Runners
-- Slightly increase fatigue for front runners early-race. Hint +1
+- **Just Your Typical Hard Work!**
+  - “You catch on to their styles so fast.” → Speed +10, Bond +5
+  - “You have a very special power.” → Power +10, Bond +5
+- **Just A Typical Accident?!**
+  - “You really charged off there!” → Stamina +5, Guts +10, Bond +5
+  - “You didn't even hesitate!” → Bond +5, Subdued Front Runners
+    - Hint +1: Slightly increase fatigue for front runners early-race.
 
 ### [Tracen Academy] Seeking the Pearl
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -2493,24 +2003,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Full-Power Passion!
-- I'm not sure that's how things work… ……
-- Energy +10, Mood +1, Bond +5
-
-- Well, get on with the show, then!
-- Power +5, Guts +5, Bond +5
-- Full-Power Thinking!
-- Won't it be hard to implement? ……
-- Wit +20, Bond +5
-
-- That's such a cool idea!
-- Energy -10, Bond +5, Uma Stan Uma Stan
-- Slightly increase velocity when close to many runners. Hint +3
+- **Full-Power Passion!**
+  - “I'm not sure that's how things work… ……” → Energy +10, Mood +1, Bond +5
+  - “Well, get on with the show, then!” → Power +5, Guts +5, Bond +5
+- **Full-Power Thinking!**
+  - “Won't it be hard to implement? ……” → Wit +20, Bond +5
+  - “That's such a cool idea!” → Energy -10, Bond +5, Uma Stan
+    - Hint +3: Slightly increase velocity when close to many runners.
 
 ### [Tracen Academy] Hishi Akebono
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Sunny Days ○: Moderately increase performance in sunny weather.
@@ -2522,24 +2025,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Eat Up ♪ ☆♪
-- Why don't you take a quick break?
-- Energy +10, Bond +5
-
-- You must be putting a lot of strength into that. ……
-- Energy -5, Power +15, Bond +5
-- Leave It to Me ♪ ☆♪
-- Can you move the leveler out of the way?
-- Stamina +10, Bond +5
-
-- Help level the track by running around it!
-- Energy -15, Bond +5, Sprinting Gear Sprinting Gear
-- Slightly increase acceleration late-race. (Sprint) Hint +2
+- **Eat Up ♪ ☆♪**
+  - “Why don't you take a quick break?” → Energy +10, Bond +5
+  - “You must be putting a lot of strength into that. ……” → Energy -5, Power +15, Bond +5
+- **Leave It to Me ♪ ☆♪**
+  - “Can you move the leveler out of the way?” → Stamina +10, Bond +5
+  - “Help level the track by running around it!” → Energy -15, Bond +5, Sprinting Gear
+    - Hint +2: Slightly increase acceleration late-race. (Sprint)
 
 ### [Tracen Academy] Sirius Symboli
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2549,24 +2045,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Want Me to Teach You?
-- I'll try to do it myself.
-- Energy -5, Stamina +20, Bond +5
-
-- I need your help.
-- Wit +10, Bond +5
-- Want Me to Help You?
-- Please give them back!
-- Wit +5, Bond +5, Disorient Disorient
-- Slightly narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser) Hint +1
-
-- I'm not going to beg for them.
-- Skill points +15, Bond +5
+- **Want Me to Teach You?**
+  - “I'll try to do it myself.” → Energy -5, Stamina +20, Bond +5
+  - “I need your help.” → Wit +10, Bond +5
+- **Want Me to Help You?**
+  - “Please give them back!” → Wit +5, Bond +5, Disorient
+    - Hint +1: Slightly narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser)
+  - “I'm not going to beg for them.” → Skill points +15, Bond +5
 
 ### [Tracen Academy] K.S.Miracle
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Updrafters: Slightly increase passing ability when positioned toward the back late-race. (Mile)
@@ -2578,15 +2067,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Spreading Kindness
-- No data yet! Add it here .
-- Come Rain or River
-- No data yet! Add it here .
+- **Spreading Kindness**
+  - _no data yet_
+- **Come Rain or River**
+  - _no data yet_
 
 ### [Tracen Academy] Tsurumaru Tsuyoshi
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -2597,15 +2085,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Preparing to the MAX!
-- No data yet! Add it here .
-- Helping Out to the MAX!
-- No data yet! Add it here .
+- **Preparing to the MAX!**
+  - _no data yet_
+- **Helping Out to the MAX!**
+  - _no data yet_
 
 ### [Tracen Academy] Yamanin Zephyr
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Fall Runner ○: Moderately increase performance in fall.
@@ -2620,18 +2107,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Speed +10, Guts +5, Bond +5
-
-- Max Energy +4, Bond +5
-- Speed +3, Power +3, Guts +3, Bond +5
-
-- Aspire Aspire
-- Very slightly increase velocity for a medium duration when positioned 2nd or later and within 2 lengths of the lead just before late-race. (Pace Chaser) Hint +1, Bond +5
+- **(untitled event)**
+  - Speed +10, Guts +5, Bond +5 / Max Energy +4, Bond +5 / Speed +3, Power +3, Guts +3, Bond +5 / Aspire / Very slightly increase velocity for a medium duration when positioned 2nd or later and within 2 lengths of the lead just before late-race. (Pace Chaser) Hint +1, Bond +5
 
 ### [Tracen Academy] Copano Rickey
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Oi Racecourse ○: Moderately increase performance at Oi Racecourse.
@@ -2645,15 +2126,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ☆
-- No data yet! Add it here .
-- ☆
-- No data yet! Add it here .
+- **☆**
+  - _no data yet_
+- **☆**
+  - _no data yet_
 
 ### [Tracen Academy] Tap Dance City
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Inner Post Proficiency ○: Moderately increase performance in brackets 1–3.
@@ -2664,15 +2144,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Precious Venue
-- No data yet! Add it here .
-- Treasure
-- No data yet! Add it here .
+- **Precious Venue**
+  - _no data yet_
+- **Treasure**
+  - _no data yet_
 
 ### [Tracen Academy] Verxina
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -2683,13 +2162,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Vivlos
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Position Pilfer: Slightly increase velocity when positioned midpack or further back mid-race. (Late Surger)
@@ -2702,17 +2180,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ♪
-- Bond +5, Energy -5, Power +25
-
-- Bond +5, Guts +15
-- ♪
-- No data yet! Add it here .
+- **♪**
+  - Bond +5, Energy -5, Power +25 / Bond +5, Guts +15
+- **♪**
+  - _no data yet_
 
 ### [Tracen Academy] Orfevre
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -2725,13 +2200,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Rhein Kraft
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Hanshin Racecourse ○: Moderately increase performance at Hanshin Racecourse.
@@ -2744,13 +2218,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Blast Onepiece
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -2765,13 +2238,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] No Reason
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -2784,13 +2256,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Buena Vista
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Acceleration ○: Slightly increase acceleration on a corner with masterful turning.
@@ -2803,13 +2274,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Transcend
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Groundwork: Slightly increase acceleration after activating many skills early-race.
@@ -2825,13 +2295,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Stay Gold
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -2849,13 +2318,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Red Desire
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -2869,13 +2337,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Samson Big
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Final Push: Slightly increase ability to keep the lead on the final corner. (Front Runner)
@@ -2890,15 +2357,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ## Wit
 
 ### [Tracen Academy] Symboli Rudolf
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Preferred Position: Slightly decrease fatigue mid-race. (Pace Chaser)
@@ -2912,25 +2378,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Emperor's Encouragement “”
-- We're focusing on moderate speed training
-- Speed +10, Bond +5
-
-- We're training hard to prepare for the worst case scenario.
-- Energy -10, Skill points +30, Bond +5
-- The Student Council President's Thoughtfulness
-- Thanks! Now no storm will rain on our parade.
-- Bond +5, Rainy Days ○ Rainy Days ○
-- ○
-- Moderately increase performance in rainy weather. Hint +1
-
-- It must be tough always looking out for the school.
-- Stamina +15, Bond +5
+- **The Emperor's Encouragement “”**
+  - “We're focusing on moderate speed training” → Speed +10, Bond +5
+  - “We're training hard to prepare for the worst case scenario.” → Energy -10, Skill points +30, Bond +5
+- **The Student Council President's Thoughtfulness**
+  - “Thanks! Now no storm will rain on our parade.” → Bond +5, Rainy Days ○
+    - Hint +1: Moderately increase performance in rainy weather.
+  - “It must be tough always looking out for the school.” → Stamina +15, Bond +5
 
 ### [Tracen Academy] Daiwa Scarlet
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Competitive Spirit ○: Moderately increase performance when many other runners are using the same strategy.
@@ -2942,24 +2400,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I'm Going to Win Tomorrow!
-- Do you always come this early?
-- Wit +10, Bond +5
-
-- Second is still pretty good. 2
-- Mood +1, Skill Points +15, Bond +5
-- This Is Nothing!
-- Want me to do it for you?
-- Bond +5, Stamina to Spare Stamina to Spare
-- Slightly decrease fatigue upon approaching mid-race. (Pace Chaser) Hint +1
-
-- You should go to the infirmary, just in case!
-- Energy +20, Mood +1, Bond +5
+- **I'm Going to Win Tomorrow!**
+  - “Do you always come this early?” → Wit +10, Bond +5
+  - “Second is still pretty good. 2” → Mood +1, Skill Points +15, Bond +5
+- **This Is Nothing!**
+  - “Want me to do it for you?” → Bond +5, Stamina to Spare
+    - Hint +1: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
+  - “You should go to the infirmary, just in case!” → Energy +20, Mood +1, Bond +5
 
 ### [Tracen Academy] Fine Motion
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -2970,25 +2421,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Wonderful New Shoes
-- Ones that are lightweight so you can run fast in them.
-- Speed +5, Skill points +10, Bond +5
-
-- Ones that are heavy but will be great for training.
-- Energy -10, Stamina +5, Skill points +20, Bond +5
-- Reminiscent Clover
-- The final corner.
-- Bond +5, Corner Adept ○ Corner Adept ○
-- ○
-- Slightly increase velocity on a corner with skilled turning. Hint +1
-
-- The final straight.
-- Guts +15, Bond +5
+- **Wonderful New Shoes**
+  - “Ones that are lightweight so you can run fast in them.” → Speed +5, Skill points +10, Bond +5
+  - “Ones that are heavy but will be great for training.” → Energy -10, Stamina +5, Skill points +20, Bond +5
+- **Reminiscent Clover**
+  - “The final corner.” → Bond +5, Corner Adept ○
+    - Hint +1: Slightly increase velocity on a corner with skilled turning.
+  - “The final straight.” → Guts +15, Bond +5
 
 ### [Tracen Academy] Agnes Tachyon
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Up-Tempo: Slightly increase positioning ability when positioned toward the front mid-race. (Medium)
@@ -2998,25 +2441,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Correlation between Sleep and Efficiency
-- You're just going to power through it?
-- Power +5, Wit +5, Bond +5
-
-- Sounds like you're writing a pretty complicated thesis.
-- Wit +10, Bond +5
-- Happenstance Introduced Through Intervention
-- A running style.
-- Bond +5, Late Surger Savvy ○ Late Surger Savvy ○
-- ○
-- Moderately increase ability to get into a good position. (Late Surger) Hint +1
-
-- Decision-making.
-- Wit +10, Bond +5
+- **The Correlation between Sleep and Efficiency**
+  - “You're just going to power through it?” → Power +5, Wit +5, Bond +5
+  - “Sounds like you're writing a pretty complicated thesis.” → Wit +10, Bond +5
+- **Happenstance Introduced Through Intervention**
+  - “A running style.” → Bond +5, Late Surger Savvy ○
+    - Hint +1: Moderately increase ability to get into a good position. (Late Surger)
+  - “Decision-making.” → Wit +10, Bond +5
 
 ### [Tracen Academy] Air Shakur
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Pressure: Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long)
@@ -3025,24 +2460,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- //Verification Required //
-- Maybe you should redo the formulas?
-- Energy +10, Guts +5, Bond +5
-
-- But good things come to those who persist.
-- Energy -10, Stamina +5, Guts +10, Bond +5
-- //Absolute Desire //
-- Why don't you get them in a way that suits you?
-- Bond +5, Pace Strategy Pace Strategy
-- Slightly recover endurance when passed by another runner mid-race. Hint +1
-
-- You should get them yourself.
-- Guts +5, Max Energy +4, Bond +4
+- **//Verification Required //**
+  - “Maybe you should redo the formulas?” → Energy +10, Guts +5, Bond +5
+  - “But good things come to those who persist.” → Energy -10, Stamina +5, Guts +10, Bond +5
+- **//Absolute Desire //**
+  - “Why don't you get them in a way that suits you?” → Bond +5, Pace Strategy
+    - Hint +1: Slightly recover endurance when passed by another runner mid-race.
+  - “You should get them yourself.” → Guts +5, Max Energy +4, Bond +4
 
 ### [Tracen Academy] Marvelous Sunday
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -3053,25 +2481,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Marvelous, No Question ☆ ☆
-- I feel really tired lately.
-- Energy +10, Speed +5, Bond +5
-
-- I want to be more motivated.
-- Mood +1, Speed +5, Bond +5
-- How To Be More Marvelous ☆ ☆
-- Throw everything you've got at it? …
-- Energy +10, Mood +1, Bond +5
-
-- Maybe chill out a little and let things happen as they will? …
-- Bond +5, Hanshin Racecourse ○ Hanshin Racecourse ○
-- ○
-- Moderately increase performance at Hanshin Racecourse. Hint +1
+- **Marvelous, No Question ☆**
+  - “I feel really tired lately.” → Energy +10, Speed +5, Bond +5
+  - “I want to be more motivated.” → Mood +1, Speed +5, Bond +5
+- **How To Be More Marvelous ☆**
+  - “Throw everything you've got at it? …” → Energy +10, Mood +1, Bond +5
+  - “Maybe chill out a little and let things happen as they will? …” → Bond +5, Hanshin Racecourse ○
+    - Hint +1: Moderately increase performance at Hanshin Racecourse.
 
 ### [Tracen Academy] Matikanefukukitaru
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Hakodate Racecourse ○: Moderately increase performance at Hakodate Racecourse.
@@ -3084,23 +2504,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Maximum Spirituality
-- It's probably just from you rushing everything... ……
-- Wit +5, Skill points +15, Bond +5
-
-- Why don't you try being a little more enthusiastic?
-- Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
-- When Piety and Kindness Intersect ――
-- I guess I have a few favors to I'd like to ask...
-- Skill points +30, Bond +5
-
-- Why don't you try being kind to yourself?
-- Energy +20, Bond +5
+- **Maximum Spirituality**
+  - “It's probably just from you rushing everything... ……” → Wit +5, Skill points +15, Bond +5
+  - “Why don't you try being a little more enthusiastic?” → Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
+- **When Piety and Kindness Intersect ――**
+  - “I guess I have a few favors to I'd like to ask...” → Skill points +30, Bond +5
+  - “Why don't you try being kind to yourself?” → Energy +20, Bond +5
 
 ### [Tracen Academy] Mejiro Dober
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Kyoto Racecourse ○: Moderately increase performance at Kyoto Racecourse.
@@ -3111,24 +2524,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Give It a Try
-- Train your body to gain confidence!
-- Energy +15, Bond +5
-
-- Practice smiling in front of a mirror!
-- Mood +1, Skill points +15, Bond +5
-- Hope She'll Like It... ……
-- Why not get something else?
-- Skill points +45, Bond +5
-
-- Steel yourself and plow on through!
-- Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Give It a Try**
+  - “Train your body to gain confidence!” → Energy +15, Bond +5
+  - “Practice smiling in front of a mirror!” → Mood +1, Skill points +15, Bond +5
+- **Hope She'll Like It... ……**
+  - “Why not get something else?” → Skill points +45, Bond +5
+  - “Steel yourself and plow on through!” → Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [Tracen Academy] Fuji Kiseki
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Summer Runner ○: Moderately increase performance in summer.
@@ -3139,24 +2545,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Sleight of Hand
-- You mean the pocket you slipped a coi— ――
-- Wit +5, Skill points +15, Bond +5
-
-- Wow! A coin! What impressive magical powers! ……
-- Power +5, Skill points +15, Bond +5
-- Misdirection
-- The trick to rounding the last corner.
-- Bond +5, Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
-
-- Running techniques.
-- Skill points +30, Bond +5
+- **Sleight of Hand**
+  - “You mean the pocket you slipped a coi— ――” → Wit +5, Skill points +15, Bond +5
+  - “Wow! A coin! What impressive magical powers! ……” → Power +5, Skill points +15, Bond +5
+- **Misdirection**
+  - “The trick to rounding the last corner.” → Bond +5, Prepared to Pass
+    - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
+  - “Running techniques.” → Skill points +30, Bond +5
 
 ### [Tracen Academy] Ikuno Dictus
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -3167,24 +2566,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Ikuno-Style Flawless Method
-- You're going to do this all by yourself? 1
-- Wit +10, Bond +5
-
-- You're so passionate.
-- Skill points +30, Bond +5
-- Ikuno-Style Management
-- Can you go over mine too?
-- Stamina +20, Bond +5
-
-- Mind giving me some tips?
-- Bond +5, Trick (Rear) Trick (Rear)
-- Slightly increase fatigue for rushed runners ahead when positioned toward the back mid-race. Hint +1
+- **Ikuno-Style Flawless Method**
+  - “You're going to do this all by yourself? 1” → Wit +10, Bond +5
+  - “You're so passionate.” → Skill points +30, Bond +5
+- **Ikuno-Style Management**
+  - “Can you go over mine too?” → Stamina +20, Bond +5
+  - “Mind giving me some tips?” → Bond +5, Trick (Rear)
+    - Hint +1: Slightly increase fatigue for rushed runners ahead when positioned toward the back mid-race.
 
 ### [Tracen Academy] Mejiro Ardan
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Left-Handed ○: Moderately increase performance on left-handed tracks.
@@ -3195,24 +2587,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Glass Girl Wants to Study
-- Healthy Three-Minute Recipes for Athletes! 3
-- Speed +10, Bond +5
-
-- Changing Your Brain Through Good Sleep.
-- Energy +10, Wit +5, Bond +5
-- The Glass Girl Wants to Play
-- How about Karuta?
-- Speed +10, Wit +10, Bond +5
-
-- Why not film videos for Umatok?
-- Bond +5, Hesitant Pace Chasers Hesitant Pace Chasers
-- Slightly decrease velocity of pace chasers late-race. Hint +1
+- **The Glass Girl Wants to Study**
+  - “Healthy Three-Minute Recipes for Athletes! 3” → Speed +10, Bond +5
+  - “Changing Your Brain Through Good Sleep.” → Energy +10, Wit +5, Bond +5
+- **The Glass Girl Wants to Play**
+  - “How about Karuta?” → Speed +10, Wit +10, Bond +5
+  - “Why not film videos for Umatok?” → Bond +5, Hesitant Pace Chasers
+    - Hint +1: Slightly decrease velocity of pace chasers late-race.
 
 ### [Tracen Academy] Curren Chan
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Sprinting Gear: Slightly increase acceleration late-race. (Sprint)
@@ -3223,24 +2608,17 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- #UrUniqueCuteness #
-- Something with an intellectual look might be good.
-- Speed +5, Wit +10, Bond +5
-
-- Something super energetic would be good!
-- Speed +10, Power +5, Bond +5
-- #Cuteness4U ☆ #☆
-- How about we take a group pic?
-- Bond +5, Skill points +15
-
-- Let's line everyone up and take selfies efficiently!
-- Bond +5, Intimidate Intimidate
-- Moderately intimidate runners behind when positioned toward the front early-race. (Sprint) Hint +1
+- **#UrUniqueCuteness #**
+  - “Something with an intellectual look might be good.” → Speed +5, Wit +10, Bond +5
+  - “Something super energetic would be good!” → Speed +10, Power +5, Bond +5
+- **#Cuteness4U ☆ #☆**
+  - “How about we take a group pic?” → Bond +5, Skill points +15
+  - “Let's line everyone up and take selfies efficiently!” → Bond +5, Intimidate
+    - Hint +1: Moderately intimidate runners behind when positioned toward the front early-race. (Sprint)
 
 ### [Tracen Academy] Mr. C.B.
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Rainy Days ○: Moderately increase performance in rainy weather.
@@ -3253,24 +2631,16 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Paths that Beckon
-- Persuade her to head back and sleep.
-- Energy +10, Skill points +10, Bond +5
-
-- Join her for some breakfast.
-- Power +20, Bond +5
-- Even if I Ruffle Feathers
-- I'm gonna wait till my head clears up.
-- Wit +15, Bond +5
-
-- Yeah, I should get a taxi and head home soon.
-- Early Start Early Start
-- Very slightly increase velocity for a medium duration when positioned toward the back mid-race. (End Closer) Hint +1, Bond +5
+- **The Paths that Beckon**
+  - “Persuade her to head back and sleep.” → Energy +10, Skill points +10, Bond +5
+  - “Join her for some breakfast.” → Power +20, Bond +5
+- **Even if I Ruffle Feathers**
+  - “I'm gonna wait till my head clears up.” → Wit +15, Bond +5
+  - “Yeah, I should get a taxi and head home soon.” → Early Start / Very slightly increase velocity for a medium duration when positioned toward the back mid-race. (End Closer) Hint +1, Bond +5
 
 ### [Tracen Academy] Mejiro Ramonu
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -3285,13 +2655,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] North Flight
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -3305,13 +2674,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Neo Universe
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -3325,15 +2693,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- “”
-- No data yet! Add it here .
-- “”
-- No data yet! Add it here .
+- **“”**
+  - _no data yet_
+- **“”**
+  - _no data yet_
 
 ### [Tracen Academy] Dantsu Flame
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -3347,13 +2714,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Cesario
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -3365,13 +2731,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Daring Tact
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Spring Runner ○: Moderately increase performance in spring.
@@ -3387,13 +2752,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Lucky Lilac
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -3406,15 +2770,14 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A
-- No data yet! Add it here .
-- B
-- No data yet! Add it here .
+- **A**
+  - _no data yet_
+- **B**
+  - _no data yet_
 
 ### [Tracen Academy] Air Messiah
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -3427,13 +2790,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Win Variation
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -3450,13 +2812,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Chrono Genesis
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -3468,13 +2829,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Durandal
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -3490,13 +2850,12 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Tracen Academy] Forever Young
 
-**Unique Effect (Lv1+):** -
+**Unique Effect:** none
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -3515,6 +2874,5 @@ Unique effects, hints and training events. Stat bonuses are in [R.md](R.md). Sou
 
 **Training Events**
 **Other Events**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
