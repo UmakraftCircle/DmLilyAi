@@ -1,1 +1,66 @@
 # Chrono Genesis
+
+**Japanese name:** クロノジェネシス
+**Series:** Umamusume: Pretty Derby (anime, game and franchise)
+
+> Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
+
+---
+
+## Infobox
+
+| Field | Details |
+|-------|---------|
+| Name | Chrono Genesis |
+| Japanese name | クロノジェネシス |
+| Voice actor | Hiyori Manase |
+| Birthday | March 6 |
+| Height | 152 cm |
+| Three sizes | 77 - 54 - 76 |
+| Shoe size | Left and right: 22.0cm |
+| School | Junior Division |
+| Dorm | Ritto Dormitory |
+| Strong point | Rapid note-taking, schedule management |
+| Weak point | Excessive humidity |
+
+## Overview
+
+Not filled in yet.
+
+## Background
+
+Not filled in yet.
+
+## Real-life counterpart
+
+Chrono Genesis is named after and based on a Japanese racehorse.
+
+| Field | Details |
+|-------|---------|
+| Date of birth | 6 Mar 2016 |
+| Date of death | Alive |
+| Races | 17 |
+| Wins | 8 |
+| Record (1st-2nd-3rd-other) | 8-3-4-2 |
+| Earnings | 1,101,714,000 JPY |
+
+---
+
+## Game data: versions
+
+Not filled in yet (see Gaps).
+
+## Gaps
+
+- Ears, tail, family, trivia and weight rows were left out (game text is not copied).
+- Overview, background and personality: not filled in yet.
+- Appearances (anime, game, other media): not filled in yet.
+- Game data (versions, aptitudes, career objectives, stats, unique skills, support cards, images): not filled in by this script. Add them from uma.guide or GameTora.
+
+## Sources
+
+| Source | URL |
+|--------|-----|
+| GameTora profile | https://gametora.com/umamusume/characters/chrono-genesis |
+
+Game materials are copyright Cygames, Inc.
