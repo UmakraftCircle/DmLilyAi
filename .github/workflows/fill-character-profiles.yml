@@ -1,0 +1,134 @@
+name: Fill character profiles (GameTora)
+
+# Fills the one-line stub files in LilyAiGameSpace/Umamusume/Character using
+# GameTora + this repo's support card tables (tools/generate_character_profiles.py).
+# Hand-written profiles are never touched.
+#
+# How to use:
+#   1. Actions tab > "Fill character profiles (GameTora)" > Run workflow
+#   2. Leave dry_run = true the first time. It shows a preview and commits nothing.
+#   3. Run again with dry_run = false to write the files.
+#
+# The run FAILS (red) with a clear message if GameTora can't be reached or nothing
+# was generated, so a green run always means files were produced.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many stub files to fill (0 = all)"
+        default: "3"
+        required: true
+      only:
+        description: "Optional: comma-separated names, e.g. Air_Groove,Agnes_Tachyon"
+        default: ""
+      dry_run:
+        description: "Preview only, do not commit"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fill-character-profiles
+  cancel-in-progress: false
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      LIMIT: ${{ inputs.limit }}
+      ONLY: ${{ inputs.only }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tools/tests -v
+
+      - name: Check GameTora is reachable
+        run: |
+          url="https://gametora.com/umamusume/characters/special-week"
+          code=$(curl -sS -L -m 30 -A "DmLilyAi-profile-generator/1.0 (+https://github.com/UmakraftCircle/DmLilyAi)" -o probe.html -w "%{http_code}" "$url" || true)
+          code=${code:-000}
+          size=$(wc -c < probe.html 2>/dev/null || echo 0)
+          ids=$(grep -o -E '(chr_icon_|/profile/|chara_stand_)[0-9]{4}' probe.html 2>/dev/null | sort -u | head -3 | tr '\n' ' ')
+          {
+            echo "### GameTora check"
+            echo "- URL: $url"
+            echo "- HTTP status: $code"
+            echo "- Page size: $size bytes"
+            echo "- Character id found in page: ${ids:-none}"
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ "$code" != "200" ]; then
+            echo "::error::GameTora returned HTTP $code to the GitHub runner (blocked or unreachable). Nothing was generated."
+            head -c 500 probe.html 2>/dev/null || true
+            exit 1
+          fi
+          if [ -z "$ids" ]; then
+            echo "::error::GameTora page loaded but no character id was found in it. The page layout differs from what the script expects."
+            head -c 800 probe.html
+            exit 1
+          fi
+
+      - name: Generate profiles
+        run: |
+          args=(--limit "$LIMIT")
+          if [ -n "$ONLY" ]; then
+            args+=(--only "$ONLY")
+          fi
+          python -u tools/generate_character_profiles.py "${args[@]}" | tee generate.log
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Generator log"
+            echo '```'
+            tail -n 80 generate.log 2>/dev/null || echo "no log"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail if nothing was written
+        run: |
+          n=$(grep -c '^  wrote ' generate.log || true)
+          echo "Profiles written: $n"
+          if [ "$n" -eq 0 ]; then
+            echo "::error::0 profiles were generated. See the Generator log above for the reason per character."
+            exit 1
+          fi
+
+      - name: Preview (dry run, nothing committed)
+        if: ${{ inputs.dry_run }}
+        run: |
+          git status --short -- LilyAiGameSpace/Umamusume/Character
+          first=$(git diff --name-only -- LilyAiGameSpace/Umamusume/Character | head -1)
+          {
+            echo "### Preview of $first (first 70 lines)"
+            echo '```markdown'
+            head -n 70 "$first"
+            echo '```'
+            echo "Dry run: no files were committed. Run again with dry_run = false to write them."
+          } >> "$GITHUB_STEP_SUMMARY"
+          git checkout -- LilyAiGameSpace/Umamusume/Character
+
+      - name: Commit and push
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LilyAiGameSpace/Umamusume/Character
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Fill character stub profiles from GameTora"
+            git push
+          fi
