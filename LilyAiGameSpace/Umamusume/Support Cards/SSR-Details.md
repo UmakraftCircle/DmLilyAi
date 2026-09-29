@@ -62,3 +62,30 @@ Unique effects, hints and training events. Stat bonuses are in [SSR.md](SSR.md).
 **Unique Effect (Lv1+):** Speed Bonus +1, Initial Speed +20
 
 Hints and events not fully captured yet.
+
+### [Eat Fast! Yum Fast!] Sakura Bakushin O
+
+**Unique Effect (Lv1+):** Friendship Bonus +10, Initial Friendship Gauge +15
+
+**Hints**
+- Sprinting Gear: slightly increase acceleration late-race (Sprint)
+- Frenzied Front Runners: increase time needed for front runners to calm down when they become rushed
+- Flustered Front Runners: slightly increase fatigue for front runners mid-race
+- Sprint Straightaways ○: slightly increase velocity on a straight (Sprint)
+- Sprint Corners ○: slightly increase velocity on a corner (Sprint)
+- Huge Lead: slightly increase ability to maintain the lead when leading by a large margin mid-race (Sprint)
+- Countermeasure: slightly increase passing ability when positioned toward the front upon approaching late-race (Sprint)
+- Intimidate: moderately intimidate runners behind when positioned toward the front early-race (Sprint)
+
+**Event Chain**
+- 1/3 Bakushin's Cooking!: Speed +10
+- 2/3 Bakushin's Love!: Speed/Power +5
+- 3/3 Bakushin's Huge Success!: Speed +10, Power +5, Turbo Sprint (Hint +1)
+
+**Other Events**
+- Genius Efficiency!
+  - "Boost your speed by wiping the floor!": Speed +15, Bond +5
+  - "Boost your power by tidying the reference room!": Speed +5, Power +10, Bond +5
+- Enough to Break into a Dash!
+  - "Can I borrow it when you're done?": Gap Closer (Hint +1), Bond +5
+  - "Could you run for me so I can study your technique?": Energy -10, Speed +10, Power +5, Bond +5

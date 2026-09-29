@@ -9,6 +9,7 @@ Stat bonuses at max level (Lv50). Values in (+N) come from the card's unique eff
 | [Beyond This Shining Moment] Silence Suzuka | 35 | 40 (+15) | 30 | 25 | 5 | 15 | - | (+20) | 65 | - | - | - | 1 |
 | [Dream Big!] Tokai Teio | 20 (+10) | 60 | (+20) | 25 | 10 | 15 | 2 | 40 | 35 | - | 1 | - | - |
 | [Run(my)way] Gold City | 20 | 30 | (+20) | 25 | 10 | 15 | 4 | 60 | ? | (+1) | 1 | 5 | - |
+| [Eat Fast! Yum Fast!] Sakura Bakushin O | 20 (+10) | 40 | 20 | 25 (+15) | 10 | 20 | - | - | 50 | 1 | - | 10 | - |
 
 ## Power
 
