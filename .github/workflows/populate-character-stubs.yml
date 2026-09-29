@@ -4,11 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Max stubs to fill this run"
+        description: "Max files to write this run"
         default: "10"
       only:
-        description: "Comma-separated file stems (e.g. Kitasan_Black,Rice_Shower). Empty = next stubs alphabetically"
+        description: "Comma-separated file stems (e.g. Kitasan_Black,Rice_Shower). Empty = next files alphabetically"
         default: ""
+      refresh:
+        description: "Also regenerate files this script created earlier (hand-written profiles are never touched)"
+        type: boolean
+        default: false
       dry_run:
         description: "Parse and report only, do not commit"
         type: boolean
@@ -36,11 +40,13 @@ jobs:
           LIMIT: ${{ inputs.limit }}
           ONLY: ${{ inputs.only }}
           DRY: ${{ inputs.dry_run }}
+          REFRESH: ${{ inputs.refresh }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           args=(--limit "$LIMIT")
           if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
           if [ "$DRY" = "true" ]; then args+=(--dry-run); fi
+          if [ "$REFRESH" = "true" ]; then args+=(--refresh); fi
           python .github/scripts/populate_character_stubs.py "${args[@]}"
 
       - name: Commit changes
