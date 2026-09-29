@@ -73,7 +73,13 @@ Special Week is named after and based on the Japanese racehorse of the same name
 
 ## Game data: versions
 
-Special Week has three playable versions in the game. Aptitudes and career goals are identical across all three. Base stats, growth bonuses, release dates and obtain methods differ.
+Special Week has three playable versions in the game. Aptitudes and career goals are identical across all three. Base stats, growth bonuses, release dates, unique skills and obtain methods differ.
+
+| Version | uma.guide page | GameTora page |
+|---------|----------------|---------------|
+| Special Dreamer (Original) | https://uma.guide/characters/100101 | https://gametora.com/umamusume/characters/100101-special-week |
+| Hopp'n♪Happy Heart (Summer) | https://uma.guide/characters/100102 | https://gametora.com/umamusume/characters/100102-special-week |
+| Ruler of Japan (Commander) | https://uma.guide/characters/100103 | https://gametora.com/umamusume/characters/100103-special-week |
 
 ### Shared aptitudes (all versions)
 
@@ -127,11 +133,23 @@ Best fits: Medium and Long turf, as a Pace Chaser or Late Surger.
 | Release date (Global) | 2025-10-14 |
 | Rarity | 3 star (base) |
 | Stat growth bonuses | Stamina 10%, Power 10%, Guts 10% |
+| Concept | A summer swimwear outfit. After forgetting how to pull off her signature moves, she goes on a seaside vacation to rest and recover, which unlocks the outfit. |
+| Suited styles | Pace Chaser or Late Surger, depending on the build. |
 
 | Stats | Speed | Stamina | Power | Guts | Wit |
 |-------|-------|---------|-------|------|-----|
 | 3 star | 77 | 90 | 103 | 98 | 82 |
 | 5 star | 94 | 110 | 125 | 119 | 102 |
+
+**Unique skill: Dazzl'n ♪ Diver (per Game8):** rated as strong as a unique recovery skill like Swinging Maestro (about one gold recovery skill's worth). It activates in the mid-race when the user is in the mid-pack (about 70% of the pack), meaning 2nd to 6th place in a 9-gate race (Champions Meeting) or 2nd to 8th in a 12-gate race (Team Trials).
+
+**Build notes (per Game8 and TheGamer, as of their write-ups):**
+- Late-race acceleration skills are suggested, for example On Your Left!, Nimble Navigator and Scramble. With the Symboli Kris S Stamina SSR support, Claw Forward is a strong pick but costs some stamina.
+- Because her unique skill already acts like a recovery skill, a single gold recovery skill such as Swinging Maestro is considered enough.
+- Winning the Japan Cup (a career goal) rewards skill points, a boost to all stats and a hint for Standard Distance ◯.
+- Secret event "Rivals in Arms": requires winning five specific races (the Satsuki Sho, Kikuka Sho, Japan Cup as a Classic, Takarazuka Kinen as a Senior, and Arima Kinen as a Senior). Rewards include Speed, Power and Guts, plus hints for Stamina to Spare and Slick Surge.
+- Guts and Wit can mostly be ignored beyond some initial gains that keep her final stretch and skill triggers working (TheGamer).
+- Suggested Legacy parents (TheGamer): Nice Nature, Narita Brian, Grass Wonder and TM Opera O. Alternatives: Gold Ship, Winning Ticket, Super Creek and Matikanefukukitaru, depending on which sparks they carry.
 
 ### Version 3: Special Week (Commander) [Ruler of Japan]
 
@@ -141,17 +159,23 @@ Best fits: Medium and Long turf, as a Pace Chaser or Late Surger.
 | Rarity | 3 star (base) |
 | Stat growth bonuses | Speed 10%, Stamina 10%, Wit 10% |
 | Obtain method | Not available from the gacha (see below) |
+| Also known as | Commander Special Week |
 
 | Stats | Speed | Stamina | Power | Guts | Wit |
 |-------|-------|---------|-------|------|-----|
 | 3 star | 96 | 82 | 94 | 82 | 96 |
 | 5 star | 117 | 100 | 115 | 100 | 118 |
 
-**How to get her (per the Fandom wiki):** she is a special trainee that cannot be pulled from the gacha. She is a reward for completing hidden requirements in the main story, and her star level can only be raised with statues. The listed steps are:
-1. Create a Veteran using the Team Sirius support card "Passing the Dream On".
+**Unique skill (per Game8 and the Fandom wiki):** activates when the user activates any other skill on the final corner in the late race. She then takes the crowd's cheers to heart and gets a moderate velocity increase. At **Nakayama Racecourse** the velocity increase is much greater.
+- Because the activation requirement is simple, it can be inherited for races at Nakayama. Game8 notes it is less flexible than the uniques of common parents like Mejiro Ryan (Down the Line) or Oguri Cap (Starlight Beat), since its full effect depends on the racecourse, but it remains a good inherit where it applies.
+- Her skill set points her toward Long races, but Game8 says her potential fully shines only in races where her Nakayama bonus can be used.
+
+**How to get her:** she is a special trainee that cannot be pulled from the gacha. She is a reward for completing hidden requirements in the main story, and her star level can only be raised with statues. Steps from the sources:
+1. Create a Veteran using the free Team Sirius SSR support card "Passing the Dream On" (obtainable from Finale Part 1 of the main story).
 2. View all of that card's recreation events.
-3. Buy the skill "Best in Japan" before the run ends.
-4. Advance through Main Story Act 1, Finale Part 2, until the Arima Kinen goal race appears.
+3. Buy the skill "Best in Japan" before the run ends (this skill can only be earned by finishing all those recreation events).
+4. In Main Story Act 1, Finale Part 2, select that Veteran as Special Week's inheritance for the story trainee.
+5. Advance until the Arima Kinen goal race appears and win it. An extra story chapter then unlocks, and Ruler of Japan Special Week is given after viewing it.
 
 ### Version comparison
 
@@ -160,6 +184,12 @@ Best fits: Medium and Long turf, as a Pace Chaser or Late Surger.
 | Special Dreamer | 2025-06-26 | 102 | 108 | 120 | 110 | 110 | Stamina 20%, Wit 10% |
 | Hopp'n♪Happy Heart (Summer) | 2025-10-14 | 94 | 110 | 125 | 119 | 102 | Stamina 10%, Power 10%, Guts 10% |
 | Ruler of Japan (Commander) | 2026-06-25 | 117 | 100 | 115 | 100 | 118 | Speed 10%, Stamina 10%, Wit 10% |
+
+| Version | Unique skill role |
+|---------|-------------------|
+| Special Dreamer | Late-race speed boost after overtaking, from the front half of the pack. |
+| Hopp'n♪Happy Heart (Dazzl'n ♪ Diver) | Mid-race recovery-style skill from the mid-pack. |
+| Ruler of Japan | Late-race velocity boost after another skill triggers on the final corner, strongest at Nakayama. |
 
 ---
 
@@ -173,20 +203,27 @@ Support page: https://gametora.com/umamusume/supports/30105-special-week
 
 ## Gaps
 
-Some fields could not be confirmed from the pages I could read and are left out rather than guessed: the unique skills of the Summer and Commander versions, their events, and per-version skill lists. The uma.guide character page (https://uma.guide/characters/100101) loads its data dynamically, so its event and skill tabs did not come through.
+The uma.guide pages for all three versions (100101, 100102, 100103) load their data dynamically, so their event lists and skill tabs did not come through. Only the page titles and image links were readable. Not confirmed from any source: full event lists for each version and complete per-version skill lists. Details above from Game8, TheGamer and the wikis come from community write-ups and can change with balance updates.
 
 ## Sources
 
 | Source | URL |
 |--------|-----|
-| uma.guide character page (Special Dreamer) | https://uma.guide/characters/100101 |
+| uma.guide, Special Dreamer | https://uma.guide/characters/100101 |
+| uma.guide, Hopp'n♪Happy Heart | https://uma.guide/characters/100102 |
+| uma.guide, Ruler of Japan | https://uma.guide/characters/100103 |
 | GameTora profile | https://gametora.com/umamusume/characters/special-week |
 | GameTora, Special Dreamer | https://gametora.com/umamusume/characters/100101-special-week |
 | GameTora, Summer | https://gametora.com/umamusume/characters/100102-special-week |
 | GameTora, Commander | https://gametora.com/umamusume/characters/100103-special-week |
 | GameTora, SSR support card | https://gametora.com/umamusume/supports/30105-special-week |
-| Game8 build guide | https://game8.co/games/Umamusume-Pretty-Derby/archives/536322 |
+| Game8, Special Dreamer | https://game8.co/games/Umamusume-Pretty-Derby/archives/536322 |
+| Game8, Hopp'n♪Happy Heart | https://game8.co/games/Umamusume-Pretty-Derby/archives/556853 |
+| Game8, Ruler of Japan | https://game8.co/games/Umamusume-Pretty-Derby/archives/603281 |
+| TheGamer, Hopp'n Happy Heart build | https://www.thegamer.com/umamusume-pretty-derby-best-hoppn-happy-heart-special-week-build-stats-skills-support-cards/ |
 | Umamusume Wiki (Fandom) | https://umamusume.fandom.com/wiki/Special_Week |
+| Umamusume Wiki, Ruler of Japan trainee | https://umamusume.fandom.com/wiki/Special_Week/Trainee/Ruler_of_Japan |
+| Umamusu wiki, Ruler of Japan | https://umamusu.wiki/Game:Special_Week_(Ruler_of_Japan) |
 | Wikipedia, list of characters | https://en.wikipedia.org/wiki/List_of_Umamusume:_Pretty_Derby_characters |
 
 Game materials are copyright Cygames, Inc.
@@ -197,9 +234,11 @@ Binary files cannot be committed with the current repo tool, so each image is ke
 
 | Description | URL |
 |-------------|-----|
-| Special Dreamer standing art | https://gametora.com/images/umamusume/characters/chara_stand_1001_100101.png |
-| Summer standing art | https://gametora.com/images/umamusume/characters/chara_stand_1001_100102.png |
-| Commander standing art | https://gametora.com/images/umamusume/characters/chara_stand_1001_100103.png |
+| Special Dreamer standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1001_100101.png |
+| Summer standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1001_100102.png |
+| Commander standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1001_100103.png |
 | Profile art | https://media.gametora.com/umamusume/characters/profile/1001.png |
 | Character icon | https://gametora.com/images/umamusume/characters/icons/chr_icon_1001.png |
-| uma.guide standing art (webp) | https://uma.guide/img/uma/chara_stand_1001_100101.webp |
+| uma.guide art, Special Dreamer (webp) | https://uma.guide/img/uma/chara_stand_1001_100101.webp |
+| uma.guide art, Hopp'n♪Happy Heart (webp) | https://uma.guide/img/uma/chara_stand_1001_100130.webp |
+| uma.guide art, Ruler of Japan (webp) | https://uma.guide/img/uma/chara_stand_1001_100102.webp |
