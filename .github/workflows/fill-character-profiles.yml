@@ -97,33 +97,47 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # Diagnostic: shows what the parser sees on real GameTora pages (Special Week).
+      # Diagnostic: shows what the parser sees on a real GameTora version page.
       - name: Debug - what the parser sees
         if: always()
         continue-on-error: true
         run: |
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import sys
+          import json, re, sys
           sys.path.insert(0, "tools")
           import generate_character_profiles as g
-          for url in ("https://gametora.com/umamusume/characters/special-week",
-                      "https://gametora.com/umamusume/characters/100101-special-week"):
-              raw = g.fetch(url)
-              print(f"### Debug: {url}")
-              if not raw:
-                  print("fetch returned nothing (404, blocked or error)")
-                  continue
-              lines, h1, em = g.html_to_lines(raw)
-              print(f"- html bytes: {len(raw)}, text lines: {len(lines)}, h1: {h1!r}")
-              print("- character id found:", g.parse_character_id(raw))
-              v = g.parse_version(lines, h1)
-              print("- parsed:", {k: (len(x) if isinstance(x, (list, dict)) else x) for k, x in v.items()})
-              for key in ("Base stats", "Stat bonuses", "Aptitude", "Objectives", "Release date"):
-                  print(f"- '{key}' at line(s):", [i for i, l in enumerate(lines) if l == key])
-              print("```")
-              for i, l in enumerate(lines[:120]):
-                  print(i, l[:90])
-              print("```")
+          url = "https://gametora.com/umamusume/characters/100101-special-week"
+          raw = g.fetch(url)
+          print(f"### Debug: {url}")
+          if not raw:
+              print("fetch returned nothing (404, blocked or error)")
+              sys.exit(0)
+          lines, h1, em = g.html_to_lines(raw)
+          print(f"- html bytes: {len(raw)}, text lines: {len(lines)}, h1: {h1!r}")
+          for key in ("Base stats", "Stat bonuses", "Aptitude", "Objectives", "Release date"):
+              print(f"- '{key}' at line(s):", [i for i, l in enumerate(lines) if l == key])
+          m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.S)
+          if not m:
+              print("- no __NEXT_DATA__ script block in the page")
+          else:
+              try:
+                  d = json.loads(m.group(1))
+                  pp = d.get("props", {}).get("pageProps", {})
+                  print("- __NEXT_DATA__ pageProps keys:", list(pp.keys()))
+                  item = pp.get("itemData") or pp.get("data") or {}
+                  if isinstance(item, dict):
+                      print("- item keys:", list(item.keys())[:80])
+                  print("- JSON sample (first 2500 chars):")
+                  print("```json")
+                  print(json.dumps(pp)[:2500])
+                  print("```")
+              except Exception as e:
+                  print("- __NEXT_DATA__ parse error:", e)
+          print("- text lines (first 100):")
+          print("```")
+          for i, l in enumerate(lines[:100]):
+              print(i, l[:90])
+          print("```")
           PY
 
       - name: Fail if nothing was written
