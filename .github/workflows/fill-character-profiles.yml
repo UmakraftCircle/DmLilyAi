@@ -11,6 +11,7 @@ name: Fill character profiles (GameTora)
 #
 # The run FAILS (red) with a clear message if GameTora can't be reached or nothing
 # was generated, so a green run always means files were produced.
+# Debug output is also saved to debug/ in the repo after every run.
 
 on:
   workflow_dispatch:
@@ -23,7 +24,7 @@ on:
         description: "Optional: comma-separated names, e.g. Air_Groove,Agnes_Tachyon"
         default: ""
       dry_run:
-        description: "Preview only, do not commit"
+        description: "Preview only, do not commit profiles"
         type: boolean
         default: true
 
@@ -102,7 +103,7 @@ jobs:
         if: always()
         continue-on-error: true
         run: |
-          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' | tee debug_out.md >> "$GITHUB_STEP_SUMMARY"
           import json, re, sys
           sys.path.insert(0, "tools")
           import generate_character_profiles as g
@@ -127,9 +128,9 @@ jobs:
                   item = pp.get("itemData") or pp.get("data") or {}
                   if isinstance(item, dict):
                       print("- item keys:", list(item.keys())[:80])
-                  print("- JSON sample (first 2500 chars):")
+                  print("- JSON sample (first 3500 chars):")
                   print("```json")
-                  print(json.dumps(pp)[:2500])
+                  print(json.dumps(pp)[:3500])
                   print("```")
               except Exception as e:
                   print("- __NEXT_DATA__ parse error:", e)
@@ -163,7 +164,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
           git checkout -- LilyAiGameSpace/Umamusume/Character
 
-      - name: Commit and push
+      - name: Commit and push profiles
         if: ${{ !inputs.dry_run }}
         run: |
           git config user.name "github-actions[bot]"
@@ -173,5 +174,24 @@ jobs:
             echo "Nothing to commit."
           else
             git commit -m "Fill character stub profiles from GameTora"
+            git push
+          fi
+
+      # Saves the log + debug output into debug/ so it can be read without opening the run page.
+      - name: Save debug output to the repo
+        if: always()
+        continue-on-error: true
+        run: |
+          mkdir -p debug
+          cp generate.log debug/generate.log 2>/dev/null || true
+          cp debug_out.md debug/gametora-debug.md 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add debug
+          if git diff --cached --quiet; then
+            echo "No debug changes."
+          else
+            git commit -m "chore: save GameTora debug output [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
             git push
           fi
