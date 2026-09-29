@@ -1,0 +1,80 @@
+name: Generate character profiles
+
+# Fills in Character/<Name>.md files that are still one-line stubs, using
+# GameTora + the repo's support card tables (see tools/generate_character_profiles.py).
+#
+# Two ways to run it:
+#   * Actions tab -> "Generate character profiles" -> Run workflow (only appears
+#     once this file is on the default branch). Set limit=0 to do every stub.
+#   * Automatically on pushes to the feature branch below, as a small sample
+#     (first 8 files, refreshing ones it already generated) so the output can be
+#     reviewed in the PR before merging. Delete that branch entry after merging.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max profiles to generate (0 = all stubs)"
+        default: "8"
+      only:
+        description: "Comma-separated names, e.g. Vodka,Air_Groove (blank = all stubs)"
+        default: ""
+      refresh:
+        description: "Also regenerate files that already carry the generated marker"
+        type: boolean
+        default: false
+  push:
+    branches:
+      - feature/character-profile-generator
+    paths:
+      - "tools/generate_character_profiles.py"
+      - "tools/tests/test_generate_character_profiles.py"
+      - ".github/workflows/generate-character-profiles.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-character-profiles-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LIMIT: ${{ github.event.inputs.limit || '8' }}
+      ONLY: ${{ github.event.inputs.only || '' }}
+      REFRESH: ${{ github.event_name == 'push' && 'true' || github.event.inputs.refresh }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tools/tests -v
+
+      - name: Generate profiles
+        run: |
+          args=(--limit "$LIMIT")
+          if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
+          if [ "$REFRESH" = "true" ]; then args+=(--refresh); fi
+          python tools/generate_character_profiles.py "${args[@]}" | tee generate.log
+
+      - name: Job summary
+        if: always()
+        run: |
+          { echo '### Character profile generator'; echo '```'; tail -n 60 generate.log 2>/dev/null || echo 'no log'; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- "LilyAiGameSpace/Umamusume/Character"; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A "LilyAiGameSpace/Umamusume/Character"
+          git commit -m "chore: generate character profiles [skip ci]"
+          git push
