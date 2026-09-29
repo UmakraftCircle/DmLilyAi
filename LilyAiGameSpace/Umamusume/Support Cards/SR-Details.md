@@ -4,9 +4,18 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 ## Speed
 
+<!-- cleaned: support-card-details v1 -->
+
 ### [5:00 a.m.—Right on Schedule] Eishin Flash
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40 (+15), Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 (+15) — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -17,33 +26,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Good Manager
-- (1 / 2)
-- Max Energy +4, Energy +10, Mood +1
-- A Good Friend
-- (2 / 2)
-- Energy +20, Homestretch Haste Homestretch Haste
-- Slightly increase velocity in the last spurt. Hint +1
+- **Step 1/2 — A Good Manager:** Max Energy +4, Energy +10, Mood +1
+- **Step 2/2 — A Good Friend:** Energy +20, Homestretch Haste
+  - Hint +1: Slightly increase velocity in the last spurt.
+
 **Other Events**
-- Unforeseen Lunch
-- Why not take this chance to try something new?
-- Energy +15, Bond +5
-
-- Guess you'll have to think of something quickly.
-- Speed +5, Guts +5, Bond +5
-- Responding to the Unforeseen
-- Why not make it yourself?
-- Guts +10, Bond +5
-
-- I'm sure there's another store that sells it.
-- Bond +5, Target in Sight ○ Target in Sight ○
-- ○
-- Moderately increase performance when the favorite is using the same strategy. Hint +1
+- **Unforeseen Lunch**
+  - “Why not take this chance to try something new?” → Energy +15, Bond +5
+  - “Guess you'll have to think of something quickly.” → Speed +5, Guts +5, Bond +5
+- **Responding to the Unforeseen**
+  - “Why not make it yourself?” → Guts +10, Bond +5
+  - “I'm sure there's another store that sells it.” → Bond +5, Target in Sight ○
+    - Hint +1: Moderately increase performance when the favorite is using the same strategy.
 
 ### [Poolside High Tides] Narita Taishin
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20 (+15), Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -56,32 +63,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Nighttime Secret ……
-- (1 / 2)
-- Speed +5, Stamina +5
-- Enjoy the Musical!
-- (2 / 2)
-- Speed/Stamina/Power +5, I Can See Right Through You I Can See Right Through You
-- Slightly widen field of view with situational awareness when moving sideways. (End Closer) Hint +1
+- **Step 1/2 — Nighttime Secret ……:** Speed +5, Stamina +5
+- **Step 2/2 — Enjoy the Musical!:** Speed/Stamina/Power +5, I Can See Right Through You
+  - Hint +1: Slightly widen field of view with situational awareness when moving sideways. (End Closer)
+
 **Other Events**
-- Just Leave Me Alone
-- At least let me cheer you on!
-- Bond +5, Stamina +5, Skill Points +15
-
-- I just want to help.
-- Bond +5, Power +5, Skill points +15
-- Just Don't Bother Me
-- Okay, just don't be late...
-- Bond +5, Pressure Pressure
-- Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long) Hint +1
-
-- Don't overdo it.
-- Skill Points +30, Bond +5
+- **Just Leave Me Alone**
+  - “At least let me cheer you on!” → Bond +5, Stamina +5, Skill Points +15
+  - “I just want to help.” → Bond +5, Power +5, Skill points +15
+- **Just Don't Bother Me**
+  - “Okay, just don't be late...” → Bond +5, Pressure
+    - Hint +1: Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long)
+  - “Don't overdo it.” → Skill Points +30, Bond +5
 
 ### [First-Rate Plan] King Halo
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together (+1), Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Speed: (+20) — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -93,31 +98,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- First-Rate Coaching
-- (1 / 2)
-- Speed +10
-- First-Rate Advice
-- (2 / 2)
-- Speed +15, Skill Points +15
+- **Step 1/2 — First-Rate Coaching:** Speed +10
+- **Step 2/2 — First-Rate Advice:** Speed +15, Skill Points +15
+
 **Other Events**
-- You May Socialize With Me!
-- I'll take partner running.
-- Energy -20, Speed +10, Power +10, Wit +5, Bond +5
-
-- I'll take King Commendation practice.
-- Mood -1, Guts +25, Bond +5
-- You May Advise Me!
-- What do you think of the saying "Where there's a will, there's a way"?
-- Guts +10, Wit +5, Bond +5
-
-- Any thoughts on timing your strategy in a race?
-- Bond +5, Homestretch Haste Homestretch Haste
-- Slightly increase velocity in the last spurt. Hint +1
+- **You May Socialize With Me!**
+  - “I'll take partner running.” → Energy -20, Speed +10, Power +10, Wit +5, Bond +5
+  - “I'll take King Commendation practice.” → Mood -1, Guts +25, Bond +5
+- **You May Advise Me!**
+  - “What do you think of the saying "Where there's a will, there's a way"?” → Guts +10, Wit +5, Bond +5
+  - “Any thoughts on timing your strategy in a race?” → Bond +5, Homestretch Haste
+    - Hint +1: Slightly increase velocity in the last spurt.
 
 ### [Lamplit Training of a Witch-to-Be] Sweep Tosho
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +30, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Frequency Increases the frequency at which hint events occur (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Frequency: (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Prudent Positioning: Increase navigation early-race.
@@ -130,43 +133,34 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Some Very Green Friends
-- (1 / 2)
-- I think you should eat your vegetables.
-- Speed +5, Skill points +10, Bond +5, Lucky Seven Lucky Seven
-- Moderately good things may happen when in bracket 7. Hint +1
+- **Step 1/2 — Some Very Green Friends**
+  - “I think you should eat your vegetables.” → Speed +5, Skill points +10, Bond +5, Lucky Seven
+    - Hint +1: Moderately good things may happen when in bracket 7.
+  - “Do whatever you want.” → Mood -1, Maverick ○
+- **Step 2/2 — Premeditated Mischief**
+  - “You only had Fuji Kiseki's best intentions in mind, right?!” → Speed +10, Skill points +20, Bond +5, Levelheaded
+    - Hint +1: Relax and slightly recover endurance when following directly behind a runner. (End Closer)
+  - “You should be honest and apologize.” → Mood -1, Lone Wolf
+    - Hint +1: Moderately increase performance when no other runners have the heart of a lone wolf.
 
-- Do whatever you want.
-- Mood -1, Maverick ○ Maverick ○
-- ○
-- Increase performance when no other runners are using the same strategy. Hint +5, Ends chain event
-- Premeditated Mischief
-- (2 / 2)
-- You only had Fuji Kiseki's best intentions in mind, right?!
-- Speed +10, Skill points +20, Bond +5, Levelheaded Levelheaded
-- Relax and slightly recover endurance when following directly behind a runner. (End Closer) Hint +1
-
-- You should be honest and apologize.
-- Mood -1, Lone Wolf Lone Wolf
-- Moderately increase performance when no other runners have the heart of a lone wolf. Hint +1
 **Other Events**
-- Miracle ☆ Escape! ☆
-- Just admit defeat already.
-- Energy +10, Speed +5, Bond +5
-
-- Run! Hurry!
-- Energy -10, Speed +20, Bond +5
-- Wonderful ☆ Mistake! ☆
-- How about I teach you a cool spell instead?
-- Energy -20, Skill points +40, Bond +5
-
-- Let's look for it together. 1
-- Charming ○ , Bond +5
+- **Miracle ☆ Escape! ☆**
+  - “Just admit defeat already.” → Energy +10, Speed +5, Bond +5
+  - “Run! Hurry!” → Energy -10, Speed +20, Bond +5
+- **Wonderful ☆ Mistake! ☆**
+  - “How about I teach you a cool spell instead?” → Energy -20, Skill points +40, Bond +5
+  - “Let's look for it together. 1” → Charming ○ , Bond +5
 
 ### [///WARNING GATE///] Shinko Windy
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20 (+10), Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Speed Increases initial Speed when beginning a Career playthrough +20, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough (+15), Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Initial Speed: +20 — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -176,37 +170,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Dig Here, Windy!
-- (1 / 2)
-- Leave the rest to your trusty minion.
-- Speed +10, Bond +5
+- **Step 1/2 — Dig Here, Windy!**
+  - “Leave the rest to your trusty minion.” → Speed +10, Bond +5
+  - “Let's give this all we've got!” → Energy -5, Skill points +30, Bond +5
+- **Step 2/2 — C'mon Gates, Open Already!:** On Success: Speed +10, Skill points +15, Bond +5, Shifting Gears / On Failure: Speed +5, Skill points +10, Bond +5
+  - Hint +3: Slightly increase passing ability when positioned toward the front mid-race. (Mile)
 
-- Let's give this all we've got!
-- Energy -5, Skill points +30, Bond +5
-- C'mon Gates, Open Already!
-- (2 / 2)
-- On Success: Speed +10, Skill points +15, Bond +5, Shifting Gears Shifting Gears
-- Slightly increase passing ability when positioned toward the front mid-race. (Mile) Hint +3
-- On Failure: Speed +5, Skill points +10, Bond +5
 **Other Events**
-- Chomp Extermination!
-- Just tell her the truth!
-- Mood +1, Speed +3, Bond +5
-
-- Come on, help lessen her burden.
-- Energy +10, Skill points +5, Bond +5
-- Chomp Attack!
-- What did I tell you?
-- Skill points +15, Bond +5
-
-- Guess this means you lost, huh?
-- Speed +3, Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Chomp Extermination!**
+  - “Just tell her the truth!” → Mood +1, Speed +3, Bond +5
+  - “Come on, help lessen her burden.” → Energy +10, Skill points +5, Bond +5
+- **Chomp Attack!**
+  - “What did I tell you?” → Skill points +15, Bond +5
+  - “Guess this means you lost, huh?” → Speed +3, Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [Mud-Caked Compañero] El Condor Pasa
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together (+1), Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -217,38 +205,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- With Passion and Joy!
-- (1 / 2)
-- Let's play in the water to rinse off your clothes!
-- Bond +5, Energy +10, Speed +5, Power +5
+- **Step 1/2 — With Passion and Joy!**
+  - “Let's play in the water to rinse off your clothes!” → Bond +5, Energy +10, Speed +5, Power +5
+  - “Go all out in a mud wrestling match!” → Bond +5, Energy -10, Speed +15, Power +10
+- **Step 2/2 — Muddy Heroes:** Energy -10, Speed +15, Power +15, Pace Chaser Corners ○ / Slightly increase velocity on a corner. (Pace Chaser) Hint +1, Bond +5
 
-- Go all out in a mud wrestling match!
-- Bond +5, Energy -10, Speed +15, Power +10
-- Muddy Heroes
-- (2 / 2)
-- Energy -10, Speed +15, Power +15, Pace Chaser Corners ○ Pace Chaser Corners ○
-- ○
-- Slightly increase velocity on a corner. (Pace Chaser) Hint +1, Bond +5
 **Other Events**
-- Blazing Fire!
-- You could eat a stamina-boosting meal.
-- Stamina +10, Bond +5
-
-- You could try sprinting with a tire tied to you.
-- Energy -10, Power 20, Bond +5
-- Secret Notebook!
-- The El-Style Power Training Program.
-- Power +10, Bond +5
-
-- Tips for Race Running on a Clear Day.
-- Bond +5, Sunny Days ○ Sunny Days ○
-- ○
-- Moderately increase performance in sunny weather. Hint +1
+- **Blazing Fire!**
+  - “You could eat a stamina-boosting meal.” → Stamina +10, Bond +5
+  - “You could try sprinting with a tire tied to you.” → Energy -10, Power 20, Bond +5
+- **Secret Notebook!**
+  - “The El-Style Power Training Program.” → Power +10, Bond +5
+  - “Tips for Race Running on a Clear Day.” → Bond +5, Sunny Days ○
+    - Hint +1: Moderately increase performance in sunny weather.
 
 ### [An Annoying Supervisor] Vodka
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +10 (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +10 (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -263,38 +243,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Slacking Off at Sundown
-- (1 / 2)
-- You should show her how much you regret it!
-- Max Energy +4, Power +10, Bond +5
+- **Step 1/2 — Slacking Off at Sundown**
+  - “You should show her how much you regret it!” → Max Energy +4, Power +10, Bond +5
+  - “You should apologize to her earnestly.” → On Success: Speed +15, Bond +5, Mile Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Mile)
+  - On Failure: Speed +5, Bond +5
+- **Step 2/2 — Persistence Pays Off:** Speed +15, Skill points +15
 
-- You should apologize to her earnestly.
-- On Success: Speed +15, Bond +5, Mile Corners ○ Mile Corners ○
-- ○
-- Slightly increase velocity on a corner. (Mile) Hint +1
-- On Failure: Speed +5, Bond +5
-- Persistence Pays Off
-- (2 / 2)
-- Speed +15, Skill points +15
 **Other Events**
-- The Coolest Line
-- Try making yourself look more threatening.
-- Bond +5, Power +10
-
-- Ty striking an intimidation pose.
-- Bond +5, Power +5, Skill Points +15
-- Enemies on Main Street
-- Use the side roads.
-- Bond +5, Nimble Navigator Nimble Navigator
-- Slightly increase maneuverability when the way ahead is blocked in the last spurt. Hint +1
-
-- Run as fast as you can.
-- Power +5, Skill points +15, Bond +5
+- **The Coolest Line**
+  - “Try making yourself look more threatening.” → Bond +5, Power +10
+  - “Ty striking an intimidation pose.” → Bond +5, Power +5, Skill Points +15
+- **Enemies on Main Street**
+  - “Use the side roads.” → Bond +5, Nimble Navigator
+    - Hint +1: Slightly increase maneuverability when the way ahead is blocked in the last spurt.
+  - “Run as fast as you can.” → Power +5, Skill points +15, Bond +5
 
 ### [Cozy Cute Memory ♪] Curren Chan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Speed: +15 — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Sprinting Gear: Slightly increase acceleration late-race. (Sprint)
@@ -305,38 +278,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- #AWildCurrenAppeared #Curren
-- (1 / 2)
-- Yeah. I could tell you really love your fans.
-- Bond +5, Speed +20
+- **Step 1/2 — #AWildCurrenAppeared #Curren**
+  - “Yeah. I could tell you really love your fans.” → Bond +5, Speed +20
+  - “Yeah, but didn't you come to buy something?” → Bond +5, Skill Points +10, Shrewd Step
+    - Hint +1: Slightly increase ability to navigate smoothly. (Pace Chaser)
+- **Step 2/2 — #CuteFluffyOverload #:** Sprint Corners ○ / Slightly increase velocity on a corner. (Sprint) Hint +1, Bond +5
 
-- Yeah, but didn't you come to buy something?
-- Bond +5, Skill Points +10, Shrewd Step Shrewd Step
-- Slightly increase ability to navigate smoothly. (Pace Chaser) Hint +1
-- #CuteFluffyOverload #
-- (2 / 2)
-- Sprint Corners ○ Sprint Corners ○
-- ○
-- Slightly increase velocity on a corner. (Sprint) Hint +1, Bond +5
 **Other Events**
-- #UrUniqueCuteness #
-- Something with an intellectual look might be good.
-- Speed +5, Wit +10, Bond +5
-
-- Something super energetic would be good!
-- Speed +10, Power +5, Bond +5
-- #Cuteness4U ☆ #☆
-- How about we take a group pic?
-- Bond +5, Skill points +15
-
-- Let's line everyone up and take selfies efficiently!
-- Bond +5, Intimidate Intimidate
-- Moderately intimidate runners behind when positioned toward the front early-race. (Sprint) Hint +1
+- **#UrUniqueCuteness #**
+  - “Something with an intellectual look might be good.” → Speed +5, Wit +10, Bond +5
+  - “Something super energetic would be good!” → Speed +10, Power +5, Bond +5
+- **#Cuteness4U ☆ #☆**
+  - “How about we take a group pic?” → Bond +5, Skill points +15
+  - “Let's line everyone up and take selfies efficiently!” → Bond +5, Intimidate
+    - Hint +1: Moderately intimidate runners behind when positioned toward the front early-race. (Sprint)
 
 ### [A Clip to Keep Your Heart Warm] Aston Machan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Speed Bonus Increases Speed gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough -, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +5 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -349,18 +316,23 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Dead End: Blocking the Path] Jungle Pocket
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20 (+10), Mood Effect Amplifies the effect of mood when training together -, Power Bonus Increases Power gain when training together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 (+10) — Increases the effectiveness of Friendship Training
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Late Surger Corners ○: Slightly increase velocity on a corner. (Late Surger)
@@ -373,28 +345,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- “”“”
-- (1 / 2)
-- No data yet! Add it here .
-- “”
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- “”
-- Bond +5, Power +15
-
-- LRoars……
-- Bond +5, Energy -10, Speed +15, Stamina +10
-- “”
-- Bond +5, Stamina +15
-
-- Bond +5, Scramble Scramble
-- Moderately expend endurance to slightly increase acceleration when positioned midpack or further back in the last spurt. (Late, Long) Hint +1
+- **“”**
+  - Bond +5, Power +15
+  - “LRoars……” → Bond +5, Energy -10, Speed +15, Stamina +10
+- **“”**
+  - Bond +5, Stamina +15 / Bond +5, Scramble
+    - Hint +1: Moderately expend endurance to slightly increase acceleration when positioned midpack or further back in the last spurt. (Late, Long)
 
 ### [Summer Evening Shower] Silence Suzuka
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together (+15), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough (+15), Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Speed: +15 — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Left-Handed ○: Moderately increase performance on left-handed tracks.
@@ -408,30 +381,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- On and On
-- Of course.
-- Speed +10, Stamina +5, Bond +5
-
-- Sure! Now run as fast as you can!
-- Speed +15, Bond +5
-- What Should I Do?
-- Why not do some partner running with her?
-- Speed +5, Stamina +5, Wit +5, Bond +5
-
-- Maybe the trick is hidden in that left-handed loop you're in.
-- Bond +5, Left-Handed ○ Left-Handed ○
-- ○
-- Moderately increase performance on left-handed tracks. Hint +1
+- **On and On**
+  - “Of course.” → Speed +10, Stamina +5, Bond +5
+  - “Sure! Now run as fast as you can!” → Speed +15, Bond +5
+- **What Should I Do?**
+  - “Why not do some partner running with her?” → Speed +5, Stamina +5, Wit +5, Bond +5
+  - “Maybe the trick is hidden in that left-handed loop you're in.” → Bond +5, Left-Handed ○
+    - Hint +1: Moderately increase performance on left-handed tracks.
 
 ### [あくもー退散！？] Matikanetannhauser
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together (+15), Speed Bonus Increases Speed gain when training together -, Power Bonus Increases Power gain when training together (+1), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: (+15) — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Calm in a Crowd: Slightly recover endurance when surrounded mid-race.
@@ -443,30 +415,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- ……
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Just Your Typical Hard Work!
-- You catch on to their styles so fast.
-- Speed +10, Bond +5
-
-- You have a very special power.
-- Power +10, Bond +5
-- Just A Typical Accident?!
-- You really charged off there!
-- Stamina +5, Guts +10, Bond +5
-
-- You didn't even hesitate!
-- Bond +5, Subdued Front Runners Subdued Front Runners
-- Slightly increase fatigue for front runners early-race. Hint +1
+- **Just Your Typical Hard Work!**
+  - “You catch on to their styles so fast.” → Speed +10, Bond +5
+  - “You have a very special power.” → Power +10, Bond +5
+- **Just A Typical Accident?!**
+  - “You really charged off there!” → Stamina +5, Guts +10, Bond +5
+  - “You didn't even hesitate!” → Bond +5, Subdued Front Runners
+    - Hint +1: Slightly increase fatigue for front runners early-race.
 
 ### [Time flies] Tosen Jordan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40, Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -479,29 +450,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Doomscrolling the Time Away
-- Why don't you run a lap, and I'll time it for you? 1
-- Bond +5, Mood +1, Speed +5
-
-- How about you jog somewhere different than usual?
-- Bond +5, Stamina +10
-- Sponsored Posts Can Be Low-Key Sus
-- You can just use it on your days off.
-- Bond +5, Energy +10, Mood +1
-
-- You can use it for something else.
-- Bond +5, Lucky Seven Lucky Seven
-- Moderately good things may happen when in bracket 7. Hint +1
+- **Doomscrolling the Time Away**
+  - “Why don't you run a lap, and I'll time it for you? 1” → Bond +5, Mood +1, Speed +5
+  - “How about you jog somewhere different than usual?” → Bond +5, Stamina +10
+- **Sponsored Posts Can Be Low-Key Sus**
+  - “You can just use it on your days off.” → Bond +5, Energy +10, Mood +1
+  - “You can use it for something else.” → Bond +5, Lucky Seven
+    - Hint +1: Moderately good things may happen when in bracket 7.
 
 ### [お守りパワーで福徳円満！] Matikanefukukitaru
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40 (+15), Speed Bonus Increases Speed gain when training together -, Initial Speed Increases initial Speed when beginning a Career playthrough +20, Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 (+15) — Amplifies the effect of mood when training together
+- Initial Speed: +20 — Increases initial Speed when beginning a Career playthrough
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Pressure: Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long)
@@ -513,28 +484,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Maximum Spirituality
-- It's probably just from you rushing everything... ……
-- Wit +5, Skill points +15, Bond +5
-
-- Why don't you try being a little more enthusiastic?
-- Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
-- When Piety and Kindness Intersect ――
-- I guess I have a few favors to I'd like to ask...
-- Skill points +30, Bond +5
-
-- Why don't you try being kind to yourself?
-- Energy +20, Bond +5
+- **Maximum Spirituality**
+  - “It's probably just from you rushing everything... ……” → Wit +5, Skill points +15, Bond +5
+  - “Why don't you try being a little more enthusiastic?” → Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
+- **When Piety and Kindness Intersect ――**
+  - “I guess I have a few favors to I'd like to ask...” → Skill points +30, Bond +5
+  - “Why don't you try being kind to yourself?” → Energy +20, Bond +5
 
 ### [先陣スプラッシュ！] Bubble Gum Fellow
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Speed Bonus Increases Speed gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together -, Initial Speed Increases initial Speed when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Initial Speed: (+20) — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -546,18 +516,22 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [『しあわせの青いバラ』] Rice Shower
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Kyoto Racecourse ○: Moderately increase performance at Kyoto Racecourse.
@@ -570,31 +544,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- ……
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- A Page of Flower Shop Assistance 1
-- Want me to help water the flowers?
-- Mood +2, Bond +5
-
-- Want me to bring out more flowers from the back?
-- Stamina +10, Bond +5
-- A Page About Cloudy Weather 1
-- Rent out the gymnasium and run there!
-- Speed +5, Guts +5, Bond +5
-
-- Make some sunshine dolls to ward off the rain!
-- Bond +5, Firm Conditions ○ Firm Conditions ○
-- ○
-- Moderately increase performance on firm ground. Hint +1
+- **A Page of Flower Shop Assistance 1**
+  - “Want me to help water the flowers?” → Mood +2, Bond +5
+  - “Want me to bring out more flowers from the back?” → Stamina +10, Bond +5
+- **A Page About Cloudy Weather 1**
+  - “Rent out the gymnasium and run there!” → Speed +5, Guts +5, Bond +5
+  - “Make some sunshine dolls to ward off the rain!” → Bond +5, Firm Conditions ○
+    - Hint +1: Moderately increase performance on firm ground.
 
 ### [静寂を煎じ] Sakura Chitose O
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +30, Training Effectiveness Increases the effectiveness of training performed together +1, Initial Speed Increases initial Speed when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +1, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: +1 — Increases the effectiveness of training performed together
+- Initial Speed: (+20) — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +1 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Cloudy Days ○: Moderately increase performance in cloudy weather.
@@ -609,18 +583,25 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [ぬくもりフォー・ユー] Mejiro Dober
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Training Effectiveness Increases the effectiveness of training performed together +1 (+5), Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +5, Skill Point Bonus Increases skill point gain when training together +1
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +1 (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +5 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: +1 — Increases skill point gain when training together
 
 **Hints**
 - Winter Runner ○: Moderately increase performance in winter.
@@ -634,29 +615,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Give It a Try
-- Train your body to gain confidence!
-- Energy +15, Bond +5
-
-- Practice smiling in front of a mirror!
-- Mood +1, Skill points +15, Bond +5
-- Hope She'll Like It... ……
-- Why not get something else?
-- Skill points +45, Bond +5
-
-- Steel yourself and plow on through!
-- Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Give It a Try**
+  - “Train your body to gain confidence!” → Energy +15, Bond +5
+  - “Practice smiling in front of a mirror!” → Mood +1, Skill points +15, Bond +5
+- **Hope She'll Like It... ……**
+  - “Why not get something else?” → Skill points +45, Bond +5
+  - “Steel yourself and plow on through!” → Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [瞬光] Calstone Light O
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together +1 (+1), Initial Speed Increases initial Speed when beginning a Career playthrough +10, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +1, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Speed Bonus: +1 (+1) — Increases Speed gain when training together
+- Initial Speed: +10 — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +1 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Summer Runner ○: Moderately increase performance in summer.
@@ -670,20 +650,23 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ## Power
 
 ### [Reach the Top!] Hishi Amazon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Mood Effect Amplifies the effect of mood when training together +30, Stamina Bonus Increases Stamina gain when training together -, Initial Power Increases initial Power when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5 (+5), Fan Bonus Increases fan gain from races +10, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 (+5) — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Stamina to Spare: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
@@ -694,32 +677,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- True to Myself
-- (1 / 2)
-- Speed +5, Power +5, Bond +5
-- A Hishiama Solution
-- (2 / 2)
-- Speed +10, Masterful Gambit Masterful Gambit
-- Slightly increase velocity during the last spurt when positioned toward the back late-race. (End Closer) Hint +1
+- **Step 1/2 — True to Myself:** Speed +5, Power +5, Bond +5
+- **Step 2/2 — A Hishiama Solution:** Speed +10, Masterful Gambit
+  - Hint +1: Slightly increase velocity during the last spurt when positioned toward the back late-race. (End Closer)
+
 **Other Events**
-- Hishiama's Struggles: Problem Children
-- Surround her from all sides and trap her.
-- Energy +10, Wit +5, Bond +5
-
-- Lure her out to the track.
-- Energy -10, Speed 10, Guts 5, Bond 5
-- Hishiama's Struggles: Final Stretch
-- Blow the other racers away with sheer force of will.
-- Bond +5, Hesitant End Closers Hesitant End Closers
-- Slightly decrease velocity of end closers late-race. Hint +1
-
-- Go wide on the outside, then make your move.
-- Power +5, Skill Points +15, Bond +5
+- **Hishiama's Struggles: Problem Children**
+  - “Surround her from all sides and trap her.” → Energy +10, Wit +5, Bond +5
+  - “Lure her out to the track.” → Energy -10, Speed 10, Guts 5, Bond 5
+- **Hishiama's Struggles: Final Stretch**
+  - “Blow the other racers away with sheer force of will.” → Bond +5, Hesitant End Closers
+    - Hint +1: Slightly decrease velocity of end closers late-race.
+  - “Go wide on the outside, then make your move.” → Power +5, Skill Points +15, Bond +5
 
 ### [Digital's Recharge Station] Agnes Digital
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +20, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -731,35 +713,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Happy Otaku Life
-- (1 / 2)
-- Power +10
-- My Love for Umamusume is Eternal!
-- (2 / 2)
-- Speed +5, Power +10, Frenzied End Closers Frenzied End Closers
-- Increase time needed for end closers to calm down when they become rushed. Hint +1
+- **Step 1/2 — Happy Otaku Life:** Power +10
+- **Step 2/2 — My Love for Umamusume is Eternal!:** Speed +5, Power +10, Frenzied End Closers
+  - Hint +1: Increase time needed for end closers to calm down when they become rushed.
+
 **Other Events**
-- Umamusume Deficiency!
-- You should go home and rest.
-- Energy +5, Speed +5, Bond +5
-
-- You can still make it, though!
-- Speed +5, Power +5, Bond +5
-- Heavy Romance
-- You'll catch a cold if you push yourself too hard.
-- Bond +5, Rainy Days ○ Rainy Days ○
-- ○
-- Moderately increase performance in rainy weather. Hint +1
-
-- Talk about being hardcore!
-- Bond +5, Wet Conditions ○ Wet Conditions ○
-- ○
-- Moderately increase performance on good, soft, and heavy ground. Hint +1
+- **Umamusume Deficiency!**
+  - “You should go home and rest.” → Energy +5, Speed +5, Bond +5
+  - “You can still make it, though!” → Speed +5, Power +5, Bond +5
+- **Heavy Romance**
+  - “You'll catch a cold if you push yourself too hard.” → Bond +5, Rainy Days ○
+    - Hint +1: Moderately increase performance in rainy weather.
+  - “Talk about being hardcore!” → Bond +5, Wet Conditions ○
+    - Hint +1: Moderately increase performance on good, soft, and heavy ground.
 
 ### [Trial Initiation] Biwa Hayahide
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30 (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 (+20) — Increases the frequency at which hint events occur
 
 **Hints**
 - Hanshin Racecourse ○: Moderately increase performance at Hanshin Racecourse.
@@ -770,33 +748,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Big Sister's Job
-- (1 / 2)
-- Energy -10, Power +15
-- Training in Theory
-- (2 / 2)
-- On Success: Energy -10, Stamina +5, Power +15, Bond +5, Pressure Pressure
-- Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long) Hint +3
-- On Failure: Energy -20, Power +5
+- **Step 1/2 — A Big Sister's Job:** Energy -10, Power +15
+- **Step 2/2 — Training in Theory:** On Success: Energy -10, Stamina +5, Power +15, Bond +5, Pressure / On Failure: Energy -20, Power +5
+  - Hint +3: Slightly increase velocity and very minimally increase acceleration after passing another runner late-race. (Long)
+
 **Other Events**
-- Last-Minute Modal Theory
-- Train until the last moment.
-- Power +15, Bond +5
-
-- Watch previous races.
-- Speed +10, Skill points +15, Bond +5
-- Step-Out-of-Your-Comfort-Zone Theory
-- Don't think with your head- just act.
-- Energy -10, Bond +5, Inside Scoop Inside Scoop
-- Slightly increase velocity when near the inner rail on the final corner. (Long) Hint +1
-
-- It'll only do you harm if you injure yourself.
-- Energy +10, Stamina +10, Bond +5
+- **Last-Minute Modal Theory**
+  - “Train until the last moment.” → Power +15, Bond +5
+  - “Watch previous races.” → Speed +10, Skill points +15, Bond +5
+- **Step-Out-of-Your-Comfort-Zone Theory**
+  - “Don't think with your head- just act.” → Energy -10, Bond +5, Inside Scoop
+    - Hint +1: Slightly increase velocity when near the inner rail on the final corner. (Long)
+  - “It'll only do you harm if you injure yourself.” → Energy +10, Stamina +10, Bond +5
 
 ### [Pal-Assisted Training] Mihono Bourbon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Mood Effect Amplifies the effect of mood when training together +30, Power Bonus Increases Power gain when training together -, Initial Power Increases initial Power when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Frequency Increases the frequency at which hint events occur (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Frequency: (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Snowy Days ○: Moderately increase performance in snowy weather.
@@ -806,39 +780,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I'm Not a Cyborg
-- (1 / 2)
-- Train your facial muscles to be more expressive!
-- Guts +10, Skill points +15, Bond +5
+- **Step 1/2 — I'm Not a Cyborg**
+  - “Train your facial muscles to be more expressive!” → Guts +10, Skill points +15, Bond +5
+  - “Speak with more inflection!” → Energy -10, Bond -5, Corner Recovery ○
+- **Step 2/2 — New Values Installed:** Energy -10, Power +5, Guts +5, Bond +5, Front Runner Straightaways ○
+  - Hint +1: Slightly increase velocity on a straight. (Front Runner)
 
-- Speak with more inflection!
-- Energy -10, Bond -5, Corner Recovery ○ Corner Recovery ○
-- ○
-- Slightly recover endurance on a corner with efficient turning. Hint +1, Ends chain event
-- New Values Installed
-- (2 / 2)
-- Energy -10, Power +5, Guts +5, Bond +5, Front Runner Straightaways ○ Front Runner Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Front Runner) Hint +1
 **Other Events**
-- Do No Harm
-- They look super heavy... ……
-- Energy -10, Stamina +5, Power +15, Bond +5
-
-- They're kind of noisy for this late night...
-- Energy +10, Wit +5, Bond +5
-- Orders Must Be Followed
-- Get in line right before the store opens.
-- Bond +5, Focus Focus
-- Slightly decrease time lost to slow starts. Hint +1
-
-- Make a break for it during lunch!
-- Speed +10, Skill points +15, Bond +5
+- **Do No Harm**
+  - “They look super heavy... ……” → Energy -10, Stamina +5, Power +15, Bond +5
+  - “They're kind of noisy for this late night...” → Energy +10, Wit +5, Bond +5
+- **Orders Must Be Followed**
+  - “Get in line right before the store opens.” → Bond +5, Focus
+    - Hint +1: Slightly decrease time lost to slow starts.
+  - “Make a break for it during lunch!” → Speed +10, Skill points +15, Bond +5
 
 ### [On and Off the Court] Mejiro Ryan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20 (+15), Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races (+5), Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -848,32 +814,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Where Cool Comes From
-- (1 / 2)
-- Power +5, Skill points +15, Bond +5
-- Carried by Cheers
-- (2 / 2)
-- Power +15, Bond +5, Nimble Navigator Nimble Navigator
-- Slightly increase maneuverability when the way ahead is blocked in the last spurt. Hint +1
+- **Step 1/2 — Where Cool Comes From:** Power +5, Skill points +15, Bond +5
+- **Step 2/2 — Carried by Cheers:** Power +15, Bond +5, Nimble Navigator
+  - Hint +1: Slightly increase maneuverability when the way ahead is blocked in the last spurt.
+
 **Other Events**
-- My Muscles and Me, Onward to Tomorrow!
-- Why stop there? Push yourself to the limit!
-- Energy -10, Power +15, Bond +5
-
-- Congrats on hitting your goal!
-- Power +5, Max Energy +4, Bond +5
-- It's Not Like I Like Romance!
-- It'd be better to pace yourself.
-- Bond +5, Pace Strategy Pace Strategy
-- Slightly recover endurance when passed by another runner mid-race. Hint +1
-
-- You'll exhaust yourself trying to binge it.
-- Energy +30, Bond +5
+- **My Muscles and Me, Onward to Tomorrow!**
+  - “Why stop there? Push yourself to the limit!” → Energy -10, Power +15, Bond +5
+  - “Congrats on hitting your goal!” → Power +5, Max Energy +4, Bond +5
+- **It's Not Like I Like Romance!**
+  - “It'd be better to pace yourself.” → Bond +5, Pace Strategy
+    - Hint +1: Slightly recover endurance when passed by another runner mid-race.
+  - “You'll exhaust yourself trying to binge it.” → Energy +30, Bond +5
 
 ### [Let's Get This Party Lit!] Daitaku Helios
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30 (+15), Power Bonus Increases Power gain when training together -, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -886,44 +849,36 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- #BFF #Party! #bff #Party!
-- (1 / 2)
-- Bet! Woooo!
-- Power +10, Bond +5
+- **Step 1/2 — #BFF #Party! #bff #Party!**
+  - “Bet! Woooo!” → Power +10, Bond +5
+  - “What? Me too?!” → Speed +10, Bond +5
+- **Step 2/2 — #LOL #Party! #Round2 #lol #Party!! #2nd**
+  - “Run away!” → On Success: Speed +10, Power +10, Bond +5, Straight Descent
+    - Hint +3: Slightly improve running on a downhill. (Pace Chaser)
+  - On Failure: Power +10, Bond +5, Straight Descent
+    - Hint +1: Slightly improve running on a downhill. (Pace Chaser)
+  - “Catch it!” → Energy +20, Bond +5, Watchful Eye
+    - Hint +1: Slightly decrease fatigue, then very slightly decrease velocity of runners ahead when positioned toward the back upon approaching mid-race. (Mile)
 
-- What? Me too?!
-- Speed +10, Bond +5
-- #LOL #Party! #Round2 #lol #Party!! #2nd
-- (2 / 2)
-- Run away!
-- On Success: Speed +10, Power +10, Bond +5, Straight Descent Straight Descent
-- Slightly improve running on a downhill. (Pace Chaser) Hint +3
-- On Failure: Power +10, Bond +5, Straight Descent Straight Descent
-- Slightly improve running on a downhill. (Pace Chaser) Hint +1
-
-- Catch it!
-- Energy +20, Bond +5, Watchful Eye Watchful Eye
-- Slightly decrease fatigue, then very slightly decrease velocity of runners ahead when positioned toward the back upon approaching mid-race. (Mile) Hint +1
 **Other Events**
-- Encounter With the Sun ☆ ☆
-- Buckle up and sing with everything you've got.
-- Power +10, Bond +5
-
-- Clap and cheer to set the mood.
-- Bond +5, Chance for Hot Topic
-- Smiles Forever
-- Pull yourself together!
-- Speed +5, Power +10, Bond +5
-
-- Just take a moment to calm down.
-- Bond +5, Long Shot ○ Long Shot ○
-- ○
-- Moderately increase performance when 4th favorite or below. Hint +1
+- **Encounter With the Sun ☆**
+  - “Buckle up and sing with everything you've got.” → Power +10, Bond +5
+  - “Clap and cheer to set the mood.” → Bond +5, Chance for Hot Topic
+- **Smiles Forever**
+  - “Pull yourself together!” → Speed +5, Power +10, Bond +5
+  - “Just take a moment to calm down.” → Bond +5, Long Shot ○
+    - Hint +1: Moderately increase performance when 4th favorite or below.
 
 ### [Lifting Your Spirits] Nishino Flower
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30 (+15), Power Bonus Increases Power gain when training together -, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5 (+5), Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 (+5) — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Hanshin Racecourse ○: Moderately increase performance at Hanshin Racecourse.
@@ -934,36 +889,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I Want You to Rest! ……
-- (1 / 2)
-- Wit +15, Bond +5
-- I Want to Say Thank You! ……
-- (2 / 2)
-- You really worked hard to get that crown to her.
-- Power +5, Bond +5, Straightaway Adept Straightaway Adept
-- Slightly increase velocity on a straight. Hint +1
+- **Step 1/2 — I Want You to Rest! ……:** Wit +15, Bond +5
+- **Step 2/2 — I Want to Say Thank You! ……**
+  - “You really worked hard to get that crown to her.” → Power +5, Bond +5, Straightaway Adept
+    - Hint +1: Slightly increase velocity on a straight.
+  - “A flower crown of gratitude. How sweet.” → Wit +5, Bond +5, Straightaway Acceleration
+    - Hint +1: Slightly increase acceleration on a straight.
 
-- A flower crown of gratitude. How sweet.
-- Wit +5, Bond +5, Straightaway Acceleration Straightaway Acceleration
-- Slightly increase acceleration on a straight. Hint +1
 **Other Events**
-- Warmth, Love, and Lunch
-- The side dishes are so cute.
-- Charming ○ , Bond +5
-
-- It looks very nutritious.
-- Energy +20, Bond +5
-- Let's Bloom Beautifully ♪ ♪
-- Let's share the work and get it done faster!
-- Wit +15, Bond +5
-
-- I'll fill up the watering can for you!
-- Speed +10, Power +5, Bond +5
+- **Warmth, Love, and Lunch**
+  - “The side dishes are so cute.” → Charming ○ , Bond +5
+  - “It looks very nutritious.” → Energy +20, Bond +5
+- **Let's Bloom Beautifully ♪**
+  - “Let's share the work and get it done faster!” → Wit +15, Bond +5
+  - “I'll fill up the watering can for you!” → Speed +10, Power +5, Bond +5
 
 ### [Laughing through the Mud] Inari One
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20 (+10), Stamina Bonus Increases Stamina gain when training together (+1), Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 (+10) — Increases the effectiveness of Friendship Training
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Spring Runner ○: Moderately increase performance in spring.
@@ -977,36 +927,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Don't Give Up!
-- (1 / 2)
-- No data yet! Add it here .
-- A Good Ruckus!
-- (2 / 2)
-- Don't go so fast, everyone... ……
-- Bond +5, Energy -5, Mood +2, Speed +3, Power +3, Guts +3
+- **Step 1/2 — Don't Give Up!:** _no data yet_
+- **Step 2/2 — A Good Ruckus!**
+  - “Don't go so fast, everyone... ……” → Bond +5, Energy -5, Mood +2, Speed +3, Power +3, Guts +3
+  - “Run like you always do!” → Bond +5, Energy -5, Speed +10, Oi Racecourse ○
+    - Hint +3: Moderately increase performance at Oi Racecourse.
 
-- Run like you always do!
-- Bond +5, Energy -5, Speed +10, Oi Racecourse ○ Oi Racecourse ○
-- ○
-- Moderately increase performance at Oi Racecourse. Hint +3
 **Other Events**
-- Let's Tussle! Booyah!
-- Bond +5, Energy -5, Power +15
-
-- Bond +5, Mood +1, Guts +5
-- Mikoshi, Heave Ho!
-- Maybe a bit more vigor in your movements?
-- Bond +5, Skill Points +15
-
-- Maybe you just need an audience?
-- Bond +5, Kyoto Racecourse ○ Kyoto Racecourse ○
-- ○
-- Moderately increase performance at Kyoto Racecourse. Hint +1
+- **Let's Tussle! Booyah!**
+  - Bond +5, Energy -5, Power +15 / Bond +5, Mood +1, Guts +5
+- **Mikoshi, Heave Ho!**
+  - “Maybe a bit more vigor in your movements?” → Bond +5, Skill Points +15
+  - “Maybe you just need an audience?” → Bond +5, Kyoto Racecourse ○
+    - Hint +1: Moderately increase performance at Kyoto Racecourse.
 
 ### [Grma, Ramen ♪] Fine Motion
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough (+15), Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -1017,33 +961,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- What Even Is Normal?
-- (1 / 2)
-- Energy +15, Power +5, Skill points +10
-- Clovers For You Too ♪ ♪
-- (2 / 2)
-- Skill points +20, Steadfast Steadfast
-- Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium) Hints +2
+- **Step 1/2 — What Even Is Normal?:** Energy +15, Power +5, Skill points +10
+- **Step 2/2 — Clovers For You Too ♪:** Skill points +20, Steadfast
+  - Hint +2: Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium)
+
 **Other Events**
-- Wonderful New Shoes
-- Ones that are lightweight so you can run fast in them.
-- Speed +5, Skill points +10, Bond +5
-
-- Ones that are heavy but will be great for training.
-- Energy -10, Stamina +5, Skill points +20, Bond +5
-- Reminiscent Clover
-- The final corner.
-- Bond +5, Corner Adept ○ Corner Adept ○
-- ○
-- Slightly increase velocity on a corner with skilled turning. Hint +1
-
-- The final straight.
-- Guts +15, Bond +5
+- **Wonderful New Shoes**
+  - “Ones that are lightweight so you can run fast in them.” → Speed +5, Skill points +10, Bond +5
+  - “Ones that are heavy but will be great for training.” → Energy -10, Stamina +5, Skill points +20, Bond +5
+- **Reminiscent Clover**
+  - “The final corner.” → Bond +5, Corner Adept ○
+    - Hint +1: Slightly increase velocity on a corner with skilled turning.
+  - “The final straight.” → Guts +15, Bond +5
 
 ### [The Perfect Morning Greeting!] Sakura Bakushin O
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Sprinting Gear: Slightly increase acceleration late-race. (Sprint)
@@ -1057,31 +996,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Bakushin Greeting!
-- (1 / 2)
-- No data yet! Add it here .
-- The Value of Greetings
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Genius Efficiency!
-- Boost your speed by wiping the floor!
-- Speed +15, Bond +5
-
-- Boost your power by tidying the reference room!
-- Speed +5, Power +10, Bond +5
-- Enough to Break into a Dash!
-- Can I borrow it when you're done?
-- Gap Closer Gap Closer
-- Slightly increase spurting ability when positioned toward the back late-race. (Sprint) hint +1, Bond +5
-
-- Could you run for me so I can study your technique?
-- Energy -10, Speed +10, Power +5, Bond +5
+- **Genius Efficiency!**
+  - “Boost your speed by wiping the floor!” → Speed +15, Bond +5
+  - “Boost your power by tidying the reference room!” → Speed +5, Power +10, Bond +5
+- **Enough to Break into a Dash!**
+  - “Can I borrow it when you're done?” → Gap Closer / Slightly increase spurting ability when positioned toward the back late-race. (Sprint) hint +1, Bond +5
+  - “Could you run for me so I can study your technique?” → Energy -10, Speed +10, Power +5, Bond +5
 
 ### [At the End of the Day] Special Week
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +20, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Stamina Increases initial Stamina when beginning a Career playthrough -, Initial Power Increases initial Power when beginning a Career playthrough (+20), Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1094,33 +1029,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Unspoken Feelings
-- (1 / 2)
-- Energy +15, Mood +1, Bond +5
-- A Small Thank You
-- (2 / 2)
-- On Success: Energy +10, Head-On Head-On
-- Slightly increase acceleration when positioned toward the front in the early part of late-race. (Pace Chaser) Hint +3, Bond +5
-- On Failure: Energy +10
+- **Step 1/2 — Unspoken Feelings:** Energy +15, Mood +1, Bond +5
+- **Step 2/2 — A Small Thank You:** On Success: Energy +10, Head-On / Slightly increase acceleration when positioned toward the front in the early part of late-race. (Pace Chaser) Hint +3, Bond +5 / On Failure: Energy +10
+
 **Other Events**
-- Watch Where You're Going!
-- Then you should probably save that energy for the race.
-- Bond +5, Extra Tank Extra Tank
-- Slightly regain the energy to run when close to exhausting strength. (Long) Hint +1
-
-- You'd better hurry, then.
-- Guts +15, Bond +5
-- So Many Options!
-- You should treat your self to something tasty.
-- Energy +10, Mood +1, Bond +5
-
-- Go everywhere that pops unto your head! !
-- Energy -10, Stamina +15, Skill points +15, Bond +5
+- **Watch Where You're Going!**
+  - “Then you should probably save that energy for the race.” → Bond +5, Extra Tank
+    - Hint +1: Slightly regain the energy to run when close to exhausting strength. (Long)
+  - “You'd better hurry, then.” → Guts +15, Bond +5
+- **So Many Options!**
+  - “You should treat your self to something tasty.” → Energy +10, Mood +1, Bond +5
+  - “Go everywhere that pops unto your head! !” → Energy -10, Stamina +15, Skill points +15, Bond +5
 
 ### [Stop, Prez!] Narita Top Road
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +20, Power Bonus Increases Power gain when training together -, Initial Stamina Increases initial Stamina when beginning a Career playthrough -, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -1131,31 +1062,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Don't Go Overboard!
-- (1 / 2)
-- No data yet! Add it here .
-- Going Overboard for You!
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- A Thorough Inspection
-- You could use this opportunity to take a break.
-- Bond +5, Energy +20
-
-- Better hurry up and finish!
-- Bond +5, Energy -10, Speed +25
-- A Diligent Effort
-- Practice makes perfect!
-- Bond +5, Stamina +10
-
-- What if you tried speeding up the song?
-- Bond +5, Up-Tempo Up-Tempo
-- Slightly increase positioning ability when positioned toward the front mid-race. (Medium) Hint +1
+- **A Thorough Inspection**
+  - “You could use this opportunity to take a break.” → Bond +5, Energy +20
+  - “Better hurry up and finish!” → Bond +5, Energy -10, Speed +25
+- **A Diligent Effort**
+  - “Practice makes perfect!” → Bond +5, Stamina +10
+  - “What if you tried speeding up the song?” → Bond +5, Up-Tempo
+    - Hint +1: Slightly increase positioning ability when positioned toward the front mid-race. (Medium)
 
 ### [Ah, Wonderful Saccharinity] Agnes Tachyon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Power Bonus Increases Power gain when training together (+1), Initial Speed Increases initial Speed when beginning a Career playthrough +25, Initial Power Increases initial Power when beginning a Career playthrough +25, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15 (+15), Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Power Bonus: (+1) — Increases Power gain when training together
+- Initial Speed: +25 — Increases initial Speed when beginning a Career playthrough
+- Initial Power: +25 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +15 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -1170,30 +1098,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- The Correlation between Sleep and Efficiency
-- You're just going to power through it?
-- Power +5, Wit +5, Bond +5
-
-- Sounds like you're writing a pretty complicated thesis.
-- Wit +10, Bond +5
-- Happenstance Introduced Through Intervention
-- A running style.
-- Bond +5, Late Surger Savvy ○ Late Surger Savvy ○
-- ○
-- Moderately increase ability to get into a good position. (Late Surger) Hint +1
-
-- Decision-making.
-- Wit +10, Bond +5
+- **The Correlation between Sleep and Efficiency**
+  - “You're just going to power through it?” → Power +5, Wit +5, Bond +5
+  - “Sounds like you're writing a pretty complicated thesis.” → Wit +10, Bond +5
+- **Happenstance Introduced Through Intervention**
+  - “A running style.” → Bond +5, Late Surger Savvy ○
+    - Hint +1: Moderately increase ability to get into a good position. (Late Surger)
+  - “Decision-making.” → Wit +10, Bond +5
 
 ### [Try a Sweet Swim Ring] Hishi Akebono
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40, Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Sunny Days ○: Moderately increase performance in sunny weather.
@@ -1206,29 +1131,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Eat Up ♪ ☆♪
-- Why don't you take a quick break?
-- Energy +10, Bond +5
-
-- You must be putting a lot of strength into that. ……
-- Energy -5, Power +15, Bond +5
-- Leave It to Me ♪ ☆♪
-- Can you move the leveler out of the way?
-- Stamina +10, Bond +5
-
-- Help level the track by running around it!
-- Energy -15, Bond +5, Sprinting Gear Sprinting Gear
-- Slightly increase acceleration late-race. (Sprint) Hint +2
+- **Eat Up ♪ ☆♪**
+  - “Why don't you take a quick break?” → Energy +10, Bond +5
+  - “You must be putting a lot of strength into that. ……” → Energy -5, Power +15, Bond +5
+- **Leave It to Me ♪ ☆♪**
+  - “Can you move the leveler out of the way?” → Stamina +10, Bond +5
+  - “Help level the track by running around it!” → Energy -15, Bond +5, Sprinting Gear
+    - Hint +2: Slightly increase acceleration late-race. (Sprint)
 
 ### [The Splendid Aftertaste of Good Tea] Grass Wonder
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +30, Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Stamina Increases initial Stamina when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +1 (+5), Fan Bonus Increases fan gain from races +5, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Stamina: +15 — Increases initial Stamina when beginning a Career playthrough
+- Race Bonus: +1 (+5) — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Position Pilfer: Slightly increase velocity when positioned midpack or further back mid-race. (Late Surger)
@@ -1240,31 +1163,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Library Vexation
-- For now, why not focus on the book you did manage to find? 1
-- Wit +10, Bond +5
-
-- Why don't we look for them together?
-- Guts +5, Wit +5, Bond +5
-- A Friendly Daytime Discussion
-- You could throw them off by messing with their pace.
-- Bond +5, Frenzied Pace Chasers Frenzied Pace Chasers
-- Increase time needed for pace chasers to calm down when they become rushed. Hint +1
-
-- Try sticking close to them to make sure they can't run way they want.
-- Bond +5, Target in Sight ○ Target in Sight ○
-- ○
-- Moderately increase performance when the favorite is using the same strategy. Hint +1
+- **Library Vexation**
+  - “For now, why not focus on the book you did manage to find? 1” → Wit +10, Bond +5
+  - “Why don't we look for them together?” → Guts +5, Wit +5, Bond +5
+- **A Friendly Daytime Discussion**
+  - “You could throw them off by messing with their pace.” → Bond +5, Frenzied Pace Chasers
+    - Hint +1: Increase time needed for pace chasers to calm down when they become rushed.
+  - “Try sticking close to them to make sure they can't run way they want.” → Bond +5, Target in Sight ○
+    - Hint +1: Moderately increase performance when the favorite is using the same strategy.
 
 ### [『最強』は作れる！] Royce and Royce
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Power Bonus Increases Power gain when training together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Focus: Slightly decrease time lost to slow starts.
@@ -1277,18 +1196,21 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [道端フィードバック] Air Shakur
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Stamina Bonus Increases Stamina gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +10, Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Straightaway Acceleration: Slightly increase acceleration on a straight.
@@ -1300,31 +1222,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- well-behaved
-- (1 / 2)
-- No data yet! Add it here .
-- ill-behaved
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- //Verification Required //
-- Maybe you should redo the formulas?
-- Energy +10, Guts +5, Bond +5
-
-- But good things come to those who persist.
-- Energy -10, Stamina +5, Guts +10, Bond +5
-- //Absolute Desire //
-- Why don't you get them in a way that suits you?
-- Bond +5, Pace Strategy Pace Strategy
-- Slightly recover endurance when passed by another runner mid-race. Hint +1
-
-- You should get them yourself.
-- Guts +5, Max Energy +4, Bond +4
+- **//Verification Required //**
+  - “Maybe you should redo the formulas?” → Energy +10, Guts +5, Bond +5
+  - “But good things come to those who persist.” → Energy -10, Stamina +5, Guts +10, Bond +5
+- **//Absolute Desire //**
+  - “Why don't you get them in a way that suits you?” → Bond +5, Pace Strategy
+    - Hint +1: Slightly recover endurance when passed by another runner mid-race.
+  - “You should get them yourself.” → Guts +5, Max Energy +4, Bond +4
 
 ### [お任せ！オートクチュール] North Flight
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +30, Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Standard Distance ○: Moderately increase performance over standard distances (multiples of 400m).
@@ -1338,18 +1257,24 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Daring Music] Daring Heart
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20, Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -1363,22 +1288,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Spirit!
-- (1 / 2)
-- No data yet! Add it here .
-- Enjoy!
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Queen's Heart
-- No data yet! Add it here .
-- Away in the Mountains
-- No data yet! Add it here .
+- **Queen's Heart**
+  - _no data yet_
+- **Away in the Mountains**
+  - _no data yet_
 
 ### [続け故郷へ、けっぱり道！] Hokko Tarumae
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Power Increases initial Power when beginning a Career playthrough +10, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +1, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Power: +10 — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +1 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Shrewd Step: Slightly increase ability to navigate smoothly. (Pace Chaser)
@@ -1392,18 +1323,25 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [温もりの一皿、召し上がれ♪] Super Creek
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +10, Stamina Bonus Increases Stamina gain when training together (+1), Power Bonus Increases Power gain when training together +1, Initial Stamina Increases initial Stamina when beginning a Career playthrough +10 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50, Skill Point Bonus Increases skill point gain when training together +1
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +10 — Amplifies the effect of mood when training together
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Power Bonus: +1 — Increases Power gain when training together
+- Initial Stamina: +10 (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: +1 — Increases skill point gain when training together
 
 **Hints**
 - Corner Recovery ○: Slightly recover endurance on a corner with efficient turning.
@@ -1416,31 +1354,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Leave it to Me to Help Out! ♪ ♪
-- Could you give me some pointers on training?
-- Energy +15, Bond +5
-
-- Would you like to train with us?
-- Stamina +10, Bond +5
-- Leave it to Me to Be Considerate! ♪ ♪
-- Cheer her on.
-- Bond +5, Deep Breaths Deep Breaths
-- Take a breather and slightly decrease fatigue mid-race. (Long) Hint +1
-
-- Get her a drink.
-- Energy +10, Stamina +5, Bond +5
+- **Leave it to Me to Help Out! ♪**
+  - “Could you give me some pointers on training?” → Energy +15, Bond +5
+  - “Would you like to train with us?” → Stamina +10, Bond +5
+- **Leave it to Me to Be Considerate! ♪**
+  - “Cheer her on.” → Bond +5, Deep Breaths
+    - Hint +1: Take a breather and slightly decrease fatigue mid-race. (Long)
+  - “Get her a drink.” → Energy +10, Stamina +5, Bond +5
 
 ## Stamina
 
 ### [Cute + Cute = ?] Mayano Top Gun
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20 (+10), Mood Effect Amplifies the effect of mood when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Stamina Increases initial Stamina when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20 (+20), Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 (+10) — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Stamina: +25 — Increases initial Stamina when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +20 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -1452,32 +1387,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Still Taxiing?
-- (1 / 2)
-- Skill Points +30, Bond +5
-- Take Off toward Trendy ♪ ♪
-- (2 / 2)
-- Stamina +10, Skill points +15, Bond +5, Focus Focus
-- Slightly decrease time lost to slow starts. Hint +1
+- **Step 1/2 — Still Taxiing?:** Skill Points +30, Bond +5
+- **Step 2/2 — Take Off toward Trendy ♪:** Stamina +10, Skill points +15, Bond +5, Focus
+  - Hint +1: Slightly decrease time lost to slow starts.
+
 **Other Events**
-- Snack Advice for Mayano!
-- You gotta go with the new flavor.
-- Stamina +5, Guts +5, Bond +5
-
-- Go for the tried-and-true chocolate! 1
-- Stamina +10, Bond +5
-- Fashion Advice for Mayano!
-- The trendy fit!
-- Bond +5, Straightaway Adept Straightaway Adept
-- Slightly increase velocity on a straight. Hint +1
-
-- The comfy Fit!
-- Stamina +10, Bond +5
+- **Snack Advice for Mayano!**
+  - “You gotta go with the new flavor.” → Stamina +5, Guts +5, Bond +5
+  - “Go for the tried-and-true chocolate! 1” → Stamina +10, Bond +5
+- **Fashion Advice for Mayano!**
+  - “The trendy fit!” → Bond +5, Straightaway Adept
+    - Hint +1: Slightly increase velocity on a straight.
+  - “The comfy Fit!” → Stamina +10, Bond +5
 
 ### [My Solo Drawn to Raindrop Drums] Manhattan Cafe
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Stamina Increases initial Stamina when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Stamina: +15 — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -1489,33 +1422,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Invitation on a Rainy Day
-- (1 / 2)
-- Energy +10, Skill Points +15
-- Invitation on a Stormy Day
-- (2 / 2)
-- Stamina +15, Bond +5, Studious Studious
-- Slightly widen field of view with heightened observation mid-race. (Late Surger) Hint +1
+- **Step 1/2 — Invitation on a Rainy Day:** Energy +10, Skill Points +15
+- **Step 2/2 — Invitation on a Stormy Day:** Stamina +15, Bond +5, Studious
+  - Hint +1: Slightly widen field of view with heightened observation mid-race. (Late Surger)
+
 **Other Events**
-- Solo Nighttime Run
-- Do you always run so much? ……
-- Stamina +10, Bond +5
-
-- You sure are focused. ……
-- Energy +10, Stamina +5, Bond +5
-- A Taste of Silence
-- Were you trying to relax?
-- Stamina +15, Skill Points +15, Bond +6
-
-- You're not scared being in the dark all alone?
-- Bond +5, Non-Standard Distance ○ Non-Standard Distance ○
-- ○
-- Moderately increase performance over non-standard distances (non-multiples of 400m). Hint +1
+- **Solo Nighttime Run**
+  - “Do you always run so much? ……” → Stamina +10, Bond +5
+  - “You sure are focused. ……” → Energy +10, Stamina +5, Bond +5
+- **A Taste of Silence**
+  - “Were you trying to relax?” → Stamina +15, Skill Points +15, Bond +6
+  - “You're not scared being in the dark all alone?” → Bond +5, Non-Standard Distance ○
+    - Hint +1: Moderately increase performance over non-standard distances (non-multiples of 400m).
 
 ### [The Perfect Book for You] Zenno Rob Roy
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +30, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Stamina Increases initial Stamina when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Stamina: (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -1529,37 +1458,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Bookworm and the Magical Girl
-- (1 / 2)
-- Deepen your knowledge with more reading.
-- Stamina +5, Wit +5, Bond +5
+- **Step 1/2 — The Bookworm and the Magical Girl**
+  - “Deepen your knowledge with more reading.” → Stamina +5, Wit +5, Bond +5
+  - “Start off with strength training!” → Energy +20, Power +10, Bond +5, End of chain event
+- **Step 2/2 — Someday, I'll Be the Main Character:** Stamina +10, Wit +10, Sharp Gaze
+  - Hint +1: Slightly startle other runners late-race. (Late Surger)
 
-- Start off with strength training!
-- Energy +20, Power +10, Bond +5, End of chain event
-- Someday, I'll Be the Main Character
-- (2 / 2)
-- Stamina +10, Wit +10, Sharp Gaze Sharp Gaze
-- Slightly startle other runners late-race. (Late Surger) Hint +1
 **Other Events**
-- Book-lover Quirks
-- That final car chase was amazing.
-- Speed +5, Wit +5, Bond +5
-
-- The visuals were gorgeous.
-- Energy +10, Power +5, Bond +5
-- A Tale Entrusted
-- Why not ask the student library assistant for help?
-- Stamina +10, Wit +10, Bond +5
-
-- What kind of story is it?
-- Bond +5, Medium Straightaways ○ Medium Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Medium) Hint +1
+- **Book-lover Quirks**
+  - “That final car chase was amazing.” → Speed +5, Wit +5, Bond +5
+  - “The visuals were gorgeous.” → Energy +10, Power +5, Bond +5
+- **A Tale Entrusted**
+  - “Why not ask the student library assistant for help?” → Stamina +10, Wit +10, Bond +5
+  - “What kind of story is it?” → Bond +5, Medium Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Medium)
 
 ### [Turf as Nails] Tosen Jordan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20 (+15), Stamina Bonus Increases Stamina gain when training together -, Initial Stamina Increases initial Stamina when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Initial Stamina: +15 — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -1571,43 +1493,36 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Nail Artist on the Turf
-- (1 / 2)
-- Now that's innovative!
-- On Success: Skill points +40, Bond +5
-- On Failure: Mood -1, Skill points +10
+- **Step 1/2 — Nail Artist on the Turf**
+  - “Now that's innovative!” → On Success: Skill points +40, Bond +5
+  - On Failure: Mood -1, Skill points +10
+  - “That doesn't sound like a good idea… ……” → Stamina +10, Bond +5
+- **Step 2/2 — Not Just for Show**
+  - “I guess they're both stylish and handy.” → On Success: Energy +10, Bond +5, Ramp Up
+    - Hint +3: Slightly increase velocity when passing another runner mid-race.
+    - Hint +1: Slightly increase velocity when passing another runner mid-race.
+  - “I think it's cool how serious you are about races.” → Energy -5, Stamina +20, Bond +5
 
-- That doesn't sound like a good idea… ……
-- Stamina +10, Bond +5
-- Not Just for Show
-- (2 / 2)
-- I guess they're both stylish and handy.
-- On Success: Energy +10, Bond +5, Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +3
-- On Failure: Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +1
-
-- I think it's cool how serious you are about races.
-- Energy -5, Stamina +20, Bond +5
 **Other Events**
-- Doomscrolling the Time Away
-- Why don't you run a lap, and I'll time it for you? 1
-- Bond +5, Mood +1, Speed +5
-
-- How about you jog somewhere different than usual?
-- Bond +5, Stamina +10
-- Sponsored Posts Can Be Low-Key Sus
-- You can just use it on your days off.
-- Bond +5, Energy +10, Mood +1
-
-- You can use it for something else.
-- Bond +5, Lucky Seven Lucky Seven
-- Moderately good things may happen when in bracket 7. Hint +1
+- **Doomscrolling the Time Away**
+  - “Why don't you run a lap, and I'll time it for you? 1” → Bond +5, Mood +1, Speed +5
+  - “How about you jog somewhere different than usual?” → Bond +5, Stamina +10
+- **Sponsored Posts Can Be Low-Key Sus**
+  - “You can just use it on your days off.” → Bond +5, Energy +10, Mood +1
+  - “You can use it for something else.” → Bond +5, Lucky Seven
+    - Hint +1: Moderately good things may happen when in bracket 7.
 
 ### [救いはあるよっ♪] Mejiro Palmer
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20, Stamina Bonus Increases Stamina gain when training together (+1), Guts Bonus Increases Guts gain when training together -, Initial Stamina Increases initial Stamina when beginning a Career playthrough +20, Initial Guts Increases initial Guts when beginning a Career playthrough +15 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Initial Stamina: +20 — Increases initial Stamina when beginning a Career playthrough
+- Initial Guts: +15 (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -1621,30 +1536,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- An Inescapable Choice?
-- Go with the tenacious wedge!
-- Energy -15, Guts +20, Bond +5
-
-- Uber-powerful driver all the way!
-- Power +5, Skill points +15, Bond +5
-- Optimistic Escapism
-- Thanks for the tip, but I think I'll keep trying a bit longer.
-- Guts +15, Bond +5
-
-- All right! I'll give this mental escape thing a try!
-- Bond +5, Wet Conditions ○ Wet Conditions ○
-- ○
-- Moderately increase performance on good, soft, and heavy ground. Hint +1
+- **An Inescapable Choice?**
+  - “Go with the tenacious wedge!” → Energy -15, Guts +20, Bond +5
+  - “Uber-powerful driver all the way!” → Power +5, Skill points +15, Bond +5
+- **Optimistic Escapism**
+  - “Thanks for the tip, but I think I'll keep trying a bit longer.” → Guts +15, Bond +5
+  - “All right! I'll give this mental escape thing a try!” → Bond +5, Wet Conditions ○
+    - Hint +1: Moderately increase performance on good, soft, and heavy ground.
 
 ### [Hot Hearts and Cool Drinks] Mejiro Ryan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +40, Stamina Bonus Increases Stamina gain when training together -, Guts Bonus Increases Guts gain when training together (+1), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Guts Bonus: (+1) — Increases Guts gain when training together
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -1653,37 +1564,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- All Roads Lead to Gains!
-- (1 / 2)
-- Stamina +10, Bond +5
-- Success Starts with Reps!
-- (2 / 2)
-- You're a good presenter.
-- Bond +5, Energy +25
+- **Step 1/2 — All Roads Lead to Gains!:** Stamina +10, Bond +5
+- **Step 2/2 — Success Starts with Reps!**
+  - “You're a good presenter.” → Bond +5, Energy +25
+  - “There's nothing like strength training!” → Stamina +10, Power +5, Late Surger Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Late Surger)
 
-- There's nothing like strength training!
-- Stamina +10, Power +5, Late Surger Straightaways ○ Late Surger Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Late Surger) Hint +1
 **Other Events**
-- My Muscles and Me, Onward to Tomorrow!
-- Why stop there? Push yourself to the limit!
-- Energy -10, Power +15, Bond +5
-
-- Congrats on hitting your goal!
-- Power +5, Max Energy +4, Bond +5
-- It's Not Like I Like Romance!
-- It'd be better to pace yourself.
-- Bond +5, Pace Strategy Pace Strategy
-- Slightly recover endurance when passed by another runner mid-race. Hint +1
-
-- You'll exhaust yourself trying to binge it.
-- Energy +30, Bond +5
+- **My Muscles and Me, Onward to Tomorrow!**
+  - “Why stop there? Push yourself to the limit!” → Energy -10, Power +15, Bond +5
+  - “Congrats on hitting your goal!” → Power +5, Max Energy +4, Bond +5
+- **It's Not Like I Like Romance!**
+  - “It'd be better to pace yourself.” → Bond +5, Pace Strategy
+    - Hint +1: Slightly recover endurance when passed by another runner mid-race.
+  - “You'll exhaust yourself trying to binge it.” → Energy +30, Bond +5
 
 ### [Step! Smile! Wink!] Tokai Teio
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Stamina Increases initial Stamina when beginning a Career playthrough (+20), Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Stamina: (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Prudent Positioning: Increase navigation early-race.
@@ -1695,38 +1601,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Selfish (?) Desire
-- (1 / 2)
-- Max Energy +4, Skill Points +10, Bond +5
-- Spreading the Love of Dance!
-- (2 / 2)
-- Why not find someone else to play the game?
-- Bond +5, Skill Points +15, Medium Corners ○ Medium Corners ○
-- ○
-- Slightly increase velocity on a corner. (Medium) Hint +1
+- **Step 1/2 — A Selfish (?) Desire:** Max Energy +4, Skill Points +10, Bond +5
+- **Step 2/2 — Spreading the Love of Dance!**
+  - “Why not find someone else to play the game?” → Bond +5, Skill Points +15, Medium Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Medium)
+  - “What if you dance with the audience?” → Bond +5, Energy +20
 
-- What if you dance with the audience?
-- Bond +5, Energy +20
 **Other Events**
-- My Way, Or...
-- You should run the way that best suits you! 1
-- Mood +1, Skill points +15, Bond +5
-
-- But think of how good it'll feel to sprint after holding back.
-- Guts +15, Bond +5
-- My Weapon
-- Yeah, people who can do it all are so cool!
-- Mood +1, Guts +10, Bond +5
-
-- I think you have plenty of weapons up your sleeve already.
-- Bond +5, Pace Chaser Straightaways ○ Pace Chaser Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Pace Chaser) Hint +1
+- **My Way, Or...**
+  - “You should run the way that best suits you! 1” → Mood +1, Skill points +15, Bond +5
+  - “But think of how good it'll feel to sprint after holding back.” → Guts +15, Bond +5
+- **My Weapon**
+  - “Yeah, people who can do it all are so cool!” → Mood +1, Guts +10, Bond +5
+  - “I think you have plenty of weapons up your sleeve already.” → Bond +5, Pace Chaser Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Pace Chaser)
 
 ### [Mighty Fotografia] T.M. Opera O
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Stamina Bonus Increases Stamina gain when training together (+1), Initial Stamina Increases initial Stamina when beginning a Career playthrough +15, Initial Guts Increases initial Guts when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Initial Stamina: +15 — Increases initial Stamina when beginning a Career playthrough
+- Initial Guts: +15 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -1741,30 +1639,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Etude to Victory
-- I think just running a victory lap would be better… ……
-- Mood -1, Speed +5, Skill points +30, Bond +5
-
-- It was pretty good, yeah.
-- Power +5, Skill points +15, Bond +5
-- Beyond Our Limited Time
-- It's better to perform with everything you've got within the time you're allotted. …
-- Energy +10, Skill points +15, Bond +5
-
-- It's important to think outside the box.
-- Bond +5, Non-Standard Distance ○ Non-Standard Distance ○
-- ○
-- Moderately increase performance over non-standard distances (non-multiples of 400m). Hint +1
+- **Etude to Victory**
+  - “I think just running a victory lap would be better… ……” → Mood -1, Speed +5, Skill points +30, Bond +5
+  - “It was pretty good, yeah.” → Power +5, Skill points +15, Bond +5
+- **Beyond Our Limited Time**
+  - “It's better to perform with everything you've got within the time you're allotted. …” → Energy +10, Skill points +15, Bond +5
+  - “It's important to think outside the box.” → Bond +5, Non-Standard Distance ○
+    - Hint +1: Moderately increase performance over non-standard distances (non-multiples of 400m).
 
 ### [Your Laugh After School] Symboli Rudolf
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Stamina Bonus Increases Stamina gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Stamina Increases initial Stamina when beginning a Career playthrough +25, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Stamina: +25 — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Subdued Front Runners: Slightly increase fatigue for front runners early-race.
@@ -1778,31 +1674,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- “”
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- The Emperor's Encouragement “”
-- We're focusing on moderate speed training
-- Speed +10, Bond +5
-
-- We're training hard to prepare for the worst case scenario.
-- Energy -10, Skill points +30, Bond +5
-- The Student Council President's Thoughtfulness
-- Thanks! Now no storm will rain on our parade.
-- Bond +5, Rainy Days ○ Rainy Days ○
-- ○
-- Moderately increase performance in rainy weather. Hint +1
-
-- It must be tough always looking out for the school.
-- Stamina +15, Bond +5
+- **The Emperor's Encouragement “”**
+  - “We're focusing on moderate speed training” → Speed +10, Bond +5
+  - “We're training hard to prepare for the worst case scenario.” → Energy -10, Skill points +30, Bond +5
+- **The Student Council President's Thoughtfulness**
+  - “Thanks! Now no storm will rain on our parade.” → Bond +5, Rainy Days ○
+    - Hint +1: Moderately increase performance in rainy weather.
+  - “It must be tough always looking out for the school.” → Stamina +15, Bond +5
 
 ### [Golshi's House Specialty] Gold Ship
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5 (+5), Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 (+5) — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Standing By: Slightly decrease fatigue mid-race. (End Closer)
@@ -1832,30 +1723,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Adventurer Gold Ship
-- E-endurance, I guess? ……
-- Stamina +15, Bond +5
-
-- Persistence or something? ……
-- Guts +10, Skill points +15, Bond +5
-- Revive the Brand! Golshi's Yakisoba
-- Why don't you try improving the flavor of your yakisoba? ……
-- Mood +1, Stamina +5, Bond +5
-
-- Why don't you try selling grilled akashiyaki dumplings? ……?
-- Bond +5, Hanshin Racecourse ○ Hanshin Racecourse ○
-- ○
-- Moderately increase performance at Hanshin Racecourse. Hint +1
+- **Adventurer Gold Ship**
+  - “E-endurance, I guess? ……” → Stamina +15, Bond +5
+  - “Persistence or something? ……” → Guts +10, Skill points +15, Bond +5
+- **Revive the Brand! Golshi's Yakisoba**
+  - “Why don't you try improving the flavor of your yakisoba? ……” → Mood +1, Stamina +5, Bond +5
+  - “Why don't you try selling grilled akashiyaki dumplings? ……?” → Bond +5, Hanshin Racecourse ○
+    - Hint +1: Moderately increase performance at Hanshin Racecourse.
 
 ### [お助け大将と小さな魔女] Kitasan Black
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Guts Increases initial Guts when beginning a Career playthrough +15 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Guts: +15 (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Corner Adept ○: Slightly increase velocity on a corner with skilled turning.
@@ -1868,28 +1757,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Ah, Friendship
-- You have a good set of pipes!
-- Mood +1, Bond +5, Power +5
-
-- Now you've just gotta get ready for the test!
-- Energy +10, Bond +5
-- Ah, Home Sweet Home
-- Some good quality shoes would work.
-- Speed +5, Power +10, Bond +5
-
-- A training guide would be good.
-- Bond +5, Acquired " Practice Perfect ○ " Condition
+- **Ah, Friendship**
+  - “You have a good set of pipes!” → Mood +1, Bond +5, Power +5
+  - “Now you've just gotta get ready for the test!” → Energy +10, Bond +5
+- **Ah, Home Sweet Home**
+  - “Some good quality shoes would work.” → Speed +5, Power +10, Bond +5
+  - “A training guide would be good.” → Bond +5, Acquired " Practice Perfect ○ " Condition
 
 ### [とびっきりの金メダル] Nice Nature
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +40, Stamina Bonus Increases Stamina gain when training together (+1), Guts Bonus Increases Guts gain when training together -, Initial Guts Increases initial Guts when beginning a Career playthrough +20, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35 (+20)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Initial Guts: +20 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -1901,31 +1789,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ♪
-- (1 / 2)
-- No data yet! Add it here .
-- ♪
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Not like Meow
-- Tell her it's important to unwind.
-- Energy +20, Bond +5
-
-- Teach her how to take advantage of a cafe visit.
-- Energy +10, Wit +5, Bond +5
-- (Delicious) Burden
-- Eat it with grated daikon radish to make things easier!
-- Bond +5, Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +1
-
-- You should hold a tempura party at the dorm!
-- Mood +1, Max Energy +4, Bond +5
+- **Not like Meow**
+  - “Tell her it's important to unwind.” → Energy +20, Bond +5
+  - “Teach her how to take advantage of a cafe visit.” → Energy +10, Wit +5, Bond +5
+- **(Delicious) Burden**
+  - “Eat it with grated daikon radish to make things easier!” → Bond +5, Ramp Up
+    - Hint +1: Slightly increase velocity when passing another runner mid-race.
+  - “You should hold a tempura party at the dorm!” → Mood +1, Max Energy +4, Bond +5
 
 ### [護るべきは無垢の瞳] Yaeno Muteki
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Stamina Bonus Increases Stamina gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +10, Initial Stamina Increases initial Stamina when beginning a Career playthrough (+20), Initial Guts Increases initial Guts when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Stamina: (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Pace Strategy: Slightly recover endurance when passed by another runner mid-race.
@@ -1938,30 +1823,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Firm and Plain, Yet Close to Virtue
-- You should focus on how quickly you can punch.
-- Speed +10, Bond +5
-
-- You should focus on how powerfully you can punch.
-- Mood +1, Power +5, Bond +5
-- The Will to Protect! ……
-- You looked like you were undergoing harsh training just now.
-- Stamina +10, Power +10, Bond +5
-
-- So you also have a silly side, eh?
-- Bond +5, Medium Corners ○ Medium Corners ○
-- ○
-- Slightly increase velocity on a corner. (Medium) Hint +1
+- **Firm and Plain, Yet Close to Virtue**
+  - “You should focus on how quickly you can punch.” → Speed +10, Bond +5
+  - “You should focus on how powerfully you can punch.” → Mood +1, Power +5, Bond +5
+- **The Will to Protect! ……**
+  - “You looked like you were undergoing harsh training just now.” → Stamina +10, Power +10, Bond +5
+  - “So you also have a silly side, eh?” → Bond +5, Medium Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Medium)
 
 ### [月下麗人] Mejiro Ramonu
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +10, Initial Stamina Increases initial Stamina when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Stamina: (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -1974,18 +1857,25 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [一輪ずつ、喜びを束ねて] Curren Bouquetd'or
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together -, Stamina Bonus Increases Stamina gain when training together (+1), Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Stamina Increases initial Stamina when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Stamina: (+20) — Increases initial Stamina when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Corner Recovery ○: Slightly recover endurance on a corner with efficient turning.
@@ -2000,18 +1890,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [私たちのアイディアノート] Satono Diamond
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +20, Stamina Bonus Increases Stamina gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +1, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +1, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20 (+20), Skill Point Bonus Increases skill point gain when training together +1
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Stamina Bonus: (+1) — Increases Stamina gain when training together
+- Training Effectiveness: +1 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +1 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 (+20) — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: +1 — Increases skill point gain when training together
 
 **Hints**
 - Winter Runner ○: Moderately increase performance in winter.
@@ -2026,31 +1924,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- I Love New Things!
-- Are you really gonna drink it out of a teacup?
-- Guts +10, Bond +5
-
-- Is this your first time trying melon soda?
-- Energy -10, Stamina +20, Bond +5
-- I Love Complicated Things!
-- Well, give it a shot!
-- Stamina +5, Guts +10, Bond +5
-
-- Let's see how fast it really is first. 1
-- Bond +5, Hesitant Front Runners Hesitant Front Runners
-- Slightly decrease velocity of front runners late-race. Hint +1
+- **I Love New Things!**
+  - “Are you really gonna drink it out of a teacup?” → Guts +10, Bond +5
+  - “Is this your first time trying melon soda?” → Energy -10, Stamina +20, Bond +5
+- **I Love Complicated Things!**
+  - “Well, give it a shot!” → Stamina +5, Guts +10, Bond +5
+  - “Let's see how fast it really is first. 1” → Bond +5, Hesitant Front Runners
+    - Hint +1: Slightly decrease velocity of front runners late-race.
 
 ## Guts
 
 ### [Nothing Escapes the Vice Prez] Air Groove
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20 (+15), Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5 (+5), Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 (+5) — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
 
 **Hints**
 - Pace Strategy: Slightly recover endurance when passed by another runner mid-race.
@@ -2062,36 +1959,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- As Dignified as a Moth Orchid
-- (1 / 2)
-- Power +5, Guts +5
-- Bloom by the Oak
-- (2 / 2)
-- On Success: Energy -10, Stamina +5, Power +5, Guts +10, Bond +5, Straightaway Acceleration Straightaway Acceleration
-- Slightly increase acceleration on a straight. Hint +3
-- On Failure: Energy -20, Power +5, Guts +5, Straightaway Acceleration Straightaway Acceleration
-- Slightly increase acceleration on a straight. Hint +1
-- On Failure: Energy -20, Power +5, Bond +5, Straightaway Acceleration Straightaway Acceleration
-- Slightly increase acceleration on a straight. Hint +1
+- **Step 1/2 — As Dignified as a Moth Orchid:** Power +5, Guts +5
+- **Step 2/2 — Bloom by the Oak:** On Success: Energy -10, Stamina +5, Power +5, Guts +10, Bond +5, Straightaway Acceleration / On Failure: Energy -20, Power +5, Guts +5, Straightaway Acceleration / On Failure: Energy -20, Power +5, Bond +5, Straightaway Acceleration
+  - Hint +3: Slightly increase acceleration on a straight.
+  - Hint +1: Slightly increase acceleration on a straight.
+  - Hint +1: Slightly increase acceleration on a straight.
+
 **Other Events**
-- Strict but Gracious
-- Are you always so tough on them?
-- Bond +5, Go with the Flow Go with the Flow
-- Moderately increase navigation late-race. Hint +1
-
-- You're always watching them very closely, aren't you?
-- Energy +10, Wit +10, Bond +5
-- Agile but Strong
-- Will you be all right carrying all that by yourself? 1
-- Power +15, Bond +5
-
-- You'd better hurry if you want to get through all of that. ……
-- Speed +10, Stamina +5, Bond +5
+- **Strict but Gracious**
+  - “Are you always so tough on them?” → Bond +5, Go with the Flow
+    - Hint +1: Moderately increase navigation late-race.
+  - “You're always watching them very closely, aren't you?” → Energy +10, Wit +10, Bond +5
+- **Agile but Strong**
+  - “Will you be all right carrying all that by yourself? 1” → Power +15, Bond +5
+  - “You'd better hurry if you want to get through all of that. ……” → Speed +10, Stamina +5, Bond +5
 
 ### [City Girl 101] Yukino Bijin
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Power Bonus Increases Power gain when training together -, Guts Bonus Increases Guts gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Guts Bonus: (+1) — Increases Guts gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -2101,32 +1994,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Gotta Practice Order'n!
-- (1 / 2)
-- Mood +1, Power +5, Bond +5
-- A Natural City Girl
-- (2 / 2)
-- Mood +1, Wit +25
+- **Step 1/2 — Gotta Practice Order'n!:** Mood +1, Power +5, Bond +5
+- **Step 2/2 — A Natural City Girl:** Mood +1, Wit +25
+
 **Other Events**
-- For a Spiffy Concert
-- Try adding some flashy moves.
-- Guts +10, Bond +5
-
-- Try including some acrobatic choreography.
-- Energy -10, Guts +15, Bond +5
-- Aiming for the City Spots “”
-- Let me take a look at that map… If you want to go here… ……
-- Energy -10, Mood +1, Guts +10, Bond +5
-
-- You should use a GPS app.
-- Bond +5, Corner Acceleration ○ Corner Acceleration ○
-- ○
-- Slightly increase acceleration on a corner with masterful turning. Hint +1
+- **For a Spiffy Concert**
+  - “Try adding some flashy moves.” → Guts +10, Bond +5
+  - “Try including some acrobatic choreography.” → Energy -10, Guts +15, Bond +5
+- **Aiming for the City Spots “”**
+  - “Let me take a look at that map… If you want to go here… ……” → Energy -10, Mood +1, Guts +10, Bond +5
+  - “You should use a GPS app.” → Bond +5, Corner Acceleration ○
+    - Hint +1: Slightly increase acceleration on a corner with masterful turning.
 
 ### [Fighting for Fortune] Meisho Doto
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Guts Increases initial Guts when beginning a Career playthrough +25, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Frequency Increases the frequency at which hint events occur (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Guts: +25 — Increases initial Guts when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Frequency: (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -2139,38 +2028,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- What I'm Destined For... ……
-- (1 / 2)
-- I think you should just wait here.
-- Energy +10, Guts +5, Bond +5
+- **Step 1/2 — What I'm Destined For... ……**
+  - “I think you should just wait here.” → Energy +10, Guts +5, Bond +5
+  - “Grab her attention with a big yell!” → On Success: Mood +1, Guts +5, Wit +5, Max Energy +4, Bond +5
+  - On Failure: Energy -10, Wit +5
+- **Step 2/2 — What I'm Looking For... ……:** Energy +10, Mood +1, Skill points +25, Prepared to Pass
+  - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
 
-- Grab her attention with a big yell!
-- On Success: Mood +1, Guts +5, Wit +5, Max Energy +4, Bond +5
-- On Failure: Energy -10, Wit +5
-- What I'm Looking For... ……
-- (2 / 2)
-- Energy +10, Mood +1, Skill points +25, Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
 **Other Events**
-- I... Will Change ……
-- You should try copying her unwavering confidence.
-- Energy +10, Mood +1, Bond +5
-
-- You should try copying her boundless energy.
-- Guts +15, Bond +5
-- Please... Buy Some Carrots ……
-- Let's see if Tracen is interested in taking them.
-- Energy +10, Wit +5, Bond +5
-
-- You'll have more luck hawking carrots where it's more crowded.
-- Bond +5, Pace Chaser Corners ○ Pace Chaser Corners ○
-- ○
-- Slightly increase velocity on a corner. (Pace Chaser) Hint +1
+- **I... Will Change ……**
+  - “You should try copying her unwavering confidence.” → Energy +10, Mood +1, Bond +5
+  - “You should try copying her boundless energy.” → Guts +15, Bond +5
+- **Please... Buy Some Carrots ……**
+  - “Let's see if Tracen is interested in taking them.” → Energy +10, Wit +5, Bond +5
+  - “You'll have more luck hawking carrots where it's more crowded.” → Bond +5, Pace Chaser Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Pace Chaser)
 
 ### [It's Just Water] Nice Nature
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20 (+15), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Kokura Racecourse ○: Moderately increase performance at Kokura Racecourse.
@@ -2184,32 +2067,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- A Light Workout (for a Hardworker)
-- (1 / 2)
-- Stamina +5, Guts +5
-- Visible Improvement (But So What?!)
-- (2 / 2)
-- Stamina +5, Guts +10, Extra Tank Extra Tank
-- Slightly regain the energy to run when close to exhausting strength. (Long) Hint +1
+- **Step 1/2 — A Light Workout (for a Hardworker):** Stamina +5, Guts +5
+- **Step 2/2 — Visible Improvement (But So What?!):** Stamina +5, Guts +10, Extra Tank
+  - Hint +1: Slightly regain the energy to run when close to exhausting strength. (Long)
+
 **Other Events**
-- Not like Meow
-- Tell her it's important to unwind.
-- Energy +20, Bond +5
-
-- Teach her how to take advantage of a cafe visit.
-- Energy +10, Wit +5, Bond +5
-- (Delicious) Burden
-- Eat it with grated daikon radish to make things easier!
-- Bond +5, Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +1
-
-- You should hold a tempura party at the dorm!
-- Mood +1, Max Energy +4, Bond +5
+- **Not like Meow**
+  - “Tell her it's important to unwind.” → Energy +20, Bond +5
+  - “Teach her how to take advantage of a cafe visit.” → Energy +10, Wit +5, Bond +5
+- **(Delicious) Burden**
+  - “Eat it with grated daikon radish to make things easier!” → Bond +5, Ramp Up
+    - Hint +1: Slightly increase velocity when passing another runner mid-race.
+  - “You should hold a tempura party at the dorm!” → Mood +1, Max Energy +4, Bond +5
 
 ### [Now Dat's What I Call Grilled Squid!] Tamamo Cross
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +10, Initial Power Increases initial Power when beginning a Career playthrough +15, Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type -, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Power: +15 — Increases initial Power when beginning a Career playthrough
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Rosy Outlook: Slightly decrease fatigue when positioned toward the front mid-race. (Medium)
@@ -2222,43 +2103,33 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Rhapsody of Kindness
-- (1 / 2)
-- You never hesitate to help others, huh?
-- Bond +5, Mood +1, Speed +5
+- **Step 1/2 — Rhapsody of Kindness**
+  - “You never hesitate to help others, huh?” → Bond +5, Mood +1, Speed +5
+  - “You're very kind.” → Bond +5, Energy +10, Stamina +5
+- **Step 2/2 — The Path of Profit and People**
+  - “You're making me want some.” → Bond +5, Speed +10, Skill Points +10, Pace Chaser Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Pace Chaser)
+  - “Keep up the good work!” → Bond +5, Stamina +10, Skill Points +10, Late Surger Corners ○
+    - Hint +1: Slightly increase velocity on a corner. (Late Surger)
 
-- You're very kind.
-- Bond +5, Energy +10, Stamina +5
-- The Path of Profit and People
-- (2 / 2)
-- You're making me want some.
-- Bond +5, Speed +10, Skill Points +10, Pace Chaser Corners ○ Pace Chaser Corners ○
-- ○
-- Slightly increase velocity on a corner. (Pace Chaser) Hint +1
-
-- Keep up the good work!
-- Bond +5, Stamina +10, Skill Points +10, Late Surger Corners ○ Late Surger Corners ○
-- ○
-- Slightly increase velocity on a corner. (Late Surger) Hint +1
 **Other Events**
-- Tamamo's School Tour
-- Oh? Are you talking about the library?
-- Wit +10, Bond +5
-
-- Oh? Are you talking about the gym?
-- Stamina +5, Guts +5, Bond +5
-- A Battle I Can't Lose!
-- Get a grasp on the crowd's movements!
-- Bond +5, Calm in a Crowd Calm in a Crowd
-- Slightly recover endurance when surrounded mid-race. Hint +1
-
-- Observe your rivals closely!
-- Stamina +5, Wit +5, Bond +5
+- **Tamamo's School Tour**
+  - “Oh? Are you talking about the library?” → Wit +10, Bond +5
+  - “Oh? Are you talking about the gym?” → Stamina +5, Guts +5, Bond +5
+- **A Battle I Can't Lose!**
+  - “Get a grasp on the crowd's movements!” → Bond +5, Calm in a Crowd
+    - Hint +1: Slightly recover endurance when surrounded mid-race.
+  - “Observe your rivals closely!” → Stamina +5, Wit +5, Bond +5
 
 ### [The World's My Oyster] Seeking the Pearl
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Mood Effect Amplifies the effect of mood when training together +30, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20 (+15), Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Firm Conditions ○: Moderately increase performance on firm ground.
@@ -2270,40 +2141,34 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- No More Words ♪ Use Body Language! ♪
-- (1 / 2)
-- Sing in a loud voice.
-- Mood +1, Bond +5, Lucky Seven Lucky Seven
-- Moderately good things may happen when in bracket 7. Hint +1
+- **Step 1/2 — No More Words ♪ Use Body Language! ♪**
+  - “Sing in a loud voice.” → Mood +1, Bond +5, Lucky Seven
+    - Hint +1: Moderately good things may happen when in bracket 7.
+  - “Dance the stress away.” → Power +10, Guts +10, Bond +5
+  - “Strike a magnificent pose.” → Energy +30
+- **Step 2/2 — Never Give Up! Endless Possibilities!:** Power +5, Guts +5, Shifting Gears
+  - Hint +1: Slightly increase passing ability when positioned toward the front mid-race. (Mile)
 
-- Dance the stress away.
-- Power +10, Guts +10, Bond +5
-
-- Strike a magnificent pose.
-- Energy +30
-- Never Give Up! Endless Possibilities!
-- (2 / 2)
-- Power +5, Guts +5, Shifting Gears Shifting Gears
-- Slightly increase passing ability when positioned toward the front mid-race. (Mile) Hint +1
 **Other Events**
-- Full-Power Passion!
-- I'm not sure that's how things work… ……
-- Energy +10, Mood +1, Bond +5
-
-- Well, get on with the show, then!
-- Power +5, Guts +5, Bond +5
-- Full-Power Thinking!
-- Won't it be hard to implement? ……
-- Wit +20, Bond +5
-
-- That's such a cool idea!
-- Energy -10, Bond +5, Uma Stan Uma Stan
-- Slightly increase velocity when close to many runners. Hint +3
+- **Full-Power Passion!**
+  - “I'm not sure that's how things work… ……” → Energy +10, Mood +1, Bond +5
+  - “Well, get on with the show, then!” → Power +5, Guts +5, Bond +5
+- **Full-Power Thinking!**
+  - “Won't it be hard to implement? ……” → Wit +20, Bond +5
+  - “That's such a cool idea!” → Energy -10, Bond +5, Uma Stan
+    - Hint +3: Slightly increase velocity when close to many runners.
 
 ### [The Brightest Star Shines On] Sirius Symboli
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Speed Increases initial Speed when beginning a Career playthrough (+20), Initial Guts Increases initial Guts when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Speed: (+20) — Increases initial Speed when beginning a Career playthrough
+- Initial Guts: +15 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2313,37 +2178,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Don of the Delinquents
-- (1 / 2)
-- Guts +15, Bond +5
-- Oil and Water
-- (2 / 2)
-- I agree with Rudolf's idea of prioritizing the collective.
-- On Success: Speed +15, Power +15, Bond +5
-- On Failure: Energy -5, Speed +10, Bond -5
+- **Step 1/2 — Don of the Delinquents:** Guts +15, Bond +5
+- **Step 2/2 — Oil and Water**
+  - “I agree with Rudolf's idea of prioritizing the collective.” → On Success: Speed +15, Power +15, Bond +5
+  - On Failure: Energy -5, Speed +10, Bond -5
+  - “I agree with Sirius's idea of prioritizing individual runners.” → Skill points +20, Bond +5, Shrewd Step
+    - Hint +1: Slightly increase ability to navigate smoothly. (Pace Chaser)
 
-- I agree with Sirius's idea of prioritizing individual runners.
-- Skill points +20, Bond +5, Shrewd Step Shrewd Step
-- Slightly increase ability to navigate smoothly. (Pace Chaser) Hint +1
 **Other Events**
-- Want Me to Teach You?
-- I'll try to do it myself.
-- Energy -5, Stamina +20, Bond +5
-
-- I need your help.
-- Wit +10, Bond +5
-- Want Me to Help You?
-- Please give them back!
-- Wit +5, Bond +5, Disorient Disorient
-- Slightly narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser) Hint +1
-
-- I'm not going to beg for them.
-- Skill points +15, Bond +5
+- **Want Me to Teach You?**
+  - “I'll try to do it myself.” → Energy -5, Stamina +20, Bond +5
+  - “I need your help.” → Wit +10, Bond +5
+- **Want Me to Help You?**
+  - “Please give them back!” → Wit +5, Bond +5, Disorient
+    - Hint +1: Slightly narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser)
+  - “I'm not going to beg for them.” → Skill points +15, Bond +5
 
 ### [Aim for the Brightest] Admire Vega
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together (+1), Power Bonus Increases Power gain when training together -, Initial Guts Increases initial Guts when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races +5 (+5), Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 (+5) — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Masterful Gambit: Slightly increase velocity during the last spurt when positioned toward the back late-race. (End Closer)
@@ -2354,31 +2214,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- The Joy of Being Together
-- (1 / 2)
-- No data yet! Add it here .
-- Toward the Brightest Star
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Awkward Triangulum
-- Let's work together!
-- Power +15, Bond +5
-
-- Let's try getting him to calm down.
-- Energy +10, Bond +5
-- Lonesome Cepheus
-- I'll tidy up a bit of her equipment as well!
-- Bond +5, Subdued Pace Chasers Subdued Pace Chasers
-- Slightly increase fatigue for pace chasers early-race. Hint +1
-
-- ...I should respect her wishes. ……
-- Wit +10, Bond +5
+- **Awkward Triangulum**
+  - “Let's work together!” → Power +15, Bond +5
+  - “Let's try getting him to calm down.” → Energy +10, Bond +5
+- **Lonesome Cepheus**
+  - “I'll tidy up a bit of her equipment as well!” → Bond +5, Subdued Pace Chasers
+    - Hint +1: Slightly increase fatigue for pace chasers early-race.
+  - “...I should respect her wishes. ……” → Wit +10, Bond +5
 
 ### [Almost... an Umadol?! ♡] Smart Falcon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Guts Increases initial Guts when beginning a Career playthrough +25, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Guts: +25 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2391,37 +2247,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- What Is an Umadol? What is
-- (1 / 2)
-- The best thing is how cute they are!
-- Bond +5, Leader's Pride Leader's Pride
-- Slightly increase ability to pass or challenge another runner early-race or mid-race. (Front Runner) Hint +1
+- **Step 1/2 — What Is an Umadol? What is**
+  - “The best thing is how cute they are!” → Bond +5, Leader's Pride
+    - Hint +1: Slightly increase ability to pass or challenge another runner early-race or mid-race. (Front Runner)
+  - “The best thing is how powerful they are!” → Bond +5, Energy +10, Power +5
+- **Step 2/2 — This Is an Umadol! This is:** Skill Points +25, Top Pick / Slightly increase velocity when engaged in a challenge mid-race. (Dirt) Hint +1, Bond +5
 
-- The best thing is how powerful they are!
-- Bond +5, Energy +10, Power +5
-- This Is an Umadol! This is
-- (2 / 2)
-- Skill Points +25, Top Pick Top Pick
-- Slightly increase velocity when engaged in a challenge mid-race. (Dirt) Hint +1, Bond +5
 **Other Events**
-- Chants Are the Life of a Concert ☆ ☆
-- Faaaal-cooooo!
-- Stamina +5, Guts +10, Bond +5
-
-- I-I can't do this... ……
-- Wit +15, Bond +5
-- If I'm Cute, Come to My Show! ☆ ☆
-- Run away.
-- Energy -10, Power +10, Bond +5, Final Push Final Push
-- Slightly increase ability to keep the lead on the final corner. (Front Runner) Hint +1
-
-- Download it.
-- Energy +10, Wit +5, Bond +5
+- **Chants Are the Life of a Concert ☆**
+  - “Faaaal-cooooo!” → Stamina +5, Guts +10, Bond +5
+  - “I-I can't do this... ……” → Wit +15, Bond +5
+- **If I'm Cute, Come to My Show! ☆**
+  - “Run away.” → Energy -10, Power +10, Bond +5, Final Push
+    - Hint +1: Slightly increase ability to keep the lead on the final corner. (Front Runner)
+  - “Download it.” → Energy +10, Wit +5, Bond +5
 
 ### [I Love You... Dear Food] Oguri Cap
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Speed Bonus Increases Speed gain when training together -, Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +1 (+5), Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Race Bonus: +1 (+5) — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Corner Acceleration ○: Slightly increase acceleration on a corner with masterful turning.
@@ -2435,38 +2286,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- "I Just Can't Quit Food" —Oguri Cap ――
-- (1 / 2)
-- Don't overthink it. Just eat.
-- Bond +15
+- **Step 1/2 — "I Just Can't Quit Food" —Oguri Cap ――**
+  - “Don't overthink it. Just eat.” → Bond +15
+  - “I bet there's a reason you eat so much.” → Bond +5, Guts +15
+- **Step 2/2 — "Happiness? Don't Mind If I Do" —Oguri Cap ――:** Power +7, Guts +7, Skill Points +10, Wet Conditions ○ / Moderately increase performance on good, soft, and heavy ground. Hint +1, Bond +5
 
-- I bet there's a reason you eat so much.
-- Bond +5, Guts +15
-- "Happiness? Don't Mind If I Do" —Oguri Cap ――
-- (2 / 2)
-- Power +7, Guts +7, Skill Points +10, Wet Conditions ○ Wet Conditions ○
-- ○
-- Moderately increase performance on good, soft, and heavy ground. Hint +1, Bond +5
 **Other Events**
-- How Should I Respond? ……
-- Why don't you show them how you train?
-- Energy +5, Power +5, Bond +5
-
-- Think of it as a chance to work on your weaknesses.
-- Energy -10, Guts +15, Bond +5
-- Conquering the Crowds ……
-- Fight your way through the crowd.
-- Power +5, Skill points +15, Bond +5
-
-- Wait for the right moment to slip through.
-- Bond +5, Nakayama Racecourse ○ Nakayama Racecourse ○
-- ○
-- Moderately increase performance at Nakayama Racecourse. Hint +1
+- **How Should I Respond? ……**
+  - “Why don't you show them how you train?” → Energy +5, Power +5, Bond +5
+  - “Think of it as a chance to work on your weaknesses.” → Energy -10, Guts +15, Bond +5
+- **Conquering the Crowds ……**
+  - “Fight your way through the crowd.” → Power +5, Skill points +15, Bond +5
+  - “Wait for the right moment to slip through.” → Bond +5, Nakayama Racecourse ○
+    - Hint +1: Moderately increase performance at Nakayama Racecourse.
 
 ### [The 3rd MIRACLE] K.S.Miracle
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25 (+10), Guts Bonus Increases Guts gain when training together -, Initial Guts Increases initial Guts when beginning a Career playthrough +20, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50, Skill Point Bonus Increases skill point gain when training together (+1)
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 (+10) — Increases the effectiveness of Friendship Training
+- Initial Guts: +20 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
 
 **Hints**
 - Updrafters: Slightly increase passing ability when positioned toward the back late-race. (Mile)
@@ -2478,22 +2319,24 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Across Still Waters
-- (1 / 2)
-- No data yet! Add it here .
-- On Thin Ice
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Spreading Kindness
-- No data yet! Add it here .
-- Come Rain or River
-- No data yet! Add it here .
+- **Spreading Kindness**
+  - _no data yet_
+- **Come Rain or River**
+  - _no data yet_
 
 ### [Go, Go! Tsuyoshi!] Tsurumaru Tsuyoshi
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Speed Bonus Increases Speed gain when training together -, Guts Bonus Increases Guts gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Guts Bonus: (+1) — Increases Guts gain when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Long Shot ○: Moderately increase performance when 4th favorite or below.
@@ -2504,22 +2347,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- An Optimistic Outlook!
-- (1 / 2)
-- No data yet! Add it here .
-- A Strength That's All My Own!
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Preparing to the MAX!
-- No data yet! Add it here .
-- Helping Out to the MAX!
-- No data yet! Add it here .
+- **Preparing to the MAX!**
+  - _no data yet_
+- **Helping Out to the MAX!**
+  - _no data yet_
 
 ### [Gentle and Sleek] Mejiro Dober
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +30, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Guts Increases initial Guts when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Guts: +15 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -2531,29 +2378,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Give It a Try
-- Train your body to gain confidence!
-- Energy +15, Bond +5
-
-- Practice smiling in front of a mirror!
-- Mood +1, Skill points +15, Bond +5
-- Hope She'll Like It... ……
-- Why not get something else?
-- Skill points +45, Bond +5
-
-- Steel yourself and plow on through!
-- Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Give It a Try**
+  - “Train your body to gain confidence!” → Energy +15, Bond +5
+  - “Practice smiling in front of a mirror!” → Mood +1, Skill points +15, Bond +5
+- **Hope She'll Like It... ……**
+  - “Why not get something else?” → Skill points +45, Bond +5
+  - “Steel yourself and plow on through!” → Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [Gods of Luck Are Early to Rise] Copano Rickey
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Guts Increases initial Guts when beginning a Career playthrough +20, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Frequency Increases the frequency at which hint events occur (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +50
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Guts: +20 — Increases initial Guts when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Frequency: (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Oi Racecourse ○: Moderately increase performance at Oi Racecourse.
@@ -2567,21 +2413,24 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ――
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- ☆
-- No data yet! Add it here .
-- ☆
-- No data yet! Add it here .
+- **☆**
+  - _no data yet_
+- **☆**
+  - _no data yet_
 
 ### [長姉は大変？] Verxina
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +30, Speed Bonus Increases Speed gain when training together (+1), Initial Guts Increases initial Guts when beginning a Career playthrough -, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -2592,18 +2441,23 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Cheers!] Tap Dance City
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +30, Guts Bonus Increases Guts gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Tokyo Racecourse ○: Moderately increase performance at Tokyo Racecourse.
@@ -2617,22 +2471,25 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Sloppy Captain
-- (1 / 2)
-- No data yet! Add it here .
-- Sloppy Captain?
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Precious Venue
-- No data yet! Add it here .
-- Treasure
-- No data yet! Add it here .
+- **Precious Venue**
+  - _no data yet_
+- **Treasure**
+  - _no data yet_
 
 ### [みんなにグッドマーベラス☆] Marvelous Sunday
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Speed Increases initial Speed when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Speed: (+20) — Increases initial Speed when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Right-Handed ○: Moderately increase performance on right-handed tracks.
@@ -2645,32 +2502,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ☆
-- (1 / 2)
-- No data yet! Add it here .
-- ☆
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Marvelous, No Question ☆ ☆
-- I feel really tired lately.
-- Energy +10, Speed +5, Bond +5
-
-- I want to be more motivated.
-- Mood +1, Speed +5, Bond +5
-- How To Be More Marvelous ☆ ☆
-- Throw everything you've got at it? …
-- Energy +10, Mood +1, Bond +5
-
-- Maybe chill out a little and let things happen as they will? …
-- Bond +5, Hanshin Racecourse ○ Hanshin Racecourse ○
-- ○
-- Moderately increase performance at Hanshin Racecourse. Hint +1
+- **Marvelous, No Question ☆**
+  - “I feel really tired lately.” → Energy +10, Speed +5, Bond +5
+  - “I want to be more motivated.” → Mood +1, Speed +5, Bond +5
+- **How To Be More Marvelous ☆**
+  - “Throw everything you've got at it? …” → Energy +10, Mood +1, Bond +5
+  - “Maybe chill out a little and let things happen as they will? …” → Bond +5, Hanshin Racecourse ○
+    - Hint +1: Moderately increase performance at Hanshin Racecourse.
 
 ### [メロンなささやき] Mejiro McQueen
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40, Speed Bonus Increases Speed gain when training together (+1), Power Bonus Increases Power gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Pace Strategy: Slightly recover endurance when passed by another runner mid-race.
@@ -2684,29 +2536,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- Energy +10, Guts +10 ,Bond +5
-- (2 / 2)
-- No data yet! Add it here .
+- **Step 1/2:** Energy +10, Guts +10 ,Bond +5
+- **Step 2/2:** _no data yet_
+
 **Other Events**
-- To Maintain My Weight
-- She should do her best to stick to her diet until the race is over.
-- Energy -10, Stamina +15, Bond +5
-
-- She should be fine if she runs more to burn off what she eats.
-- Max Energy +4, Stamina +5, Bond +5
-- To Reach the Greatest Heights
-- Train your stamina and guts.
-- Stamina +5, Guts +5, Bond +5
-
-- Focus on your start.
-- Bond +5, Early Lead Early Lead
-- Slightly increase ability to go to the front early-race. (Front Runner) Hint +1
+- **To Maintain My Weight**
+  - “She should do her best to stick to her diet until the race is over.” → Energy -10, Stamina +15, Bond +5
+  - “She should be fine if she runs more to burn off what she eats.” → Max Energy +4, Stamina +5, Bond +5
+- **To Reach the Greatest Heights**
+  - “Train your stamina and guts.” → Stamina +5, Guts +5, Bond +5
+  - “Focus on your start.” → Bond +5, Early Lead
+    - Hint +1: Slightly increase ability to go to the front early-race. (Front Runner)
 
 ### [私たちのプリンセス流儀] Kawakami Princess
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30, Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Power Increases initial Power when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Power: (+20) — Increases initial Power when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Corner Acceleration ○: Slightly increase acceleration on a corner with masterful turning.
@@ -2719,29 +2572,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Princess Punch!
-- Wint it up and go for a knockout punch! 1
-- Guts +10, Bond +5
-
-- How about imagining it's someone you want to hit?
-- Mood +1, Bond +5
-- Princess Escape!
-- Change who's it!
-- Energy +10, Bond +5
-
-- Why not change the rules a little?
-- Bond +5, Steadfast Steadfast
-- Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium) hint +1
+- **Princess Punch!**
+  - “Wint it up and go for a knockout punch! 1” → Guts +10, Bond +5
+  - “How about imagining it's someone you want to hit?” → Mood +1, Bond +5
+- **Princess Escape!**
+  - “Change who's it!” → Energy +10, Bond +5
+  - “Why not change the rules a little?” → Bond +5, Steadfast
+    - Hint +1: Slightly increase velocity and very minimally increase acceleration when pressured on the final corner or later. (Medium)
 
 ### [Fervent Yearning] Red Desire
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Speed Bonus Increases Speed gain when training together +1, Power Bonus Increases Power gain when training together +1, Guts Bonus Increases Guts gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Guts Increases initial Guts when beginning a Career playthrough +10, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +1, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Speed Bonus: +1 — Increases Speed gain when training together
+- Power Bonus: +1 — Increases Power gain when training together
+- Guts Bonus: (+1) — Increases Guts gain when training together
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Guts: +10 — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +1 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Slick Surge: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
@@ -2755,18 +2611,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [Sushi-Go-Round!] Taiki Shuttle
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30 (+15), Power Bonus Increases Power gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +1, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +1, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together +1
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Training Effectiveness: +1 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +1 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: +1 — Increases skill point gain when training together
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -2780,30 +2644,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- with
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Yes! Let's Hug ☆ ☆
-- Speed.
-- Speed +10, Bond +5
-
-- Power.
-- Speed +5, Power +5, Bond +5
-- Yeehaw! Party Tonight ☆ ☆
-- Take the long way and run as fast as you can!
-- Energy -10, Speed +5, Power +10, Bond +5
-
-- Imagine yourself parting the crowd as you run!
-- Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
+- **Yes! Let's Hug ☆**
+  - “Speed.” → Speed +10, Bond +5
+  - “Power.” → Speed +5, Power +5, Bond +5
+- **Yeehaw! Party Tonight ☆**
+  - “Take the long way and run as fast as you can!” → Energy -10, Speed +5, Power +10, Bond +5
+  - “Imagine yourself parting the crowd as you run!” → Prepared to Pass
+    - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
 
 ### [清く、やわらかな夜] Zenno Rob Roy
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +20, Power Bonus Increases Power gain when training together (+1), Guts Bonus Increases Guts gain when training together +1, Training Effectiveness Increases the effectiveness of training performed together +1, Initial Guts Increases initial Guts when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +5
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Power Bonus: (+1) — Increases Power gain when training together
+- Guts Bonus: +1 — Increases Guts gain when training together
+- Training Effectiveness: +1 — Increases the effectiveness of training performed together
+- Initial Guts: (+20) — Increases initial Guts when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +5 — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Pace Strategy: Slightly recover endurance when passed by another runner mid-race.
@@ -2817,32 +2681,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Book-lover Quirks
-- That final car chase was amazing.
-- Speed +5, Wit +5, Bond +5
-
-- The visuals were gorgeous.
-- Energy +10, Power +5, Bond +5
-- A Tale Entrusted
-- Why not ask the student library assistant for help?
-- Stamina +10, Wit +10, Bond +5
-
-- What kind of story is it?
-- Bond +5, Medium Straightaways ○ Medium Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Medium) Hint +1
+- **Book-lover Quirks**
+  - “That final car chase was amazing.” → Speed +5, Wit +5, Bond +5
+  - “The visuals were gorgeous.” → Energy +10, Power +5, Bond +5
+- **A Tale Entrusted**
+  - “Why not ask the student library assistant for help?” → Stamina +10, Wit +10, Bond +5
+  - “What kind of story is it?” → Bond +5, Medium Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Medium)
 
 ## Wit
 
 ### [Well, Look Who's Home] Fuji Kiseki
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40, Wit Bonus Increases Wit gain when training together -, Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Summer Runner ○: Moderately increase performance in summer.
@@ -2853,32 +2716,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Abracadabra
-- (1 / 2)
-- Wit +10
-- Out of This World
-- (2 / 2)
-- Wit +10, Skill points +15, Flustered End Closers Flustered End Closers
-- Slightly increase fatigue for end closers mid-race. Hint +1
+- **Step 1/2 — Abracadabra:** Wit +10
+- **Step 2/2 — Out of This World:** Wit +10, Skill points +15, Flustered End Closers
+  - Hint +1: Slightly increase fatigue for end closers mid-race.
+
 **Other Events**
-- Sleight of Hand
-- You mean the pocket you slipped a coi— ――
-- Wit +5, Skill points +15, Bond +5
-
-- Wow! A coin! What impressive magical powers! ……
-- Power +5, Skill points +15, Bond +5
-- Misdirection
-- The trick to rounding the last corner.
-- Bond +5, Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
-
-- Running techniques.
-- Skill points +30, Bond +5
+- **Sleight of Hand**
+  - “You mean the pocket you slipped a coi— ――” → Wit +5, Skill points +15, Bond +5
+  - “Wow! A coin! What impressive magical powers! ……” → Power +5, Skill points +15, Bond +5
+- **Misdirection**
+  - “The trick to rounding the last corner.” → Bond +5, Prepared to Pass
+    - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
+  - “Running techniques.” → Skill points +30, Bond +5
 
 ### [Nothing Hard Work Can't Solve!] Daiwa Scarlet
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Mood Effect Amplifies the effect of mood when training together +30 (+15), Wit Bonus Increases Wit gain when training together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20 (+15), Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Competitive Spirit ○: Moderately increase performance when many other runners are using the same strategy.
@@ -2890,32 +2750,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I Won't Lose to Anyone!
-- (1 / 2)
-- Energy +15, Wit +5, Bond +5
-- I Can Clean Better than Anyone!
-- (2 / 2)
-- Wit +10, Tactical Tweak Tactical Tweak
-- Slightly increase acceleration when positioned toward the back mid-race. (Pace Chaser) Hint +1
+- **Step 1/2 — I Won't Lose to Anyone!:** Energy +15, Wit +5, Bond +5
+- **Step 2/2 — I Can Clean Better than Anyone!:** Wit +10, Tactical Tweak
+  - Hint +1: Slightly increase acceleration when positioned toward the back mid-race. (Pace Chaser)
+
 **Other Events**
-- I'm Going to Win Tomorrow!
-- Do you always come this early?
-- Wit +10, Bond +5
-
-- Second is still pretty good. 2
-- Mood +1, Skill Points +15, Bond +5
-- This Is Nothing!
-- Want me to do it for you?
-- Bond +5, Stamina to Spare Stamina to Spare
-- Slightly decrease fatigue upon approaching mid-race. (Pace Chaser) Hint +1
-
-- You should go to the infirmary, just in case!
-- Energy +20, Mood +1, Bond +5
+- **I'm Going to Win Tomorrow!**
+  - “Do you always come this early?” → Wit +10, Bond +5
+  - “Second is still pretty good. 2” → Mood +1, Skill Points +15, Bond +5
+- **This Is Nothing!**
+  - “Want me to do it for you?” → Bond +5, Stamina to Spare
+    - Hint +1: Slightly decrease fatigue upon approaching mid-race. (Pace Chaser)
+  - “You should go to the infirmary, just in case!” → Energy +20, Mood +1, Bond +5
 
 ### [Experimental Studies on Subject A] Agnes Tachyon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30, Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Wit Increases initial Wit when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Frequency Increases the frequency at which hint events occur (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 — Amplifies the effect of mood when training together
+- Initial Wit: +15 — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Hint Frequency: (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Up-Tempo: Slightly increase positioning ability when positioned toward the front mid-race. (Medium)
@@ -2925,33 +2785,30 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Report: Potential of Specialized Training Report
-- (1 / 2)
-- Wit +5, Skill points +15
-- Report: N/A (On Break) Report
-- (2 / 2)
-- Wit +10, Skill points +15, Subdued Front Runners Subdued Front Runners
-- Slightly increase fatigue for front runners early-race. Hint +1
+- **Step 1/2 — Report: Potential of Specialized Training Report:** Wit +5, Skill points +15
+- **Step 2/2 — Report: N/A (On Break) Report:** Wit +10, Skill points +15, Subdued Front Runners
+  - Hint +1: Slightly increase fatigue for front runners early-race.
+
 **Other Events**
-- The Correlation between Sleep and Efficiency
-- You're just going to power through it?
-- Power +5, Wit +5, Bond +5
-
-- Sounds like you're writing a pretty complicated thesis.
-- Wit +10, Bond +5
-- Happenstance Introduced Through Intervention
-- A running style.
-- Bond +5, Late Surger Savvy ○ Late Surger Savvy ○
-- ○
-- Moderately increase ability to get into a good position. (Late Surger) Hint +1
-
-- Decision-making.
-- Wit +10, Bond +5
+- **The Correlation between Sleep and Efficiency**
+  - “You're just going to power through it?” → Power +5, Wit +5, Bond +5
+  - “Sounds like you're writing a pretty complicated thesis.” → Wit +10, Bond +5
+- **Happenstance Introduced Through Intervention**
+  - “A running style.” → Bond +5, Late Surger Savvy ○
+    - Hint +1: Moderately increase ability to get into a good position. (Late Surger)
+  - “Decision-making.” → Wit +10, Bond +5
 
 ### [A Marvelous ☆ Plan] Marvelous Sunday
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30 (+15), Wit Bonus Increases Wit gain when training together -, Initial Wit Increases initial Wit when beginning a Career playthrough +15 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Initial Wit: +15 (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -2962,32 +2819,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Marvelous World Plan ☆ ☆
-- (1 / 2)
-- Guts +5, Wit +5
-- Marvelously Marvelous ☆ ☆
-- (2 / 2)
-- Guts +15, Wit +15
+- **Step 1/2 — Marvelous World Plan ☆:** Guts +5, Wit +5
+- **Step 2/2 — Marvelously Marvelous ☆:** Guts +15, Wit +15
+
 **Other Events**
-- Marvelous, No Question ☆ ☆
-- I feel really tired lately.
-- Energy +10, Speed +5, Bond +5
-
-- I want to be more motivated.
-- Mood +1, Speed +5, Bond +5
-- How To Be More Marvelous ☆ ☆
-- Throw everything you've got at it? …
-- Energy +10, Mood +1, Bond +5
-
-- Maybe chill out a little and let things happen as they will? …
-- Bond +5, Hanshin Racecourse ○ Hanshin Racecourse ○
-- ○
-- Moderately increase performance at Hanshin Racecourse. Hint +1
+- **Marvelous, No Question ☆**
+  - “I feel really tired lately.” → Energy +10, Speed +5, Bond +5
+  - “I want to be more motivated.” → Mood +1, Speed +5, Bond +5
+- **How To Be More Marvelous ☆**
+  - “Throw everything you've got at it? …” → Energy +10, Mood +1, Bond +5
+  - “Maybe chill out a little and let things happen as they will? …” → Bond +5, Hanshin Racecourse ○
+    - Hint +1: Moderately increase performance at Hanshin Racecourse.
 
 ### [Fate's Forecast] Matikanefukukitaru
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +40, Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20 (+15), Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +20 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Hakodate Racecourse ○: Moderately increase performance at Hakodate Racecourse.
@@ -3000,38 +2853,34 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Spirits' Lost and Found
-- (1 / 2)
-- Energy +5, Mood +1, Skill points +15, Bond +5
-- Guidance and Friends
-- (2 / 2)
-- Do you trust your friends?
-- Skill points +45, Bond +5
+- **Step 1/2 — Spirits' Lost and Found:** Energy +5, Mood +1, Skill points +15, Bond +5
+- **Step 2/2 — Guidance and Friends**
+  - “Do you trust your friends?” → Skill points +45, Bond +5
+  - “Maybe you should go for a run to clear your mind. 1” → Bond +5 On Success: Energy +10, Mood +1, Right-Handed ○
+  - Moderately increase performance on right-handed tracks. Hint +3 On Failure: Energy -20, Right-Handed ○
+    - Hint +1: Moderately increase performance on right-handed tracks.
 
-- Maybe you should go for a run to clear your mind. 1
-- Bond +5 On Success: Energy +10, Mood +1, Right-Handed ○ Right-Handed ○
-- ○
-- Moderately increase performance on right-handed tracks. Hint +3 On Failure: Energy -20, Right-Handed ○ Right-Handed ○
-- ○
-- Moderately increase performance on right-handed tracks. Hint +1
 **Other Events**
-- Maximum Spirituality
-- It's probably just from you rushing everything... ……
-- Wit +5, Skill points +15, Bond +5
-
-- Why don't you try being a little more enthusiastic?
-- Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
-- When Piety and Kindness Intersect ――
-- I guess I have a few favors to I'd like to ask...
-- Skill points +30, Bond +5
-
-- Why don't you try being kind to yourself?
-- Energy +20, Bond +5
+- **Maximum Spirituality**
+  - “It's probably just from you rushing everything... ……” → Wit +5, Skill points +15, Bond +5
+  - “Why don't you try being a little more enthusiastic?” → Energy -10, Speed +5, Stamina +5, Power +5, Bond +5
+- **When Piety and Kindness Intersect ――**
+  - “I guess I have a few favors to I'd like to ask...” → Skill points +30, Bond +5
+  - “Why don't you try being kind to yourself?” → Energy +20, Bond +5
 
 ### [Ignore the Stares] Mejiro Dober
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Kyoto Racecourse ○: Moderately increase performance at Kyoto Racecourse.
@@ -3042,33 +2891,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Don't Need to Be Complimented
-- (1 / 2)
-- Energy +10, Guts +5
-- Don't Need to Be Seen
-- (2 / 2)
-- On Success: Energy +20, Stamina +15, Slick Surge Slick Surge
-- Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger) Hint +1
-- On Failure: Energy +5, Stamina +5
+- **Step 1/2 — Don't Need to Be Complimented:** Energy +10, Guts +5
+- **Step 2/2 — Don't Need to Be Seen:** On Success: Energy +20, Stamina +15, Slick Surge / On Failure: Energy +5, Stamina +5
+  - Hint +1: Slightly increase acceleration when positioned midpack or further back in the early part of late-race. (Late Surger)
+
 **Other Events**
-- Give It a Try
-- Train your body to gain confidence!
-- Energy +15, Bond +5
-
-- Practice smiling in front of a mirror!
-- Mood +1, Skill points +15, Bond +5
-- Hope She'll Like It... ……
-- Why not get something else?
-- Skill points +45, Bond +5
-
-- Steel yourself and plow on through!
-- Bond +5, Unyielding Spirit Unyielding Spirit
-- Slightly increase passing ability. (Mile) Hint +1
+- **Give It a Try**
+  - “Train your body to gain confidence!” → Energy +15, Bond +5
+  - “Practice smiling in front of a mirror!” → Mood +1, Skill points +15, Bond +5
+- **Hope She'll Like It... ……**
+  - “Why not get something else?” → Skill points +45, Bond +5
+  - “Steel yourself and plow on through!” → Bond +5, Unyielding Spirit
+    - Hint +1: Slightly increase passing ability. (Mile)
 
 ### [Never Skip Warm-Ups] Ikuno Dictus
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Wit Bonus Increases Wit gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +5, Initial Wit Increases initial Wit when beginning a Career playthrough +25, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20 (+20), Skill Point Bonus Increases skill point gain when training together -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Wit Bonus: (+1) — Increases Wit gain when training together
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Wit: +25 — Increases initial Wit when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
+- Specialty Priority: +20 (+20) — Increases the frequency at which the character participates in their preferred training type
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -3079,37 +2924,32 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Ikuno-Style Friendship
-- (1 / 2)
-- Wit +10, Skill points +20
-- Ikuno-Style Support
-- (2 / 2)
-- Work on your heart and lungs to lead the pack!
-- Wit +15, Bond +5, Frenzied Front Runners Frenzied Front Runners
-- Increase time needed for front runners to calm down when they become rushed. Hint +3
+- **Step 1/2 — Ikuno-Style Friendship:** Wit +10, Skill points +20
+- **Step 2/2 — Ikuno-Style Support**
+  - “Work on your heart and lungs to lead the pack!” → Wit +15, Bond +5, Frenzied Front Runners
+    - Hint +3: Increase time needed for front runners to calm down when they become rushed.
+  - “Build up those legs to end races on a strong finish!” → Wit +15, Bond +5, Frenzied End Closers
+    - Hint +3: Increase time needed for end closers to calm down when they become rushed.
 
-- Build up those legs to end races on a strong finish!
-- Wit +15, Bond +5, Frenzied End Closers Frenzied End Closers
-- Increase time needed for end closers to calm down when they become rushed. Hint +3
 **Other Events**
-- Ikuno-Style Flawless Method
-- You're going to do this all by yourself? 1
-- Wit +10, Bond +5
-
-- You're so passionate.
-- Skill points +30, Bond +5
-- Ikuno-Style Management
-- Can you go over mine too?
-- Stamina +20, Bond +5
-
-- Mind giving me some tips?
-- Bond +5, Trick (Rear) Trick (Rear)
-- Slightly increase fatigue for rushed runners ahead when positioned toward the back mid-race. Hint +1
+- **Ikuno-Style Flawless Method**
+  - “You're going to do this all by yourself? 1” → Wit +10, Bond +5
+  - “You're so passionate.” → Skill points +30, Bond +5
+- **Ikuno-Style Management**
+  - “Can you go over mine too?” → Stamina +20, Bond +5
+  - “Mind giving me some tips?” → Bond +5, Trick (Rear)
+    - Hint +1: Slightly increase fatigue for rushed runners ahead when positioned toward the back mid-race.
 
 ### [Messing Around] Nice Nature
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +10, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training -
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +10 — Increases fan gain from races
 
 **Hints**
 - Kokura Racecourse ○: Moderately increase performance at Kokura Racecourse.
@@ -3123,37 +2963,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Chasing Their Backs
-- (1 / 2)
-- You're a "young'un" too, you know.
-- Energy +5, Wit +3, Bond +5
+- **Step 1/2 — Chasing Their Backs**
+  - “You're a "young'un" too, you know.” → Energy +5, Wit +3, Bond +5
+  - “I'm pumped up now too!” → Bond +20
+- **Step 2/2 — Wind at My Back:** Energy +10, Wit +5, Bond +5, Long Shot ○
+  - Hint +3: Moderately increase performance when 4th favorite or below.
 
-- I'm pumped up now too!
-- Bond +20
-- Wind at My Back
-- (2 / 2)
-- Energy +10, Wit +5, Bond +5, Long Shot ○ Long Shot ○
-- ○
-- Moderately increase performance when 4th favorite or below. Hint +3
 **Other Events**
-- Not like Meow
-- Tell her it's important to unwind.
-- Energy +20, Bond +5
-
-- Teach her how to take advantage of a cafe visit.
-- Energy +10, Wit +5, Bond +5
-- (Delicious) Burden
-- Eat it with grated daikon radish to make things easier!
-- Bond +5, Ramp Up Ramp Up
-- Slightly increase velocity when passing another runner mid-race. Hint +1
-
-- You should hold a tempura party at the dorm!
-- Mood +1, Max Energy +4, Bond +5
+- **Not like Meow**
+  - “Tell her it's important to unwind.” → Energy +20, Bond +5
+  - “Teach her how to take advantage of a cafe visit.” → Energy +10, Wit +5, Bond +5
+- **(Delicious) Burden**
+  - “Eat it with grated daikon radish to make things easier!” → Bond +5, Ramp Up
+    - Hint +1: Slightly increase velocity when passing another runner mid-race.
+  - “You should hold a tempura party at the dorm!” → Mood +1, Max Energy +4, Bond +5
 
 ### [My Heart Will Go On] Mejiro Ardan
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +30 (+15), Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40 (+20), Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +30 (+15) — Amplifies the effect of mood when training together
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 (+20) — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Left-Handed ○: Moderately increase performance on left-handed tracks.
@@ -3164,36 +2998,33 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- Special Drinks Made with Friends ♪ ♪
-- (1 / 2)
-- That just goes to show how much you love them. 2
-- On Success: Energy +10, Speed +5, Wit +5, Skill points +10
-- On Failure: Wit +10, Ends chain event
+- **Step 1/2 — Special Drinks Made with Friends ♪**
+  - “That just goes to show how much you love them. 2” → On Success: Energy +10, Speed +5, Wit +5, Skill points +10
+  - On Failure: Wit +10, Ends chain event
+  - “I see that you keep a close eye on your rivals.” → Mood +1, Speed +10
+- **Step 2/2 — The Place I Wish to Stand 1:** Energy +30, Mood +1
 
-- I see that you keep a close eye on your rivals.
-- Mood +1, Speed +10
-- The Place I Wish to Stand 1
-- (2 / 2)
-- Energy +30, Mood +1
 **Other Events**
-- The Glass Girl Wants to Study
-- Healthy Three-Minute Recipes for Athletes! 3
-- Speed +10, Bond +5
-
-- Changing Your Brain Through Good Sleep.
-- Energy +10, Wit +5, Bond +5
-- The Glass Girl Wants to Play
-- How about Karuta?
-- Speed +10, Wit +10, Bond +5
-
-- Why not film videos for Umatok?
-- Bond +5, Hesitant Pace Chasers Hesitant Pace Chasers
-- Slightly decrease velocity of pace chasers late-race. Hint +1
+- **The Glass Girl Wants to Study**
+  - “Healthy Three-Minute Recipes for Athletes! 3” → Speed +10, Bond +5
+  - “Changing Your Brain Through Good Sleep.” → Energy +10, Wit +5, Bond +5
+- **The Glass Girl Wants to Play**
+  - “How about Karuta?” → Speed +10, Wit +10, Bond +5
+  - “Why not film videos for Umatok?” → Bond +5, Hesitant Pace Chasers
+    - Hint +1: Slightly decrease velocity of pace chasers late-race.
 
 ### [Reckless Witch Training] Sweep Tosho
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Wit Bonus Increases Wit gain when training together -, Training Effectiveness Increases the effectiveness of training performed together (+5), Initial Speed Increases initial Speed when beginning a Career playthrough +20, Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +10, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: (+5) — Increases the effectiveness of training performed together
+- Initial Speed: +20 — Increases initial Speed when beginning a Career playthrough
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +10 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Prudent Positioning: Increase navigation early-race.
@@ -3206,30 +3037,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- What's Behind the Foul Mood? ……
-- (1 / 2)
-- No data yet! Add it here .
-- The Trick to Perseverance! ……
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Miracle ☆ Escape! ☆
-- Just admit defeat already.
-- Energy +10, Speed +5, Bond +5
-
-- Run! Hurry!
-- Energy -10, Speed +20, Bond +5
-- Wonderful ☆ Mistake! ☆
-- How about I teach you a cool spell instead?
-- Energy -20, Skill points +40, Bond +5
-
-- Let's look for it together. 1
-- Charming ○ , Bond +5
+- **Miracle ☆ Escape! ☆**
+  - “Just admit defeat already.” → Energy +10, Speed +5, Bond +5
+  - “Run! Hurry!” → Energy -10, Speed +20, Bond +5
+- **Wonderful ☆ Mistake! ☆**
+  - “How about I teach you a cool spell instead?” → Energy -20, Skill points +40, Bond +5
+  - “Let's look for it together. 1” → Charming ○ , Bond +5
 
 ### [Going for Gold] Gold City
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Speed Bonus Increases Speed gain when training together (+1), Wit Bonus Increases Wit gain when training together -, Initial Speed Increases initial Speed when beginning a Career playthrough -, Initial Wit Increases initial Wit when beginning a Career playthrough +15 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Initial Wit: +15 (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Rainy Days ○: Moderately increase performance in rainy weather.
@@ -3240,31 +3068,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- I Can Do It Myself
-- (1 / 2)
-- No data yet! Add it here .
-- Relying On Others
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- 08:36 / Crap, I Overslept 08:36
-- Isn't class starting soon? ……
-- Mood -1, Skill points +45, Bond +5
-
-- Yeah, there's no point in rushing.
-- Energy +10, Wit +5, Bond +5
-- 13:12 / Lunch Break, Gotta Get Myself Together 13:12
-- Focus on what's at hand for now!
-- Skill points +30, Bond +5
-
-- Would you like an energy drink?
-- Bond +5, A Small Breather A Small Breather
-- Slightly recover endurance when positioned midpack or further back mid-race. (Late Surger) Hint +1
+- **08:36 / Crap, I Overslept 08:36**
+  - “Isn't class starting soon? ……” → Mood -1, Skill points +45, Bond +5
+  - “Yeah, there's no point in rushing.” → Energy +10, Wit +5, Bond +5
+- **13:12 / Lunch Break, Gotta Get Myself Together 13:12**
+  - “Focus on what's at hand for now!” → Skill points +30, Bond +5
+  - “Would you like an energy drink?” → Bond +5, A Small Breather
+    - Hint +1: Slightly recover endurance when positioned midpack or further back mid-race. (Late Surger)
 
 ### [Bobbing with the Waves] Seiun Sky
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +40, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +25, Race Bonus Increases stat gain from races (+5), Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together -, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +25 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: (+5) — Increases stat gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Early Lead: Slightly increase ability to go to the front early-race. (Front Runner)
@@ -3276,31 +3100,27 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- After the Fishing Trip... ……
-- (1 / 2)
-- No data yet! Add it here .
-- Let's Go Fishing Again
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Recruiting Cat Catchers
-- Just wait in a sunny spot.
-- Energy +10, Wit +5, Bond +5
-
-- Chasing it at full speed is sure to work.
-- Energy -10, Speed +15, Stamina +5, Bond +5
-- Recruiting Advisors
-- You should try changing fishing spots.
-- Wit +15, Bond +5
-
-- You should try changing the way you move the rod.
-- Bond +5, Keeping the Lead Keeping the Lead
-- Slightly increase ability to maintain the lead when leading by a fair margin mid-race. (Long) Hint +1
+- **Recruiting Cat Catchers**
+  - “Just wait in a sunny spot.” → Energy +10, Wit +5, Bond +5
+  - “Chasing it at full speed is sure to work.” → Energy -10, Speed +15, Stamina +5, Bond +5
+- **Recruiting Advisors**
+  - “You should try changing fishing spots.” → Wit +15, Bond +5
+  - “You should try changing the way you move the rod.” → Bond +5, Keeping the Lead
+    - Hint +1: Slightly increase ability to maintain the lead when leading by a fair margin mid-race. (Long)
 
 ### [One Bomb Drive ♪] Maruzensky
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15 (+10), Mood Effect Amplifies the effect of mood when training together +40, Wit Bonus Increases Wit gain when training together -, Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 (+10) — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Nakayama Racecourse ○: Moderately increase performance at Nakayama Racecourse.
@@ -3313,30 +3133,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- ☆
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- For an Adorable Younger Student
-- Teach her how to use her knees properly.
-- Bond +5, Early Lead Early Lead
-- Slightly increase ability to go to the front early-race. (Front Runner) Hint +1
-
-- Work on improving her baseline endurance.
-- Energy +5, Speed +10, Bond +5
-- Drive Destination
-- The beach.
-- Speed +5, Mood +1, Bond +5
-
-- A new town.
-- Wit +5, Mood +1, Bond +5
+- **For an Adorable Younger Student**
+  - “Teach her how to use her knees properly.” → Bond +5, Early Lead
+    - Hint +1: Slightly increase ability to go to the front early-race. (Front Runner)
+  - “Work on improving her baseline endurance.” → Energy +5, Speed +10, Bond +5
+- **Drive Destination**
+  - “The beach.” → Speed +5, Mood +1, Bond +5
+  - “A new town.” → Wit +5, Mood +1, Bond +5
 
 ### [あまえんぼNight] Taiki Shuttle
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Speed Bonus Increases Speed gain when training together (+1), Training Effectiveness Increases the effectiveness of training performed together +10, Initial Wit Increases initial Wit when beginning a Career playthrough -, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20 (+20), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Speed Bonus: (+1) — Increases Speed gain when training together
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Specialty Priority: +20 (+20) — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Productive Plan: Slightly widen the margin when positioned toward the front upon approaching mid-race. (Mile)
@@ -3347,29 +3165,31 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Yes! Let's Hug ☆ ☆
-- Speed.
-- Speed +10, Bond +5
-
-- Power.
-- Speed +5, Power +5, Bond +5
-- Yeehaw! Party Tonight ☆ ☆
-- Take the long way and run as fast as you can!
-- Energy -10, Speed +5, Power +10, Bond +5
-
-- Imagine yourself parting the crowd as you run!
-- Prepared to Pass Prepared to Pass
-- Slightly increase ability to break out of the pack on the final corner. (Pace Chaser) Hint +1
+- **Yes! Let's Hug ☆**
+  - “Speed.” → Speed +10, Bond +5
+  - “Power.” → Speed +5, Power +5, Bond +5
+- **Yeehaw! Party Tonight ☆**
+  - “Take the long way and run as fast as you can!” → Energy -10, Speed +5, Power +10, Bond +5
+  - “Imagine yourself parting the crowd as you run!” → Prepared to Pass
+    - Hint +1: Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
 
 ### [ギャラルホルンを磨き上げよ] Tanino Gimlet
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough -, Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Straightaway Adept: Slightly increase velocity on a straight.
@@ -3382,24 +3202,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
-**Other Events**
-- The Euphoria of Destruction! ……
-- No data yet! Add it here .
-- An Electrifying Present! ……
-- Bond +5, Power +10, Skill points +5
+_No chain data yet._
 
-- Bond +5, End Closer Savvy ○ End Closer Savvy ○
-- ○
-- Moderately increase ability to get into a good position. (End Closer) Hint +1
+**Other Events**
+- **The Euphoria of Destruction! ……**
+  - _no data yet_
+- **An Electrifying Present! ……**
+  - Bond +5, Power +10, Skill points +5 / Bond +5, End Closer Savvy ○
+    - Hint +1: Moderately increase ability to get into a good position. (End Closer)
 
 ### [ぬりぬりシェイプアップ！] Dantsu Flame
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20, Wit Bonus Increases Wit gain when training together -, Initial Wit Increases initial Wit when beginning a Career playthrough +15, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough (+15), Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +5, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +40, Specialty Priority Increases the frequency at which the character participates in their preferred training type +20, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Initial Wit: +15 — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +5 — Increases fan gain from races
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +40 — Increases the frequency at which hint events occur
+- Specialty Priority: +20 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Ramp Up: Slightly increase velocity when passing another runner mid-race.
@@ -3413,18 +3238,24 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- No data yet! Add it here .
-- No data yet! Add it here .
+- **(untitled event)**
+  - _no data yet_ / _no data yet_
 
 ### [君の花衣] Sakura Laurel
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +25, Training Effectiveness Increases the effectiveness of training performed together +5, Initial Speed Increases initial Speed when beginning a Career playthrough -, Initial Wit Increases initial Wit when beginning a Career playthrough +15 (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +20, Race Bonus Increases stat gain from races +5, Fan Bonus Increases fan gain from races +15, Hint Levels Increases the level of hints gained through events -, Hint Frequency Increases the frequency at which hint events occur -, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +25 — Increases the effectiveness of Friendship Training
+- Training Effectiveness: +5 — Increases the effectiveness of training performed together
+- Initial Wit: +15 (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +20 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +5 — Increases stat gain from races
+- Fan Bonus: +15 — Increases fan gain from races
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Lay Low: When the way ahead is jammed early or mid-race, lay low to slightly recover endurance and slightly increase navigation.
@@ -3437,20 +3268,26 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Stay Positive at All Times!
-- No data yet! Add it here .
-- Stay Positive in All Situations!
-- No data yet! Add it here .
+- **Stay Positive at All Times!**
+  - _no data yet_
+- **Stay Positive in All Situations!**
+  - _no data yet_
 
 ### [喜びの咲く刻] Lucky Lilac
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +20, Speed Bonus Increases Speed gain when training together -, Training Effectiveness Increases the effectiveness of training performed together +5 (+5), Initial Wit Increases initial Wit when beginning a Career playthrough (+20), Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15, Race Bonus Increases stat gain from races -, Fan Bonus Increases fan gain from races -, Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +50, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 — Amplifies the effect of mood when training together
+- Training Effectiveness: +5 (+5) — Increases the effectiveness of training performed together
+- Initial Wit: (+20) — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +15 — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +50 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Non-Standard Distance ○: Moderately increase performance over non-standard distances (non-multiples of 400m).
@@ -3463,20 +3300,28 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- A
-- No data yet! Add it here .
-- B
-- No data yet! Add it here .
+- **A**
+  - _no data yet_
+- **B**
+  - _no data yet_
 
 ### [ニャンともイカすヒーローさ] Biko Pegasus
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +20, Mood Effect Amplifies the effect of mood when training together +40, Training Effectiveness Increases the effectiveness of training performed together +1, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +15 (+15), Race Bonus Increases stat gain from races +1, Fan Bonus Increases fan gain from races +1, Hint Levels Increases the level of hints gained through events +1, Hint Frequency Increases the frequency at which hint events occur +20, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Skill Point Bonus Increases skill point gain when training together (+1), Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +20 — Increases the effectiveness of Friendship Training
+- Mood Effect: +40 — Amplifies the effect of mood when training together
+- Training Effectiveness: +1 — Increases the effectiveness of training performed together
+- Initial Friendship Gauge: +15 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Race Bonus: +1 — Increases stat gain from races
+- Fan Bonus: +1 — Increases fan gain from races
+- Hint Levels: +1 — Increases the level of hints gained through events
+- Hint Frequency: +20 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Skill Point Bonus: (+1) — Increases skill point gain when training together
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - Wet Conditions ○: Moderately increase performance on good, soft, and heavy ground.
@@ -3490,30 +3335,29 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- A Hero's Woes
-- You'll need to preserve your strength, then.
-- Energy +15, Bond +5
-
-- Now's your chance to train!
-- Energy +5, Power +5, Bond +5
-- Preparing My Special Move!
-- That strike thing sounds pretty neat.
-- Bond +5, Sprint Straightaways ○ Sprint Straightaways ○
-- ○
-- Slightly increase velocity on a straight. (Sprint) Hint +1
-
-- You shouldn't push yourself too hard.
-- Energy +30, Bond +5
+- **A Hero's Woes**
+  - “You'll need to preserve your strength, then.” → Energy +15, Bond +5
+  - “Now's your chance to train!” → Energy +5, Power +5, Bond +5
+- **Preparing My Special Move!**
+  - “That strike thing sounds pretty neat.” → Bond +5, Sprint Straightaways ○
+    - Hint +1: Slightly increase velocity on a straight. (Sprint)
+  - “You shouldn't push yourself too hard.” → Energy +30, Bond +5
 
 ### [そびえ立つ背中] Hishi Amazon
 
-**Unique Effect (Lv1+):** Effect Lv25, Friendship Bonus Increases the effectiveness of Friendship Training +15, Mood Effect Amplifies the effect of mood when training together +20 (+15), Training Effectiveness Increases the effectiveness of training performed together +10, Initial Wit Increases initial Wit when beginning a Career playthrough +10, Initial Friendship Gauge Increases initial Friendship Gauge when beginning a Career playthrough +1 (+15), Hint Levels Increases the level of hints gained through events +2, Hint Frequency Increases the frequency at which hint events occur +30, Specialty Priority Increases the frequency at which the character participates in their preferred training type +35, Wit Friendship Recovery Increases Energy recovery from Wit Friendship Training +3
+**Unique Effect** (unlocks at Lv25):
+- Friendship Bonus: +15 — Increases the effectiveness of Friendship Training
+- Mood Effect: +20 (+15) — Amplifies the effect of mood when training together
+- Training Effectiveness: +10 — Increases the effectiveness of training performed together
+- Initial Wit: +10 — Increases initial Wit when beginning a Career playthrough
+- Initial Friendship Gauge: +1 (+15) — Increases initial Friendship Gauge when beginning a Career playthrough
+- Hint Levels: +2 — Increases the level of hints gained through events
+- Hint Frequency: +30 — Increases the frequency at which hint events occur
+- Specialty Priority: +35 — Increases the frequency at which the character participates in their preferred training type
+- Wit Friendship Recovery: +3 — Increases Energy recovery from Wit Friendship Training
 
 **Hints**
 - End Closer Straightaways ○: Slightly increase velocity on a straight. (End Closer)
@@ -3526,22 +3370,13 @@ Unique effects, hints and training events. Stat bonuses are in [SR.md](SR.md). S
 
 **Training Events**
 **Event Chain**
-- .mw-parser-output .training-event-box{border:1px solid;border-radius:10px;max-width:800px}.mw-parser-output .training-event-title{display:flex;justify-content:space-between;background-color:#eee;padding:5px 15px;border-radius:9px 9px 0 0;border-bottom:1px solid}.mw-parser-output .training-event-title-text{font-size:large}.mw-parser-output .training-event-title-marker{font-size:medium}.mw-parser-output .training-event-content{padding:10px}.mw-parser-output .training-event-choice{font-size:larger;font-weight:bold;border:1px solid;border-radius:5px;padding:5px 10px;margin:10px 0;max-width:500px}.mw-parser-output .training-event-choice-1{background-color:#d7f7a9}.mw-parser-output .training-event-choice-2{background-color:#f8eda3}.mw-parser-output .training-event-choice-3{background-color:#f2cddf}.mw-parser-output .training-event-choice-4{background-color:#bfe2f5}.mw-parser-output .training-event-choice-5{background-color:#cbc9f1}.mw-parser-output .training-event-description{margin:15px 10px}
-- (1 / 2)
-- No data yet! Add it here .
-- (2 / 2)
-- No data yet! Add it here .
+_No chain data yet._
+
 **Other Events**
-- Hishiama's Struggles: Problem Children
-- Surround her from all sides and trap her.
-- Energy +10, Wit +5, Bond +5
-
-- Lure her out to the track.
-- Energy -10, Speed 10, Guts 5, Bond 5
-- Hishiama's Struggles: Final Stretch
-- Blow the other racers away with sheer force of will.
-- Bond +5, Hesitant End Closers Hesitant End Closers
-- Slightly decrease velocity of end closers late-race. Hint +1
-
-- Go wide on the outside, then make your move.
-- Power +5, Skill Points +15, Bond +5
+- **Hishiama's Struggles: Problem Children**
+  - “Surround her from all sides and trap her.” → Energy +10, Wit +5, Bond +5
+  - “Lure her out to the track.” → Energy -10, Speed 10, Guts 5, Bond 5
+- **Hishiama's Struggles: Final Stretch**
+  - “Blow the other racers away with sheer force of will.” → Bond +5, Hesitant End Closers
+    - Hint +1: Slightly decrease velocity of end closers late-race.
+  - “Go wide on the outside, then make your move.” → Power +5, Skill Points +15, Bond +5
