@@ -55,6 +55,23 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tools/tests -v
 
+      # Diagnostic: shows what GameTora returns to this runner (status code, size,
+      # start of the page, and whether a character id can be found in it).
+      - name: Probe GameTora
+        continue-on-error: true
+        run: |
+          {
+            echo '### GameTora probe'
+            echo '```'
+            for u in "https://gametora.com/umamusume/characters/special-week" "https://gametora.com/umamusume/characters/admire-vega"; do
+              echo "== $u"
+              curl -sS -L -m 30 -A "DmLilyAi-profile-generator/1.0" -o probe.html -w "HTTP %{http_code}, %{size_download} bytes\n" "$u" || echo "curl failed"
+              head -c 300 probe.html | tr '\n' ' '; echo
+              echo "id patterns found:"; grep -o -E '(chr_icon_|/profile/|chara_stand_)[0-9]{4}' probe.html | sort -u | head -3
+            done
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Generate profiles
         run: |
           args=(--limit "$LIMIT")
