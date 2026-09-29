@@ -2,11 +2,17 @@ name: Clean support card details
 
 # Re-cleans the scraped *-Details.md files whenever they change on main
 # (e.g. after the wiki scraper is re-run) and can be started by hand from the
-# Actions tab on any branch. The script is idempotent, so a run on already
-# clean files makes no commit.
+# Actions tab. The script is idempotent, so a run on already clean files makes
+# no commit.
+#
+# NOTE: the chore/clean-support-card-details entry below is only there so the
+# workflow runs on the PR branch before it exists on main. Delete that line
+# after merging.
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - chore/clean-support-card-details
     paths:
       - "LilyAiGameSpace/Umamusume/Support Cards/*-Details.md"
       - "tools/clean_support_card_details.py"
