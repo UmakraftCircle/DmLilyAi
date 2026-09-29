@@ -97,6 +97,35 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      # Diagnostic: shows what the parser sees on real GameTora pages (Special Week).
+      - name: Debug - what the parser sees
+        if: always()
+        continue-on-error: true
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import sys
+          sys.path.insert(0, "tools")
+          import generate_character_profiles as g
+          for url in ("https://gametora.com/umamusume/characters/special-week",
+                      "https://gametora.com/umamusume/characters/100101-special-week"):
+              raw = g.fetch(url)
+              print(f"### Debug: {url}")
+              if not raw:
+                  print("fetch returned nothing (404, blocked or error)")
+                  continue
+              lines, h1, em = g.html_to_lines(raw)
+              print(f"- html bytes: {len(raw)}, text lines: {len(lines)}, h1: {h1!r}")
+              print("- character id found:", g.parse_character_id(raw))
+              v = g.parse_version(lines, h1)
+              print("- parsed:", {k: (len(x) if isinstance(x, (list, dict)) else x) for k, x in v.items()})
+              for key in ("Base stats", "Stat bonuses", "Aptitude", "Objectives", "Release date"):
+                  print(f"- '{key}' at line(s):", [i for i, l in enumerate(lines) if l == key])
+              print("```")
+              for i, l in enumerate(lines[:120]):
+                  print(i, l[:90])
+              print("```")
+          PY
+
       - name: Fail if nothing was written
         run: |
           n=$(grep -c '^  wrote ' generate.log || true)
