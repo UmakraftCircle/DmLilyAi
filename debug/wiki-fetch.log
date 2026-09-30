@@ -1,5 +1,4 @@
 scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
-1 character file(s) with blank sections, 0 skipped (all three sections already filled)
-- Air_Shakur: blank = Overview, Background, Appearances
-  wrote sources/wiki/Air_Shakur.md, 11675 chars
-done: 1 staged, 0 failed
+0 character file(s) with blank sections, 1 skipped (all three sections already filled)
+  skipped: Air_Shakur
+nothing to fetch
