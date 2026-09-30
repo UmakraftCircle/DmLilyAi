@@ -1,0 +1,134 @@
+name: Fetch wiki sources (blank profile sections)
+
+# Stages Umamusume Wiki text for character profiles whose Overview, Background or
+# Appearances section is still blank ("Not filled in yet"). Files where all three
+# sections already have content are skipped. Nothing in
+# LilyAiGameSpace/Umamusume/Character is modified. Staged text is written to
+# sources/wiki/<Name>.md and then reworded into the profile by hand.
+# (tools/fetch_wiki_sources.py)
+#
+# How to use:
+#   1. Actions tab > "Fetch wiki sources (blank profile sections)" > Run workflow
+#   2. Leave dry_run = true the first time. It fetches and previews, saves no staged files.
+#   3. Run again with dry_run = false to save the staged files.
+#
+# The run FAILS (red) if the wiki can't be reached or nothing could be staged.
+# The log is also saved to debug/wiki-fetch.log after every run.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many characters to fetch (0 = all with blank sections)"
+        default: "3"
+        required: true
+      only:
+        description: "Optional: comma-separated file names, e.g. Air_Groove,Agnes_Tachyon"
+        default: ""
+      dry_run:
+        description: "Preview only, do not save staged files"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-wiki-sources
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      LIMIT: ${{ inputs.limit }}
+      ONLY: ${{ inputs.only }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tools/tests -v
+
+      - name: Check Umamusume Wiki is reachable
+        run: |
+          url="https://umamusu.wiki/w/index.php?title=Air_Messiah&action=raw"
+          code=$(curl -sS -L -m 30 -A "DmLilyAi-profile-generator/1.0 (+https://github.com/UmakraftCircle/DmLilyAi)" -o probe.txt -w "%{http_code}" "$url" || true)
+          code=${code:-000}
+          size=$(wc -c < probe.txt 2>/dev/null || echo 0)
+          {
+            echo "### Wiki check"
+            echo "- URL: $url"
+            echo "- HTTP status: $code"
+            echo "- Page size: $size bytes"
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ "$code" != "200" ]; then
+            echo "::error::Umamusume Wiki returned HTTP $code to the GitHub runner (blocked or unreachable). Nothing was fetched."
+            head -c 500 probe.txt 2>/dev/null || true
+            exit 1
+          fi
+          if ! grep -qi "biography" probe.txt; then
+            echo "::error::The wiki page loaded but has no Biography section. The page layout differs from what the script expects."
+            head -c 800 probe.txt
+            exit 1
+          fi
+
+      - name: Fetch wiki sources
+        run: |
+          args=(--limit "$LIMIT")
+          if [ -n "$ONLY" ]; then
+            args+=(--only "$ONLY")
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          python -u tools/fetch_wiki_sources.py "${args[@]}" | tee fetch.log
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Fetch log"
+            echo '```'
+            tail -n 120 fetch.log 2>/dev/null || echo "no log"
+            echo '```'
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "Dry run: no staged files were saved. Run again with dry_run = false to save them."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit staged files
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/wiki
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Stage wiki sources for blank character sections"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
+
+      - name: Save log to the repo
+        if: always()
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add debug/wiki-fetch.log
+          if git diff --cached --quiet; then
+            echo "No log changes."
+          else
+            git commit -m "chore: save wiki fetch log [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
