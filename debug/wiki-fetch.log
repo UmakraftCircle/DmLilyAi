@@ -92,9 +92,9 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
   sections: Lead (64), Biography (1936), Appearance (1617), Relationships (1906), Media Appearances (166), Event Appearances (217), Song Discography (984), Trivia (1447), Real-life page (excerpt) (3293)
   wrote sources/wiki/Copano_Rickey.md, 12084 chars
 - Curren_Bouquetdor: blank = Overview, Background, Appearances
-    raw fetch of Curren_Bouquetdor returned HTTP 404
-    api fetch of Curren_Bouquetdor returned HTTP 200
-  FAILED: no wiki page found or the wiki blocked the request
+  songs: 30 line(s) expanded
+  sections: Lead (52), Biography (1646), Appearance (1264), Relationships (1290), Media Appearances (21), Event Appearances (124), Song Discography (686), Trivia (1166), Real-life page (excerpt) (3580)
+  wrote sources/wiki/Curren_Bouquetdor.md, 10296 chars
 - Curren_Chan: blank = Background, Appearances
   songs: 59 line(s) expanded
   sections: Biography (2102), Appearance (997), Relationships (4541), Media Appearances (168), Event Appearances (188), Song Discography (1427), Trivia (2153)
@@ -116,8 +116,8 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
   wrote sources/wiki/Dream_Journey.md, 22130 chars
 - Duramente: blank = Appearances
   songs: 45 line(s) expanded
-  sections: Appearance (1991), Media Appearances (111), Event Appearances (149), Song Discography (935), Trivia (1152)
-  wrote sources/wiki/Duramente.md, 4746 chars
+  sections: Appearance (1991), Media Appearances (111), Event Appearances (170), Song Discography (935), Trivia (1152)
+  wrote sources/wiki/Duramente.md, 4767 chars
 - Durandal: blank = Overview, Background, Appearances
   songs: 34 line(s) expanded
   sections: Lead (52), Biography (1725), Appearance (1528), Relationships (2976), Media Appearances (21), Event Appearances (128), Song Discography (664), Trivia (1779), Real-life page (excerpt) (832)
@@ -260,20 +260,17 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
   sections: Appearance (1308), Media Appearances (224), Event Appearances (262), Song Discography (1705), Trivia (1428)
   wrote sources/wiki/Mihono_Bourbon.md, 5350 chars
 - Mr_CB: blank = Overview, Background, Appearances
-    raw fetch of IRL:Mr_CB returned HTTP 404
-    api fetch of IRL:Mr_CB returned HTTP 200
-  note: no real-life page found (IRL:Mr_CB)
   songs: 67 line(s) expanded
-  sections: Lead (59), Biography (2217), Appearance (4076), Media Appearances (185), Event Appearances (178), Song Discography (1347), Trivia (1089)
-  wrote sources/wiki/Mr_CB.md, 9575 chars
+  sections: Lead (59), Biography (2217), Appearance (4076), Media Appearances (185), Event Appearances (178), Song Discography (1347), Trivia (1090), Real-life page (excerpt) (3570)
+  wrote sources/wiki/Mr_CB.md, 13152 chars
 - Nakayama_Festa: blank = Overview, Background, Appearances
   songs: 64 line(s) expanded
   sections: Lead (65), Biography (1854), Appearance (734), Relationships (4415), Media Appearances (190), Event Appearances (250), Song Discography (1275), Trivia (6405), Real-life page (excerpt) (3575)
   wrote sources/wiki/Nakayama_Festa.md, 19220 chars
 - Narita_Brian: blank = Background, Appearances
   songs: 144 line(s) expanded
-  sections: Biography (1963), Appearance (1762), Relationships (3325), Media Appearances (187), Event Appearances (316), Song Discography (3077), Trivia (793)
-  wrote sources/wiki/Narita_Brian.md, 11858 chars
+  sections: Biography (1963), Appearance (1762), Relationships (3325), Media Appearances (187), Event Appearances (337), Song Discography (3077), Trivia (793)
+  wrote sources/wiki/Narita_Brian.md, 11879 chars
 - Narita_Taishin: blank = Appearances
   songs: 61 line(s) expanded
   sections: Appearance (1684), Media Appearances (242), Event Appearances (248), Song Discography (1456), Trivia (1132)
@@ -416,4 +413,4 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
   songs: 25 line(s) expanded
   sections: Lead (64), Biography (2008), Appearance (1298), Relationships (3240), Media Appearances (144), Event Appearances (110), Song Discography (648), Trivia (2534), Real-life page (excerpt) (3575)
   wrote sources/wiki/Zenno_Rob_Roy.md, 14075 chars
-done: 94 staged, 1 failed
+done: 95 staged, 0 failed
