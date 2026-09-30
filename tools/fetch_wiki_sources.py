@@ -7,7 +7,7 @@ Files where all three sections already have content are skipped completely.
 For the others, only the wiki sections needed by the blank ones are saved.
 
 Nothing in LilyAiGameSpace/Umamusume/Character is ever modified. The staged text
-goes to sources/wiki/<Name>.md and is meant to be read and reworded by hand.
+goes to sources/wiki/<n>.md and is meant to be read and reworded by hand.
 Standard library only.
 """
 import argparse
@@ -29,6 +29,13 @@ LOG_PATH = os.path.join(ROOT, "debug", "wiki-fetch.log")
 
 WIKI = "https://umamusu.wiki"
 UA = "DmLilyAi-profile-generator/1.0 (+https://github.com/UmakraftCircle/DmLilyAi)"
+
+# File names that drop punctuation the wiki page title keeps. Key: norm_name(file stem).
+# The override is tried first; the file's H1 and the file name stay as fallbacks.
+TITLE_OVERRIDES = {
+    "curren_bouquetdor": "Curren_Bouquetd'or",
+    "mr_cb": "Mr._C.B.",
+}
 
 TARGETS = ("Overview", "Background", "Appearances")
 BLANK_MARK = "not filled in yet"
@@ -75,8 +82,11 @@ def blank_sections(md):
 
 
 def wiki_title(md, stem):
-    """Wiki page title candidates: the file's H1 first, then the file name."""
+    """Wiki page title candidates: a known override, then the file's H1, then the file name."""
     cands = []
+    over = TITLE_OVERRIDES.get(norm_name(stem))
+    if over:
+        cands.append(over)
     m = re.search(r"^#\s+(.+?)\s*$", md, re.M)
     if m:
         cands.append(m.group(1).replace(" ", "_"))
