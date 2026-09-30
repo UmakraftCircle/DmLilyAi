@@ -2,6 +2,7 @@
 
 **Japanese name:** キタサンブラック
 **Series:** Umamusume: Pretty Derby (anime, game and franchise)
+**Tagline (game):** Her smile brightens the room, and she is known for enjoying festivals.
 
 > Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
 
@@ -16,6 +17,7 @@
 | Voice actor | Hinaki Yano |
 | Birthday | March 10 |
 | Height | 162 cm |
+| Weight | The subject identifies as a growing Uma. |
 | Three sizes | 85 - 56 - 88 |
 | Shoe size | Left and right: 23.0cm |
 | School | Junior Division |
@@ -26,11 +28,23 @@
 
 ## Overview
 
-Not filled in yet.
+Kitasan Black is an Umamusume who first appears in the second season of the Umamusume: Pretty Derby anime. She admires the legendary horse Tokai Teio and enrolls at Tracen to emulate her idol. In the third season she becomes the series' main protagonist, sharing a room with her childhood friend and rival Satono Diamond while competing as part of Team Spica.
 
 ## Background
 
-Not filled in yet.
+- **Origins:** Inspired by Tokai Teio, she joins Tracen to follow in her idol's footsteps.
+- **Team:** Becomes a member of Team Spica during the third season.
+- **Personality:** Shows admiration for Tokai Teio and maintains a close, competitive friendship with Satono Diamond.
+
+## Profile details (game)
+
+| Detail | Description |
+|--------|-------------|
+| Ears | The subject has an excellent sense of pitch. |
+| Tail | Her tail can carry a heavy weight. |
+| Family | Her family home houses thirty people, including her father's pupils. |
+| Trivia 1 | She usually falls in love with things at first sight. |
+| Trivia 2 | Once she starts eating candy, she cannot stop. |
 
 ## Real-life counterpart
 
@@ -47,7 +61,8 @@ Kitasan Black is named after and based on a Japanese racehorse.
 
 ## Appearances
 
-Not filled in yet.
+- Anime Season 2 – debut appearance as a supporting character.
+- Anime Season 3 – serves as the protagonist.
 
 ---
 
@@ -122,10 +137,7 @@ Rank A or higher: Turf, Medium, Long, Front Runner.
 
 ## Gaps
 
-- Ears, tail, family, trivia and weight rows were left out (game text is not copied).
-- Overview: not filled in yet.
-- Background and personality: not filled in yet.
-- Appearances (anime, game, other media): not filled in yet.
+- Overview, background and appearances are reworded summaries written by an AI model from the linked wiki pages. Check them against the sources before relying on them.
 - Unique skills, build notes, obtain methods and support cards: not filled in yet.
 - Kitasan Black [Gilded Shrine to Glory]: could not parse stats.
 - Kitasan Black [Crane's Ambition]: could not parse stats, release date.
@@ -139,6 +151,7 @@ Rank A or higher: Turf, Medium, Long, Front Runner.
 | GameTora, Kitasan Black [Gilded Shrine to Glory] | https://gametora.com/umamusume/characters/106801-kitasan-black |
 | GameTora, Kitasan Black [Crane's Ambition] | https://gametora.com/umamusume/characters/106802-kitasan-black |
 | GameTora, Kitasan Black [Final Bloom] | https://gametora.com/umamusume/characters/106803-kitasan-black |
+| Wikipedia, list of characters | https://en.wikipedia.org/wiki/List_of_Umamusume:_Pretty_Derby_characters |
 
 Game materials are copyright Cygames, Inc.
 
