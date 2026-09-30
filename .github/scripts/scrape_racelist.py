@@ -69,12 +69,35 @@ def collect_rows(page):
     return page.eval_on_selector_all("[role=row], [class*=races_row]", js_div)
 
 
+def dump_page(page):
+    DEBUG.mkdir(exist_ok=True)
+    (DEBUG / "page.html").write_text(page.content(), encoding="utf-8")
+    (DEBUG / "page.txt").write_text(page.inner_text("body"), encoding="utf-8")
+    page.screenshot(path=str(DEBUG / "page.png"), full_page=False)
+
+
 def load_rows(dump: bool):
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1400, "height": 1000})
-        page.goto(URL, wait_until="networkidle", timeout=60000)
-        page.wait_for_selector("tr, [role=row]", timeout=30000)
+
+        # Skip images/fonts/media: faster, and less for ad scripts to hang on.
+        page.route(
+            "**/*",
+            lambda route: route.abort()
+            if route.request.resource_type in ("image", "media", "font")
+            else route.continue_(),
+        )
+
+        # "networkidle" never fires here (ads/analytics keep connections open),
+        # so wait for the DOM and then for the table itself.
+        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        try:
+            page.wait_for_selector("tr, [role=row]", timeout=45000)
+        except Exception:
+            dump_page(page)
+            browser.close()
+            raise
 
         # Scroll until the row count stops growing (handles lazy/virtual lists).
         last, stable = -1, 0
@@ -87,9 +110,7 @@ def load_rows(dump: bool):
 
         rows = collect_rows(page)
         if dump or not rows:
-            DEBUG.mkdir(exist_ok=True)
-            (DEBUG / "page.html").write_text(page.content(), encoding="utf-8")
-            (DEBUG / "page.txt").write_text(page.inner_text("body"), encoding="utf-8")
+            dump_page(page)
         browser.close()
     return rows
 
