@@ -4,16 +4,17 @@ name: Fetch wiki sources (blank profile sections)
 # Appearances section is still blank ("Not filled in yet"). Files where all three
 # sections already have content are skipped. Nothing in
 # LilyAiGameSpace/Umamusume/Character is modified. Staged text is written to
-# sources/wiki/<Name>.md and then reworded into the profile by hand.
+# sources/wiki/<n>.md and then reworded into the profile by hand.
 # (tools/fetch_wiki_sources.py)
 #
 # How to use:
 #   1. Actions tab > "Fetch wiki sources (blank profile sections)" > Run workflow
-#   2. Leave dry_run = true the first time. It fetches and previews, saves no staged files.
-#   3. Run again with dry_run = false to save the staged files.
+#   2. Defaults now stage EVERY character that still has a blank section
+#      (limit = 0, only = empty, dry_run = false). Air_Shakur was the test case and
+#      is already filled, so it is skipped automatically.
+#   3. To test something small, set limit to a number, or put file names in "only".
+#      Set dry_run = true to preview without saving staged files.
 #
-# The test default is Air_Shakur (all three sections blank). Clear "only" to run on
-# the first characters that still have blanks, in file-name order.
 # The run FAILS (red) if the wiki can't be reached, if "only" matches nothing, or if
 # nothing could be staged. The log is also saved to debug/wiki-fetch.log after every run.
 
@@ -22,15 +23,15 @@ on:
     inputs:
       limit:
         description: "How many characters to fetch (0 = all with blank sections)"
-        default: "3"
+        default: "0"
         required: true
       only:
-        description: "Comma-separated file names without .md, e.g. Air_Shakur,Air_Groove (empty = all with blanks)"
-        default: "Air_Shakur"
+        description: "Comma-separated file names without .md, e.g. Air_Groove,Agnes_Tachyon (empty = all with blanks)"
+        default: ""
       dry_run:
         description: "Preview only, do not save staged files"
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: write
@@ -61,7 +62,8 @@ jobs:
 
       - name: Check Umamusume Wiki is reachable
         run: |
-          url="https://umamusu.wiki/w/index.php?title=Air_Shakur&action=raw"
+          # Probe a long-established page so a rename of one character page cannot fail the run.
+          url="https://umamusu.wiki/w/index.php?title=Special_Week&action=raw"
           code=$(curl -sS -L -m 30 -A "DmLilyAi-profile-generator/1.0 (+https://github.com/UmakraftCircle/DmLilyAi)" -o probe.txt -w "%{http_code}" "$url" || true)
           code=${code:-000}
           size=$(wc -c < probe.txt 2>/dev/null || echo 0)
