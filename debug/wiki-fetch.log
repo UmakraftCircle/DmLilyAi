@@ -1,4 +1,419 @@
 scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
-0 character file(s) with blank sections, 1 skipped (all three sections already filled)
+95 character file(s) with blank sections, 40 skipped (all three sections already filled)
+  skipped: Admire_Groove
+  skipped: Admire_Vega
+  skipped: Agnes_Tachyon
+  skipped: Air_Messiah
   skipped: Air_Shakur
-nothing to fetch
+  skipped: Aston_Machan
+  skipped: Cesario
+  skipped: Daiichi_Ruby
+  skipped: Daitaku_Helios
+  skipped: Grass_Wonder
+  skipped: Haru_Urara
+  skipped: Hishi_Amazon
+  skipped: Jungle_Pocket
+  skipped: KS_Miracle
+  skipped: King_Halo
+  skipped: Kitasan_Black
+  skipped: Matikanetannhauser
+  skipped: Mejiro_Bright
+  skipped: Mejiro_Palmer
+  skipped: Mejiro_Ramonu
+  skipped: Narita_Top_Road
+  skipped: Nice_Nature
+  skipped: Rhein_Kraft
+  skipped: Rice_Shower
+  skipped: Sakura_Bakushin_O
+  skipped: Sakura_Chiyono_O
+  skipped: Sakura_Laurel
+  skipped: Satono_Diamond
+  skipped: Silence_Suzuka
+  skipped: Sirius_Symboli
+  skipped: Sounds_of_Earth
+  skipped: Special_Week
+  skipped: Stay_Gold
+  skipped: Symboli_Kris_S
+  skipped: Symboli_Rudolf
+  skipped: Tokai_Teio
+  skipped: Twin_Turbo
+  skipped: Vivlos
+  skipped: Winning_Ticket
+  skipped: Yamanin_Zephyr
+- Agnes_Digital: blank = Background, Appearances
+  songs: 42 line(s) expanded
+  sections: Biography (1947), Appearance (2032), Relationships (2981), Media Appearances (199), Event Appearances (136), Song Discography (1017), Trivia (3568)
+  wrote sources/wiki/Agnes_Digital.md, 12318 chars
+- Air_Groove: blank = Background
+  sections: Biography (1996), Relationships (4682), Trivia (1745)
+  wrote sources/wiki/Air_Groove.md, 8827 chars
+- Almond_Eye: blank = Overview, Background, Appearances
+  songs: 57 line(s) expanded
+  sections: Lead (61), Biography (1631), Appearance (1733), Relationships (2401), Media Appearances (50), Event Appearances (154), Song Discography (959), Trivia (2085), Real-life page (excerpt) (3571)
+  wrote sources/wiki/Almond_Eye.md, 13090 chars
+- Bamboo_Memory: blank = Appearances
+  songs: 19 line(s) expanded
+  sections: Appearance (1303), Media Appearances (111), Event Appearances (274), Song Discography (509), Trivia (510)
+  wrote sources/wiki/Bamboo_Memory.md, 3127 chars
+- Believe: blank = Overview, Background, Appearances
+  songs: 18 line(s) expanded
+  sections: Lead (58), Biography (1654), Appearance (1459), Relationships (4427), Media Appearances (45), Event Appearances (73), Song Discography (356), Trivia (569), Real-life page (excerpt) (3569)
+  wrote sources/wiki/Believe.md, 12646 chars
+- Biko_Pegasus: blank = Overview, Background, Appearances
+  songs: 43 line(s) expanded
+  sections: Lead (63), Biography (1725), Appearance (995), Relationships (1036), Media Appearances (150), Event Appearances (153), Song Discography (955), Trivia (818), Real-life page (excerpt) (763)
+  wrote sources/wiki/Biko_Pegasus.md, 7109 chars
+- Biwa_Hayahide: blank = Appearances
+  songs: 94 line(s) expanded
+  sections: Appearance (1727), Media Appearances (276), Event Appearances (210), Song Discography (1953), Trivia (3565)
+  wrote sources/wiki/Biwa_Hayahide.md, 8151 chars
+- Bubble_Gum_Fellow: blank = Overview, Background, Appearances
+  songs: 4 line(s) expanded
+  sections: Lead (52), Biography (1813), Appearance (1210), Relationships (1139), Media Appearances (21), Event Appearances (85), Song Discography (121), Trivia (894), Real-life page (excerpt) (704)
+  wrote sources/wiki/Bubble_Gum_Fellow.md, 6505 chars
+- Buena_Vista: blank = Overview, Background, Appearances
+  songs: 33 line(s) expanded
+  sections: Lead (62), Biography (1631), Appearance (1591), Relationships (6350), Media Appearances (61), Event Appearances (148), Song Discography (608), Trivia (7658), Real-life page (excerpt) (3573)
+  wrote sources/wiki/Buena_Vista.md, 22130 chars
+- Calstone_Light_O: blank = Appearances
+  songs: 54 line(s) expanded
+  sections: Appearance (1377), Media Appearances (21), Event Appearances (128), Song Discography (1011), Trivia (2967)
+  wrote sources/wiki/Calstone_Light_O.md, 5933 chars
+- Cheval_Grand: blank = Appearances
+  songs: 77 line(s) expanded
+  sections: Appearance (1798), Media Appearances (112), Event Appearances (94), Song Discography (1682), Trivia (2217)
+  wrote sources/wiki/Cheval_Grand.md, 6320 chars
+- Chrono_Genesis: blank = Overview, Background, Appearances
+  songs: 49 line(s) expanded
+  sections: Lead (65), Biography (1696), Appearance (1535), Relationships (1357), Media Appearances (42), Event Appearances (97), Song Discography (894), Trivia (2133), Real-life page (excerpt) (3576)
+  wrote sources/wiki/Chrono_Genesis.md, 11852 chars
+- Copano_Rickey: blank = Overview, Background, Appearances
+  songs: 42 line(s) expanded
+  sections: Lead (64), Biography (1936), Appearance (1617), Relationships (1906), Media Appearances (166), Event Appearances (217), Song Discography (984), Trivia (1447), Real-life page (excerpt) (3293)
+  wrote sources/wiki/Copano_Rickey.md, 12084 chars
+- Curren_Bouquetdor: blank = Overview, Background, Appearances
+    raw fetch of Curren_Bouquetdor returned HTTP 404
+    api fetch of Curren_Bouquetdor returned HTTP 200
+  FAILED: no wiki page found or the wiki blocked the request
+- Curren_Chan: blank = Background, Appearances
+  songs: 59 line(s) expanded
+  sections: Biography (2102), Appearance (997), Relationships (4541), Media Appearances (168), Event Appearances (188), Song Discography (1427), Trivia (2153)
+  wrote sources/wiki/Curren_Chan.md, 12008 chars
+- Daiwa_Scarlet: blank = Background
+  sections: Biography (1981), Relationships (3289), Trivia (2688)
+  wrote sources/wiki/Daiwa_Scarlet.md, 8371 chars
+- Dantsu_Flame: blank = Appearances
+  songs: 52 line(s) expanded
+  sections: Appearance (1091), Media Appearances (125), Event Appearances (75), Song Discography (1154), Trivia (965)
+  wrote sources/wiki/Dantsu_Flame.md, 3827 chars
+- Daring_Heart: blank = Overview, Background, Appearances
+  songs: 25 line(s) expanded
+  sections: Lead (63), Biography (1654), Appearance (1353), Relationships (1166), Media Appearances (21), Event Appearances (200), Song Discography (432), Trivia (591), Real-life page (excerpt) (768)
+  wrote sources/wiki/Daring_Heart.md, 6699 chars
+- Dream_Journey: blank = Overview, Background, Appearances
+  songs: 35 line(s) expanded
+  sections: Lead (64), Biography (1605), Appearance (1851), Relationships (8579), Media Appearances (81), Event Appearances (206), Song Discography (649), Trivia (5066), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Dream_Journey.md, 22130 chars
+- Duramente: blank = Appearances
+  songs: 45 line(s) expanded
+  sections: Appearance (1991), Media Appearances (111), Event Appearances (149), Song Discography (935), Trivia (1152)
+  wrote sources/wiki/Duramente.md, 4746 chars
+- Durandal: blank = Overview, Background, Appearances
+  songs: 34 line(s) expanded
+  sections: Lead (52), Biography (1725), Appearance (1528), Relationships (2976), Media Appearances (21), Event Appearances (128), Song Discography (664), Trivia (1779), Real-life page (excerpt) (832)
+  wrote sources/wiki/Durandal.md, 10144 chars
+- Eishin_Flash: blank = Overview, Background, Appearances
+  songs: 46 line(s) expanded
+  sections: Lead (63), Biography (2133), Appearance (1292), Relationships (2008), Media Appearances (109), Event Appearances (182), Song Discography (1205), Trivia (989), Real-life page (excerpt) (1511)
+  wrote sources/wiki/Eishin_Flash.md, 9943 chars
+- El_Condor_Pasa: blank = Background, Appearances
+  songs: 98 line(s) expanded
+  sections: Biography (2041), Appearance (1286), Relationships (2295), Media Appearances (260), Event Appearances (245), Song Discography (2124), Trivia (2567)
+  wrote sources/wiki/El_Condor_Pasa.md, 11259 chars
+- Epiphaneia: blank = Overview, Background, Appearances
+  songs: 25 line(s) expanded
+  sections: Lead (52), Biography (1637), Appearance (2512), Relationships (2232), Media Appearances (22), Event Appearances (97), Song Discography (449), Trivia (2187), Real-life page (excerpt) (3572)
+  wrote sources/wiki/Epiphaneia.md, 13205 chars
+- Espoir_City: blank = Overview, Background, Appearances
+  songs: 30 line(s) expanded
+  sections: Lead (62), Biography (1576), Appearance (1731), Relationships (824), Media Appearances (52), Event Appearances (124), Song Discography (598), Trivia (971), Real-life page (excerpt) (789)
+  wrote sources/wiki/Espoir_City.md, 7175 chars
+- Fenomeno: blank = Overview, Background, Appearances
+  songs: 25 line(s) expanded
+  sections: Lead (52), Biography (1769), Appearance (1347), Relationships (2802), Media Appearances (65), Event Appearances (200), Song Discography (512), Trivia (1169), Real-life page (excerpt) (1565)
+  wrote sources/wiki/Fenomeno.md, 9920 chars
+- Fine_Motion: blank = Background, Appearances
+  songs: 52 line(s) expanded
+  sections: Biography (2082), Appearance (1063), Relationships (1847), Media Appearances (170), Event Appearances (165), Song Discography (1206), Trivia (2315)
+  wrote sources/wiki/Fine_Motion.md, 9280 chars
+- Fuji_Kiseki: blank = Background, Appearances
+  songs: 52 line(s) expanded
+  sections: Biography (2240), Appearance (1110), Relationships (1531), Media Appearances (193), Event Appearances (273), Song Discography (1363), Trivia (438)
+  wrote sources/wiki/Fuji_Kiseki.md, 7580 chars
+- Furioso: blank = Overview, Background, Appearances
+  songs: 13 line(s) expanded
+  sections: Lead (58), Biography (1731), Appearance (2079), Relationships (1929), Media Appearances (21), Event Appearances (73), Song Discography (283), Trivia (703), Real-life page (excerpt) (1501)
+  wrote sources/wiki/Furioso.md, 8814 chars
+- Fusaichi_Pandora: blank = Overview, Background, Appearances
+  songs: 30 line(s) expanded
+  sections: Lead (116), Biography (1914), Appearance (2067), Relationships (3498), Media Appearances (21), Event Appearances (156), Song Discography (543), Trivia (2579), Real-life page (excerpt) (3577)
+  wrote sources/wiki/Fusaichi_Pandora.md, 14934 chars
+- Gentildonna: blank = Appearances
+  songs: 49 line(s) expanded
+  sections: Appearance (1363), Media Appearances (63), Event Appearances (222), Song Discography (835), Trivia (3183)
+  wrote sources/wiki/Gentildonna.md, 6080 chars
+- Gold_City: blank = Background, Appearances
+  songs: 55 line(s) expanded
+  sections: Biography (2205), Appearance (931), Relationships (531), Media Appearances (179), Event Appearances (208), Song Discography (1349), Trivia (2293)
+  wrote sources/wiki/Gold_City.md, 8122 chars
+- Gold_Ship: blank = Background
+  sections: Biography (2066), Relationships (4941), Trivia (2195)
+  wrote sources/wiki/Gold_Ship.md, 9603 chars
+- Gran_Alegria: blank = Overview, Background, Appearances
+  songs: 36 line(s) expanded
+  sections: Lead (63), Biography (1690), Appearance (1357), Relationships (1570), Media Appearances (43), Event Appearances (149), Song Discography (687), Trivia (1516), Real-life page (excerpt) (3573)
+  wrote sources/wiki/Gran_Alegria.md, 11099 chars
+- Hishi_Akebono: blank = Appearances
+  songs: 33 line(s) expanded
+  sections: Appearance (1525), Media Appearances (190), Event Appearances (132), Song Discography (911), Trivia (1509)
+  wrote sources/wiki/Hishi_Akebono.md, 4687 chars
+- Hishi_Miracle: blank = Overview, Background, Appearances
+  songs: 55 line(s) expanded
+  sections: Lead (64), Biography (1996), Appearance (961), Relationships (3248), Media Appearances (112), Event Appearances (165), Song Discography (1033), Trivia (1710), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Hishi_Miracle.md, 13318 chars
+- Hokko_Tarumae: blank = Overview, Background, Appearances
+  songs: 67 line(s) expanded
+  sections: Lead (64), Biography (2118), Appearance (1005), Relationships (758), Media Appearances (227), Event Appearances (195), Song Discography (1450), Trivia (375), Real-life page (excerpt) (837)
+  wrote sources/wiki/Hokko_Tarumae.md, 7483 chars
+- Ikuno_Dictus: blank = Overview, Background, Appearances
+  songs: 40 line(s) expanded
+  sections: Lead (63), Biography (1972), Appearance (1201), Relationships (800), Media Appearances (83), Event Appearances (385), Song Discography (993), Trivia (109), Real-life page (excerpt) (642)
+  wrote sources/wiki/Ikuno_Dictus.md, 6699 chars
+- Inari_One: blank = Appearances
+  songs: 45 line(s) expanded
+  sections: Appearance (1530), Media Appearances (185), Event Appearances (194), Song Discography (1027), Trivia (583)
+  wrote sources/wiki/Inari_One.md, 3927 chars
+- Ines_Fujin: blank = Overview, Background, Appearances
+  songs: 37 line(s) expanded
+  sections: Lead (61), Biography (2212), Appearance (1150), Relationships (342), Media Appearances (168), Event Appearances (64), Song Discography (935), Trivia (745), Real-life page (excerpt) (3571)
+  wrote sources/wiki/Ines_Fujin.md, 9693 chars
+- Katsuragi_Ace: blank = Overview, Background, Appearances
+  songs: 34 line(s) expanded
+  sections: Lead (64), Biography (1951), Appearance (1820), Relationships (5452), Media Appearances (90), Event Appearances (154), Song Discography (711), Trivia (828), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Katsuragi_Ace.md, 15099 chars
+- Kawakami_Princess: blank = Overview, Background, Appearances
+  songs: 36 line(s) expanded
+  sections: Lead (68), Biography (1935), Appearance (1274), Relationships (2122), Media Appearances (59), Event Appearances (219), Song Discography (1021), Trivia (2320), Real-life page (excerpt) (539)
+  wrote sources/wiki/Kawakami_Princess.md, 10023 chars
+- Kiseki: blank = Overview, Background, Appearances
+  songs: 22 line(s) expanded
+  sections: Lead (57), Biography (1595), Appearance (1298), Relationships (1945), Media Appearances (65), Event Appearances (130), Song Discography (415), Trivia (2699), Real-life page (excerpt) (560)
+  wrote sources/wiki/Kiseki.md, 9197 chars
+- Loves_Only_You: blank = Overview, Background, Appearances
+  songs: 67 line(s) expanded
+  sections: Lead (65), Biography (1854), Appearance (1144), Relationships (1608), Media Appearances (43), Event Appearances (121), Song Discography (1210), Trivia (2145), Real-life page (excerpt) (3576)
+  wrote sources/wiki/Loves_Only_You.md, 12223 chars
+- Lucky_Lilac: blank = Overview, Background, Appearances
+  songs: 45 line(s) expanded
+  sections: Lead (52), Biography (1603), Appearance (702), Relationships (2892), Media Appearances (50), Event Appearances (121), Song Discography (815), Trivia (1466), Real-life page (excerpt) (3573)
+  wrote sources/wiki/Lucky_Lilac.md, 11722 chars
+- Manhattan_Cafe: blank = Appearances
+  songs: 83 line(s) expanded
+  sections: Appearance (1176), Media Appearances (212), Event Appearances (243), Song Discography (1984), Trivia (2878)
+  wrote sources/wiki/Manhattan_Cafe.md, 6916 chars
+- Maruzensky: blank = Background
+  sections: Biography (2270), Relationships (1904), Trivia (3016)
+  wrote sources/wiki/Maruzensky.md, 7594 chars
+- Marvelous_Sunday: blank = Appearances
+  songs: 29 line(s) expanded
+  sections: Appearance (936), Media Appearances (124), Event Appearances (173), Song Discography (645), Trivia (692)
+  wrote sources/wiki/Marvelous_Sunday.md, 2999 chars
+- Matikanefukukitaru: blank = Appearances
+  songs: 95 line(s) expanded
+  sections: Appearance (1466), Media Appearances (173), Event Appearances (236), Song Discography (2256), Trivia (2299)
+  wrote sources/wiki/Matikanefukukitaru.md, 6865 chars
+- Mayano_Top_Gun: blank = Appearances
+  songs: 80 line(s) expanded
+  sections: Appearance (1417), Media Appearances (225), Event Appearances (201), Song Discography (1625), Trivia (2594)
+  wrote sources/wiki/Mayano_Top_Gun.md, 6485 chars
+- Meisho_Doto: blank = Appearances
+  songs: 45 line(s) expanded
+  sections: Appearance (1370), Media Appearances (244), Event Appearances (330), Song Discography (1353), Trivia (1486)
+  wrote sources/wiki/Meisho_Doto.md, 5197 chars
+- Mejiro_Ardan: blank = Appearances
+  songs: 41 line(s) expanded
+  sections: Appearance (1448), Media Appearances (164), Event Appearances (244), Song Discography (986), Trivia (1504)
+  wrote sources/wiki/Mejiro_Ardan.md, 4763 chars
+- Mejiro_Dober: blank = Appearances
+  songs: 55 line(s) expanded
+  sections: Appearance (997), Media Appearances (152), Event Appearances (209), Song Discography (1315), Trivia (1060)
+  wrote sources/wiki/Mejiro_Dober.md, 4150 chars
+- Mejiro_McQueen: blank = Background
+  sections: Biography (2069), Relationships (3334), Trivia (1093)
+  wrote sources/wiki/Mejiro_McQueen.md, 6912 chars
+- Mejiro_Ryan: blank = Appearances
+  songs: 70 line(s) expanded
+  sections: Appearance (838), Media Appearances (141), Event Appearances (146), Song Discography (1453), Trivia (2757)
+  wrote sources/wiki/Mejiro_Ryan.md, 5749 chars
+- Mihono_Bourbon: blank = Appearances
+  songs: 76 line(s) expanded
+  sections: Appearance (1308), Media Appearances (224), Event Appearances (262), Song Discography (1705), Trivia (1428)
+  wrote sources/wiki/Mihono_Bourbon.md, 5350 chars
+- Mr_CB: blank = Overview, Background, Appearances
+    raw fetch of IRL:Mr_CB returned HTTP 404
+    api fetch of IRL:Mr_CB returned HTTP 200
+  note: no real-life page found (IRL:Mr_CB)
+  songs: 67 line(s) expanded
+  sections: Lead (59), Biography (2217), Appearance (4076), Media Appearances (185), Event Appearances (178), Song Discography (1347), Trivia (1089)
+  wrote sources/wiki/Mr_CB.md, 9575 chars
+- Nakayama_Festa: blank = Overview, Background, Appearances
+  songs: 64 line(s) expanded
+  sections: Lead (65), Biography (1854), Appearance (734), Relationships (4415), Media Appearances (190), Event Appearances (250), Song Discography (1275), Trivia (6405), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Nakayama_Festa.md, 19220 chars
+- Narita_Brian: blank = Background, Appearances
+  songs: 144 line(s) expanded
+  sections: Biography (1963), Appearance (1762), Relationships (3325), Media Appearances (187), Event Appearances (316), Song Discography (3077), Trivia (793)
+  wrote sources/wiki/Narita_Brian.md, 11858 chars
+- Narita_Taishin: blank = Appearances
+  songs: 61 line(s) expanded
+  sections: Appearance (1684), Media Appearances (242), Event Appearances (248), Song Discography (1456), Trivia (1132)
+  wrote sources/wiki/Narita_Taishin.md, 5185 chars
+- Neo_Universe: blank = Overview, Background, Appearances
+  songs: 44 line(s) expanded
+  sections: Lead (63), Biography (1769), Appearance (1445), Relationships (1388), Media Appearances (175), Event Appearances (157), Song Discography (864), Trivia (1335), Real-life page (excerpt) (3574)
+  wrote sources/wiki/Neo_Universe.md, 11221 chars
+- Nishino_Flower: blank = Overview, Background, Appearances
+  songs: 46 line(s) expanded
+  sections: Lead (65), Biography (1944), Appearance (1101), Relationships (2488), Media Appearances (108), Event Appearances (187), Song Discography (1105), Trivia (1907), Real-life page (excerpt) (3576)
+  wrote sources/wiki/Nishino_Flower.md, 12938 chars
+- No_Reason: blank = Overview, Background, Appearances
+  songs: 4 line(s) expanded
+  sections: Lead (60), Biography (1586), Appearance (1109), Relationships (1952), Media Appearances (58), Event Appearances (86), Song Discography (121), Trivia (1396), Real-life page (excerpt) (3444)
+  wrote sources/wiki/No_Reason.md, 10254 chars
+- North_Flight: blank = Overview, Background, Appearances
+  songs: 15 line(s) expanded
+  sections: Lead (63), Biography (1799), Appearance (1662), Relationships (950), Media Appearances (65), Event Appearances (159), Song Discography (316), Trivia (508), Real-life page (excerpt) (3574)
+  wrote sources/wiki/North_Flight.md, 9547 chars
+- Oguri_Cap: blank = Background
+  sections: Biography (2413), Relationships (3355), Trivia (2799)
+  wrote sources/wiki/Oguri_Cap.md, 8968 chars
+- Orfevre: blank = Overview, Background, Appearances
+  songs: 44 line(s) expanded
+  sections: Lead (58), Biography (1512), Appearance (1543), Relationships (5092), Media Appearances (63), Event Appearances (188), Song Discography (711), Trivia (7644), Real-life page (excerpt) (3569)
+  wrote sources/wiki/Orfevre.md, 20816 chars
+- Phalaenopsis: blank = Overview, Background, Appearances
+  songs: 33 line(s) expanded
+  sections: Lead (52), Biography (1728), Appearance (532), Relationships (2062), Media Appearances (57), Event Appearances (74), Song Discography (966), Trivia (1481), Real-life page (excerpt) (3574)
+  wrote sources/wiki/Phalaenopsis.md, 10977 chars
+- Red_Desire: blank = Overview, Background, Appearances
+  songs: 18 line(s) expanded
+  sections: Lead (61), Biography (1501), Appearance (2298), Relationships (3128), Media Appearances (107), Event Appearances (71), Song Discography (377), Trivia (1988), Real-life page (excerpt) (3572)
+  wrote sources/wiki/Red_Desire.md, 13548 chars
+- Rose_Kingdom: blank = Overview, Background, Appearances
+  songs: 15 line(s) expanded
+  sections: Lead (52), Biography (1666), Appearance (1547), Relationships (1157), Media Appearances (22), Event Appearances (71), Song Discography (326), Trivia (556), Real-life page (excerpt) (1431)
+  wrote sources/wiki/Rose_Kingdom.md, 7279 chars
+- Royce_and_Royce: blank = Overview, Background, Appearances
+  songs: 13 line(s) expanded
+  sections: Lead (66), Biography (1701), Appearance (1051), Relationships (1812), Media Appearances (150), Event Appearances (71), Song Discography (351), Trivia (1214), Real-life page (excerpt) (2929)
+  wrote sources/wiki/Royce_and_Royce.md, 9805 chars
+- Rulership: blank = Overview, Background, Appearances
+  songs: 22 line(s) expanded
+  sections: Lead (52), Biography (1534), Appearance (2170), Relationships (5082), Media Appearances (22), Event Appearances (178), Song Discography (404), Trivia (3994), Real-life page (excerpt) (3571)
+  wrote sources/wiki/Rulership.md, 17449 chars
+- Satono_Crown: blank = Appearances
+  songs: 41 line(s) expanded
+  sections: Appearance (1267), Media Appearances (112), Event Appearances (145), Song Discography (949), Trivia (654)
+  wrote sources/wiki/Satono_Crown.md, 3544 chars
+- Seeking_the_Pearl: blank = Overview, Background, Appearances
+  songs: 49 line(s) expanded
+  sections: Lead (68), Biography (2044), Appearance (1481), Relationships (1423), Media Appearances (59), Event Appearances (111), Song Discography (1003), Trivia (2279), Real-life page (excerpt) (3579)
+  wrote sources/wiki/Seeking_the_Pearl.md, 12513 chars
+- Seiun_Sky: blank = Appearances
+  songs: 80 line(s) expanded
+  sections: Appearance (1080), Media Appearances (334), Event Appearances (167), Song Discography (1826), Trivia (1090)
+  wrote sources/wiki/Seiun_Sky.md, 4905 chars
+- Shinko_Windy: blank = Overview, Background, Appearances
+  songs: 21 line(s) expanded
+  sections: Lead (63), Biography (1898), Appearance (1191), Relationships (921), Media Appearances (43), Event Appearances (101), Song Discography (480), Trivia (860), Real-life page (excerpt) (501)
+  wrote sources/wiki/Shinko_Windy.md, 6509 chars
+- Smart_Falcon: blank = Overview, Background, Appearances
+  songs: 83 line(s) expanded
+  sections: Lead (63), Biography (2154), Appearance (1097), Relationships (3452), Media Appearances (191), Event Appearances (281), Song Discography (1669), Trivia (1683), Real-life page (excerpt) (697)
+  wrote sources/wiki/Smart_Falcon.md, 11738 chars
+- Still_in_Love: blank = Appearances
+  songs: 38 line(s) expanded
+  sections: Appearance (1725), Media Appearances (32), Event Appearances (99), Song Discography (745), Trivia (5386)
+  wrote sources/wiki/Still_in_Love.md, 8407 chars
+- Super_Creek: blank = Appearances
+  songs: 68 line(s) expanded
+  sections: Appearance (1457), Media Appearances (161), Event Appearances (274), Song Discography (1636), Trivia (2807)
+  wrote sources/wiki/Super_Creek.md, 6749 chars
+- Sweep_Tosho: blank = Overview, Background, Appearances
+  songs: 37 line(s) expanded
+  sections: Lead (62), Biography (2027), Appearance (1155), Relationships (7591), Media Appearances (149), Event Appearances (221), Song Discography (913), Trivia (4204), Real-life page (excerpt) (3573)
+  wrote sources/wiki/Sweep_Tosho.md, 20343 chars
+- TM_Opera_O: blank = Background, Appearances
+  songs: 113 line(s) expanded
+  sections: Biography (1954), Appearance (1196), Relationships (2790), Media Appearances (211), Event Appearances (325), Song Discography (2766), Trivia (2044)
+  wrote sources/wiki/TM_Opera_O.md, 11717 chars
+- Taiki_Shuttle: blank = Appearances
+  songs: 79 line(s) expanded
+  sections: Appearance (2067), Media Appearances (173), Event Appearances (181), Song Discography (1688), Trivia (1182)
+  wrote sources/wiki/Taiki_Shuttle.md, 5711 chars
+- Tamamo_Cross: blank = Background, Appearances
+  songs: 113 line(s) expanded
+  sections: Biography (2455), Appearance (1219), Relationships (1746), Media Appearances (300), Event Appearances (278), Song Discography (2477), Trivia (992)
+  wrote sources/wiki/Tamamo_Cross.md, 9902 chars
+- Tanino_Gimlet: blank = Appearances
+  songs: 41 line(s) expanded
+  sections: Appearance (1280), Media Appearances (155), Event Appearances (154), Song Discography (785), Trivia (1238)
+  wrote sources/wiki/Tanino_Gimlet.md, 4032 chars
+- Tap_Dance_City: blank = Overview, Background, Appearances
+  songs: 23 line(s) expanded
+  sections: Lead (65), Biography (1764), Appearance (916), Relationships (2894), Media Appearances (21), Event Appearances (190), Song Discography (439), Trivia (2005), Real-life page (excerpt) (3576)
+  wrote sources/wiki/Tap_Dance_City.md, 12327 chars
+- Tosen_Jordan: blank = Overview, Background, Appearances
+  songs: 55 line(s) expanded
+  sections: Lead (63), Biography (2303), Appearance (1661), Relationships (5434), Media Appearances (145), Event Appearances (253), Song Discography (1361), Trivia (1650), Real-life page (excerpt) (3574)
+  wrote sources/wiki/Tosen_Jordan.md, 16895 chars
+- Transcend: blank = Overview, Background, Appearances
+  songs: 37 line(s) expanded
+  sections: Lead (60), Biography (1874), Appearance (2106), Relationships (1557), Media Appearances (50), Event Appearances (150), Song Discography (657), Trivia (1821), Real-life page (excerpt) (277)
+  wrote sources/wiki/Transcend.md, 8994 chars
+- Tsurumaru_Tsuyoshi: blank = Appearances
+  songs: 41 line(s) expanded
+  sections: Appearance (1466), Media Appearances (144), Event Appearances (88), Song Discography (810), Trivia (835)
+  wrote sources/wiki/Tsurumaru_Tsuyoshi.md, 3778 chars
+- Verxina: blank = Appearances
+  songs: 43 line(s) expanded
+  sections: Appearance (1845), Media Appearances (99), Event Appearances (182), Song Discography (858), Trivia (1354)
+  wrote sources/wiki/Verxina.md, 4740 chars
+- Victoire_Pisa: blank = Overview, Background, Appearances
+  songs: 25 line(s) expanded
+  sections: Lead (52), Biography (1520), Appearance (2254), Relationships (1854), Media Appearances (21), Event Appearances (71), Song Discography (445), Trivia (2236), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Victoire_Pisa.md, 12482 chars
+- Vodka: blank = Background
+  sections: Biography (1869), Relationships (3707), Trivia (2836)
+  wrote sources/wiki/Vodka.md, 8801 chars
+- Win_Variation: blank = Overview, Background, Appearances
+  songs: 30 line(s) expanded
+  sections: Lead (64), Biography (1596), Appearance (1393), Relationships (2357), Media Appearances (111), Event Appearances (123), Song Discography (571), Trivia (913), Real-life page (excerpt) (1083)
+  wrote sources/wiki/Win_Variation.md, 8665 chars
+- Wonder_Acute: blank = Overview, Background, Appearances
+  songs: 55 line(s) expanded
+  sections: Lead (63), Biography (1921), Appearance (1594), Relationships (2460), Media Appearances (179), Event Appearances (195), Song Discography (1194), Trivia (774), Real-life page (excerpt) (679)
+  wrote sources/wiki/Wonder_Acute.md, 9510 chars
+- Yaeno_Muteki: blank = Appearances
+  songs: 57 line(s) expanded
+  sections: Appearance (1639), Media Appearances (143), Event Appearances (203), Song Discography (1310), Trivia (471)
+  wrote sources/wiki/Yaeno_Muteki.md, 4183 chars
+- Yukino_Bijin: blank = Overview, Background, Appearances
+  songs: 36 line(s) expanded
+  sections: Lead (63), Biography (2045), Appearance (1543), Relationships (818), Media Appearances (153), Event Appearances (165), Song Discography (844), Trivia (1065), Real-life page (excerpt) (2319)
+  wrote sources/wiki/Yukino_Bijin.md, 9466 chars
+- Zenno_Rob_Roy: blank = Overview, Background, Appearances
+  songs: 25 line(s) expanded
+  sections: Lead (64), Biography (2008), Appearance (1298), Relationships (3240), Media Appearances (144), Event Appearances (110), Song Discography (648), Trivia (2534), Real-life page (excerpt) (3575)
+  wrote sources/wiki/Zenno_Rob_Roy.md, 14075 chars
+done: 94 staged, 1 failed
