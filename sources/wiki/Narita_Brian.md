@@ -101,6 +101,7 @@ As for her racing outfit, her chest is wrapped in bandages, layered under a crea
 * Orchestra in Late Autumn!
 * Illuminate the Heart
 * Slapstick Crash!
+* Banquet of Shadows
 
 === Anniversary Events ===
 * Half Anniversary Story

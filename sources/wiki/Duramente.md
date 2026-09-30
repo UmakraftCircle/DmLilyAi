@@ -38,6 +38,7 @@ Adding to the outfit, her left thigh is adorned with an ornate gold wrap featuri
 
 * Mine and Everyone's
 * Summer Days Graffiti
+* Banquet of Shadows
 
 === Anniversary Events ===
 

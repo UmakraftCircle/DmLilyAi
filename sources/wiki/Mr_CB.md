@@ -2,7 +2,7 @@
 
 - Character file: LilyAiGameSpace/Umamusume/Character/Mr_CB.md
 - Blank sections to fill: Overview, Background, Appearances
-- Page: https://umamusu.wiki/Mr_CB (retrieved 2026-09-30 UTC)
+- Page: https://umamusu.wiki/Mr._C.B. (retrieved 2026-09-30 UTC)
 - License: Umamusume Wiki text is CC BY-SA 4.0. Reword before use. Game materials are copyright Cygames, Inc.
 - This is staging data with links and refs stripped. It is not the finished profile.
 
@@ -173,3 +173,41 @@ Solo
 * Her love for rain is a reference to how in real life, Mr. C.B. won the Triple Crown in unfavorable conditions, such as rain.
 * In her SSR Speed Card, she is holding a book that looks similar to the book "Ware ni Gogatsu o" ("May for Me" in English) written by Shuji Terayama. The book opens up with the line "Twenty years old", while both Mr. C.B. and Katsuragi Ace passed away at twenty years old in 2000.
 * Though she lives alone in Umamusume, Mr. C.B. was actually trained at Miho Training Center in real life.
+
+## Real-life page (excerpt)
+
+Source: https://umamusu.wiki/IRL:Mr._C.B.
+
+Mr. C.B. was a Japanese racehorse that was active from 1982 to 1985. He is the 3rd racehorse to achieve the Classic Triple Crown, ending the 19 year drought of having no Triple Crown colt to achieve such feat since Shinzan in 1964.<br>
+
+In addition to this, he was the first racehorse to achieve the Classic Triple Crown with a Japanese-bred sire (maru-chichi). He was also the final Triple Crown winner prior to the JRA's adoption of the international race grading system in 1984, and the first horse to win the Tenno Sho (Autumn) after its adoption.
+
+### Name Origin
+
+The name "C.B." comes from the initials of the farm where he was born, Chigira Bokujō (Chigira Farm).
+
+### Background
+
+Mr. C.B. was born to C.B. Queen on April 7th, 1980. He was weaned at Okamoto Farm in Hokkaido and stayed there until March of the next year, when he was moved to Chigira Ranch in Gunma. C.B. Queen's owner and breeder owned Chigira Ranch, and Mr. C.B. trained there until his debut.
+
+He didn't get a unique name at birth and instead was known as "C. B. Queen 1," after his mother.
+
+### Racing career
+
+=== Two-year-old season (1982) ===
+He was finally given his unique racing name, "Mr. C.B." and was sent to train at the Miho Trainer Center, under the care of Yasuhisa Matsuyama. 
+
+His debut race was at the New Horse in Tokyo under the conditions of 1600m Turf. Due to Mr. C.B.'s notable lineage, he was the favorite to win out of the 12 horses participating. Mr. C.B. started slightly behind in the beginning before quickly catching up and surpassing the group. He ends up winning the race by a large margin, being 5 paces ahead of second place.
+
+He next raced at the Kuromatsu Sho, where he was the 1st favorite to win once again. Mr. C.B. suffers from a slow start, greatly setting him behind the group. Despite this, Mr. C.B. ends up catching up with the group once again, but only winning this race by a very thin margin this time. Fans were unhappy with how Mr. C.B. had struggled on a race that should have been an easy victory for him.
+
+At his next race, the Hiiragi Sho, he once again has another devastating slow start and stays towards the back of the group, even up until the 4th corner of the race, to the remorse of his fans. Despite the short distance of the final straight, Mr. C.B. shows off his pure ability of power by surging ahead towards the front of the group. He ends up securing himself second place to Umeno Shin O.
+
+With the pattern of Mr. C.B. suffering slow starts, his jockey, Masato Yoshinaga, realized he needed to change race strategy to account for this. He instead focused on training Mr. C.B.'s power and ability to pull ahead in the final straight, like he did in the last race.
+
+=== Three-year-old season (1983) ===
+Entering Mr. C.B.'s classic year, his next race is the Kyodo Tsushin Hai in Tokyo. This race was also chosen in preparation for the Japanese Derby, which is held at the same racecourse. 
+
+Umeno Shin O, winner of the Hiiragi Sho, is also participating in this race against him. During the race, Mr. C.B. had a rare good start but purposely stayed at the back of the pack. Just before the 3rd corner, he started to make his move and narrowed the gap to the front. Umeno Shin O and he had a very close battle to the front until Mr. C.B. managed to pull ahead and cross the goal by one head. He had secured the win and avenged himself on the Hiiragi Sho. This was Mr. C.B.'s real starting point for his racing career.
+
+The next race Mr. C.B. took on was the Yay
