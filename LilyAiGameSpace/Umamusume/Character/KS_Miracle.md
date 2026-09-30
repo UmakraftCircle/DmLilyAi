@@ -81,7 +81,7 @@ Her last recorded race was the Sprinters Stakes on 15 Dec 1991, the same date as
 
 ## Game data: versions
 
-K.S.Miracle has two trainee versions in the game (JP server data). Aptitudes and career objectives are identical across both. Base stats, growth bonuses, release dates and unique skills differ. Both are listed by GameTora as obtainable from the Standard Gacha (Namu Wiki ties each release to a JP pickup gacha, see Gaps).
+K.S.Miracle has two trainee versions in the game (JP server data). Aptitudes and career objectives are identical across both. Base stats, growth bonuses, release dates, unique skills and skill sets differ. Both are listed by GameTora as obtainable from the Standard Gacha (Namu Wiki ties each release to a JP pickup gacha, see Gaps).
 
 | Version | GameTora page |
 |---------|---------------|
@@ -150,7 +150,22 @@ Note (per Umamusume Wiki): in career mode the Classic-year Sprinters Stakes obje
 
 **Unique skill (per Namu Wiki, name machine translated as "Blue light of happiness"):** activates when she is in the front part of the field (roughly the top 20-50%) at a random point in the first half of the final stretch, and raises her speed. The boost matches the last sprint well. It is the standard unique-skill strength (0.35) in Short and Mile races and one tier lower (0.25) in Medium and Long races, so it is weaker if inherited onto a Medium or Long runner.
 
-**Build notes (per Namu Wiki):** She is a Short/Mile Pace Chaser. Her own skills and the unique skill's placement condition all suit Pace Chaser, so there is little reason to change her style even though Late Surger is B.
+**Skill set (per Namu Wiki; names machine translated, so approximate):**
+
+| Source | Skill | Rarity | Effect | Condition |
+|--------|-------|--------|--------|-----------|
+| Initial | Preparing to get out | Normal | Small speed increase if she is ahead somewhere in the final corner. | Pace Chaser |
+| Initial | First and second measures | Normal | Small acceleration increase if she is in a good position as the race nears its end. | Short distance |
+| Initial | Head-to-head match | Normal | Small acceleration increase if she is ahead where the final stretch begins. | Pace Chaser |
+| Awakening Lv 2 | Leading straight line ◯ | Normal | Small speed increase somewhere on any straight. | Pace Chaser |
+| Awakening Lv 3 | Speedster | Rare | Speed increase if she is ahead somewhere in the final corner. | Pace Chaser |
+| Awakening Lv 4 | Light step | Normal | Small speed increase if she is ahead as the race nears its end. | Short distance |
+| Awakening Lv 5 | Fierce competition | Rare | Acceleration increase if she is ahead where the final stretch begins. | Pace Chaser |
+| Evolution of Speedster | K.Speed | Evolution | Speed increase if she moves forward in the final corner, plus a small forward move in Short races. | Pace Chaser |
+| Evolution of Speedster | The trajectory of a meteor | Evolution | Speed increase for a while if she is ahead in the final corner. | Pace Chaser, Mile |
+| Evolution of Fierce competition | Flame of life | Evolution | Acceleration increase if she moves forward near the end of the race, then a small speed increase with 200m left. | Pace Chaser |
+
+**Build notes (per Namu Wiki):** She is a Short/Mile Pace Chaser. Her own skills and the unique skill's placement condition all suit Pace Chaser, so there is little reason to change her style even though Late Surger is B. Speedster has two evolution options, one for general Short use and one for Mile.
 
 ### Version 2: K.S.Miracle (Autumn) [Andante in Autumn Hues]
 
@@ -168,6 +183,20 @@ Note (per Umamusume Wiki): in career mode the Classic-year Sprinters Stakes obje
 | 5 star | 128 | 80 | 118 | 112 | 112 |
 
 **Unique skill (per Namu Wiki, name machine translated as "Play miracles and hearts"):** if she competes with other runners in the mid-pack (roughly the top 20-70%) for over 2 seconds in the mid-race, her speed rises during the final spurt (0.35). In a Short race, if she is in 1st to 3rd place when it activates, she also gets a smaller extra boost (0.15). Namu Wiki's wording says "blocked", which is probably a translation of a competing condition, so check the exact trigger against GameTora once it lists skills.
+
+**Skill set (per Namu Wiki; names machine translated, so approximate):**
+
+| Source | Skill | Rarity | Effect | Condition |
+|--------|-------|--------|--------|-----------|
+| Initial | Head-to-head match | Normal | Small acceleration increase if she is ahead where the final stretch begins. | Pace Chaser |
+| Initial | Aggressive | Normal | Small speed increase somewhere in the mid-race, using some stamina. | Pace Chaser |
+| Initial | Stepping out | Normal | Small speed increase when she tries to overtake. | None listed |
+| Awakening Lv 2 | Autumn Uma Musume ◯ | Normal | Speed increases somewhat in autumn races. | Autumn races |
+| Awakening Lv 3 | Breaking down Yeongjong (影従打破) | Rare | Large speed increase somewhere in the mid-race, using some stamina. | Pace Chaser |
+| Awakening Lv 4 | Heart of the chest (胸の高鳴り) | Normal | Moves slightly ahead where the final stretch begins. | Short or Mile |
+| Awakening Lv 5 | Flashing light (閃雷) | Rare | Speed increase when she tries to overtake. | None listed |
+| Evolution of Breaking down Yeongjong | 『Please watch』 (『見ていて、くださいね』) | Evolution | Large speed increase in the mid-race using stamina, or a very large increase without using stamina in Short races. | Pace Chaser |
+| Evolution of Flashing light | Comets of light | Evolution | Speed rises when she tries to overtake, plus an extra forward-movement effect (wording unclear in the translation). | None listed |
 
 **Build notes (per Namu Wiki):** This version is built more narrowly for Short-distance Pace Chaser than the Original. Her owned skills are Short or Pace Chaser skills, and the unique skill's extra effect is Short only. Mid-race competition is common in Short and Mile races, so the trigger fires often.
 
@@ -205,8 +234,8 @@ Support pages: https://gametora.com/umamusume/supports/20051-ksmiracle (SR), htt
 - Values are GameTora's JP-server data. GameTora says the character is not yet released on the Global server, so Global release dates and any Global changes are unknown.
 - Country of birth for the real horse: GameTora shows Japan, while Umamusume Wiki says the horse was born in the United States. This file does not pick one.
 - Objective 8 appears as undefined on GameTora, so its real wording is not confirmed. Namu Wiki's objective list does not show a separate entry for it.
-- Skill names and descriptions come from Namu Wiki's machine-translated English page. Official English names are not confirmed. Initial, awakening and evolution skill lists were read but are not copied here.
-- GameTora's character pages show no unique skill, so skill details rest on Namu Wiki alone.
+- Skill names and descriptions come from Namu Wiki's machine-translated English page. Official English names are not confirmed. Some wording is unclear (for example the extra effect of Comets of light and the exact Autumn unique trigger). The "Pace Chaser" condition is my reading of Namu Wiki's tags "Tactics/Leading" and "Advance", which may be inexact.
+- GameTora's character pages show no unique skill or skill list, so skill details rest on Namu Wiki alone.
 - GameTora lists both trainee versions as Standard Gacha, while Namu Wiki links each release to a JP pickup gacha. Which is right is not confirmed.
 - The R and SSR [White Bird Arabesque] support cards were not read. Game8's SR card page could not be opened (it blocks automated access), so its assessment above comes from a search snippet only.
 - The overview, background and appearances are reworded by hand from Umamusume Wiki and GameTora. Check them against the sources before relying on them.
