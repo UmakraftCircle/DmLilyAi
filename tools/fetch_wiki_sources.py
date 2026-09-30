@@ -12,6 +12,7 @@ Standard library only.
 """
 import argparse
 import datetime
+import html as htmllib
 import json
 import os
 import re
@@ -40,6 +41,7 @@ KEYWORDS = {
 }
 
 H2 = re.compile(r"^==(?!=)\s*(.*?)\s*==\s*$", re.M)
+DISCO_TEMPLATE = re.compile(r"\{\{\s*Character[_ ]Discography", re.I)
 
 
 # ---------------------------------------------------------------- blank check
@@ -135,6 +137,40 @@ def clean_text(text, strip_templates=False):
     return text.strip()
 
 
+# ------------------------------------------------------------ rendered HTML
+
+def html_to_text(h):
+    """Turn a rendered HTML fragment (tables, lists) into plain lines."""
+    h = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", "", h)
+    h = re.sub(r"(?i)</tr\s*>", "\n", h)
+    h = re.sub(r"(?i)</t[dh]\s*>", " | ", h)
+    h = re.sub(r"(?i)<br\s*/?>|</p>|</li>|</div>|</h[1-6]>", "\n", h)
+    h = re.sub(r"<[^>]+>", "", h)
+    h = htmllib.unescape(h)
+    lines = []
+    for ln in h.splitlines():
+        ln = re.sub(r"\s+", " ", ln).strip()
+        ln = re.sub(r"(\s*\|)+$", "", ln).strip()
+        if ln:
+            lines.append(ln)
+    return "\n".join(lines)
+
+
+def extract_rendered_section(page_html, heading_id):
+    """Text of the level-2 section whose heading has the given id, from parsed HTML."""
+    i = page_html.find('id="%s"' % heading_id)
+    if i < 0:
+        return None
+    seg = page_html[i:]
+    k = seg.find("</h2>")  # drop the rest of the heading itself
+    seg = seg[k + 5:] if k >= 0 else seg[seg.find(">") + 1:]
+    j = seg.find("<h2")
+    if j >= 0:
+        seg = seg[:j]
+    text = html_to_text(seg)
+    return text or None
+
+
 # ------------------------------------------------------------------- network
 
 def http_get(url, timeout=30):
@@ -173,9 +209,29 @@ def fetch_wikitext(title, log, _depth=0):
     return None
 
 
+def fetch_rendered_section(title, heading_id, log):
+    """Rendered text of one section (used for template-generated song tables), or None."""
+    q = urllib.parse.quote(title, safe=":_.()!,'")
+    url = ("%s/w/api.php?action=parse&page=%s&prop=text&format=json&formatversion=2&redirects=1"
+           % (WIKI, q))
+    code, body = http_get(url)
+    if code != 200:
+        log("    rendered fetch of %s returned HTTP %s" % (title, code or body[:80]))
+        return None
+    try:
+        page_html = json.loads(body)["parse"]["text"]
+    except (KeyError, ValueError):
+        log("    rendered fetch of %s returned unexpected data" % title)
+        return None
+    text = extract_rendered_section(page_html, heading_id)
+    if not text:
+        log("    rendered page of %s has no section %r" % (title, heading_id))
+    return text
+
+
 # ------------------------------------------------------------------ staging
 
-def build_staged(stem, char_rel, blanks, title, page, irl_title, irl_text):
+def build_staged(stem, char_rel, blanks, title, page, irl_title, irl_text, songs_text=None):
     lead, secs = split_sections(page)
     picked = pick_sections(secs, blanks)
     today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
@@ -192,7 +248,12 @@ def build_staged(stem, char_rel, blanks, title, page, irl_title, irl_text):
     if "Overview" in blanks:
         out += ["## Lead", "", clean_text(lead, strip_templates=True) or "(empty)", ""]
     for t, body in picked:
-        out += ["## %s" % t, "", clean_text(body), ""]
+        if songs_text and DISCO_TEMPLATE.search(body):
+            out += ["## %s" % t, "", "(expanded from the rendered page; columns: song | album | type)", "", songs_text, ""]
+        elif DISCO_TEMPLATE.search(body):
+            out += ["## %s" % t, "", "(the wiki builds this list from a template that could not be expanded; songs are missing)", ""]
+        else:
+            out += ["## %s" % t, "", clean_text(body), ""]
     if not picked:
         out += ["(No matching sections found on the page. Check the page by hand.)", ""]
     if "Overview" in blanks and irl_text:
@@ -202,6 +263,12 @@ def build_staged(stem, char_rel, blanks, title, page, irl_title, irl_text):
         text = (excerpt + "\n\n" + body).strip()
         out += ["## Real-life page (excerpt)", "", "Source: %s/%s" % (WIKI, urllib.parse.quote(irl_title, safe=":_.()!,'")), "", text[:3500], ""]
     return "\n".join(out).rstrip() + "\n"
+
+
+def section_sizes(text):
+    """'Biography (1200), Relationships (900)' from a staged file, for the log."""
+    parts = re.split(r"^## ", text, flags=re.M)[1:]
+    return ", ".join("%s (%d)" % (p.split("\n", 1)[0].strip(), len(p)) for p in parts)
 
 
 def main(argv=None):
@@ -252,8 +319,8 @@ def main(argv=None):
         return 1 if only else 0
 
     staged = failed = 0
-    first_preview = None
-    for i, (stem, md, blanks) in enumerate(todo):
+    first_songs = None
+    for stem, md, blanks in todo:
         log("- %s: blank = %s" % (stem, ", ".join(blanks)))
         page, used = None, None
         for title in wiki_title(md, stem):
@@ -272,10 +339,17 @@ def main(argv=None):
             time.sleep(args.delay)
             if not irl_text:
                 log("  note: no real-life page found (%s)" % irl_title)
+        songs_text = None
+        if "Appearances" in blanks and DISCO_TEMPLATE.search(page):
+            songs_text = fetch_rendered_section(used, "Song_Discography", log)
+            time.sleep(args.delay)
+            log("  songs: %s" % ("%d line(s) expanded" % len(songs_text.splitlines()) if songs_text
+                                  else "could not be expanded, noted in the staged file"))
+            if songs_text and first_songs is None:
+                first_songs = (stem, songs_text)
         char_rel = "LilyAiGameSpace/Umamusume/Character/%s.md" % stem
-        text = build_staged(stem, char_rel, blanks, used, page, irl_title, irl_text)
-        if first_preview is None:
-            first_preview = (stem, text)
+        text = build_staged(stem, char_rel, blanks, used, page, irl_title, irl_text, songs_text)
+        log("  sections: %s" % section_sizes(text))
         if args.dry_run:
             log("  wrote (dry run, not saved) sources/wiki/%s.md, %d chars" % (stem, len(text)))
         else:
@@ -286,10 +360,10 @@ def main(argv=None):
         staged += 1
 
     log("done: %d staged, %d failed" % (staged, failed))
-    if first_preview and args.dry_run:
+    if first_songs and args.dry_run:
         log("")
-        log("--- preview of %s (first 60 lines) ---" % first_preview[0])
-        for ln in first_preview[1].splitlines()[:60]:
+        log("--- expanded song list for %s (first 25 lines) ---" % first_songs[0])
+        for ln in first_songs[1].splitlines()[:25]:
             log(ln)
     _write_log(lines)
     return 0 if staged else 1
