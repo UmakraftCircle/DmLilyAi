@@ -15,8 +15,6 @@ The coolly calculating Empress. Highly gifted and ambitious.
 The vice president of Tracen Academy's student council, known to the other students as the "Empress". The daughter of an accomplished racer, she constantly strives to live up to her mother's racing prowess and ability to guide others. To this end, she has joined her friend and confidant, Symboli Rudolf, in the student council. Despite her strict schedule, she still makes time to tend the flowers in the garden.
 
 {{Character Profile
-| self_intro = I am Air Groove. If you are unwavering in your beliefs, your ideals will blossom. It is my role as Empress to lead by example.
-| self_intro_jp = エアグルーヴだ。信念を曲げなければ理想は必ず芽吹く。それを示すため私が“女帝”として皆の指針となろう
 | strengths = Growing flowers
 | strengths_jp = 花を育てること
 | weaknesses = Things that suddenly flash or move
@@ -34,15 +32,17 @@ The vice president of Tracen Academy's student council, known to the other stude
 | before_a_race = Reapplies her eyeshadow and gets fired up
 | before_a_race_jp = アイシャドウを塗り直し、気合いを入れる
 | good_subject = 
-| good_subject_jp = 
+| good_subject_jp = “女帝”たるもの、余す所なく
 | secret_pride = 
-| secret_pride_jp = 
+| secret_pride_jp = コンテナガーデンの品評会で入賞したこと
 | frequent_purchase = 
-| frequent_purchase_jp = 
+| frequent_purchase_jp = リキッドアイライナー、保湿用尻尾ミルク
 | secret1 = She hates all insects except ladybugs.
 | secret1_jp = 実は、虫嫌いだがテントウムシだけは好き。
 | secret2 = She listens to Chopin when she wants to relax.
 | secret2_jp = 実は、リラックスしたい時にはショパンのCDを聴く。
+| self_intro = I am Air Groove. If you are unwavering in your beliefs, your ideals will blossom. It is my role as Empress to lead by example.
+| self_intro_jp = エアグルーヴだ。信念を曲げなければ理想は必ず芽吹く。それを示すため私が“女帝”として皆の指針となろう
 }}
 
 ## Relationships
