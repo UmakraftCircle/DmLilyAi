@@ -26,6 +26,10 @@ REPO_ROOT = HERE.parents[1]
 OUT = REPO_ROOT / "LilyAiGameSpace/Umamusume/Guide/RaceList/Racelist.md"
 DEBUG = REPO_ROOT / "racelist_debug"              # not committed
 
+ROW_SELECTOR = "tr, [role=row], [class*=races_row]"
+USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+
 YEARS = ["Junior", "Classic", "Senior"]
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -78,8 +82,15 @@ def dump_page(page):
 
 def load_rows(dump: bool):
     with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page(viewport={"width": 1400, "height": 1000})
+        browser = p.chromium.launch(
+            args=["--disable-blink-features=AutomationControlled"]
+        )
+        context = browser.new_context(
+            viewport={"width": 1400, "height": 1000},
+            locale="en-US",
+            user_agent=USER_AGENT,
+        )
+        page = context.new_page()
 
         # Skip images/fonts/media: faster, and less for ad scripts to hang on.
         page.route(
@@ -91,10 +102,16 @@ def load_rows(dump: bool):
 
         # "networkidle" never fires here (ads/analytics keep connections open),
         # so wait for the DOM and then for the table itself.
-        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        resp = page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        print(f"HTTP {resp.status if resp else '?'} | title={page.title()!r} | url={page.url}")
         try:
-            page.wait_for_selector("tr, [role=row]", timeout=45000)
+            # state="attached": a hidden first match must not cause a timeout.
+            page.wait_for_selector(ROW_SELECTOR, state="attached", timeout=45000)
         except Exception:
+            try:
+                print("BODY START:", page.inner_text("body")[:800])
+            except Exception:
+                pass
             dump_page(page)
             browser.close()
             raise
@@ -104,7 +121,7 @@ def load_rows(dump: bool):
         while stable < 3:
             page.mouse.wheel(0, 6000)
             page.wait_for_timeout(500)
-            count = page.locator("tr, [role=row]").count()
+            count = page.locator(ROW_SELECTOR).count()
             stable = stable + 1 if count == last else 0
             last = count
 
