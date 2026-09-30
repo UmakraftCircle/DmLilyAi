@@ -1,1 +1,143 @@
 # Duramente
+
+**Japanese name:** ドゥラメンテ
+**Series:** Umamusume: Pretty Derby (anime, game and franchise)
+**Tagline (game):** She is believed to possess the strongest blood, representing the culmination of an illustrious lineage.
+
+> Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
+
+---
+
+## Infobox
+
+| Field | Details |
+|-------|---------|
+| Name | Duramente |
+| Japanese name | ドゥラメンテ |
+| Voice actor | Akina |
+| Birthday | March 22 |
+| Height | 166 cm |
+| Weight | She has an amazing form. |
+| Three sizes | 89 - 57 - 85 |
+| Shoe size | Left and right: 24.5cm |
+| School | Junior Division |
+| Dorm | Miho Dormitory |
+| Strong point | Physical fitness tests (especially repeated side steps) |
+| Weak point | Cracking eggs cleanly |
+| Game versions | 1 (Red in Black) |
+
+## Overview
+
+Duramente is a character in the Umamusume: Pretty Derby franchise. She functions as a rival to the champion Kitasan Black. At first she did not acknowledge Kitasan Black's racing skill, but later she grew to respect and befriend her.
+
+## Background
+
+- **Personality:** Initially dismissive of Kitasan Black's abilities, she later becomes respectful and friendly toward her.
+
+## Profile details (game)
+
+| Detail | Description |
+|--------|-------------|
+| Ears | She usually stands tall and proud. |
+| Tail | She maintains her weight at what she considers ideal for exercise. |
+| Family | Her entire family becomes fiercely competitive over table tennis during hot spring trips. |
+| Trivia 1 | She has an uncanny knack for bringing sunny weather. |
+| Trivia 2 | Her sunglasses tend to fall off while she exercises. |
+
+## Real-life counterpart
+
+Duramente is named after and based on a Japanese racehorse.
+
+| Field | Details |
+|-------|---------|
+| Date of birth | 22 Mar 2012 |
+| Date of death | 31 Aug 2021 |
+| Races | 9 |
+| Wins | 5 |
+| Record (1st-2nd-3rd-other) | 5-4-0-0 |
+| Earnings | 516607000 JPY 1200000 |
+
+## Appearances
+
+Not filled in yet.
+
+---
+
+## Game data: versions
+
+Duramente has 1 playable version in the game.
+
+| Version | GameTora page |
+|---------|---------------|
+| Duramente [Red in Black] | https://gametora.com/umamusume/characters/110801-duramente |
+
+### Shared aptitudes
+
+| Category | Type | Rank |
+|----------|------|------|
+| Surface | Turf | A |
+| Surface | Dirt | G |
+| Distance | Short | G |
+| Distance | Mile | A |
+| Distance | Medium | A |
+| Distance | Long | C |
+| Strategy | Front Runner | G |
+| Strategy | Pace Chaser | C |
+| Strategy | Late Surger | A |
+| Strategy | End Closer | A |
+
+Rank A or higher: Turf, Mile, Medium, Late Surger, End Closer.
+
+### Shared career objectives
+
+| # | Objective | Turn | Timing | Race |
+|---|-----------|------|--------|------|
+| 1 | Participate in the Junior Make Debut | 12 | Junior Class | , |
+| 2 | Place 5th or better in the Kyodo News Hai | 27 | Classic Class | , |
+| 3 | Place 5th or better in the Satsuki Sho | 31 | Classic Class | , |
+| 4 | Place 5th or better in the Tokyo Yushun (Japanese Derby) | 34 | Classic Class | , |
+| 5 | Participate in the Kikuka Sho | 44 | Classic Class | , |
+| 6 | Place 1st in the Nakayama Kinen | 52 | Senior Class | , |
+| 7 | Place 1st in the Osaka Hai | 54 | Senior Class | , |
+| 8 | Place 1st in the Takarazuka Kinen | 60 | Senior Class | , |
+| 9 | Place 1st in the Tenno Sho (Autumn) | 68 | Senior Class | , |
+| 10 | Place 1st in the Japan Cup | 70 | Senior Class | , |
+
+### Version 1: Duramente [Red in Black]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 3 star (base) |
+| Stat growth bonuses | Speed 20%, Power 10% |
+
+---
+
+## Gaps
+
+- Appearances (anime, game, other media): not filled in yet.
+- Overview, background and appearances are reworded summaries written by an AI model from the linked wiki pages. Check them against the sources before relying on them.
+- Unique skills, build notes, obtain methods and support cards: not filled in yet.
+- Duramente [Red in Black]: could not parse stats, release date.
+
+## Sources
+
+| Source | URL |
+|--------|-----|
+| GameTora profile | https://gametora.com/umamusume/characters/duramente |
+| GameTora, Duramente [Red in Black] | https://gametora.com/umamusume/characters/110801-duramente |
+| Wikipedia, list of characters | https://en.wikipedia.org/wiki/List_of_Umamusume:_Pretty_Derby_characters |
+
+Game materials are copyright Cygames, Inc.
+
+## Images
+
+Images are kept as their original URLs.
+
+| Description | URL |
+|-------------|-----|
+| Duramente [Red in Black] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1108_110801.png |
+| Profile art | https://media.gametora.com/umamusume/characters/profile/1108.png |
+| Character icon | https://gametora.com/images/umamusume/characters/icons/chr_icon_1108.png |
+
+<!-- generated by populate_character_stubs.py; delete this line to protect hand edits -->
