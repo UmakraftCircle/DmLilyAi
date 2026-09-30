@@ -1,11 +1,13 @@
 scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
-95 character file(s) with blank sections, 40 skipped (all three sections already filled)
+93 character file(s) with blank sections, 42 skipped (all three sections already filled)
   skipped: Admire_Groove
   skipped: Admire_Vega
   skipped: Agnes_Tachyon
   skipped: Air_Messiah
   skipped: Air_Shakur
+  skipped: Almond_Eye
   skipped: Aston_Machan
+  skipped: Bamboo_Memory
   skipped: Cesario
   skipped: Daiichi_Ruby
   skipped: Daitaku_Helios
@@ -47,14 +49,6 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
 - Air_Groove: blank = Background
   sections: Biography (2048), Relationships (4682), Trivia (1745)
   wrote sources/wiki/Air_Groove.md, 8879 chars
-- Almond_Eye: blank = Overview, Background, Appearances
-  songs: 57 line(s) expanded
-  sections: Lead (61), Biography (1631), Appearance (1733), Relationships (2401), Media Appearances (50), Event Appearances (154), Song Discography (959), Trivia (2085), Real-life page (excerpt) (3571)
-  wrote sources/wiki/Almond_Eye.md, 13090 chars
-- Bamboo_Memory: blank = Appearances
-  songs: 19 line(s) expanded
-  sections: Appearance (1303), Media Appearances (111), Event Appearances (274), Song Discography (509), Trivia (510)
-  wrote sources/wiki/Bamboo_Memory.md, 3127 chars
 - Believe: blank = Overview, Background, Appearances
   songs: 18 line(s) expanded
   sections: Lead (58), Biography (1654), Appearance (1459), Relationships (4427), Media Appearances (45), Event Appearances (73), Song Discography (356), Trivia (569), Real-life page (excerpt) (3569)
@@ -413,4 +407,4 @@ scanned 135 character file(s) in LilyAiGameSpace/Umamusume/Character
   songs: 25 line(s) expanded
   sections: Lead (64), Biography (2008), Appearance (1298), Relationships (3240), Media Appearances (144), Event Appearances (110), Song Discography (648), Trivia (2534), Real-life page (excerpt) (3575)
   wrote sources/wiki/Zenno_Rob_Roy.md, 14075 chars
-done: 95 staged, 0 failed
+done: 93 staged, 0 failed
