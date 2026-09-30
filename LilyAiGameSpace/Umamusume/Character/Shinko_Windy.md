@@ -1,1 +1,153 @@
 # Shinko Windy
+
+**Japanese name:** シンコウウインディ
+**Series:** Umamusume: Pretty Derby (anime, game and franchise)
+**Tagline (game):** She is a prankster who sometimes bites.
+
+> Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
+
+---
+
+## Infobox
+
+| Field | Details |
+|-------|---------|
+| Name | Shinko Windy |
+| Japanese name | シンコウウインディ |
+| Voice actor | Yuuki Takada |
+| Birthday | April 14 |
+| Height | 152 cm |
+| Weight | No change. |
+| Three sizes | 77 - 57 - 88 |
+| Shoe size | Left and right: 22.5cm |
+| School | Senior Division |
+| Dorm | Miho Dormitory |
+| Strong point | Playing tricks, digging holes, climbing rooftops |
+| Weak point | Cotton candy |
+| Game versions | 2 (Wicked Punk, Chomp-Chomp ☆ Scamp) |
+
+## Overview
+
+Not filled in yet.
+
+## Background
+
+Not filled in yet.
+
+## Profile details (game)
+
+| Detail | Description |
+|--------|-------------|
+| Ears | She becomes twitchy-eared while devising a new prank. |
+| Tail | She sometimes has drool on it first thing in the morning. |
+| Family | When a commercial for her father's company airs, the entire family sings the jingle. |
+| Trivia 1 | She cannot fall asleep when her roommate is absent. |
+| Trivia 2 | She brushes her teeth for over ten minutes. |
+
+## Real-life counterpart
+
+Shinko Windy is named after and based on a Japanese racehorse.
+
+| Field | Details |
+|-------|---------|
+| Date of birth | 14 Apr 1993 |
+| Date of death | 27 Sept 2023 |
+| Races | 17 |
+| Wins | 5 |
+| Record (1st-2nd-3rd-other) | 5-3-1-8 |
+| Earnings | 225,440,000 JPY |
+
+## Appearances
+
+Not filled in yet.
+
+---
+
+## Game data: versions
+
+Shinko Windy has 2 playable versions in the game. Aptitudes and career objectives are identical across all versions.
+
+| Version | GameTora page |
+|---------|---------------|
+| Shinko Windy [Wicked Punk] | https://gametora.com/umamusume/characters/104301-shinko-windy |
+| Shinko Windy [Chomp-Chomp ☆ Scamp] | https://gametora.com/umamusume/characters/104302-shinko-windy |
+
+### Shared aptitudes (all versions)
+
+| Category | Type | Rank |
+|----------|------|------|
+| Surface | Turf | F |
+| Surface | Dirt | A |
+| Distance | Short | C |
+| Distance | Mile | A |
+| Distance | Medium | B |
+| Distance | Long | G |
+| Strategy | Front Runner | G |
+| Strategy | Pace Chaser | A |
+| Strategy | Late Surger | B |
+| Strategy | End Closer | F |
+
+Rank A or higher: Dirt, Mile, Pace Chaser.
+
+### Shared career objectives (all versions)
+
+| # | Objective | Turn | Timing | Race |
+|---|-----------|------|--------|------|
+| 1 | Participate in the Junior Make Debut | 12 | Junior Class | , |
+| 2 | Have at least 3000 fans | 25 | Classic Class | , |
+| 3 | Place 5th or better in the Unicorn Stakes | 36 | Classic Class | , |
+| 4 | Place 5th or better in the Japan Dirt Derby | 37 | Classic Class | , |
+| 5 | Place 3rd or better in the Tokai Stakes | 50 | Senior Class | , |
+| 6 | Place 1st in the February Stakes | 52 | Senior Class | , |
+| 7 | Place 3rd or better in the Teio Sho | 60 | Senior Class | , |
+| 8 | Place 1st in the Champions Cup | 71 | Senior Class | , |
+
+### Version 1: Shinko Windy [Wicked Punk]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 3 star (base) |
+| Stat growth bonuses | Speed 10%, Power 10%, Guts 10% |
+
+### Version 2: Shinko Windy [Chomp-Chomp ☆ Scamp]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 3 star (base) |
+| Stat growth bonuses | Speed 8%, Power 8%, Guts 14% |
+
+---
+
+## Gaps
+
+- Overview: not filled in yet.
+- Background and personality: not filled in yet.
+- Appearances (anime, game, other media): not filled in yet.
+- Unique skills, build notes, obtain methods and support cards: not filled in yet.
+- Shinko Windy [Wicked Punk]: could not parse stats, release date.
+- Shinko Windy [Chomp-Chomp ☆ Scamp]: could not parse stats, release date.
+
+## Sources
+
+| Source | URL |
+|--------|-----|
+| GameTora profile | https://gametora.com/umamusume/characters/shinko-windy |
+| GameTora, Shinko Windy [Wicked Punk] | https://gametora.com/umamusume/characters/104301-shinko-windy |
+| GameTora, Shinko Windy [Chomp-Chomp ☆ Scamp] | https://gametora.com/umamusume/characters/104302-shinko-windy |
+
+Game materials are copyright Cygames, Inc.
+
+## Images
+
+Images are kept as their original URLs.
+
+| Description | URL |
+|-------------|-----|
+| Shinko Windy [Wicked Punk] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1043_104301.png |
+| Shinko Windy [Chomp-Chomp ☆ Scamp] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1043_104302.png |
+| Profile art | https://media.gametora.com/umamusume/characters/profile/1043.png |
+| Character icon | https://gametora.com/images/umamusume/characters/icons/chr_icon_1043.png |
+
+<!-- generated by populate_character_stubs.py; delete this line to protect hand edits -->

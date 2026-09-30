@@ -1,1 +1,142 @@
 # Twin Turbo
+
+**Japanese name:** ツインターボ
+**Series:** Umamusume: Pretty Derby (anime, game and franchise)
+**Tagline (game):** This wild charger demonstrates high acceleration and endurance.
+
+> Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
+
+---
+
+## Infobox
+
+| Field | Details |
+|-------|---------|
+| Name | Twin Turbo |
+| Japanese name | ツインターボ |
+| Voice actor | Miharu Hanai |
+| Birthday | April 13 |
+| Height | 146 cm |
+| Weight | The subject's weight cannot be measured. |
+| Three sizes | 72 - 51 - 74 |
+| Shoe size | Left: 20.0cm Right: 19.5cm |
+| School | Junior Division |
+| Dorm | Miho Dormitory |
+| Strong point | Busting through any and all limits |
+| Weak point | Japanese kanji |
+| Game versions | 1 (Turbo Engine! Full Throttle!) |
+
+## Overview
+
+Twin Turbo is a character in the Umamusume: Pretty Derby franchise. She is portrayed as a friend of Tokai Teio, yet she regards Tokai Teio as a rival. Her racing style involves using full power at any distance, which leads to poor performance. In the second season of the anime, she belongs to Team Canopus.
+
+## Background
+
+- **Team:** Member of Team Canopus in the second season.
+- **Personality:** Considers Tokai Teio a rival despite their friendship.
+- **On the track:** Performs poorly because she runs at full power regardless of distance.
+
+## Profile details (game)
+
+| Detail | Description |
+|--------|-------------|
+| Ears | She twitches joyfully when pressed into a corner. |
+| Tail | Her tail moves back and forth due to lack of composure. |
+| Family | Seeing their daughter struggle with a weak constitution, they view her overexertion as growth. |
+| Trivia 1 | She performs moonwalking effectively. |
+| Trivia 2 | She opens her mouth when using eye drops. |
+
+## Real-life counterpart
+
+Twin Turbo is named after and based on a Japanese racehorse.
+
+| Field | Details |
+|-------|---------|
+| Date of birth | 13 Apr 1988 |
+| Date of death | 15 Jan 1998 |
+| Races | 35 |
+| Wins | 6 |
+| Record (1st-2nd-3rd-other) | 6-2-0-27 |
+| Earnings | 186,708,000 JPY |
+
+## Appearances
+
+- Second season of the Umamusume: Pretty Derby anime – appears as a member of Team Canopus.
+
+---
+
+## Game data: versions
+
+Twin Turbo has 1 playable version in the game.
+
+| Version | GameTora page |
+|---------|---------------|
+| Twin Turbo [Turbo Engine! Full Throttle!] | https://gametora.com/umamusume/characters/106601-twin-turbo |
+
+### Shared aptitudes
+
+| Category | Type | Rank |
+|----------|------|------|
+| Surface | Turf | A |
+| Surface | Dirt | F |
+| Distance | Short | G |
+| Distance | Mile | A |
+| Distance | Medium | A |
+| Distance | Long | E |
+| Strategy | Front Runner | A |
+| Strategy | Pace Chaser | G |
+| Strategy | Late Surger | G |
+| Strategy | End Closer | G |
+
+Rank A or higher: Turf, Mile, Medium, Front Runner.
+
+### Shared career objectives
+
+| # | Objective | Turn | Timing | Race |
+|---|-----------|------|--------|------|
+| 1 | Participate in the Junior Make Debut | 12 | Junior Class | , |
+| 2 | Have at least 5000 fans | 29 | Classic Class | , |
+| 3 | Place 5th or better in the Radio Nikkei Sho | 37 | Classic Class | , |
+| 4 | Place 5th or better in the St. Lite Kinen | 42 | Classic Class | , |
+| 5 | Place 3rd or better in 3 G3 or higher races | 57 | Senior Class | , |
+| 6 | Place 1st in the Tanabata Sho | 61 | Senior Class | , |
+| 7 | Place 1st in the All Comers | 66 | Senior Class | , |
+| 8 | Participate in the Arima Kinen | 72 | Senior Class | , |
+
+### Version 1: Twin Turbo [Turbo Engine! Full Throttle!]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 1 star (base) |
+| Stat growth bonuses | Speed 30% |
+
+---
+
+## Gaps
+
+- Overview, background and appearances are reworded summaries written by an AI model from the linked wiki pages. Check them against the sources before relying on them.
+- Unique skills, build notes, obtain methods and support cards: not filled in yet.
+- Twin Turbo [Turbo Engine! Full Throttle!]: could not parse stats, release date.
+
+## Sources
+
+| Source | URL |
+|--------|-----|
+| GameTora profile | https://gametora.com/umamusume/characters/twin-turbo |
+| GameTora, Twin Turbo [Turbo Engine! Full Throttle!] | https://gametora.com/umamusume/characters/106601-twin-turbo |
+| Wikipedia, list of characters | https://en.wikipedia.org/wiki/List_of_Umamusume:_Pretty_Derby_characters |
+
+Game materials are copyright Cygames, Inc.
+
+## Images
+
+Images are kept as their original URLs.
+
+| Description | URL |
+|-------------|-----|
+| Twin Turbo [Turbo Engine! Full Throttle!] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1066_106601.png |
+| Profile art | https://media.gametora.com/umamusume/characters/profile/1066.png |
+| Character icon | https://gametora.com/images/umamusume/characters/icons/chr_icon_1066.png |
+
+<!-- generated by populate_character_stubs.py; delete this line to protect hand edits -->
