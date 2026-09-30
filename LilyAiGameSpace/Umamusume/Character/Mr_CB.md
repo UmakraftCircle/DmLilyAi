@@ -1,1 +1,154 @@
-# Mr. C.B.
+# Mr CB
+
+**Japanese name:** ミスターシービー
+**Series:** Umamusume: Pretty Derby (anime, game and franchise)
+**Tagline (game):** She is cheerful and free-spirited, and nothing restrains her.
+
+> Profile page in the style of an encyclopedia entry. Facts are gathered from the sources listed at the bottom and reworded. Values come from the sources' data at the time of the last automated update and can change with game updates.
+
+---
+
+## Infobox
+
+| Field | Details |
+|-------|---------|
+| Name | Mr CB |
+| Japanese name | ミスターシービー |
+| Voice actor | Yurina Amami |
+| Birthday | April 7 |
+| Height | 166 cm |
+| Weight | There is no change. |
+| Three sizes | 84 - 55 - 80 |
+| Shoe size | Left and right: 25.0cm |
+| School | Senior Division |
+| Dorm | Lives alone |
+| Strong point | Writing poetry, meandering travels, poker |
+| Weak point | Standing in a line, lies and flimsy excuses |
+| Game versions | 2 (Clear Bliss, Dazzling Kabuki Flower) |
+
+## Overview
+
+Not filled in yet.
+
+## Background
+
+Not filled in yet.
+
+## Profile details (game)
+
+| Detail | Description |
+|--------|-------------|
+| Ears | She can touch her ears with her feet. |
+| Tail | She switches between different tail care treatments. |
+| Family | Her parents eloped instead of holding a wedding ceremony. |
+| Trivia 1 | She is not adept at using elevators. |
+| Trivia 2 | She loves kabuki theater and frequently attends performances. |
+
+## Real-life counterpart
+
+Mr CB is named after and based on a Japanese racehorse.
+
+| Field | Details |
+|-------|---------|
+| Date of birth | 7 Apr 1980 |
+| Date of death | 15 Dec 2000 |
+| Races | 15 |
+| Wins | 8 |
+| Record (1st-2nd-3rd-other) | 8-3-1-3 |
+| Earnings | 409,598,100 JPY |
+
+## Appearances
+
+Not filled in yet.
+
+---
+
+## Game data: versions
+
+Mr CB has 2 playable versions in the game. Aptitudes and career objectives are identical across all versions.
+
+| Version | GameTora page |
+|---------|---------------|
+| Mr CB [Clear Bliss] | https://gametora.com/umamusume/characters/105701-mr-cb |
+| Mr CB [Dazzling Kabuki Flower] | https://gametora.com/umamusume/characters/105702-mr-cb |
+
+### Shared aptitudes (all versions)
+
+| Category | Type | Rank |
+|----------|------|------|
+| Surface | Turf | A |
+| Surface | Dirt | G |
+| Distance | Short | G |
+| Distance | Mile | B |
+| Distance | Medium | A |
+| Distance | Long | A |
+| Strategy | Front Runner | G |
+| Strategy | Pace Chaser | E |
+| Strategy | Late Surger | A |
+| Strategy | End Closer | A |
+
+Rank A or higher: Turf, Medium, Long, Late Surger, End Closer.
+
+### Shared career objectives (all versions)
+
+| # | Objective | Turn | Timing | Race |
+|---|-----------|------|--------|------|
+| 1 | Participate in the Junior Make Debut | 12 | Junior Class | , |
+| 2 | Place 5th or better in the Kyodo News Hai | 27 | Classic Class | , |
+| 3 | Place 5th or better in the Satsuki Sho | 31 | Classic Class | , |
+| 4 | Place 5th or better in the Tokyo Yushun (Japanese Derby) | 34 | Classic Class | , |
+| 5 | Place 3rd or better in the Kikuka Sho | 44 | Classic Class | , |
+| 6 | Place 3rd or better in the Takarazuka Kinen | 60 | Senior Class | , |
+| 7 | Place 3rd or better in the Tenno Sho (Autumn) | 68 | Senior Class | , |
+| 8 | Place 3rd or better in the Japan Cup | 70 | Senior Class | , |
+| 9 | Place 1st in the Arima Kinen | 72 | Senior Class | , |
+
+### Version 1: Mr CB [Clear Bliss]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 3 star (base) |
+| Stat growth bonuses | Speed 10%, Stamina 10%, Wit 10% |
+
+### Version 2: Mr CB [Dazzling Kabuki Flower]
+
+| Field | Details |
+|-------|---------|
+| Release date | Not confirmed |
+| Rarity | 3 star (base) |
+| Stat growth bonuses | Speed 20%, Power 10% |
+
+---
+
+## Gaps
+
+- Overview: not filled in yet.
+- Background and personality: not filled in yet.
+- Appearances (anime, game, other media): not filled in yet.
+- Unique skills, build notes, obtain methods and support cards: not filled in yet.
+- Mr CB [Clear Bliss]: could not parse stats, release date.
+- Mr CB [Dazzling Kabuki Flower]: could not parse stats, release date.
+
+## Sources
+
+| Source | URL |
+|--------|-----|
+| GameTora profile | https://gametora.com/umamusume/characters/mr-cb |
+| GameTora, Mr CB [Clear Bliss] | https://gametora.com/umamusume/characters/105701-mr-cb |
+| GameTora, Mr CB [Dazzling Kabuki Flower] | https://gametora.com/umamusume/characters/105702-mr-cb |
+
+Game materials are copyright Cygames, Inc.
+
+## Images
+
+Images are kept as their original URLs.
+
+| Description | URL |
+|-------------|-----|
+| Mr CB [Clear Bliss] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1057_105701.png |
+| Mr CB [Dazzling Kabuki Flower] standing art (GameTora) | https://gametora.com/images/umamusume/characters/chara_stand_1057_105702.png |
+| Profile art | https://media.gametora.com/umamusume/characters/profile/1057.png |
+| Character icon | https://gametora.com/images/umamusume/characters/icons/chr_icon_1057.png |
+
+<!-- generated by populate_character_stubs.py; delete this line to protect hand edits -->
