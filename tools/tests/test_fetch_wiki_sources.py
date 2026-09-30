@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 
 import fetch_wiki_sources as f  # noqa: E402
 
-STUB = """# Air Messiah
+STUB = """# Air Shakur
 
 ## Overview
 
@@ -48,24 +48,24 @@ Not filled in yet.
 
 FILLED = PARTLY.replace("Not filled in yet.", "Kind and calm.")
 
-WIKITEXT = """{{Infobox|name=Air Messiah}}
-'''Air Messiah''' is a character.
+WIKITEXT = """{{Infobox|name=Air Shakur}}
+'''Air Shakur''' is a character.
 
 == Biography ==
-She is [[honest|honest]] and steadfast.<ref>note</ref>
+She is [[logical|logical]] and eccentric.<ref>note</ref>
 
 == Appearance ==
-Green hair.
+Silver hair.
 
 == Relationships ==
 === Friends ===
-* [[Vivlos]] - roommate
+* [[Air Messiah]] - underclassman
 
 == Media Appearances ==
 * [[Beginning of a New Era]] (Cameo)
 
 == Trivia ==
-* Likes grapes.
+* Likes soccer.
 
 == External Links ==
 x
@@ -90,8 +90,12 @@ class BlankCheck(unittest.TestCase):
         self.assertEqual(f.section_body(STUB, "Background").strip(), "Not filled in yet.")
 
     def test_title_candidates(self):
-        self.assertEqual(f.wiki_title(STUB, "Air_Messiah"), ["Air_Messiah"])
+        self.assertEqual(f.wiki_title(STUB, "Air_Shakur"), ["Air_Shakur"])
         self.assertEqual(f.wiki_title("# K.S.Miracle\n", "KS_Miracle"), ["K.S.Miracle", "KS_Miracle"])
+
+    def test_only_names_are_normalised(self):
+        for typed in ("Air_Shakur", "Air Shakur", "air shakur", " air_shakur.md ", "Air-Shakur"):
+            self.assertEqual(f.norm_name(typed), "air_shakur")
 
 
 class WikitextParsing(unittest.TestCase):
@@ -112,12 +116,12 @@ class WikitextParsing(unittest.TestCase):
                          ["Biography", "Relationships", "Trivia"])
 
     def test_clean_text(self):
-        self.assertEqual(f.clean_text("She is [[honest|honest]] and [[Vivlos]].<ref>n</ref> '''Bold'''"),
-                         "She is honest and Vivlos. Bold")
+        self.assertEqual(f.clean_text("She is [[logical|logical]] and [[Vivlos]].<ref>n</ref> '''Bold'''"),
+                         "She is logical and Vivlos. Bold")
         self.assertNotIn("{{", f.clean_text("{{Infobox|a={{x}}}} text", strip_templates=True))
 
     def test_staged_file_lists_only_needed_sections(self):
-        text = f.build_staged("Air_Messiah", "path.md", ["Appearances"], "Air_Messiah", WIKITEXT, "IRL:Air_Messiah", None)
+        text = f.build_staged("Air_Shakur", "path.md", ["Appearances"], "Air_Shakur", WIKITEXT, "IRL:Air_Shakur", None)
         self.assertIn("## Media Appearances", text)
         self.assertNotIn("## Lead", text)
         self.assertNotIn("## Biography", text)

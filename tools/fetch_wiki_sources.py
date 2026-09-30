@@ -44,6 +44,14 @@ H2 = re.compile(r"^==(?!=)\s*(.*?)\s*==\s*$", re.M)
 
 # ---------------------------------------------------------------- blank check
 
+def norm_name(s):
+    """Normalise a file name typed by hand: 'Air Shakur', 'air_shakur.md' -> 'air_shakur'."""
+    s = s.strip()
+    if s.lower().endswith(".md"):
+        s = s[:-3]
+    return re.sub(r"[\s\-]+", "_", s).lower()
+
+
 def section_body(md, name):
     """Text under '## name' up to the next '## ' heading or '---' rule, or None."""
     m = re.search(r"^##\s+%s\s*$" % re.escape(name), md, re.M)
@@ -210,13 +218,16 @@ def main(argv=None):
         print(msg, flush=True)
         lines.append(msg)
 
-    only = {s.strip().lower() for s in args.only.split(",") if s.strip()}
+    only = {norm_name(s) for s in args.only.split(",") if s.strip()}
     files = sorted(f for f in os.listdir(CHAR_DIR) if f.endswith(".md"))
-    todo, skipped = [], []
+    log("scanned %d character file(s) in %s" % (len(files), os.path.relpath(CHAR_DIR, ROOT)))
+    todo, skipped, matched = [], [], set()
     for f in files:
         stem = f[:-3]
-        if only and stem.lower() not in only:
-            continue
+        if only:
+            if norm_name(stem) not in only:
+                continue
+            matched.add(norm_name(stem))
         with open(os.path.join(CHAR_DIR, f), encoding="utf-8") as fh:
             md = fh.read()
         blanks = blank_sections(md)
@@ -225,14 +236,20 @@ def main(argv=None):
             continue
         todo.append((stem, md, blanks))
 
+    for name in sorted(only - matched):
+        log("no character file matches --only %r (use the file name without .md, e.g. Air_Shakur)" % name)
+
     log("%d character file(s) with blank sections, %d skipped (all three sections already filled)"
         % (len(todo), len(skipped)))
+    for s in skipped:
+        log("  skipped: %s" % s)
     if args.limit > 0:
         todo = todo[: args.limit]
     if not todo:
         log("nothing to fetch")
         _write_log(lines)
-        return 0
+        # Asking for specific files and getting none is an error, not a green run.
+        return 1 if only else 0
 
     staged = failed = 0
     first_preview = None

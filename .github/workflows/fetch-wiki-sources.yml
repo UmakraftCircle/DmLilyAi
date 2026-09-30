@@ -12,8 +12,10 @@ name: Fetch wiki sources (blank profile sections)
 #   2. Leave dry_run = true the first time. It fetches and previews, saves no staged files.
 #   3. Run again with dry_run = false to save the staged files.
 #
-# The run FAILS (red) if the wiki can't be reached or nothing could be staged.
-# The log is also saved to debug/wiki-fetch.log after every run.
+# The test default is Air_Shakur (all three sections blank). Clear "only" to run on
+# the first characters that still have blanks, in file-name order.
+# The run FAILS (red) if the wiki can't be reached, if "only" matches nothing, or if
+# nothing could be staged. The log is also saved to debug/wiki-fetch.log after every run.
 
 on:
   workflow_dispatch:
@@ -23,8 +25,8 @@ on:
         default: "3"
         required: true
       only:
-        description: "Optional: comma-separated file names, e.g. Air_Groove,Agnes_Tachyon"
-        default: ""
+        description: "Comma-separated file names without .md, e.g. Air_Shakur,Air_Groove (empty = all with blanks)"
+        default: "Air_Shakur"
       dry_run:
         description: "Preview only, do not save staged files"
         type: boolean
@@ -59,7 +61,7 @@ jobs:
 
       - name: Check Umamusume Wiki is reachable
         run: |
-          url="https://umamusu.wiki/w/index.php?title=Air_Messiah&action=raw"
+          url="https://umamusu.wiki/w/index.php?title=Air_Shakur&action=raw"
           code=$(curl -sS -L -m 30 -A "DmLilyAi-profile-generator/1.0 (+https://github.com/UmakraftCircle/DmLilyAi)" -o probe.txt -w "%{http_code}" "$url" || true)
           code=${code:-000}
           size=$(wc -c < probe.txt 2>/dev/null || echo 0)
@@ -90,6 +92,7 @@ jobs:
             args+=(--dry-run)
           fi
           python -u tools/fetch_wiki_sources.py "${args[@]}" | tee fetch.log
+          exit "${PIPESTATUS[0]}"
 
       - name: Summary
         if: always()
