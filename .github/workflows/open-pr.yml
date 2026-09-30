@@ -1,0 +1,49 @@
+name: Open pull request for fill branches
+
+# Opens a pull request into main whenever a branch named fill-* is pushed
+# (for example fill-character-profiles). Does nothing if a PR for that branch is
+# already open. Can also be run by hand: Actions tab > this workflow > Run workflow,
+# choose the branch to open a PR for.
+#
+# One-time setting needed: repo Settings > Actions > General > Workflow permissions >
+# tick "Allow GitHub Actions to create and approve pull requests", then Save.
+
+on:
+  push:
+    branches:
+      - "fill-**"
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to open a pull request for"
+        default: "fill-character-profiles"
+        required: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: open-pr-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  open-pr:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: ${{ inputs.branch || github.ref_name }}
+    steps:
+      - name: Open pull request if none is open
+        run: |
+          existing=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            echo "Pull request #$existing is already open for $BRANCH."
+            exit 0
+          fi
+          if ! gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+            --title "Fill blank character profile sections (Overview, Background, Appearances)" \
+            --body "Fills the blank Overview, Background and Appearances sections of the Umamusume character profiles from the staged wiki text in sources/wiki/. Only blank sections are rewritten. Opened automatically for branch $BRANCH."; then
+            echo "::error::Could not open the pull request. Check Settings > Actions > General > Workflow permissions and tick 'Allow GitHub Actions to create and approve pull requests'."
+            exit 1
+          fi
