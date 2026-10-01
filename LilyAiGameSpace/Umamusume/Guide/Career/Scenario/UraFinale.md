@@ -1,171 +1,191 @@
-# URA Finale Scenario | GameTora
-Being the very first scenario, URA Finale was released alongside the JP server of the game on February 24, 2021.
+# Guide to updated URA Finale and Unity Cup | uma.guide | Umamusume Guides & References
+The patch from July 1st brought brand new mechanics to the URA Finale and Unity Cup scenarios. This guide goes over all the changes for each.
 
-Narratively, this scenario focuses on the titular set of URA Finale races established by the Tracen Academy chairwoman Yayoi Akikawa. You will spend three years in Career training, aiming to become the champion of these new races.
+URA Finale [​](#ura-finale)
+---------------------------
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_lede.png)
+### New Stat Caps [​](#new-stat-caps)
 
-Table of Contents
------------------
+The Stat Caps have been increased for all Scenarios. For URA Finale the Stat Caps have been raised by 200, for a new Cap of 1400.
 
-*   [Basic Information](#basic-information)
-*   [Scenario Link](#scenario-link)
-*   [Fixed Training Events](#fixed-training-events)
-*   [Unique Skill Level-Ups](#unique-skill-level-ups)
-*   [Happy Meek Duels](#happy-meek-duels)
-*   [Base Training Values](#base-training-values)
-*   [Training Facility Levels](#training-facility-levels)
-*   [Scenario Spark](#scenario-spark)
-*   [Stat Caps](#stat-caps)
+![Speed](https://uma.guide/icon/stat/status_00.png)Speed
 
-Basic Information
------------------
+1400
 
-During the URA Finale journey, you will have to clear character-specific objectives to advance. There are multiple types, like participating in a particular race, achieving certain placements, or gathering a specific amount of fans.
+![Stamina](https://uma.guide/icon/stat/status_01.png)Stamina
 
-Clearing all objectives will allow you to participate in the URA Finale qualifiers. Win these to move on to the semi-finals, and then the grand finals.
+1400
 
-The trainer Aoi Kiryuin and her trainee, Happy Meek, appear in this scenario as story characters, and will be your rivals on the way to the top.
+![Power](https://uma.guide/icon/stat/status_02.png)Power
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_aoi_meek.png)
+1400
 
-Scenario Link
--------------
+![Guts](https://uma.guide/icon/stat/status_03.png)Guts
 
-The URA Finale features Aoi Kiryuin as a scenario link character. Her training events will be strengthened if you use any of her support cards in your deck.
+1400
 
-Specifically, the training event "A Three-Legged Race", which occurs during the first half of November in the second year, will now award a level 3 hint for on success (instead of level 1).
+![Wit](https://uma.guide/icon/stat/status_04.png)Wit
 
-Fixed Training Events
----------------------
+1400
 
-During Early November of the second year, the event "A Three-Legged Race" featuring Aoi Kiryuin will trigger. If you have gathered 50.000 fans by then, you will be awarded a level 1 hint for the skill, 20 Skill Points, and 20 Wisdom. This event is affected by the scenario link, as described in the section above.
+### Basic Stat Gains [​](#basic-stat-gains)
 
-Gathering 100k fans will award you with 30 Skill Points at the end of the second year. Gathering 240k fans by the end of the third year will do the same.
+The Stats received from Training have also been increased, especially the Skill Points across all trainings.
 
-An event that raises your girl's Mood is guaranteed to trigger in Early March of the second year.
 
-Events that can raise your character's unique skill level will trigger in:
+|Facility|Base Stat increase                |Energy cost|
+|--------|----------------------------------|-----------|
+|Speed   |+11 Speed, +6 Power, +4 SP        |-21        |
+|Stamina |+10 Stamina, +6 Guts, +4 SP       |-19        |
+|Power   |+6 Stamina, +9 Power, +4 SP       |-20        |
+|Guts    |+5 Speed, +5 Power, +8 Guts, +4 SP|-22        |
+|Wit     |+2 Speed, +10 Wit, +5 SP          |+5         |
 
-*   Early February of year 3
-*   Early April of year 3
-*   Late December of year 3
 
-For specifics, see the Unique Skill Level-ups section right below.
+### Happy Meek [​](#happy-meek)
 
-Additionally, a training event called 「アツい差し入れ」 featuring Chairman Akikawa was added to the game alongside the JP server's November 2022 update (it may not yet exist on other servers). It is guaranteed to trigger during the end of Late July (halfway through summer camp) in years two and three and restores 30 energy.
+![](https://uma.guide/img/guides/article/updated-ura-unity/ura-happy-meek-train.png)
 
-Unique Skill Level-Ups
-----------------------
+The update makes Happy Meek more interactive. As she is supposed to be your Uma's rival in this scenario, she can now show up on Trainings. When she does, there is a chance to Duel with her. You get an icon next to the training in that case. Note that Happy Meek will not challenge you during the summer training.
 
-During the three years of training, you will have three chances to level up your character's unique skill.
+![Happy Meek challenges you to a duel!](https://uma.guide/img/guides/article/updated-ura-unity/ura-happymeek-duel.png)
 
-These are triggered by getting:
+Happy Meek challenges you to a duel!
 
-*   60.000 fans by Early February of year 3 (Valentine's Day)
-*   70.000 fans by Early April of year 3
-*   120.000 fans by Late December of year 3 (Christmas)
+If you successfully complete the training, Happy Meek will challenge your Uma to a Contest in one out of three categories. The top choice will always be the same as the Training Facility you just Trained on, and the other two are chosen at random. An icon displays your chance of defeating Happy Meek.
 
-You can still trigger the later events even if you missed a previous one. For example, if you missed the Valentine's Day level-up, you can still trigger the one in Early April.
+![](https://uma.guide/img/guides/article/updated-ura-unity/ura-happymeek-choice.png)
 
-For characters with high dirt aptitude but low turf aptitude (such as [Haru Urara](https://gametora.com/umamusume/characters/haru-urara) or [Smart Falcon](https://gametora.com/umamusume/characters/smart-falcon)), these values are lowered to 40.000, 60.000, and 80.000, respectively.
+Engaging in a Contest will give you rewards according ot the following table. If you win, Happy Meek levels up and her next Contest will be more difficult.
 
-The April level-up also requires a green friendship gauge (3 bars) with chairman Akikawa.
+Happy Meek has 5 levels. If you manage to defeat her five times during the career, a stronger version of her will race against you in the URA Finale final race. If you best her there, you get +20 to all Stats and 150 Skill Points instead of the usual +10 Stats and 80 Skill Points. You also get a hint for ![](https://uma.guide/icon/skill/utx_ico_skill_20162.webp)Past My Limits, which is a new scenario skill that gives you a Target Speed increase in the Final Spurt.
 
-Happy Meek Duels
-----------------
+The rewards from Contests are as follows:
 
-Duels with Happy Meek are a mechanic added to the JP server in the November 2022 update. On Global, this was released on July 1, 2026.
 
-During a Career, training facilities may randomly include Happy Meek as a training partner. Whenever there is an orange "Duel" 「対決」 mark on her icon, carrying out that training will trigger a training event where you can duel her. Failing the training will not start a duel.
+|Contest Rewards|Success                                            |Failure        |
+|---------------|---------------------------------------------------|---------------|
+|Level 1        |+4 Max Stat+10 Stat+30 SPRacing Spirit: Stat Lv1   |+5 Stat+15 SP  |
+|Level 2        | +4 Max Stat +12 Stat +30 SPRacing Spirit: Stat Lv1| +5 Stat+15 SP |
+|Level 3        | +4 Max Stat +15 Stat +30 SPRacing Spirit: Stat Lv1| +5 Stat+15 SP |
+|Level 4        | +4 Max Stat +18 Stat +30 SPRacing Spirit: Stat Lv1| +5 Stat+15 SP |
+|Level 5        | +4 Max Stat +20 Stat +30 SPRacing Spirit: Stat Lv1| +10 Stat+15 SP|
+|Max Level      | +25 Stat+30 SPRacing Spirit: Stat Lv1             | +15 Stat+15 SP|
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_meek_duel_indicator.png)
 
-You'll be given three choices. The first one will always be the stat type that triggered the duel; the other two will be random choices picked from the five stat types and Energy (体力).
+The Contest of Energy gives slightly different rewards:
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_meek_duel_choices.png)
 
-Each choice will also show your chances to succeed at the said duel, indicated by the usual ✕, △, 〇, and ◎. Succeeding will raise Happy Meek's level for the next duel and award you with the following:
 
-*   a stat uncap of 4 for the targeted stat,
-*   between 10-25 of the targeted stat (depending on Happy Meek's level),
-*   30 skill points,
-*   4 maximum energy,
-*   a skill hint for the relevant "Essence of Racing" skill (see list below).
+* Contest Rewards: Level 1
+  * Success:  +4 Max EnergyRANDOM 1 Random Stat +10 +30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +5 +15 SP
+* Contest Rewards: Level 2
+  * Success:  +4 Max EnergyRANDOM 1 Random Stat +12 +30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +5+15 SP
+* Contest Rewards: Level 3
+  * Success:  +4 Max EnergyRANDOM 1 Random Stat +15 +30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +5+15 SP
+* Contest Rewards: Level 4
+  * Success:  +4 Max EnergyRANDOM 1 Random Stat +18 +30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +5+15 SP
+* Contest Rewards: Level 5
+  * Success:  +4 Max EnergyRANDOM 1 Random Stat +20 +30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +10+15 SP
+* Contest Rewards: Max Level
+  * Success: RANDOM 1 Random Stat +25+30 SPRacing Spirit: Mood Lv1
+  * Failure: RANDOM 1 Random Stat +15+15 SP
 
-Winning repeated duels focused on the same stat will raise the hint level further.
 
-Losing a duel will award 5-15 of the targeted stat depending on the level and 5 SP.
+### Racing Spirit Skills [​](#racing-spirit-skills)
 
-Here is a list of all obtainable Essence of Racing skills:
+All of the new Racing Spirit Skills are relatively cheap with a base cost of 150 Skill Points.
 
-A spark for each of these new skills also exists. They have a common and an enhanced ("+") version, each going from 1 to 3 stars as usual. The common versions simply grant hint levels for the respective skills, while the enhanced versions will also grant some of the respective stat (or SP in case of the spark).
+You can get Sparks for these Skills as for all other Skills. These Skills also have an improved version noted by a "+". These give some Stats when inheriting the Skill. ![](https://uma.guide/icon/skill/utx_ico_skill_20181.webp)Racing Spirit: Mood gives some Skill Points instead.
 
-What decides whether you can get the normal or plus spark is still under investigation, but it might be related to maxing out Happy Meek's level and winning against her in the URA Finale Final race.
+### Help from Director Akikawa [​](#help-from-director-akikawa)
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_essence_factors.png)
+![](https://uma.guide/img/guides/article/updated-ura-unity/ura-summer.png)
 
-The difficulty of these duels scales with Happy Meek's level. Winning 5 duels will max out her level (displayed as "Lv MAX" in the duel icon), causing a strengthened version of her with a blue-glowing aura to appear in the URA Finale Finals race. Similar to legend races, there will be a cut-in before/after the race.
+Finally, a Training Event has been added to both Summer Camps. Before the Early August turn, Director Akikawa appears and refreshes 30 Energy, making training in summer much more sustainable.
 
-She will have the following aptitudes, skills, mood, and something in the range of the following stats (specifics can vary by ±10 in each stat):
+Unity Cup [​](#unity-cup)
+-------------------------
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_meek_powerup.png)
+### New Stat Caps [​](#new-stat-caps-1)
 
-Winning against this powered-up Happy Meek will affect the "After the URA Finale Finals" (「URAファイナルズ決勝の後に」) training event that occurs at the end of a Career run. It will now award you with a hint for the scenario skill, as well as giving you 20 of every stat and 150 SP (these values are affected by race bonus). Your chances of receiving the URA Finale scenario spark will also be raised.
+Unity Cup enjoys new Stat Caps as well. All Stat Caps have been increased by 100 and ![](https://uma.guide/icon/type/wit.svg)Wit goes all the way to 1800.
 
-If you don't trigger her appearance, the event will instead award 10 of every stat as well as 80 SP (also affected by race bonus) with no hints given.
+![Speed](https://uma.guide/icon/stat/status_00.png)Speed
 
-Base Training Values
---------------------
+1300
 
-These are the base training values for the URA Finale scenario. This means that training at the specified facility, without any support cards present and without accounting for character growth rate bonuses, will yield the following stats at facility level 1.
+![Stamina](https://uma.guide/icon/stat/status_01.png)Stamina
 
+1300
 
-|Facility|Stat gains                        |Energy|
-|--------|----------------------------------|------|
-|Speed   |+11 Speed, +6 Power, +4 SP        |-21   |
-|Stamina |+10 Stamina, +6 Guts, +4 SP       |-19   |
-|Power   |+6 Stamina, +9 Power, +4 SP       |-20   |
-|Guts    |+5 Speed, +5 Power, +8 Guts, +4 SP|-22   |
-|Wisdom  |+2 Speed, +10 Wisdom, +5 SP       |+5    |
+![Power](https://uma.guide/icon/stat/status_02.png)Power
 
+1300
 
-Experienced players may recall the URA Finale as they were prior to the JP server update in November 2022 (July 2026 on Global), before these values received an overall increase.
+![Guts](https://uma.guide/icon/stat/status_03.png)Guts
 
+1300
 
-|Facility|Stat gains                        |Future buffs               |Energy|
-|--------|----------------------------------|---------------------------|------|
-|Speed   |+10 Speed, +5 Power, +2 SP        |+1 Speed, +1 Power, +2 SP  |-21   |
-|Stamina |+9 Stamina, +4 Guts, +2 SP        |+1 Stamina, +2 Guts, +2 SP |-19   |
-|Power   |+5 Stamina, +8 Power, +2 SP       |+1 Stamina, +1 Power, +2 SP|-20   |
-|Guts    |+4 Speed, +4 Power, +8 Guts, +2 SP|+1 Speed, +1 Power, +2 SP  |-22   |
-|Wisdom  |+2 Speed, +9 Wisdom, +4 SP        |+1 Wisdom, +1 SP           |+5    |
+![Wit](https://uma.guide/icon/stat/status_04.png)Wit
 
+1800
 
-Training Facility Levels
-------------------------
+### Basic Stat Gains [​](#basic-stat-gains-1)
 
-The level of the training facilities in the URA Finale scenario will rise depending on how often you train at them.
+The Stats received from Training have also been increased, especially the Skill Points across all trainings.
 
-All facilities start at level 1 and level up every four times you use them. For example, training Speed four times will raise its level from 1 to 2, another four trainings will increase the level from 2 to 3, and so forth, until level 5.
 
-Scenario Spark
---------------
+|Facility|Base Stat increase                |Energy cost|
+|--------|----------------------------------|-----------|
+|Speed   |+8 Speed, +4 Power, +4 SP         |-19        |
+|Stamina |+8 Stamina, +6 Guts, +4 SP        |-20        |
+|Power   |+4 Stamina, +9 Power, +4 SP       |-20        |
+|Guts    |+3 Speed, +3 Power, +6 Guts, +4 SP|-20        |
+|Wit     |+2 Speed, +6 Wit, +5 SP           |+5         |
 
-The scenario spark obtainable in the URA Finale is called "URA Finale" (or 「URAシナリオ」on JP). It will increase your Speed and Stamina when triggered during inspiration events.
 
-![](https://media.gametora.com/umamusume/article/ura_finale/ura_spark.png)
+### Skill Hints from Spirit Bursts [​](#skill-hints-from-spirit-bursts)
 
-Stat Caps
----------
+A Spirit Burst always awards you with a Skill Hint. These Hints are no longer chosen from the Aptitudes of your Uma but from the Skill Hints of the triggering Support Card. Unless it is one of your supports, the Hint will be chosen from their R Support Card version. If they have none left to give, because you either bought them all or have them all at Max Hint Level, you get the Skill at random, as earlier, based on your aptitudes.
 
-The URA Finale scenario features the following stat caps:
+The increased Energy cost for triggering a Spirit Burst has been removed. The Trainings cost just the regular amount of Energy now.
 
+### Extreme Spirit Bursts [​](#extreme-spirit-bursts)
 
-|Stat   |Cap |
-|-------|----|
-|Speed  |1400|
-|Stamina|1400|
-|Power  |1400|
-|Guts   |1400|
-|Wisdom |1400|
+![](https://uma.guide/img/guides/article/updated-ura-unity/unity-better-burst.png)
+
+The central feature of this update is the Extreme Spirit Bursts. After one of your team members achieves a Spirit Burst, they now have a chance to perform an Extreme Spirit Burst.
+
+![](https://uma.guide/img/guides/article/updated-ura-unity/unity-extreme-spiritburst.png)
+
+Like the regular Spirit Bursts, this increases your Uma's Stats, and also provides you with a Hint for the Ignited Spirit Skill corresponding to the Training where the Extreme Spirit Burst was triggered. If you have the maximum Hints for this Ignited Spirit Skill or already purchased it, you gain Hints for a different one instead.
+
+Trainings with an Extreme Spirit Burst can never fail.
+
+### Unity Cup Races [​](#unity-cup-races)
+
+The Races of the Unity Cup allow the use of up to 3 Alarm Clocks to re-do them should you fail. This will be rare, however, since the Extreme Spirit Bursts strengthen your team significantly.
+
+### Team Rank S+ [​](#team-rank-s)
+
+Your team can now achieve the S+ rank. This will give you another hint for ![](https://uma.guide/icon/skill/utx_ico_skill_20012.webp)It's On.
+
+### New Unity Cup Teams [​](#new-unity-cup-teams)
+
+![](https://uma.guide/img/guides/article/updated-ura-unity/unity-elite-team.png)
+
+To challenge your team, the opposition also gets a boost. In the fourth Unity Cup race, an Elite Team can appear once you have at least achieved A rank and triggered at least one Extreme Spirit Burst. When they appear, you get a short introduction, and they will prominently replace the top opponent choice.
+
+![](https://uma.guide/img/guides/article/updated-ura-unity/unity-elite.png)
+
+Defeating this Elite Team boosts Riko's Team Zenith's strength going into the final race!
+
+![](https://uma.guide/img/guides/article/updated-ura-unity/unity-elite-zenith.png)
+
+If you manage to take the Unity Cup against them, you will get a higher chance to inherit the Unity Cup Scenario Spark, and you can get the upgraded version of the Ignited Spirit Skill Sparks. Those are marked with a "+", and when Inherited, they award an additional bonus in the Stat corresponding to the Ignited Skill.
