@@ -1,6 +1,7 @@
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
 from LilyAiTool.DiscordTools import discord_tools
 from LilyAiTool.Executor import ToolExecutor
+from LilyAiTool.GameSpaceTools import game_space_tools
 from LilyAiTool.Models import ToolContextData, ToolResult, ToolSpec  # noqa: F401
 from LilyAiTool.Registry import ToolRegistry
 from LilyAiTool.UtilityTools import utility_tools
@@ -11,7 +12,7 @@ class ToolService:
         self.registry = ToolRegistry()
         self.executor = ToolExecutor(self.registry)
         self.notifier_box = notifier_box or NotifierBox()
-        for spec in [*utility_tools(), *discord_tools(self.notifier_box)]:
+        for spec in [*utility_tools(), *discord_tools(self.notifier_box), *game_space_tools()]:
             self.registry.register(spec)
 
     def register(self, spec: ToolSpec) -> None:
