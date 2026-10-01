@@ -69,6 +69,9 @@ class ChatWorkflow:
         uid, text = req.user_id, req.text
 
         rag_hits = self.rag.retrieve(text, k=3)
+        # Game docs the message names (a character, the race list...) go straight into the prompt, so a
+        # plain "how's Special Week?" is answered from them without waiting on a tool call. [] otherwise.
+        game_snippets = self.tools.game_context(text)
         history = [HistoryMessage(t.role, t.content) for t in self.memory.conversation.recent(uid, self.settings.history_turns)]
         schemas = self.tools.schemas() if self.settings.web_enabled else [
             s for s in self.tools.schemas() if s["function"]["name"] not in {"web_search", "read_webpage"}
@@ -83,7 +86,7 @@ class ChatWorkflow:
                 display_name=req.display_name,
                 history=history,
                 user_facts=self.memory.relevant_user_facts(uid, text),
-                knowledge_snippets=[h.as_snippet() for h in rag_hits],
+                knowledge_snippets=[h.as_snippet() for h in rag_hits] + game_snippets,
                 notes=[account_status_note(link.trainer_id if link else None, link.trainer_name if link else None)],
                 tool_schemas=schemas,
             )

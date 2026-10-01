@@ -1,10 +1,14 @@
 from LilyAiCore.ExternalServices.Discord.notifier import NotifierBox
+from LilyAiCore.Logging.logger import get_logger
+from LilyAiGameSpace.UmamusumeGameSpaceEngine import get_engine
 from LilyAiTool.DiscordTools import discord_tools
 from LilyAiTool.Executor import ToolExecutor
 from LilyAiTool.GameSpaceTools import game_space_tools
 from LilyAiTool.Models import ToolContextData, ToolResult, ToolSpec  # noqa: F401
 from LilyAiTool.Registry import ToolRegistry
 from LilyAiTool.UtilityTools import utility_tools
+
+log = get_logger("tool.service")
 
 
 class ToolService:
@@ -20,6 +24,18 @@ class ToolService:
 
     def schemas(self) -> list[dict]:
         return self.registry.schemas()
+
+    def game_context(self, text: str) -> list[str]:
+        """Game-doc snippets for a chat message that names a known Umamusume doc, else [].
+
+        No model call: a plain lookup, so the chat model can answer from the docs without first
+        having to decide to call a tool. Never raises - a docs problem must not break a chat turn.
+        """
+        try:
+            return get_engine().context_for(text)
+        except Exception:
+            log.exception("game docs context lookup failed")
+            return []
 
     async def run(self, name: str, arguments: dict, ctx: ToolContextData) -> ToolResult:
         return await self.executor.execute(name, arguments, ctx)

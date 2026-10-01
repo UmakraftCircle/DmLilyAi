@@ -5,11 +5,13 @@ LilyAiGameSpace/Umamusume/**/*.md at startup, re-checks for changed files in the
 background of normal calls, and hands back small, section-sized pieces of text so
 the free-tier Groq models do not burn their context on whole documents.
 
-Three operations are exposed (wrapped as Groq tools in LilyAiTool/GameSpaceTools):
+Operations (the first three are wrapped as Groq tools in LilyAiTool/GameSpaceTools):
 
     list_docs(category)        what exists
     search(query, category)    best-matching sections across all docs
     read(ref, section)         one doc, or one section of it
+    context_for(message)       if a chat message names a known doc (character, race list,
+                               guide...), the few most relevant sections to put in the prompt
 
 Design notes:
 - Documents are addressed by id ("Character/Special_Week"), by title, or by alias
@@ -53,6 +55,13 @@ _PAREN_RE = re.compile(r"^(.*?)\s*\((.*?)\)\s*$")
 _HIDDEN_SECTIONS = {"images"}
 # Readable, but not searched (mostly URLs, which only add noise to ranking).
 _UNSEARCHED_SECTIONS = {"sources"}
+
+# Single-word names too generic to treat as "the user is talking about this doc" in context_for().
+_GENERIC_NAMES = frozenset(
+    "readme overview guide guides skill skills character characters support card cards race races "
+    "training glossary list".split()
+)
+_MAX_ALIAS_WORDS = 6
 
 _STOPWORDS = frozenset(
     "a an and are as at be but by can do does for from how i in is it me my of on or "
@@ -235,6 +244,8 @@ class UmamusumeGameSpaceEngine:
         self._alias_map: dict[str, list[str]] = {}
         self._df: Counter = Counter()
         self._n_sections = 0
+        self._ascii_names: dict[tuple[str, ...], list[str]] = {}
+        self._cjk_names: list[tuple[str, str]] = []
         self._last_check = float("-inf")
         self._lock = threading.RLock()
         self.refresh(force=True)
@@ -294,18 +305,29 @@ class UmamusumeGameSpaceEngine:
 
     def _rebuild(self) -> None:
         alias_map: dict[str, list[str]] = {}
+        ascii_names: dict[tuple[str, ...], list[str]] = {}
+        cjk_names: list[tuple[str, str]] = []
         df: Counter = Counter()
         n = 0
         for doc in sorted(self._docs.values(), key=lambda d: d.id):
             for key in {_norm(doc.id), *(_norm(a) for a in doc.aliases)}:
                 if key:
                     alias_map.setdefault(key, []).append(doc.id)
+            for alias in doc.aliases:
+                words = tuple(_TOKEN_RE.findall(alias.replace("_", " ").casefold()))
+                if not words or len(words) > _MAX_ALIAS_WORDS:
+                    continue
+                if not alias.isascii():
+                    cjk_names.append((alias.casefold(), doc.id))
+                elif len(words) > 1 or (len(words[0]) >= 5 and words[0] not in _GENERIC_NAMES):
+                    ascii_names.setdefault(words, []).append(doc.id)
             for s in doc.visible():
                 if s.key in _UNSEARCHED_SECTIONS:
                     continue
                 n += 1
                 df.update(s.terms.keys())
         self._alias_map, self._df, self._n_sections = alias_map, df, n
+        self._ascii_names, self._cjk_names = ascii_names, cjk_names
 
     # ----------------------------------------------------------------- lookups
     def categories(self) -> dict[str, int]:
@@ -421,22 +443,21 @@ class UmamusumeGameSpaceEngine:
         return out
 
     # ------------------------------------------------------------------ search
-    def search(self, query: str, category: str | None = None, limit: int = 5) -> list[Hit]:
-        self.refresh()
-        terms = [t for t in dict.fromkeys(_tokens(query)) if t not in _STOPWORDS]
-        if not terms:
-            return []
-        limit = max(1, min(int(limit or 5), 10))
+    @staticmethod
+    def _query_terms(query: str) -> list[str]:
+        return [t for t in dict.fromkeys(_tokens(query)) if t not in _STOPWORDS]
+
+    def _rank(self, terms: list[str], category: str | None = None,
+              only: set[str] | None = None) -> list[tuple[float, Doc, Section]]:
         cat = _norm(category) if category else None
         n = max(self._n_sections, 1)
         idf = {t: math.log(1 + n / (1 + self._df.get(t, 0))) for t in terms}
 
-        hits: list[Hit] = []
+        ranked: list[tuple[float, Doc, Section]] = []
         for doc in self._docs.values():
-            if cat and _norm(doc.category) != cat:
+            if (cat and _norm(doc.category) != cat) or (only is not None and doc.id not in only):
                 continue
-            name_match = [t for t in terms if t in doc.name_terms]
-            doc_boost = 3.0 * sum(idf[t] for t in name_match)
+            doc_boost = 3.0 * sum(idf[t] for t in terms if t in doc.name_terms)
             for i, s in enumerate(doc.visible()):
                 if s.key in _UNSEARCHED_SECTIONS:
                     continue
@@ -451,11 +472,75 @@ class UmamusumeGameSpaceEngine:
                 if score == 0 and not (i == 0 and doc_boost):
                     continue
                 score *= 0.5 + 0.5 * matched / len(terms)
-                score += doc_boost
-                hits.append(Hit(doc.id, doc.title, s.path, _snippet(s, terms), round(score, 3)))
+                ranked.append((score + doc_boost, doc, s))
+        ranked.sort(key=lambda r: (-r[0], r[1].id, r[2].path))
+        return ranked
 
-        hits.sort(key=lambda h: (-h.score, h.doc_id, h.section))
-        return hits[:limit]
+    def search(self, query: str, category: str | None = None, limit: int = 5) -> list[Hit]:
+        self.refresh()
+        terms = self._query_terms(query)
+        if not terms:
+            return []
+        limit = max(1, min(int(limit or 5), 10))
+        return [
+            Hit(doc.id, doc.title, s.path, _snippet(s, terms), round(score, 3))
+            for score, doc, s in self._rank(terms, category)[:limit]
+        ]
+
+    # ----------------------------------------------------------- chat context
+    def mentioned_docs(self, message: str) -> list[Doc]:
+        """Docs whose name/alias appears as whole words in the message, most specific name first."""
+        self.refresh()
+        words = _TOKEN_RE.findall(message.replace("_", " ").casefold())
+        grams = {tuple(words[i:i + k]) for k in range(1, _MAX_ALIAS_WORDS + 1) for i in range(len(words) - k + 1)}
+        folded = message.casefold()
+        best: dict[str, int] = {}
+        for gram in grams & self._ascii_names.keys():
+            for doc_id in self._ascii_names[gram]:
+                best[doc_id] = max(best.get(doc_id, 0), len(gram))
+        for alias, doc_id in self._cjk_names:
+            if alias in folded:
+                best[doc_id] = max(best.get(doc_id, 0), 3)
+        order = sorted(best, key=lambda d: (-best[d], d))
+        return [self._docs[d] for d in order if d in self._docs]
+
+    def context_for(self, message: str, max_chars: int = 1500, max_docs: int = 2,
+                    per_section: int = 700) -> list[str]:
+        """Prompt-ready snippets for a chat message that names a known doc; [] when it names none.
+
+        Cheap (no model call): lets the chat model answer a plain "how's Special Week summer?" from
+        the docs without having to decide to call a tool first. Capped so it stays a small slice of
+        the prompt.
+        """
+        docs = self.mentioned_docs(message)[:max_docs]
+        if not docs:
+            return []
+        terms = self._query_terms(message)
+        ranked = self._rank(terms, only={d.id for d in docs}) if terms else []
+        # Message is just the name ("tell me about Special Week"): show the doc from the top instead
+        # of whichever section happens to repeat the name most.
+        if terms and all(any(t in d.name_terms for d in docs) for t in terms):
+            ranked = [(0.0, d, s) for d in docs for s in d.visible() if s.key not in _UNSEARCHED_SECTIONS]
+        if not ranked:
+            ranked = [(0.0, d, d.visible()[0]) for d in docs if d.visible()]
+
+        out: list[str] = []
+        used = 0
+        cited: set[str] = set()
+        for _, doc, s in ranked:
+            body = s.text.strip()
+            if not body:
+                continue
+            entry = f"{doc.title} > {s.path} (game docs): {_clip(body, per_section)[0]}"
+            if doc.id not in cited and doc.sources:
+                entry += f"\nSource: {doc.sources[0]}"
+                cited.add(doc.id)
+            room = max_chars - used
+            if room <= 0 or (out and len(entry) > room):
+                break
+            out.append(entry[:room])
+            used += len(entry)
+        return out
 
 
 def _clip(text: str, max_chars: int) -> tuple[str, bool]:
