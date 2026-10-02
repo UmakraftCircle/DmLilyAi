@@ -3,6 +3,7 @@
 Flow: the chat model picks a doc + operation -> this module pulls the RAW section text from the
 engine (not the 2,000-char clipped passages the guide builder uses) -> uploads it with a fixed script
 (sandbox_scripts/docs_table_ops.py) to a throwaway microVM -> returns the printed result.
+Calculators work the same way with sandbox_scripts/game_calcs.py, but need no doc text: the rules are in the script.
 
 The model only supplies parameters. It never supplies code. Everything blocking is wrapped by
 run_table_op_async() so the bot's event loop is never stalled.
@@ -31,7 +32,8 @@ from LilyAiGameSpace.UmamusumeGameSpaceEngine import UmamusumeGameSpaceEngine, g
 
 log = get_logger("gamespace.sandbox")
 
-SCRIPT_PATH = Path(__file__).resolve().parent / "sandbox_scripts" / "docs_table_ops.py"
+SCRIPT_DIR = Path(__file__).resolve().parent / "sandbox_scripts"
+TABLE_SCRIPT, CALC_SCRIPT = "docs_table_ops.py", "game_calcs.py"
 MAX_RAW_CHARS = 400_000          # far below the engine's 2 MB file cap; keeps the upload small
 EXEC_TIMEOUT_S = 30
 SANDBOX_TTL_S = 120              # backstop: the VM reaps itself if we crash before kill()
@@ -219,15 +221,15 @@ def _default_factory(template: str, ttl: int, api_key: str):
         return client.sandboxes.create(template=template)
 
 
-def run_table_op(text: str, params: dict[str, Any], *, sandbox_factory: Callable[..., Any] | None = None) -> str:
-    """Blocking. Upload `text` + a fixed script to a fresh sandbox, run it, return its text result.
+def _execute(script_name: str, input_text: str, payload: str, sandbox_factory: Callable[..., Any] | None) -> str:
+    """Blocking. Upload a fixed script (+ optional input text and a params.json) to a fresh sandbox, run it,
+    return its text result.
 
     Tries the configured keys in rotation; a key-level failure (rate limit, rejected key, no credit)
     rests that key and moves to the next one. Script/operation errors are returned as-is, never retried.
     """
-    script = SCRIPT_PATH.read_text(encoding="utf-8")
-    payload = json.dumps(params, sort_keys=True, ensure_ascii=False)
-    cache_key = hashlib.sha1((payload + "\0" + text).encode("utf-8")).hexdigest()
+    script = (SCRIPT_DIR / script_name).read_text(encoding="utf-8")
+    cache_key = hashlib.sha1((script_name + "\0" + payload + "\0" + input_text).encode("utf-8")).hexdigest()
     if (cached := _cache_get(cache_key)) is not None:
         return cached
 
@@ -250,10 +252,11 @@ def run_table_op(text: str, params: dict[str, Any], *, sandbox_factory: Callable
             sbx = None
             try:
                 sbx = sandbox_factory(template, SANDBOX_TTL_S, key)
-                sbx.filesystem.write("/workspace/input.md", text)
+                if input_text:
+                    sbx.filesystem.write("/workspace/input.md", input_text)
                 sbx.filesystem.write("/workspace/params.json", payload)
-                sbx.filesystem.write("/workspace/docs_table_ops.py", script)
-                res = sbx.exec("python3 /workspace/docs_table_ops.py", timeout_seconds=EXEC_TIMEOUT_S)
+                sbx.filesystem.write(f"/workspace/{script_name}", script)
+                res = sbx.exec(f"python3 /workspace/{script_name}", timeout_seconds=EXEC_TIMEOUT_S)
                 stdout = (getattr(res, "stdout", "") or "").strip()
                 code = getattr(res, "exit_code", 0)
                 if code not in (0, None) and not stdout:
@@ -292,5 +295,21 @@ def run_table_op(text: str, params: dict[str, Any], *, sandbox_factory: Callable
         _slots.release()
 
 
+def run_table_op(text: str, params: dict[str, Any], *, sandbox_factory: Callable[..., Any] | None = None) -> str:
+    """Table operations (top, stat, filter, compare...) on raw doc text. See sandbox_scripts/docs_table_ops.py."""
+    payload = json.dumps(params, sort_keys=True, ensure_ascii=False)
+    return _execute(TABLE_SCRIPT, text, payload, sandbox_factory)
+
+
+def run_calc(calculator: str, inputs: dict[str, Any], *, sandbox_factory: Callable[..., Any] | None = None) -> str:
+    """Rule-based game calculators (PvP score, sparks, race maths...). See sandbox_scripts/game_calcs.py."""
+    payload = json.dumps({"calculator": calculator, "inputs": inputs}, sort_keys=True, ensure_ascii=False)
+    return _execute(CALC_SCRIPT, "", payload, sandbox_factory)
+
+
 async def run_table_op_async(text: str, params: dict[str, Any], **kw: Any) -> str:
     return await asyncio.to_thread(run_table_op, text, params, **kw)
+
+
+async def run_calc_async(calculator: str, inputs: dict[str, Any], **kw: Any) -> str:
+    return await asyncio.to_thread(run_calc, calculator, inputs, **kw)

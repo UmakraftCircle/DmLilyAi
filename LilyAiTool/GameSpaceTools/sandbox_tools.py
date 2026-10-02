@@ -1,9 +1,11 @@
-"""Groq tool: run fixed table operations (top N, sums, filters, comparisons) on Umamusume docs in a sandbox.
+"""Groq tools that run in a PandaStack sandbox: table operations on game docs, and exact game calculators.
 
 Only registered when PANDASTACK_API_KEY is set and the `pandastack` package is installed, so a bot
 without it behaves exactly as before and the model never sees a tool it cannot use.
 """
 from __future__ import annotations
+
+import json
 
 from LilyAiCore.Exceptions.errors import ToolError
 from LilyAiGameSpace import sandbox_runner
@@ -37,6 +39,32 @@ async def _process(ctx, args: dict) -> str:
     return f"Computed from {where} [{doc_id}] (exact values from the docs table, calculated in a sandbox):\n{result}"
 
 
+CALCULATORS = ["help", "pvp_score", "legacy_blue_bonus", "blue_spark_odds", "white_spark_odds", "start_delay",
+               "rush_duration", "stat_effective", "wit_effectiveness", "race_phases", "length_convert",
+               "speed_boost", "acceleration_gain"]
+
+
+async def _calculate(ctx, args: dict) -> str:
+    calc = _opt(args, "calculator")
+    if not calc:
+        raise ToolError("calculator is required")
+    inputs = args.get("inputs")
+    if isinstance(inputs, str):
+        try:
+            inputs = json.loads(inputs)
+        except json.JSONDecodeError:
+            raise ToolError("inputs must be a JSON object")
+    if inputs is None:
+        inputs = {}
+    if not isinstance(inputs, dict):
+        raise ToolError("inputs must be an object")
+    try:
+        result = await sandbox_runner.run_calc_async(str(calc), inputs)
+    except sandbox_runner.SandboxError as e:
+        raise ToolError(str(e))
+    return f"Calculated in a sandbox with the game docs' rules ({calc}):\n{result}"
+
+
 def sandbox_tools() -> list[ToolSpec]:
     if not sandbox_runner.is_configured():
         return []
@@ -66,6 +94,21 @@ def sandbox_tools() -> list[ToolSpec]:
                 "category": {"type": ["string", "null"], "description": "Optional category to disambiguate the doc"},
             }, "required": ["doc", "op"]},
             _process,
+            category=CATEGORY,
+            timeout=60.0,
+        ),
+        ToolSpec(
+            "game_calculate",
+            "Exact Umamusume calculations from the game docs' rules: Team Trials (PvP) score, legacy/inheritance blue-spark "
+            "bonus and spark odds, start-delay and rush odds, effective stat for races, race phases, length/speed/acceleration. "
+            "Use it for ANY number the user wants worked out, never do the maths yourself. Call with calculator='help' to see "
+            "each calculator's inputs. Compatibility (triangle/circle) is NOT available. Quote results exactly.",
+            {"type": "object", "properties": {
+                "calculator": {"type": "string", "enum": CALCULATORS, "description": "Which calculator; 'help' lists inputs"},
+                "inputs": {"type": ["object", "null"], "description": "Inputs for that calculator, e.g. {\"final_stat\": 850} or "
+                           "{\"sparks\": [{\"stat\": \"Speed\", \"stars\": 3}]}"},
+            }, "required": ["calculator"]},
+            _calculate,
             category=CATEGORY,
             timeout=60.0,
         ),
