@@ -1,4 +1,4 @@
-"""Groq tools that run in a PandaStack sandbox: table operations on game docs, and exact game calculators.
+"""Groq tool: run fixed table operations (top N, sums, filters, comparisons) on Umamusume docs in a sandbox.
 
 Only registered when PANDASTACK_API_KEY is set and the `pandastack` package is installed, so a bot
 without it behaves exactly as before and the model never sees a tool it cannot use.
@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 
 from LilyAiCore.Exceptions.errors import ToolError
-from LilyAiGameSpace import sandbox_runner
+from LilyAiGameSpace import affinity_data, sandbox_runner
 from LilyAiTool.Models.tool_models import ToolSpec
 
 CATEGORY = "gamespace"
@@ -65,6 +65,42 @@ async def _calculate(ctx, args: dict) -> str:
     return f"Calculated in a sandbox with the game docs' rules ({calc}):\n{result}"
 
 
+_AFFINITY_SLOTS = ("legacy1", "legacy2", "sub11", "sub12", "sub21", "sub22")
+
+
+async def _affinity(ctx, args: dict) -> str:
+    op = str(_opt(args, "op") or "total").lower()
+    if op not in ("total", "best", "partners"):
+        raise ToolError("op must be total, best or partners")
+    try:
+        data = affinity_data.load()
+        main_ref = _opt(args, "main")
+        if not main_ref:
+            raise ToolError("main (the character being trained) is required")
+        params: dict = {"op": op, "main": data.resolve(main_ref)}
+        for slot in _AFFINITY_SLOTS:
+            if _opt(args, slot):
+                params[slot] = data.resolve(_opt(args, slot))
+        if _opt(args, "bonus") is not None:
+            params["bonus"] = float(_opt(args, "bonus"))
+        if _opt(args, "top") is not None:
+            params["top"] = int(_opt(args, "top"))
+        ids = {params["main"], *(params[s] for s in _AFFINITY_SLOTS if s in params)}
+        if op == "total":
+            payload, used = data.subset(sorted(ids)), sorted(ids)      # a few numbers are enough for one total
+        else:
+            payload, used = {"chars": data.chars, "aff2": data.aff2, "aff3": data.aff3}, data.chars
+        params["names"] = {str(c): data.label(c) for c in used}
+        result = await sandbox_runner.run_affinity_async(params, json.dumps(payload, separators=(",", ":")))
+    except affinity_data.AffinityError as e:
+        raise ToolError(str(e))
+    except sandbox_runner.SandboxError as e:
+        raise ToolError(str(e))
+    except ValueError:
+        raise ToolError("bonus and top must be numbers")
+    return f"Affinity from the game's own relationship data, calculated in a sandbox:\n{result}"
+
+
 def sandbox_tools() -> list[ToolSpec]:
     if not sandbox_runner.is_configured():
         return []
@@ -109,6 +145,29 @@ def sandbox_tools() -> list[ToolSpec]:
                            "{\"sparks\": [{\"stat\": \"Speed\", \"stars\": 3}]}"},
             }, "required": ["calculator"]},
             _calculate,
+            category=CATEGORY,
+            timeout=60.0,
+        ),
+        ToolSpec(
+            "game_affinity",
+            "Umamusume affinity (compatibility) for inheritance, from the game's real relationship data. op='total': the "
+            "total for a main character with legacies and sub-legacies (names, e.g. main='Grass Wonder', legacy1='Vodka', "
+            "sub11='El Condor Pasa'). op='best': the best theoretical legacy setups for a main character. op='partners': "
+            "the characters with the highest pair affinity. Result shows the tier (triangle / circle / double circle: "
+            "50 or less, 51-150, 151+). G1 race-win bonuses are NOT included unless you pass bonus. Quote results exactly.",
+            {"type": "object", "properties": {
+                "op": {"type": "string", "enum": ["total", "best", "partners"], "description": "total, best or partners"},
+                "main": {"type": "string", "description": "The character being trained"},
+                "legacy1": {"type": ["string", "null"], "description": "First legacy (parent)"},
+                "legacy2": {"type": ["string", "null"], "description": "Second legacy (parent)"},
+                "sub11": {"type": ["string", "null"], "description": "Sub-legacy (grandparent) under legacy1"},
+                "sub12": {"type": ["string", "null"], "description": "Second sub-legacy under legacy1"},
+                "sub21": {"type": ["string", "null"], "description": "Sub-legacy under legacy2"},
+                "sub22": {"type": ["string", "null"], "description": "Second sub-legacy under legacy2"},
+                "bonus": {"type": ["number", "null"], "description": "Extra affinity from shared G1 wins, if the user gives a number"},
+                "top": {"type": ["integer", "null"], "description": "How many results for best/partners"},
+            }, "required": ["op", "main"]},
+            _affinity,
             category=CATEGORY,
             timeout=60.0,
         ),
