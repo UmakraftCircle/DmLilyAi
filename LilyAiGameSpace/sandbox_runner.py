@@ -33,7 +33,7 @@ from LilyAiGameSpace.UmamusumeGameSpaceEngine import UmamusumeGameSpaceEngine, g
 log = get_logger("gamespace.sandbox")
 
 SCRIPT_DIR = Path(__file__).resolve().parent / "sandbox_scripts"
-TABLE_SCRIPT, CALC_SCRIPT = "docs_table_ops.py", "game_calcs.py"
+TABLE_SCRIPT, CALC_SCRIPT, AFFINITY_SCRIPT = "docs_table_ops.py", "game_calcs.py", "affinity_calc.py"
 MAX_RAW_CHARS = 400_000          # far below the engine's 2 MB file cap; keeps the upload small
 EXEC_TIMEOUT_S = 30
 SANDBOX_TTL_S = 120              # backstop: the VM reaps itself if we crash before kill()
@@ -221,15 +221,18 @@ def _default_factory(template: str, ttl: int, api_key: str):
         return client.sandboxes.create(template=template)
 
 
-def _execute(script_name: str, input_text: str, payload: str, sandbox_factory: Callable[..., Any] | None) -> str:
-    """Blocking. Upload a fixed script (+ optional input text and a params.json) to a fresh sandbox, run it,
-    return its text result.
+def _execute(script_name: str, input_text: str, payload: str, sandbox_factory: Callable[..., Any] | None,
+             extra_files: dict[str, str] | None = None) -> str:
+    """Blocking. Upload a fixed script (+ optional input text, extra data files and a params.json) to a fresh
+    sandbox, run it, return its text result. `extra_files` maps a file name to its text, written under /workspace/.
 
     Tries the configured keys in rotation; a key-level failure (rate limit, rejected key, no credit)
     rests that key and moves to the next one. Script/operation errors are returned as-is, never retried.
     """
     script = (SCRIPT_DIR / script_name).read_text(encoding="utf-8")
-    cache_key = hashlib.sha1((script_name + "\0" + payload + "\0" + input_text).encode("utf-8")).hexdigest()
+    extra_files = extra_files or {}
+    extras_hash = hashlib.sha1("\0".join(f"{k}\0{v}" for k, v in sorted(extra_files.items())).encode("utf-8")).hexdigest()
+    cache_key = hashlib.sha1((script_name + "\0" + payload + "\0" + input_text + "\0" + extras_hash).encode("utf-8")).hexdigest()
     if (cached := _cache_get(cache_key)) is not None:
         return cached
 
@@ -254,6 +257,8 @@ def _execute(script_name: str, input_text: str, payload: str, sandbox_factory: C
                 sbx = sandbox_factory(template, SANDBOX_TTL_S, key)
                 if input_text:
                     sbx.filesystem.write("/workspace/input.md", input_text)
+                for fname, content in extra_files.items():
+                    sbx.filesystem.write(f"/workspace/{fname}", content)
                 sbx.filesystem.write("/workspace/params.json", payload)
                 sbx.filesystem.write(f"/workspace/{script_name}", script)
                 res = sbx.exec(f"python3 /workspace/{script_name}", timeout_seconds=EXEC_TIMEOUT_S)
@@ -307,9 +312,20 @@ def run_calc(calculator: str, inputs: dict[str, Any], *, sandbox_factory: Callab
     return _execute(CALC_SCRIPT, "", payload, sandbox_factory)
 
 
+def run_affinity(params: dict[str, Any], data_json: str, *, sandbox_factory: Callable[..., Any] | None = None) -> str:
+    """Affinity totals and searches. `data_json` is the affinity file (whole, or a slice for one calculation).
+    See sandbox_scripts/affinity_calc.py."""
+    payload = json.dumps(params, sort_keys=True, ensure_ascii=False)
+    return _execute(AFFINITY_SCRIPT, "", payload, sandbox_factory, extra_files={"affinity.json": data_json})
+
+
 async def run_table_op_async(text: str, params: dict[str, Any], **kw: Any) -> str:
     return await asyncio.to_thread(run_table_op, text, params, **kw)
 
 
 async def run_calc_async(calculator: str, inputs: dict[str, Any], **kw: Any) -> str:
     return await asyncio.to_thread(run_calc, calculator, inputs, **kw)
+
+
+async def run_affinity_async(params: dict[str, Any], data_json: str, **kw: Any) -> str:
+    return await asyncio.to_thread(run_affinity, params, data_json, **kw)
