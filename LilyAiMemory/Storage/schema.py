@@ -50,4 +50,17 @@ CREATE TABLE IF NOT EXISTS daily_job_runs (
     ran_at REAL,
     PRIMARY KEY (job_name, run_date)
 );
+
+CREATE TABLE IF NOT EXISTS guide_cache (
+    cache_key TEXT PRIMARY KEY,
+    title TEXT NOT NULL,
+    question TEXT NOT NULL,
+    content TEXT NOT NULL,
+    model TEXT NOT NULL DEFAULT '',
+    source_ids TEXT NOT NULL DEFAULT '[]',
+    docs_sig TEXT NOT NULL DEFAULT '',
+    created_at REAL NOT NULL,
+    last_used_at REAL,
+    uses INTEGER NOT NULL DEFAULT 0
+);
 """
