@@ -1,7 +1,9 @@
 """Platform-agnostic DM router. Discord, the HTTP API and the DM Simulator all enter here."""
 import re
+import time
 
 from LilyAiCore.Logging.logger import get_logger
+from LilyAiGameSpace.guide_builder import GuideBuilder, GuidePlan
 from LilyAiLearning.MemoryLearning.memory_learning import explicit_memory_request
 from LilyAiMain.MainService.Discord.Events.bus import EventBus
 from LilyAiMain.MainService.Discord.Middleware.middleware import MAX_INPUT_CHARS, AccessControl, RateLimiter, clean_input
@@ -10,7 +12,7 @@ from LilyAiMain.MainService.Interaction.Feedback.feedback import ReplyLog, Reply
 from LilyAiMain.MainService.Interaction.Forms.forms import FormManager
 from LilyAiMain.MainService.Interaction.Forms.link_trainer import LinkTrainerFlow
 from LilyAiMain.MainService.Interaction.Menus.menus import HELP_TEXT, main_menu
-from LilyAiMain.MainService.Interaction.messages import IncomingMessage, OutgoingMessage
+from LilyAiMain.MainService.Interaction.messages import IncomingMessage, MenuItem, OutgoingMessage
 from LilyAiMain.MainService.Interaction.Onboarding.onboarding import OnboardingFlow
 from LilyAiMain.MainService.Interaction.Polls.polls import PollManager
 from LilyAiMain.MainService.Interaction.Workflows.chat_workflow import ChatRequest, ChatWorkflow
@@ -35,8 +37,28 @@ _LINK_STATUS = re.compile(
     re.I | re.S,
 )
 _LINK_STATUS_MAX_WORDS = 15
+# "make a guide for Special Week" / "build me a guide on the URA scenario" / "guide for Gold Ship". Questions about
+# guides ("is there a guide for ...", "what guides do you have") are left for the chat model.
+_GUIDE_REQUEST = re.compile(
+    r"^(?!\s*(?:is there|are there|do you have|does|which|what|where|any)\b)"
+    r"(?=.*\b(?:(?:make|build|create|write|generate|draft|prepare|compile|give|put together)\b[^.?!\n]{0,40}?\bguide\b"
+    r"|guide\s+(?:for|on|about|to)\b))",
+    re.I | re.S,
+)
+_GUIDE_MAX_WORDS = 40
+# Answers to "saved copy or generate a new one?" (the quick-reply buttons send exactly these phrases).
+_GUIDE_SAVED = re.compile(r"^\s*(?:use\s+(?:the\s+)?)?(?:saved|cached?|old|existing)(?:\s+(?:guide|one|copy|version))?\s*[.!]*\s*$", re.I)
+_GUIDE_NEW = re.compile(
+    r"^\s*(?:generate\s+(?:a\s+)?)?(?:new|fresh)(?:\s+(?:guide|one|copy|version))?\s*[.!]*\s*$"
+    r"|^\s*(?:regenerate|redo|rebuild|generate)(?:\s+(?:it|guide|one|again))?\s*[.!]*\s*$",
+    re.I,
+)
 _YES = {"yes", "y", "yep", "confirm", "do it", "sure"}
 _TRUNCATED_NOTICE = f"(Heads up: I only read the first {MAX_INPUT_CHARS} characters of that message - the rest got cut off.)"
+
+
+def _guide_choice_menu() -> list[MenuItem]:
+    return [MenuItem("Use saved guide", "use saved guide"), MenuItem("Generate new guide", "generate new guide")]
 
 
 class DMRouter:
@@ -53,11 +75,15 @@ class DMRouter:
         polls: PollManager,
         onboarding: OnboardingFlow,
         link_trainer: LinkTrainerFlow,
+        guides: GuideBuilder | None = None,
     ):
         self.memory, self.chat, self.replies, self.bus = memory, chat, replies, bus
         self.sessions, self.limiter, self.access = sessions, limiter, access
         self.forms, self.polls, self.onboarding = forms, polls, onboarding
         self.link_trainer = link_trainer
+        # Guides are written with the chat model and saved in the shared guide cache. The docs engine is
+        # looked up lazily, so building the router never touches the docs folder.
+        self.guides = guides or GuideBuilder(None, chat.provider, chat.settings.chat_model, memory.guide_cache)
 
     async def route(self, msg: IncomingMessage) -> list[OutgoingMessage]:
         text, truncated = clean_input(msg.text)
@@ -97,6 +123,14 @@ class DMRouter:
                 self.polls.cancel(uid)
                 return sys("Done. I've wiped everything I knew about you.")
             return sys("Okay, I've kept everything.")
+        # "I already built that guide - saved copy or a new one?" is answered once; any other message drops
+        # the question and is handled as usual.
+        pending_guide: GuidePlan | None = session.data.pop("guide_choice", None)
+        if pending_guide is not None:
+            if _GUIDE_SAVED.match(text):
+                return await self._guide_reply(uid, pending_guide, force=False)
+            if _GUIDE_NEW.match(text):
+                return await self._guide_reply(uid, pending_guide, force=True)
         if self.forms.active(uid):
             reply, _ = self.forms.submit(uid, text)
             return sys(reply)
@@ -138,6 +172,17 @@ class DMRouter:
             added = self.memory.user.add(uid, fact, source="user")
             return sys(f"Got it, I'll remember that: {fact}" if added else "I already had that one.")
 
+        # Guide requests: built from the game docs. If the same guide was built before, ask whether to reuse
+        # the saved copy or generate a new one. A request that names nothing the docs know falls through to chat.
+        if len(text.split()) <= _GUIDE_MAX_WORDS and _GUIDE_REQUEST.match(text):
+            plan = self.guides.plan(text)
+            if plan is not None:
+                saved = self.guides.lookup(plan)
+                if saved is not None:
+                    session.data["guide_choice"] = plan
+                    return sys(self.guides.ask_text(saved), _guide_choice_menu())
+                return await self._guide_reply(uid, plan, force=False)
+
         # 4. Chat
         reply = await self.chat.handle(ChatRequest(uid, text, msg.display_name))
         if not reply.ok:
@@ -148,3 +193,23 @@ class DMRouter:
             "tokens": reply.token_estimate, "ms": round(reply.elapsed_ms),
         }
         return [OutgoingMessage(reply.text, reply_id=rid, meta=meta)]
+
+    async def _guide_reply(self, uid: str, plan: GuidePlan, *, force: bool) -> list[OutgoingMessage]:
+        """Serve the saved guide or build (and save) a new one. A failure is shown as a plain system message
+        and is never saved or added to the chat history."""
+        start = time.perf_counter()
+        result = await self.guides.build_and_store(plan, force=force)
+        if not result.ok:
+            return [OutgoingMessage(result.text, kind="system")]
+        text = f"{result.note}\n\n{result.text}" if result.note else result.text
+        rid = self.replies.add(ReplyRecord(uid, plan.question, result.text, True, []))
+        # Keep the chat history short: the guide itself is in the cache, so only note what was written.
+        self.memory.conversation.append(uid, "user", plan.question)
+        self.memory.conversation.append(
+            uid, "assistant", f"(I wrote the guide \"{result.title}\" with these sections: {', '.join(result.sections)}.)"
+        )
+        meta = {
+            "model": result.model, "tools": ["guide_builder"], "domains": [], "tokens": 0,
+            "ms": round((time.perf_counter() - start) * 1000), "guide_cached": result.from_cache,
+        }
+        return [OutgoingMessage(text, reply_id=rid, meta=meta)]
