@@ -75,9 +75,39 @@ def test_runner_uses_sandbox_and_always_kills():
 
     sr._cache.clear()
     out = sr.run_table_op(DOC, {"op": "top", "column": "Friendship", "n": 1},
-                          sandbox_factory=lambda template, ttl: _FakeSandbox())
+                          sandbox_factory=lambda template, ttl, key: _FakeSandbox())
     assert "Kitasan Black" in out
     assert _FakeSandbox.killed >= 1
     with pytest.raises(sr.SandboxError):
         sr.run_table_op(DOC, {"op": "stat", "agg": "sum", "column": "Nope"},
-                        sandbox_factory=lambda template, ttl: _FakeSandbox())
+                        sandbox_factory=lambda template, ttl, key: _FakeSandbox())
+
+
+class _RateLimited(Exception):
+    status_code = 429
+
+
+def test_multiple_keys_rotate_and_skip_a_limited_key(monkeypatch):
+    pytest.importorskip("LilyAiCore.Logging.logger")
+    from LilyAiGameSpace import sandbox_runner as sr
+
+    monkeypatch.setenv("PANDASTACK_API_KEY", " k1, k2 ,k2,k3,k4,k5,k6,k7 ")
+    assert sr.load_keys() == ["k1", "k2", "k3", "k4", "k5", "k6"]   # trimmed, de-duplicated, max 6
+
+    monkeypatch.setenv("PANDASTACK_API_KEY", "k1,k2")
+    sr._pool = sr._KeyPool()
+    used = []
+
+    def factory(template, ttl, key):
+        used.append(key)
+        if key == "k1":
+            raise _RateLimited("too many requests")
+        return _FakeSandbox()
+
+    sr._cache.clear()
+    assert "Kitasan Black" in sr.run_table_op(DOC, {"op": "top", "column": "Friendship", "n": 1}, sandbox_factory=factory)
+    assert used == ["k1", "k2"]                 # k1 failed, k2 answered in the same call
+    used.clear()
+    sr._cache.clear()
+    sr.run_table_op(DOC, {"op": "top", "column": "Friendship", "n": 2}, sandbox_factory=factory)
+    assert used == ["k2"]                       # k1 is resting, so it is not tried again
