@@ -7,3 +7,4 @@ beautifulsoup4>=4.12,<5
 libsql-experimental>=0.0.41
 PyNaCl>=1.5,<2
 python-multipart>=0.0.9,<1
+pandastack>=0.5,<1

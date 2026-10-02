@@ -15,6 +15,10 @@ services:
         generateValue: true     # the password you type into Settings on the site
       - key: LILYAI_DATA_DIR
         value: /app/data
+      # PandaStack sandbox - runs fixed table calculations on the game docs (game_docs_process tool).
+      # The tool is simply not offered to the model while this is empty.
+      - key: PANDASTACK_API_KEY
+        sync: false
       # uma.moe (Umamusume circle/fan tracking) - powers /api/leaderboard, check_umamoe,
       # and the background umamoe-poll job. See LilyAiCore/ExternalServices/Umamoe/.
       - key: UMAMOE_API_KEY
