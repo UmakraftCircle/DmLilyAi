@@ -24,6 +24,11 @@ DM_ACTIONS: tuple[tuple[str, str], ...] = (
     ('"what do you remember about me"', "lists the facts saved about the user"),
     ('"forget everything about me"', "erases saved facts and chat history (asks for confirmation first)"),
     ('"set me up again"', "redoes the first-time setup questions"),
+    (
+        '"make a guide for Special Week"',
+        "builds a guide from the Umamusume game docs (if the same guide was built before, Lily asks whether to "
+        "use the saved copy or generate a new one)",
+    ),
 )
 
 CAPABILITY_RULES = """Your abilities - what you can and can't do:
