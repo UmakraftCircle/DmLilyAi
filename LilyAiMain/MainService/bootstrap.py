@@ -46,6 +46,7 @@ from LilyAiMemory.JobRuns.job_run_store import JobRunStore
 from LilyAiMemory.service import MemoryService
 from LilyAiRag.service import RagService
 from LilyAiTask.DailyTask.DeficitTask.snapshot_job import run_daily_fan_gain
+from LilyAiTool.CollectionTools import collection_tools
 from LilyAiTool.service import ToolContextData, ToolService, ToolSpec
 from LilyAiWeb.service import WebService
 
@@ -460,6 +461,10 @@ def build_app(
     for spec in _web_tools(web):
         tools.register(spec)
     for spec in _trainer_link_tools(memory.trainer_link):
+        tools.register(spec)
+    # The user's own cards / trainees / parents (my_cards, my_trainees, my_parents, collection_followup).
+    # Store and session are passed in here so the tool domain never imports Memory.
+    for spec in collection_tools(memory.collection, memory.session):
         tools.register(spec)
 
     umamoe = UmamoeClient(settings.umamoe_api_key) if settings.umamoe_api_key else None
