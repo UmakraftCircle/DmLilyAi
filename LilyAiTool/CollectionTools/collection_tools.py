@@ -555,6 +555,11 @@ def collection_tools(collection: Any, session: Any) -> list[ToolSpec]:
 
     nullable_int = {"type": ["integer", "string", "null"]}
     confirm_prop = {"type": ["boolean", "null"], "description": "true only after the user explicitly agreed"}
+    # One Racing Spirit / Burning Spirit scenario white; used by the parent and by each grandparent.
+    spirit_item = {"type": "object", "properties": {
+        "name": {"type": "string", "description": "Racing Spirit or Burning Spirit"},
+        "stat": {"type": ["string", "null"], "description": "speed, stamina, power, guts, wit or mood"},
+        "plus": {"type": ["boolean", "null"]}}}
 
     return [
         ToolSpec(
@@ -613,10 +618,7 @@ def collection_tools(collection: Any, session: Any) -> list[ToolSpec]:
                 "nickname": {"type": ["string", "null"]},
                 "scenario": {"type": ["string", "null"], "description": "Ura Finale, Unity Cup, ... (the career that made it)"},
                 "white_count": {**nullable_int, "description": "Number of white skills on the parent"},
-                "scenario_white": {"type": ["array", "null"], "items": {"type": "object", "properties": {
-                    "name": {"type": "string", "description": "Racing Spirit or Burning Spirit"},
-                    "stat": {"type": ["string", "null"], "description": "speed, stamina, power, guts, wit or mood"},
-                    "plus": {"type": ["boolean", "null"]}}}},
+                "scenario_white": {"type": ["array", "null"], "items": spirit_item},
                 "pink": {"type": ["array", "null"], "items": {"type": "object", "properties": {
                     "kind": {"type": "string", "enum": ["distance", "track", "style"]},
                     "aptitude": {"type": "string", "description": "e.g. mile, turf, pace chaser"},
@@ -625,8 +627,11 @@ def collection_tools(collection: Any, session: Any) -> list[ToolSpec]:
                     "stat": {"type": "string"}, "stars": {"type": "integer"}}},
                 "unique_skill": {"type": ["string", "null"]},
                 "key_whites": {"type": ["array", "null"], "items": {"type": "string"}},
-                "grandparents": {"type": ["array", "null"], "items": {"type": "object", "properties": {
-                    "uma": {"type": "string"}, "unique_skill": {"type": ["string", "null"]}}}},
+                "grandparents": {"type": ["array", "null"], "description": "At most 2 grandparents", "items": {
+                    "type": "object", "properties": {
+                        "uma": {"type": "string"},
+                        "unique_skill": {"type": ["string", "null"]},
+                        "scenario_white": {"type": ["array", "null"], "items": spirit_item}}}},
                 "trainee": {"type": ["string", "null"], "description": "find: the character the career is for"},
                 "distance": {"type": ["string", "null"], "description": "find: sprint, mile, medium or long"},
                 "track": {"type": ["string", "null"], "description": "find: turf or dirt"},

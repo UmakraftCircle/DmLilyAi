@@ -41,4 +41,5 @@ class MemoryService:
     def forget_user(self, user_id: str) -> None:
         self.user.clear(user_id)
         self.conversation.clear(user_id)
+        self.collection.clear(user_id)
         self.session.end(user_id)
