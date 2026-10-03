@@ -1,5 +1,6 @@
 """Facade for the Memory domain."""
 from LilyAiCore.ExternalServices.Database.sqlite import Database
+from LilyAiMemory.Collection.collection_store import CollectionStore
 from LilyAiMemory.ConversationMemory.conversation_memory import ConversationMemory
 from LilyAiMemory.DeficitState.deficit_state_store import DeficitStateStore
 from LilyAiMemory.FanGain.fan_gain import FanSnapshotStore
@@ -23,6 +24,7 @@ class MemoryService:
         self.deficit_state = DeficitStateStore(self.store)
         self.job_runs = JobRunStore(self.store)
         self.guide_cache = GuideCacheStore(self.store)
+        self.collection = CollectionStore(self.store)
 
     def relevant_user_facts(self, user_id: str, query: str, limit: int = 6) -> list[str]:
         """Most relevant facts for this message; falls back to the newest facts so basics aren't lost."""
